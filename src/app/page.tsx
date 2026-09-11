@@ -1,69 +1,38 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import HeroSlider from "@/components/home/HeroSlider";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <HeroSlider />
+
+      {/* DUMMY SECOND SECTION TO SHOW SCROLLING */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="section-label">Our Expertise</span>
+            <h2 className="section-title mx-auto text-brown">What We Do Best</h2>
+          </div>
+          
+          <div className="grid grid-3 gap-lg">
+            <div className="card">
+              <div className="w-12 h-12 rounded-full mb-6 flex items-center justify-center bg-peach text-orange font-bold">01</div>
+              <h3 className="text-xl mb-3 text-brown">Website Design</h3>
+              <p className="text-muted">Beautiful, responsive, and high-converting websites tailored to your brand.</p>
+            </div>
+            <div className="card">
+              <div className="w-12 h-12 rounded-full mb-6 flex items-center justify-center bg-peach text-orange font-bold">02</div>
+              <h3 className="text-xl mb-3 text-brown">SEO Optimization</h3>
+              <p className="text-muted">Rank higher on search engines and attract more organic traffic to your site.</p>
+            </div>
+            <div className="card">
+              <div className="w-12 h-12 rounded-full mb-6 flex items-center justify-center bg-peach text-orange font-bold">03</div>
+              <h3 className="text-xl mb-3 text-brown">Content Creation</h3>
+              <p className="text-muted">Engaging and meaningful content that resonates with your target audience.</p>
+            </div>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
