@@ -136,19 +136,19 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: clip;
 }
 
 
 body {
   min-height: 100vh;
+  overflow-x: clip;
 
   font-family: var(--font-body);
 
-  font-size: clamp(
-    15px,
-    calc(14px + 0.25vw),
-    18px
-  );
+  font-size: clamp(15px,
+      calc(14px + 0.25vw),
+      18px);
 
   font-weight: 400;
 
@@ -247,56 +247,44 @@ h6 {
 
 
 h1 {
-  font-size: clamp(
-    38px,
-    5vw,
-    80px
-  );
+  font-size: clamp(38px,
+      5vw,
+      80px);
 }
 
 
 h2 {
-  font-size: clamp(
-    30px,
-    3.5vw,
-    56px
-  );
+  font-size: clamp(30px,
+      3.5vw,
+      56px);
 }
 
 
 h3 {
-  font-size: clamp(
-    24px,
-    2.5vw,
-    36px
-  );
+  font-size: clamp(24px,
+      2.5vw,
+      36px);
 }
 
 
 h4 {
-  font-size: clamp(
-    20px,
-    1.8vw,
-    26px
-  );
+  font-size: clamp(20px,
+      1.8vw,
+      26px);
 }
 
 
 h5 {
-  font-size: clamp(
-    18px,
-    1.5vw,
-    22px
-  );
+  font-size: clamp(18px,
+      1.5vw,
+      22px);
 }
 
 
 h6 {
-  font-size: clamp(
-    16px,
-    1.2vw,
-    20px
-  );
+  font-size: clamp(16px,
+      1.2vw,
+      20px);
 }
 
 
@@ -311,11 +299,9 @@ p {
 
   color: var(--color-text);
 
-  font-size: clamp(
-    15px,
-    calc(13px + 0.4vw),
-    18px
-  );
+  font-size: clamp(15px,
+      calc(13px + 0.4vw),
+      18px);
 
   font-weight: 400;
 
@@ -369,30 +355,24 @@ p {
 ========================================================= */
 
 .container {
-  width: min(
-    calc(100% - 40px),
-    var(--container-width)
-  );
+  width: min(calc(100% - 40px),
+      var(--container-width));
 
   margin-inline: auto;
 }
 
 
 .container-wide {
-  width: min(
-    calc(100% - 40px),
-    1600px
-  );
+  width: min(calc(100% - 40px),
+      1600px);
 
   margin-inline: auto;
 }
 
 
 .container-narrow {
-  width: min(
-    calc(100% - 40px),
-    900px
-  );
+  width: min(calc(100% - 40px),
+      900px);
 
   margin-inline: auto;
 }
@@ -410,20 +390,16 @@ p {
 
 
 .section-small {
-  padding-block: clamp(
-    50px,
-    6vw,
-    90px
-  );
+  padding-block: clamp(50px,
+      6vw,
+      90px);
 }
 
 
 .section-large {
-  padding-block: clamp(
-    90px,
-    10vw,
-    180px
-  );
+  padding-block: clamp(90px,
+      10vw,
+      180px);
 }
 
 
@@ -432,11 +408,9 @@ p {
 ========================================================= */
 
 .section-header {
-  margin-bottom: clamp(
-    35px,
-    5vw,
-    75px
-  );
+  margin-bottom: clamp(35px,
+      5vw,
+      75px);
 }
 
 
@@ -451,11 +425,9 @@ p {
 
   font-family: var(--font-body);
 
-  font-size: clamp(
-    12px,
-    1vw,
-    14px
-  );
+  font-size: clamp(12px,
+      1vw,
+      14px);
 
   font-weight: 600;
 
@@ -466,8 +438,17 @@ p {
   color: var(--color-orange);
 }
 
+.section-label::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+}
+
 
 .section-title {
+  width: 100%;
   max-width: 900px;
 }
 
@@ -500,11 +481,9 @@ p {
 
   font-family: var(--font-body);
 
-  font-size: clamp(
-    14px,
-    0.3vw + 12px,
-    16px
-  );
+  font-size: clamp(14px,
+      0.3vw + 12px,
+      16px);
 
   font-weight: 600;
 
@@ -621,11 +600,9 @@ p {
 
   border-radius: var(--radius-lg);
 
-  padding: clamp(
-    20px,
-    3vw,
-    40px
-  );
+  padding: clamp(20px,
+      3vw,
+      40px);
 
   transition:
     transform 0.3s ease,
@@ -671,11 +648,9 @@ p {
 .service-number {
   font-family: var(--font-body);
 
-  font-size: clamp(
-    13px,
-    1vw,
-    17px
-  );
+  font-size: clamp(13px,
+      1vw,
+      17px);
 
   font-weight: 600;
 
@@ -688,11 +663,9 @@ p {
 .service-title {
   font-family: var(--font-heading);
 
-  font-size: clamp(
-    42px,
-    6vw,
-    96px
-  );
+  font-size: clamp(42px,
+      6vw,
+      96px);
 
   font-weight: 700;
 
@@ -707,11 +680,9 @@ p {
 .service-item {
   font-family: var(--font-body);
 
-  font-size: clamp(
-    14px,
-    1vw,
-    18px
-  );
+  font-size: clamp(14px,
+      1vw,
+      18px);
 
   font-weight: 500;
 
@@ -790,10 +761,7 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: var(--color-orange);
-
-  box-shadow:
-    0 0 0 3px rgba(255, 134, 60, 0.15);
+  border-color: #184a41;
 }
 
 
@@ -820,17 +788,21 @@ textarea {
 
   font-family: var(--font-body);
 
-  font-size: clamp(
-    14px,
-    0.3vw + 12px,
-    16px
-  );
+  font-size: clamp(14px,
+      0.3vw + 12px,
+      16px);
 
   font-weight: 500;
 
   color: var(--color-brown);
 
   transition: color 0.3s ease;
+}
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .nav-link {
+    font-size: 13.5px;
+  }
 }
 
 
@@ -1089,26 +1061,20 @@ textarea {
   .container,
   .container-wide,
   .container-narrow {
-    width: min(
-      calc(100% - 40px),
-      100%
-    );
+    width: min(calc(100% - 40px),
+        100%);
   }
 
 
   .grid-4 {
-    grid-template-columns: repeat(
-      2,
-      minmax(0, 1fr)
-    );
+    grid-template-columns: repeat(2,
+        minmax(0, 1fr));
   }
 
 
   .grid-3 {
-    grid-template-columns: repeat(
-      2,
-      minmax(0, 1fr)
-    );
+    grid-template-columns: repeat(2,
+        minmax(0, 1fr));
   }
 
 
@@ -1132,11 +1098,9 @@ textarea {
 
 
   .section {
-    padding-block: clamp(
-      60px,
-      10vw,
-      90px
-    );
+    padding-block: clamp(60px,
+        10vw,
+        90px);
   }
 
 
@@ -1153,11 +1117,9 @@ textarea {
 
 
   .service-title {
-    font-size: clamp(
-      42px,
-      13vw,
-      64px
-    );
+    font-size: clamp(42px,
+        13vw,
+        64px);
   }
 
 
@@ -1193,29 +1155,24 @@ textarea {
 
 
   h1 {
-    font-size: clamp(
-      36px,
-      11vw,
-      46px
-    );
+    font-size: clamp(36px,
+        11vw,
+        46px);
   }
 
 
   h2 {
-    font-size: clamp(
-      30px,
-      9vw,
-      38px
-    );
+    width: 100%;
+    font-size: clamp(28px,
+        8vw,
+        38px);
   }
 
 
   h3 {
-    font-size: clamp(
-      24px,
-      7vw,
-      30px
-    );
+    font-size: clamp(24px,
+        7vw,
+        30px);
   }
 
 
@@ -1232,11 +1189,9 @@ textarea {
 
 
   .service-title {
-    font-size: clamp(
-      38px,
-      12vw,
-      54px
-    );
+    font-size: clamp(38px,
+        12vw,
+        54px);
   }
 
 
@@ -1278,21 +1233,739 @@ textarea {
   .animate-ring {
     animation: ring 1s ease-in-out infinite;
   }
+
   .animate-ring-periodic {
     animation: ring-periodic 2s ease-in-out infinite;
   }
 }
 
 @keyframes ring {
-  0%, 100% { transform: rotate(0); }
-  10%, 30%, 50% { transform: rotate(15deg); }
-  20%, 40% { transform: rotate(-15deg); }
-  60% { transform: rotate(0); }
+
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  10%,
+  30%,
+  50% {
+    transform: rotate(15deg);
+  }
+
+  20%,
+  40% {
+    transform: rotate(-15deg);
+  }
+
+  60% {
+    transform: rotate(0);
+  }
 }
 
 @keyframes ring-periodic {
-  0%, 90% { transform: rotate(0); }
-  92%, 96% { transform: rotate(15deg); }
-  94%, 98% { transform: rotate(-15deg); }
-  100% { transform: rotate(0); }
+
+  0%,
+  90% {
+    transform: rotate(0);
+  }
+
+  92%,
+  96% {
+    transform: rotate(15deg);
+  }
+
+  94%,
+  98% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+/* ─── OurWork Carousel ─────────────────────────────────────────────────────── */
+
+/* Outer wrapper: relative so arrows can be positioned against it */
+.ow-carousel-outer {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Viewport: clips the overflowing cards */
+.ow-carousel-viewport {
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+/* Track: the sliding flex row */
+.ow-carousel-track {
+  display: flex;
+  gap: 20px;
+  /* matches GAP constant in JS */
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.ow-card {
+  flex: 0 0 auto;
+  min-width: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: owCardIn 0.5s ease both;
+  animation-delay: var(--ow-delay, 0ms);
+}
+
+.ow-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.28);
+}
+
+@keyframes owCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image area */
+.ow-card__img-wrap {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.ow-card__img {
+  object-fit: cover;
+  transition: transform 0.55s ease;
+}
+
+.ow-card:hover .ow-card__img {
+  transform: scale(1.06);
+}
+
+/* Gradient overlay on image */
+.ow-card__img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 40%, rgba(0, 0, 0, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* Label badge */
+.ow-card__label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.ow-card__label span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--ow-accent, #3a9e8f);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dot indicators */
+.ow-card__dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 0.35rem;
+}
+
+.ow-card__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.38);
+  transition: background 0.2s, width 0.2s;
+}
+
+.ow-card__dot--active {
+  background: #fff;
+  width: 18px;
+  border-radius: 4px;
+}
+
+/* Card body — solid dark panel */
+.ow-card__body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  background: #1a1a1a;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.ow-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.ow-card__desc {
+  font-size: 0.77rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ow-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.2rem;
+}
+
+.ow-card__tag {
+  font-size: 0.67rem;
+  font-weight: 600;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.04em;
+}
+
+/* CTA button */
+.ow-card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.6rem;
+  padding: 0.62rem 1rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background 0.22s, color 0.22s, transform 0.22s;
+}
+
+.ow-card__btn:hover {
+  background: var(--ow-accent, #3a9e8f);
+  color: #fff;
+  transform: scale(1.03);
+}
+
+
+/* ─── Carousel Arrows ─────────────────────────────────────────────────────── */
+.ow-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0a2e2c 0%, #047880 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(4, 120, 128, 0.35);
+  transition: background 0.22s, color 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+
+.ow-arrow:hover {
+  background: linear-gradient(135deg, #114e4b 0%, #3a9e8f 100%);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 28px rgba(4, 120, 128, 0.5);
+}
+
+.ow-arrow--left {
+  left: -23px;
+}
+
+.ow-arrow--right {
+  right: -23px;
+}
+
+@media (max-width: 640px) {
+  .ow-arrow--left {
+    left: 2px;
+  }
+  .ow-arrow--right {
+    right: 2px;
+  }
+}
+
+/* ─── Page Dots ───────────────────────────────────────────────────────────── */
+.ow-page-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3.5rem;
+  margin-top: 0.5rem;
+}
+
+.ow-page-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 0;
+  transition: background 0.25s, width 0.25s;
+}
+
+.ow-page-dot--active {
+  background: #d97c45;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Desktop: give arrows more breathing room */
+@media (min-width: 1024px) {
+  .ow-arrow--left {
+    left: -26px;
+  }
+
+  .ow-arrow--right {
+    right: -26px;
+  }
+}
+
+
+/* ─── "More Than Just Websites" — Image + Text Split ─────────────────────── */
+.ow-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-bottom: 0rem;
+  min-height: 420px;
+  /* border: 2px solid black; */
+}
+
+/* ── LEFT: solid dark panel ──────────────────────────────────────── */
+.ow-services__img-panel {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 4px solid red; */
+}
+
+/* Container for the list items inside the image */
+.ow-services__items {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 1.5rem;
+}
+
+/* Each service row inside the image */
+.ow-svc-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.75rem;
+  cursor: default;
+  transition: background 0.22s;
+}
+
+.ow-svc-row:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.ow-svc-row__num {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.35);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  width: 1.75rem;
+}
+
+.ow-svc-row__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.ow-svc-row__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  transition: color 0.2s;
+}
+
+.ow-svc-row:hover .ow-svc-row__name {
+  color: #d97c45;
+}
+
+.ow-svc-row__desc {
+  font-size: 0.73rem;
+  color: rgba(0, 0, 0, 0.55);
+  line-height: 1.5;
+}
+
+.ow-svc-row__arrow {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.22);
+  flex-shrink: 0;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.ow-svc-row:hover .ow-svc-row__arrow {
+  color: #d97c45;
+  transform: translateX(4px);
+}
+
+/* thin separator between rows */
+.ow-svc-row__divider {
+  position: absolute;
+  bottom: 0;
+  left: 1.75rem;
+  right: 1.75rem;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* ── RIGHT: text panel with arched leaf shape ────────────────────────── */
+.ow-services__text-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Background image filling the leaf shape */
+.ow-services__text-bg {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Dark gradient overlay so text remains readable */
+.ow-services__text-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.75) 100%);
+  z-index: 1;
+}
+
+/* Content container sitting above the image & overlay */
+.ow-services__text-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center horizontally like in the image */
+  text-align: center;
+}
+
+.ow-services__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d97c45;
+  margin: 0 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.ow-services__eyebrow::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.ow-services__heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #4a1e0a;
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+}
+
+.ow-services__sub {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 82ch;
+}
+
+/* Mobile layout for services: render text/content on top, cards below */
+.ow-services__text-panel {
+  order: 1;
+  padding: 1.25rem 1rem 0.75rem;
+}
+
+.ow-services__img-panel {
+  order: 2;
+  min-height: 240px;
+}
+
+/* ── Responsive: side by side on tablet+ ─────────────────────────── */
+@media (min-width: 768px) {
+  .ow-services {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .ow-services:not(.ow-services--reversed) .ow-services__img-panel {
+    order: 1;
+    min-height: 420px;
+  }
+
+  .ow-services:not(.ow-services--reversed) .ow-services__text-panel {
+    order: 2;
+    padding: 3.5rem 3rem;
+  }
+
+  /* Reversed layout modifier (smaller height) */
+  .ow-services--reversed {
+    grid-template-columns: 1.2fr 1fr;
+    column-gap: 8%;
+    min-height: 400px;
+    margin-bottom: 2rem;
+  }
+
+  .ow-services--reversed .ow-services__img-panel {
+    order: 2;
+    min-height: 400px;
+    justify-content: center;
+  }
+
+  .ow-services--reversed .ow-services__text-panel {
+    order: 1;
+    border-radius: 0;
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* ── Stacked Cards for reversed section ───────────────────────────── */
+.ow-stacked-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2rem 0; */
+}
+
+.ow-stacked-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  gap: 1rem;
+  position: relative;
+}
+
+.ow-stacked-card-wrapper {
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.ow-stacked-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  position: relative;
+  transition: box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Create the 3D stacked effect for 3 items */
+.ow-stacked-items--3 .ow-stacked-card-wrapper:nth-child(1) {
+  transform: translateY(30px) scale(0.95);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.ow-stacked-items--3 .ow-stacked-card-wrapper:nth-child(2) {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  z-index: 5;
+}
+
+.ow-stacked-items--3 .ow-stacked-card-wrapper:nth-child(2) .ow-stacked-card {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.ow-stacked-items--3 .ow-stacked-card-wrapper:nth-child(3) {
+  transform: translateY(-30px) scale(0.95);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+/* 5-item stack is now driven by Framer Motion scroll animations */
+
+/* Hover effects */
+.ow-stacked-items:hover .ow-stacked-card-wrapper {
+  /* Reset all to base state when hovering container */
+  transform: scale(0.95) translateY(0);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.ow-stacked-items:hover .ow-stacked-card-wrapper .ow-stacked-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.ow-stacked-items .ow-stacked-card-wrapper:hover {
+  transform: scale(1.05) translateY(0);
+  opacity: 1;
+  z-index: 10;
+}
+
+.ow-stacked-items .ow-stacked-card-wrapper:hover .ow-stacked-card {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Inside card */
+.ow-stacked-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ow-stacked-card__icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.ow-stacked-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ow-stacked-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.ow-stacked-card__desc {
+  font-size: 0.85rem;
+  color: #666666;
+  line-height: 1.4;
+}
+
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
+    transform: scaleY(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* ─── Mobile Services Dropdown Scrollbar ─────────────────────────────────── */
+.mobile-services-dropdown {
+  scrollbar-width: thin;
+  scrollbar-color: #ff863c rgba(73, 44, 40, 0.12);
+}
+
+.mobile-services-dropdown::-webkit-scrollbar {
+  width: 5px;
+}
+
+.mobile-services-dropdown::-webkit-scrollbar-track {
+  background: rgba(73, 44, 40, 0.08);
+  border-radius: 9999px;
+}
+
+.mobile-services-dropdown::-webkit-scrollbar-thumb {
+  background: #ff863c;
+  border-radius: 9999px;
+}
+
+.mobile-services-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+/* ─── Gallery Filter Scrollbar - Mobile Only ──────────────────────────────── */
+@media (max-width: 639px) {
+  .gallery-filter-scroll {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #047880 rgba(4, 120, 128, 0.12);
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+  .gallery-filter-scroll::-webkit-scrollbar {
+    height: 5px;
+    display: block;
+  }
+  .gallery-filter-scroll::-webkit-scrollbar-track {
+    background: rgba(4, 120, 128, 0.08);
+    border-radius: 9999px;
+  }
+  .gallery-filter-scroll::-webkit-scrollbar-thumb {
+    background: #047880;
+    border-radius: 9999px;
+  }
+}
+@media (min-width: 640px) {
+  .gallery-filter-scroll {
+    overflow-x: visible;
+  }
 }
