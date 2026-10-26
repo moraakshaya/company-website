@@ -173,32 +173,32 @@ export default function OurWork() {
   const goRight = () => setIndex((i) => (i < maxIndex ? i + 1 : 0));
 
   return (
-    <section className="section bg-ivory overflow-x-clip">
+    <section className="section bg-ivory overflow-x-clip lg:py-6 xl:py-8 min-[1400px]:py-[var(--section-padding)]">
       <div className="container">
         {/* Header Section */}
-        <div className="section-header text-center w-full max-w-5xl mx-auto">
-          <span className="section-label mb-4 inline-flex">OUR WORK</span>
-          <h2 className="w-full section-title text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-[#492c28] mb-6 leading-[1.1] tracking-tight md:whitespace-nowrap">
+        <div className="section-header text-center w-full max-w-5xl lg:max-w-full min-[1400px]:max-w-5xl mx-auto lg:mb-4 xl:mb-5 min-[1400px]:mb-[clamp(35px,5vw,75px)]">
+          <span className="section-label mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 inline-flex lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">OUR WORK</span>
+          <h2 className="w-full section-title lg:w-full lg:max-w-full lg:mx-auto lg:text-center min-[1400px]:max-w-[900px] min-[1400px]:mx-0 text-3xl sm:text-4xl md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 leading-[1.1] lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight md:whitespace-nowrap">
             See What We Create <span className="text-[#047880]">for Businesses<span className="text-[#ff863c]">.</span></span>
           </h2>
-          <p className="section-description mx-auto text-muted text-lg">
+          <p className="section-description mx-auto text-muted text-lg lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg lg:leading-normal xl:leading-normal min-[1400px]:leading-normal lg:max-w-[650px] xl:max-w-[720px] min-[1400px]:max-w-[650px]">
             From professional websites and memorable branding to engaging social media and digital marketing, we create digital solutions that help businesses build a stronger presence and connect with their customers.
           </p>
         </div>
 
         {/* Carousel */}
-        <div className="ow-carousel-outer">
+        <div className="ow-carousel-outer lg:px-8 xl:px-12 min-[1400px]:px-0 lg:mb-3 xl:mb-4 min-[1400px]:mb-8">
           {/* Left arrow — only when there are cards to go back to */}
           {showLeft && (
-            <button className="ow-arrow ow-arrow--left" onClick={goLeft} aria-label="Previous project">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <button className="ow-arrow ow-arrow--left lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-[46px] min-[1400px]:h-[46px] lg:left-[14px] xl:left-[28px] min-[1400px]:-left-[23px]" onClick={goLeft} aria-label="Previous project">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lg:w-4 lg:h-4 xl:w-4.5 xl:h-4.5 min-[1400px]:w-5 min-[1400px]:h-5">
                 <polyline points="15 18 9 12 15 6" />
               </svg>
             </button>
           )}
 
           {/* Viewport — clips overflow */}
-          <div className="ow-carousel-viewport" ref={viewportRef}>
+          <div className="ow-carousel-viewport lg:rounded-xl xl:rounded-2xl min-[1400px]:rounded-[1.5rem]" ref={viewportRef}>
             <div
               className="ow-carousel-track"
               style={{ transform: `translateX(-${translateX}px)` }}
@@ -206,7 +206,7 @@ export default function OurWork() {
               {projects.map((p, i) => (
                 <div
                   key={p.id}
-                  className="ow-card"
+                  className="ow-card lg:rounded-xl xl:rounded-2xl min-[1400px]:rounded-[1.5rem]"
                   style={{
                     width: cardWidth > 0 ? `${cardWidth}px` : undefined,
                     "--ow-accent": p.accentColor,
@@ -214,20 +214,20 @@ export default function OurWork() {
                   } as React.CSSProperties}
                 >
                   {/* Full-bleed image */}
-                  <div className="ow-card__img-wrap">
+                  <div className="ow-card__img-wrap lg:min-h-[190px] xl:min-h-[205px] min-[1400px]:min-h-[280px]">
                     <Image src={p.image} alt={p.alt} fill className="ow-card__img" />
-                    <div className="ow-card__label">
-                      <span>{p.id} — {p.label}</span>
+                    <div className="ow-card__label lg:top-2.5 lg:left-2.5 min-[1400px]:top-4 min-[1400px]:left-4">
+                      <span className="lg:text-[9.5px] xl:text-[10px] min-[1400px]:text-[0.68rem] lg:px-2.5 lg:py-0.5 min-[1400px]:px-3 min-[1400px]:py-1">{p.id} — {p.label}</span>
                     </div>
                   </div>
 
                   {/* Card footer */}
-                  <div className="ow-card__body">
-                    <p className="ow-card__title">{p.title}</p>
-                    <p className="ow-card__desc">{p.description}</p>
-                    <div className="ow-card__tags">
+                  <div className="ow-card__body lg:p-4 lg:pt-3.5 lg:pb-4.5 xl:p-4.5 min-[1400px]:p-5 lg:gap-1.5 min-[1400px]:gap-[0.45rem]">
+                    <p className="ow-card__title lg:text-[15px] xl:text-[16px] min-[1400px]:text-base leading-snug">{p.title}</p>
+                    <p className="ow-card__desc lg:text-[12px] xl:text-[12.5px] min-[1400px]:text-[0.77rem] lg:leading-[1.45] xl:leading-[1.5] min-[1400px]:leading-relaxed lg:line-clamp-3 xl:line-clamp-3 min-[1400px]:line-clamp-3">{p.description}</p>
+                    <div className="ow-card__tags lg:gap-1.5 min-[1400px]:gap-[0.35rem] lg:mt-1.5 min-[1400px]:mt-[0.2rem]">
                       {p.tags.map((t) => (
-                        <span key={t} className="ow-card__tag">{t}</span>
+                        <span key={t} className="ow-card__tag lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-[0.67rem] lg:px-2.5 lg:py-0.5 xl:px-2.5 xl:py-1 min-[1400px]:px-[0.55rem] min-[1400px]:py-[0.18rem]">{t}</span>
                       ))}
                     </div>
                   </div>
@@ -238,8 +238,8 @@ export default function OurWork() {
 
           {/* Right arrow — only when there are cards ahead */}
           {showRight && (
-            <button className="ow-arrow ow-arrow--right" onClick={goRight} aria-label="Next project">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <button className="ow-arrow ow-arrow--right lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-[46px] min-[1400px]:h-[46px] lg:right-[14px] xl:right-[28px] min-[1400px]:-right-[23px]" onClick={goRight} aria-label="Next project">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lg:w-4 lg:h-4 xl:w-4.5 xl:h-4.5 min-[1400px]:w-5 min-[1400px]:h-5">
                 <polyline points="9 18 15 12 9 6" />
               </svg>
             </button>
@@ -248,7 +248,7 @@ export default function OurWork() {
 
         {/* Page dots */}
         {maxIndex > 0 && (
-          <div className="ow-page-dots mb-10 sm:mb-14 md:mb-16">
+          <div className="ow-page-dots mb-10 sm:mb-14 md:mb-16 lg:mb-2 xl:mb-3 min-[1400px]:mb-16 lg:mt-2 xl:mt-3 min-[1400px]:mt-0">
             {Array.from({ length: maxIndex + 1 }).map((_, i) => (
               <button
                 key={i}
@@ -356,14 +356,14 @@ export default function OurWork() {
             {/* RIGHT (visually left on desktop): heading panel (no background) */}
             <div className="ow-services__text-panel order-1 md:order-1 pt-6 sm:pt-8 md:pt-0 pb-6 sm:pb-8 md:pb-0">
               <div className="ow-services__text-content">
-                <p className="section-label mb-4">Who We Work With</p>
-                <h2 className="text-3xl sm:text-4xl md:text-[42px] lg:text-[46px] xl:text-[50px] font-extrabold text-[#492c28] mb-6 leading-[1.2] tracking-tight">
+                <p className="section-label mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 inline-flex lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">Who We Work With</p>
+                <h2 className="text-3xl sm:text-4xl md:text-[42px] lg:text-[28px] xl:text-[32px] min-[1400px]:text-[50px] font-extrabold text-[#492c28] mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 leading-[1.2] lg:leading-[1.15] min-[1400px]:leading-[1.2] tracking-tight">
                   <span className="block">Built for Businesses</span>
                   <span className="block mt-1.5 sm:mt-2 text-[#047880]">
                     of Every Size<span className="text-[#ff863c]">.</span>
                   </span>
                 </h2>
-                <p className="section-description text-muted text-lg mx-auto mb-6 sm:mb-8 md:mb-0" style={{ maxWidth: "42ch" }}>
+                <p className="section-description text-muted text-lg lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg lg:leading-normal xl:leading-normal min-[1400px]:leading-normal mx-auto mb-6 sm:mb-8 md:mb-0 lg:max-w-[580px] xl:max-w-[620px] min-[1400px]:max-w-[650px]" style={{ maxWidth: "42ch" }}>
                   Whether you&apos;re starting a new business, running a local store or growing an established company, we create digital solutions based on what your business actually needs.
                 </p>
               </div>
@@ -377,23 +377,23 @@ export default function OurWork() {
 
           {/* Left Text Content */}
           <div className="p-6 sm:p-10 md:p-12 lg:py-10 lg:px-10 xl:py-14 xl:pl-24 xl:pr-12 w-full lg:w-[55%] xl:w-[50%] flex flex-col items-start text-left z-10 relative justify-center shrink-0">
-            <h2 className="text-3xl md:text-4xl lg:text-[36px] xl:text-[46px] font-extrabold text-white mb-4 xl:mb-5 leading-[1.1] tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[46px] font-extrabold text-white mb-4 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-4 xl:min-[1400px]:mb-5 leading-[1.1] lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight">
               <span className="block sm:whitespace-nowrap mb-1 xl:mb-2">Your Business Could</span>
               <span className="block text-[#fb923c] sm:whitespace-nowrap">Be Our Next Project.</span>
             </h2>
-            <p className="text-base md:text-lg text-white/80 mb-6 xl:mb-8 max-w-[500px] leading-relaxed">
+            <p className="text-base md:text-lg lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg text-white/80 mb-6 lg:mb-4 xl:mb-5 min-[1400px]:mb-6 xl:min-[1400px]:mb-8 max-w-[500px] leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed">
               Whether you need a website, a new brand identity, engaging content or better online visibility, let&apos;s create something that works for your business.
             </p>
-            <div className="flex flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto">
-              <Link href="/work" className="group flex-1 sm:flex-initial inline-flex items-center justify-between bg-transparent border-[1.5px] border-white text-white hover:bg-white hover:text-[#114e4b] hover:-translate-y-1 active:scale-95 rounded-full pl-3 sm:pl-5 xl:pl-6 pr-1 sm:pr-1.5 py-1.5 transition-all duration-300 shadow-md hover:shadow-lg min-w-0">
-                <span className="font-extrabold text-[11.5px] sm:text-[14px] xl:text-[15px] mr-1.5 sm:mr-3 tracking-wide whitespace-nowrap">View All Our Work</span>
-                <div className="bg-white rounded-full flex items-center justify-center w-[28px] h-[28px] sm:w-[36px] sm:h-[36px] xl:w-[38px] xl:h-[38px] shadow-sm relative overflow-hidden flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+            <div className="flex flex-row items-center gap-2 sm:gap-4 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-4 w-full sm:w-auto">
+              <Link href="/work" className="group flex-1 sm:flex-initial inline-flex items-center justify-between bg-transparent border-[1.5px] border-white text-white hover:bg-white hover:text-[#114e4b] hover:-translate-y-1 active:scale-95 rounded-full pl-3 sm:pl-5 pr-1 sm:pr-1.5 py-1.5 lg:pl-3.5 lg:pr-1 lg:py-1 xl:pl-4 xl:pr-1.5 xl:py-1 min-[1400px]:pl-6 min-[1400px]:pr-1.5 min-[1400px]:py-1.5 transition-all duration-300 shadow-md hover:shadow-lg min-w-0">
+                <span className="font-extrabold text-[11.5px] sm:text-[14px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[15px] mr-1.5 sm:mr-3 lg:mr-2 xl:mr-2.5 min-[1400px]:mr-3 tracking-wide whitespace-nowrap">View All Our Work</span>
+                <div className="bg-white rounded-full flex items-center justify-center w-[28px] h-[28px] sm:w-[36px] sm:h-[36px] lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-[38px] min-[1400px]:h-[38px] shadow-sm relative overflow-hidden flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <Image src="/images/3d-icon-view-work.jpg" alt="View Work Icon" fill style={{ objectFit: 'cover', transform: 'scale(1.15)' }} />
                 </div>
               </Link>
-              <Link href="/contact" className="group flex-1 sm:flex-initial inline-flex items-center justify-between bg-[#ff863c] hover:bg-[#ea580c] hover:-translate-y-1 active:scale-95 rounded-full pl-3 sm:pl-5 xl:pl-6 pr-1 sm:pr-1.5 py-1.5 transition-all duration-300 shadow-md hover:shadow-lg min-w-0">
-                <span className="font-extrabold text-white text-[11.5px] sm:text-[14px] xl:text-[15px] mr-1.5 sm:mr-3 tracking-wide whitespace-nowrap">Start Your Project</span>
-                <div className="bg-white rounded-full flex items-center justify-center w-[28px] h-[28px] sm:w-[36px] sm:h-[36px] xl:w-[38px] xl:h-[38px] shadow-sm relative overflow-hidden flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+              <Link href="/contact" className="group flex-1 sm:flex-initial inline-flex items-center justify-between bg-[#ff863c] hover:bg-[#ea580c] hover:-translate-y-1 active:scale-95 rounded-full pl-3 sm:pl-5 pr-1 sm:pr-1.5 py-1.5 lg:pl-3.5 lg:pr-1 lg:py-1 xl:pl-4 xl:pr-1.5 xl:py-1 min-[1400px]:pl-6 min-[1400px]:pr-1.5 min-[1400px]:py-1.5 transition-all duration-300 shadow-md hover:shadow-lg min-w-0">
+                <span className="font-extrabold text-white text-[11.5px] sm:text-[14px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[15px] mr-1.5 sm:mr-3 lg:mr-2 xl:mr-2.5 min-[1400px]:mr-3 tracking-wide whitespace-nowrap">Start Your Project</span>
+                <div className="bg-white rounded-full flex items-center justify-center w-[28px] h-[28px] sm:w-[36px] sm:h-[36px] lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-[38px] min-[1400px]:h-[38px] shadow-sm relative overflow-hidden flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   <Image src="/images/start-project-icon.jpg" alt="Start Project Icon" fill style={{ objectFit: 'cover', transform: 'scale(1.15)' }} />
                 </div>
               </Link>

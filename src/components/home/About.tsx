@@ -45,7 +45,7 @@ const ABOUT_FEATURES = [
 ];
 
 const AboutVisual = () => (
-  <div className="relative w-full max-w-[650px] aspect-[4/3] overflow-visible">
+  <div className="relative w-full max-w-[650px] lg:max-w-[480px] xl:max-w-[540px] min-[1400px]:max-w-[650px] aspect-[4/3] overflow-visible">
     {/* Layer 1: Background Blob & Icons — upper area */}
     <div className="absolute z-0" style={{ top: '-5%', right: '-8%', width: '90%', height: '80%' }}>
       <Image
@@ -92,14 +92,14 @@ const AboutVisual = () => (
 
 const About = () => {
   return (
-    <section className="py-20 lg:py-28 bg-[#fffff0] relative overflow-hidden">
+    <section className="py-20 lg:py-[96px] min-[1400px]:py-28 bg-[#fffff0] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-0">
 
           {/* Left Column: Content */}
           <div className="w-full lg:w-1/2">
-            <p className="section-label mb-4">WHO WE ARE</p>
-            <h2 className="w-full section-title text-4xl md:text-5xl lg:text-[52px] font-extrabold text-[#492c28] mb-6 leading-[1.1] tracking-tight">
+            <p className="section-label mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 inline-flex lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">WHO WE ARE</p>
+            <h2 className="w-full section-title text-4xl md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 leading-[1.1] lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight">
               More Than Just a <br className="hidden md:block" />
               <span className="text-[#047880]">Digital Agency<span className="text-[#ff863c]">.</span></span>
             </h2>
@@ -109,24 +109,24 @@ const About = () => {
               <AboutVisual />
             </div>
 
-            <div className="text-lg text-[#492c28]/80 leading-relaxed mb-10 space-y-4 max-w-[650px]">
-              <p>
+            <div className="mb-10 lg:mb-5 xl:mb-6 min-[1400px]:mb-10 space-y-4 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-4 max-w-[650px] lg:max-w-[580px] xl:max-w-[620px] min-[1400px]:max-w-[650px]">
+              <p className="text-lg lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg text-[#492c28]/80 leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed">
                 Prodbiz Solutions helps businesses build a professional and effective presence in the digital world. From branding and websites to social media and online marketing, we bring creative thinking and practical digital solutions together under one roof.
               </p>
-              <p>
+              <p className="text-lg lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg text-[#492c28]/80 leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed">
                 Whether you&apos;re a local business looking for a single creative or a growing company looking for a complete digital solution, we work around your business needs.
               </p>
             </div>
 
             {/* Feature Icons Row (Desktop View) */}
-            <div className="hidden sm:flex flex-row gap-6 mb-12 max-w-[650px]">
+            <div className="hidden sm:flex flex-row gap-6 lg:gap-3.5 xl:gap-4.5 min-[1400px]:gap-6 mb-12 lg:mb-6 xl:mb-7 min-[1400px]:mb-12 max-w-[650px] lg:max-w-[580px] xl:max-w-[620px] min-[1400px]:max-w-[650px]">
               {ABOUT_FEATURES.map((item, idx) => (
                 <div key={idx} className="flex-1">
-                  <div className={`w-12 h-12 rounded-full ${item.iconBg} ${item.iconColor} flex items-center justify-center mb-4`}>
+                  <div className={`w-12 h-12 lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-12 min-[1400px]:h-12 rounded-full ${item.iconBg} ${item.iconColor} flex items-center justify-center mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 [&>svg]:lg:w-4 [&>svg]:lg:h-4 [&>svg]:xl:w-[18px] [&>svg]:xl:h-[18px] [&>svg]:min-[1400px]:w-[22px] [&>svg]:min-[1400px]:h-[22px]`}>
                     {item.icon}
                   </div>
-                  <h4 className="text-[17px] font-bold text-[#492c28] mb-2">{item.title}</h4>
-                  <p className="text-[15px] text-[#492c28]/70 leading-relaxed">
+                  <h4 className="text-[17px] lg:text-[13.5px] xl:text-[14.5px] min-[1400px]:text-[17px] font-bold text-[#492c28] mb-2 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-2">{item.title}</h4>
+                  <p className="text-[15px] lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-[15px] text-[#492c28]/70 leading-relaxed lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -161,9 +161,9 @@ const About = () => {
               </motion.div>
             </div>
 
-            <Link href="/about" className="group inline-flex items-center gap-3 bg-[#047880] text-white pl-7 pr-2 py-2 rounded-full font-bold text-[15px] hover:bg-[#114e4b] transition-all hover:-translate-y-1 active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap">
+            <Link href="/about" className="group inline-flex items-center gap-3 lg:gap-2 xl:gap-2.5 min-[1400px]:gap-3 bg-[#047880] text-white pl-7 pr-2 py-2 lg:pl-4 lg:pr-1 lg:py-1 xl:pl-4.5 xl:pr-1.5 xl:py-1 min-[1400px]:pl-7 min-[1400px]:pr-2 min-[1400px]:py-2 rounded-full font-bold text-[15px] lg:text-[11.5px] xl:text-[12.5px] min-[1400px]:text-[15px] hover:bg-[#114e4b] transition-all hover:-translate-y-1 active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap">
               More About Prodbiz
-              <div className="w-10 h-10 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5 group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-10 min-[1400px]:h-10 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5 group-hover:scale-110 transition-transform">
                 <Image src="/home-page/about/about-arrow-3d.jpg" alt="Arrow Icon" width={40} height={40} className="w-full h-full object-contain p-0.5 group-hover:animate-ring" />
               </div>
             </Link>

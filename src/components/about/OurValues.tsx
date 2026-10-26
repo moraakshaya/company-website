@@ -329,7 +329,7 @@ function ValueCard3D({ card, index }: CardProps) {
 
 export default function OurValues() {
   return (
-    <section className="relative z-20 w-full py-16 md:py-24 lg:py-28 bg-ivory overflow-hidden">
+    <section className="relative z-20 w-full py-16 md:py-24 lg:py-12 xl:py-12 min-[1400px]:py-28 bg-ivory overflow-hidden">
       <div className="w-full px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 max-w-[1340px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-20 items-center">
 

@@ -113,29 +113,29 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="py-20 lg:py-32 bg-[#fffff0] relative overflow-hidden">
+    <section className="py-20 lg:py-[96px] min-[1400px]:py-32 bg-[#fffff0] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 relative z-10">
 
         {/* Header Block */}
-        <div className="text-center w-full max-w-[800px] mx-auto mb-16 lg:mb-20 flex flex-col items-center">
-          <div className="flex items-center gap-3 mb-4">
+        <div className="text-center w-full max-w-[800px] lg:max-w-full min-[1400px]:max-w-[800px] mx-auto mb-16 lg:mb-5 xl:mb-6 min-[1400px]:mb-20 flex flex-col items-center">
+          <div className="flex items-center gap-3 mb-4 lg:mb-2 xl:mb-2 min-[1400px]:mb-4">
             <span className="w-8 h-[2px] bg-[#ff863c]"></span>
-            <p className="text-[14px] font-extrabold text-[#ff863c] uppercase tracking-widest">WHAT WE PROVIDE</p>
+            <p className="text-[14px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px] font-extrabold text-[#ff863c] uppercase tracking-widest">WHAT WE PROVIDE</p>
           </div>
-          <h2 className="w-full section-title text-[clamp(26px,7.2vw,36px)] sm:text-4xl md:text-5xl lg:text-[56px] font-extrabold text-[#492c28] mb-6 leading-[1.15] tracking-tight">
-            Everything Your <br className="hidden md:block" />
+          <h2 className="w-full section-title lg:w-full lg:max-w-full lg:mx-auto lg:text-center min-[1400px]:max-w-[900px] min-[1400px]:mx-0 text-[clamp(26px,7.2vw,36px)] sm:text-4xl md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[56px] font-extrabold text-[#492c28] mb-6 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-6 leading-[1.15] tracking-tight">
+            Everything Your <br className="hidden md:block lg:hidden min-[1400px]:block" />
             Business <br className="block sm:hidden" />
             Needs <span className="text-[#047880]">to Grow.</span>
           </h2>
-          <p className="text-lg md:text-[19px] text-[#492c28]/70 leading-relaxed mx-auto font-medium">
+          <p className="text-lg md:text-[19px] lg:text-[13px] xl:text-[14px] min-[1400px]:text-[19px] text-[#492c28]/70 leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed mx-auto font-medium max-w-[750px] lg:max-w-[720px] xl:max-w-[800px] min-[1400px]:max-w-[750px]">
             We create the digital and marketing materials your business needs. From a single creative or a new logo to a complete website and ongoing digital marketing, we provide flexible digital services that fit your business and your goals.
           </p>
         </div>
 
         {/* Carousel Container */}
-        <div className="relative w-full max-w-[1000px] mx-auto pb-12 sm:pb-0 sm:min-h-[480px]">
+        <div className="relative w-full max-w-[1000px] lg:max-w-[880px] xl:max-w-[940px] min-[1400px]:max-w-[1000px] mx-auto pb-12 sm:pb-0 sm:min-h-[480px] lg:min-h-[340px] xl:min-h-[360px] min-[1400px]:min-h-[480px]">
 
-          <div className="relative w-full sm:w-[calc(100%-4rem)] bg-white rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] ml-0 sm:ml-16 mt-32 sm:mt-0 min-h-[660px] sm:min-h-[460px]">
+          <div className="relative w-full sm:w-[calc(100%-4rem)] lg:w-[calc(100%-3rem)] xl:w-[calc(100%-3.5rem)] min-[1400px]:w-[calc(100%-4rem)] bg-white rounded-[32px] lg:rounded-[22px] xl:rounded-[26px] min-[1400px]:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] ml-0 sm:ml-16 lg:ml-10 xl:ml-12 min-[1400px]:ml-16 mt-32 sm:mt-0 min-h-[660px] sm:min-h-[460px] lg:min-h-[330px] xl:min-h-[350px] min-[1400px]:min-h-[460px]">
 
             {servicesList.map((service, index) => {
               const isActive = index === activeIndex;
@@ -146,9 +146,9 @@ const Services = () => {
                 >
 
                   {/* Overlapping Left Image/Box matching Image 2 perfectly */}
-                  <div className={`absolute -top-24 sm:top-1/2 left-1/2 sm:-left-16 -translate-x-1/2 sm:translate-x-0 sm:-translate-y-1/2 z-20 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${isActive ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-8 pointer-events-none'}`}>
+                  <div className={`absolute -top-24 sm:top-1/2 left-1/2 sm:-left-16 lg:-left-10 xl:-left-12 min-[1400px]:-left-16 -translate-x-1/2 sm:translate-x-0 sm:-translate-y-1/2 z-20 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${isActive ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-8 pointer-events-none'}`}>
                     <div
-                      className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-[28px] overflow-hidden flex flex-col items-center justify-center text-white transition-transform duration-700 relative shadow-2xl"
+                      className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[210px] lg:h-[210px] xl:w-[230px] xl:h-[230px] min-[1400px]:w-80 min-[1400px]:h-80 rounded-[28px] lg:rounded-[18px] xl:rounded-[22px] min-[1400px]:rounded-[28px] overflow-hidden flex flex-col items-center justify-center text-white transition-transform duration-700 relative shadow-2xl"
                       style={{
                         boxShadow: isActive ? `0 30px 60px -12px rgba(73, 44, 40, 0.5)` : 'none',
                         transform: isActive ? 'scale(1)' : 'scale(0.95)'
@@ -163,31 +163,31 @@ const Services = () => {
                         }}
                       />
                       {/* 3D Border & Highlights */}
-                      <div className="absolute inset-0 rounded-[28px] border border-black/5 shadow-[inset_0_1px_3px_rgba(255,255,255,0.3),inset_0_-2px_8px_rgba(0,0,0,0.06)] pointer-events-none" />
+                      <div className="absolute inset-0 rounded-[28px] lg:rounded-[18px] xl:rounded-[22px] min-[1400px]:rounded-[28px] border border-black/5 shadow-[inset_0_1px_3px_rgba(255,255,255,0.3),inset_0_-2px_8px_rgba(0,0,0,0.06)] pointer-events-none" />
                     </div>
                   </div>
 
                   {/* Content Area */}
-                  <div className={`absolute inset-0 p-6 pt-36 pb-8 sm:pt-12 sm:pl-[260px] md:pl-[340px] sm:pr-24 md:pr-32 sm:py-12 flex flex-col h-full justify-center text-center sm:text-left transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] delay-[50ms] ${isActive ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-6 pointer-events-none'}`}>
+                  <div className={`absolute inset-0 p-6 pt-36 pb-8 sm:pt-12 sm:pl-[260px] md:pl-[340px] lg:pl-[190px] xl:pl-[210px] min-[1400px]:pl-[340px] sm:pr-24 md:pr-32 lg:pr-10 xl:pr-14 min-[1400px]:pr-32 sm:py-12 lg:py-5 xl:py-6 min-[1400px]:py-12 flex flex-col h-full justify-center text-center sm:text-left transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] delay-[50ms] ${isActive ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-6 pointer-events-none'}`}>
                     {/* Top Category / ID Text */}
-                    <p className="text-[12px] md:text-[13px] font-extrabold text-[#ff863c] uppercase tracking-widest mb-2">
+                    <p className="text-[12px] md:text-[13px] lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-[13px] font-extrabold text-[#ff863c] uppercase tracking-widest mb-2 lg:mb-1 xl:mb-1 min-[1400px]:mb-2">
                       {service.id} — {service.title}
                     </p>
 
                     {/* Subtitle / Main Title */}
-                    <h3 className="w-full text-[22px] md:text-[28px] font-extrabold text-[#2a1714] mb-4 leading-snug">
+                    <h3 className="w-full text-[22px] md:text-[28px] lg:text-[19px] xl:text-[21px] min-[1400px]:text-[28px] font-extrabold text-[#2a1714] mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 leading-snug">
                       {service.subtitle}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-[#492c28]/60 text-[15px] md:text-base leading-relaxed mb-6 max-w-xl">
+                    <p className="text-[#492c28]/60 text-[15px] md:text-base lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-base leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed mb-6 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-6 max-w-xl">
                       {service.desc}
                     </p>
 
                     {/* Pills for Offerings */}
-                    <div className="flex flex-wrap justify-center sm:justify-start gap-2.5 mb-8 max-w-xl">
+                    <div className="flex flex-wrap justify-center sm:justify-start gap-2.5 lg:gap-1.5 xl:gap-2 min-[1400px]:gap-2.5 mb-8 lg:mb-3.5 xl:mb-4 min-[1400px]:mb-8 max-w-xl">
                       {service.offerings.map((item, idx) => (
-                        <span key={idx} className="text-[12px] font-semibold bg-[#f5f5f5] text-[#492c28]/70 px-3 py-1.5 rounded-lg">
+                        <span key={idx} className="text-[12px] lg:text-[10px] xl:text-[11px] min-[1400px]:text-[12px] font-semibold bg-[#f5f5f5] text-[#492c28]/70 px-3 py-1.5 lg:px-2 lg:py-0.5 xl:px-2.5 xl:py-1 min-[1400px]:px-3 min-[1400px]:py-1.5 rounded-lg lg:rounded-md min-[1400px]:rounded-lg">
                           {item}
                         </span>
                       ))}
@@ -197,10 +197,10 @@ const Services = () => {
                     <div>
                       <Link
                         href={service.linkHref}
-                        className="group inline-flex items-center gap-3 bg-[#047880] text-white pl-7 pr-2 py-2 rounded-full font-bold text-[15px] hover:bg-[#114e4b] transition-all hover:-translate-y-1 active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap capitalize"
+                        className="group inline-flex items-center gap-3 lg:gap-2 min-[1400px]:gap-3 bg-[#047880] text-white pl-7 pr-2 py-2 lg:pl-4 xl:pl-5 min-[1400px]:pl-7 lg:pr-1 xl:pr-1.5 min-[1400px]:pr-2 lg:py-1 xl:py-1 min-[1400px]:py-2 rounded-full font-bold text-[15px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[15px] hover:bg-[#114e4b] transition-all hover:-translate-y-1 active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap capitalize"
                       >
                         {service.linkText.toLowerCase()}
-                        <div className="w-10 h-10 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5 group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 lg:w-6 lg:h-6 xl:w-7 xl:h-7 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5 group-hover:scale-110 transition-transform">
                           <img src="/icons/about-arrow-3d.jpg" alt="Arrow Icon" className="w-full h-full object-contain p-0.5 group-hover:animate-ring" />
                         </div>
                       </Link>
@@ -232,7 +232,7 @@ const Services = () => {
             </div>
 
           </div>
-          <div className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 flex-col gap-2 z-30 hidden sm:flex">
+          <div className="absolute right-4 sm:right-6 lg:right-3 xl:right-4 min-[1400px]:right-6 top-1/2 -translate-y-1/2 flex-col gap-2 lg:gap-1.5 min-[1400px]:gap-2 z-30 hidden sm:flex">
             {servicesList.map((srv, idx) => {
               const isActive = idx === activeIndex;
               return (

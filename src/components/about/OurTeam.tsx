@@ -115,7 +115,7 @@ function TeamCard3D({
           scale: 1.025,
           transition: { type: "spring", stiffness: 350, damping: 25 },
         }}
-        className="group relative select-none rounded-[2rem] border backdrop-blur-2xl backdrop-saturate-[180%] p-5 sm:p-6 flex flex-col items-center text-center transition-all duration-300 overflow-hidden cursor-default"
+        className="group relative select-none rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.75rem] min-[1400px]:rounded-[2rem] border backdrop-blur-2xl backdrop-saturate-[180%] p-5 sm:p-6 lg:p-3 xl:p-4 min-[1400px]:p-6 flex flex-col items-center text-center transition-all duration-300 overflow-hidden cursor-default"
       >
         {/* Dynamic Specular Light Glare across the glass */}
         <motion.div
@@ -127,7 +127,7 @@ function TeamCard3D({
 
         {/* 3D Floating Glassmorphic Image Frame */}
         <div
-          className="relative w-full aspect-[4/4.8] rounded-[1.4rem] overflow-hidden mb-5 shadow-[0_10px_25px_rgba(73,44,40,0.08)] border border-white/90 bg-white"
+          className="relative w-full aspect-[4/4.8] rounded-[1.4rem] lg:rounded-[1rem] xl:rounded-[1.2rem] min-[1400px]:rounded-[1.4rem] overflow-hidden mb-5 lg:mb-2.5 xl:mb-3.5 min-[1400px]:mb-5 shadow-[0_10px_25px_rgba(73,44,40,0.08)] border border-white/90 bg-white"
           style={{
             transform: "translateZ(38px)",
             transformStyle: "preserve-3d",
@@ -154,10 +154,10 @@ function TeamCard3D({
             transformStyle: "preserve-3d",
           }}
         >
-          <h3 className="text-xl sm:text-2xl font-extrabold text-[#2d1e18] tracking-tight group-hover:text-[#047880] transition-colors leading-snug">
+          <h3 className="text-xl sm:text-2xl lg:text-[15px] xl:text-[17px] min-[1400px]:text-2xl font-extrabold text-[#2d1e18] tracking-tight group-hover:text-[#047880] transition-colors leading-snug">
             {member.name}
           </h3>
-          <p className="text-sm font-bold text-[#047880] mt-1.5 tracking-wide">
+          <p className="text-sm lg:!text-[11px] xl:!text-[12px] min-[1400px]:!text-sm font-bold text-[#047880] mt-1.5 lg:mt-0.5 xl:mt-1 min-[1400px]:mt-1.5 tracking-wide">
             {member.role}
           </p>
         </div>
@@ -202,20 +202,20 @@ export default function OurTeam() {
   };
 
   return (
-    <section className="relative z-20 w-full py-16 md:py-24 lg:py-28 bg-ivory overflow-hidden">
-      <div className="w-full px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 max-w-[1340px] mx-auto">
+    <section className="relative z-20 w-full py-16 md:py-24 lg:py-12 xl:py-12 min-[1400px]:py-28 bg-ivory overflow-hidden">
+      <div className="w-full px-6 sm:px-10 md:px-12 lg:px-8 xl:px-12 min-[1400px]:px-20 max-w-[1340px] mx-auto">
 
         {/* ========================================================
             TOP SECTION HEADER (CENTERED)
             ======================================================== */}
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-14 sm:mb-16">
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-14 sm:mb-16 lg:mb-5 xl:mb-7 min-[1400px]:mb-16">
           {/* Eyebrow Label */}
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="section-label mb-4"
+            className="section-label mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]"
           >
             THE PEOPLE BEHIND PRODBIZ
           </motion.p>
@@ -226,28 +226,25 @@ export default function OurTeam() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[46px] font-extrabold text-[#492c28] mb-6 leading-[1.18] tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[40px] min-[1400px]:xl:text-[46px] font-extrabold text-[#492c28] mb-6 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-6 leading-[1.18] lg:leading-[1.15] min-[1400px]:leading-[1.18] tracking-tight"
           >
             Meet the People Who<br />
             <span className="text-[#047880]">Lead Our Vision.</span>
           </motion.h2>
 
-          {/* Descriptive Paragraphs */}
+          {/* Descriptive Paragraph */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[#492c28]/85 text-base sm:text-lg leading-relaxed font-['Inter',sans-serif] max-w-5xl mx-auto space-y-3"
+            className="text-[#492c28]/85 text-base sm:text-lg leading-relaxed font-['Inter',sans-serif] max-w-5xl lg:max-w-2xl xl:max-w-3xl min-[1400px]:max-w-5xl mx-auto"
           >
-            <p>
+            <p className="text-base sm:text-lg lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-lg leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed">
               Prodbiz is led by a team that brings together different skills, experience, and ideas.
               Each of us plays an important role in guiding the company, working with clients, and
-              making sure every project moves in the right direction.
-            </p>
-            <p>
-              Together, we work towards building strong relationships and delivering work that helps
-              businesses move forward.
+              making sure every project moves in the right direction. Together, we work towards building
+              strong relationships and delivering work that helps businesses move forward.
             </p>
           </motion.div>
         </div>
@@ -333,7 +330,7 @@ export default function OurTeam() {
         {/* ========================================================
             DESKTOP VIEW: 3-COLUMN 3D GLASSMORPHIC GRID
             ======================================================== */}
-        <div className="hidden md:grid md:grid-cols-3 gap-7 lg:gap-9 max-w-5xl mx-auto">
+        <div className="hidden md:grid md:grid-cols-3 gap-7 lg:gap-4 xl:gap-5 min-[1400px]:gap-9 max-w-5xl lg:max-w-[700px] xl:max-w-[800px] min-[1400px]:max-w-5xl mx-auto">
           {TEAM_MEMBERS.map((member, index) => (
             <TeamCard3D key={member.id} member={member} index={index} />
           ))}

@@ -86,20 +86,20 @@ export default function WhyProdbiz() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fffff0] py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-[#fffff0] py-20 lg:py-[96px] min-[1400px]:py-32">
 
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 relative z-10">
 
         {/* ── Header ──────────────────────────────────────────────── */}
-        <div className="text-center w-full max-w-[950px] mx-auto mb-14 lg:mb-16 flex flex-col items-center">
-          <div className="flex items-center gap-3 mb-4">
+        <div className="text-center w-full max-w-[950px] lg:max-w-full min-[1400px]:max-w-[950px] mx-auto mb-14 lg:mb-4 xl:mb-5 min-[1400px]:mb-16 flex flex-col items-center">
+          <div className="flex items-center gap-3 mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4">
             <span className="w-8 h-[2px] bg-[#ff863c]"></span>
-            <p className="text-[14px] font-extrabold text-[#ff863c] uppercase tracking-widest">WHY PRODBIZ</p>
+            <p className="text-[14px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px] font-extrabold text-[#ff863c] uppercase tracking-widest">WHY PRODBIZ</p>
           </div>
-          <h2 className="w-full section-title text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-[#492c28] leading-[1.1] tracking-tight mb-5 md:whitespace-nowrap">
+          <h2 className="w-full section-title lg:w-full lg:max-w-full lg:mx-auto lg:text-center min-[1400px]:max-w-[900px] min-[1400px]:mx-0 text-3xl sm:text-4xl md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] leading-[1.1] lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight mb-5 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-5 md:whitespace-nowrap">
             Here&apos;s Why Businesses <span className="text-[#047880]">Choose Us<span className="text-[#ff863c]">.</span></span>
           </h2>
-          <p className="text-lg md:text-[19px] text-[#492c28]/70 leading-relaxed font-medium max-w-[760px]">
+          <p className="text-lg md:text-[19px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[19px] text-[#492c28]/70 leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed font-medium max-w-[760px] lg:max-w-[650px] xl:max-w-[720px] min-[1400px]:max-w-[760px]">
             We don&apos;t believe every business needs the same digital solution. We understand what you need, create what fits, and work with you to build a professional presence that grows with you.
           </p>
         </div>
@@ -208,13 +208,13 @@ export default function WhyProdbiz() {
         </div>
 
         {/* Desktop: horizontal accordion with hover */}
-        <div className="hidden lg:flex gap-4" style={{ minHeight: "420px" }}>
+        <div className="hidden lg:flex gap-3 xl:gap-4 min-h-[330px] xl:min-h-[360px] min-[1400px]:min-h-[420px]">
           {reasons.map((r, i) => {
             const isActive = activeIndex === i;
             return (
               <div
                 key={r.number}
-                className="relative rounded-3xl overflow-hidden cursor-pointer"
+                className="relative rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden cursor-pointer"
                 style={{
                   backgroundImage: `linear-gradient(to top, ${r.shadowColor}ff 0%, ${r.shadowColor}e6 35%, ${r.shadowColor}00 90%), url(${r.bgImage})`,
                   backgroundSize: "cover",
@@ -230,7 +230,7 @@ export default function WhyProdbiz() {
 
                 {/* Top row — only visible when active */}
                 <div
-                  className="absolute top-6 left-7 right-7 flex items-center pointer-events-none"
+                  className="absolute top-4 left-4 right-4 xl:top-5 xl:left-5 xl:right-5 min-[1400px]:top-6 min-[1400px]:left-7 min-[1400px]:right-7 flex items-center pointer-events-none"
                   style={{
                     opacity: isActive ? 1 : 0,
                     transition: "opacity 0.35s ease",
@@ -238,7 +238,7 @@ export default function WhyProdbiz() {
                   }}
                 >
                   <span
-                    className="text-[10px] font-bold tracking-[0.2em] uppercase px-2.5 py-1 rounded-full"
+                    className="text-[9px] xl:text-[9.5px] min-[1400px]:text-[10px] font-bold tracking-[0.2em] uppercase px-2 py-0.5 xl:px-2.5 xl:py-1 min-[1400px]:px-2.5 min-[1400px]:py-1 rounded-full"
                     style={{ background: "rgba(255,255,255,0.12)", color: r.accent }}
                   >
                     {r.tag}
@@ -247,19 +247,19 @@ export default function WhyProdbiz() {
 
                 {/* Collapsed top: just the number */}
                 <div
-                  className="absolute top-6 left-7"
+                  className="absolute top-4 left-4 xl:top-5 xl:left-5 min-[1400px]:top-6 min-[1400px]:left-7"
                   style={{
                     opacity: isActive ? 0 : 1,
                     transition: "opacity 0.25s ease",
                   }}
                 >
-                  <span className="text-[11px] font-black tracking-[0.2em] text-white/50">
+                  <span className="text-[10px] xl:text-[10.5px] min-[1400px]:text-[11px] font-black tracking-[0.2em] text-white/50">
                     — {r.number}
                   </span>
                 </div>
 
                 {/* Bottom content */}
-                <div className="absolute bottom-0 left-0 right-0 p-7">
+                <div className="absolute bottom-0 left-0 right-0 p-4 xl:p-5 min-[1400px]:p-7">
                   {/* Active: number then title + desc */}
                   <div
                     style={{
@@ -270,11 +270,11 @@ export default function WhyProdbiz() {
                       pointerEvents: isActive ? "auto" : "none",
                     }}
                   >
-                    <div className="text-[11px] font-black tracking-[0.2em] text-white/50 mb-2">— {r.number}</div>
-                    <h3 className="text-2xl lg:text-[26px] font-extrabold text-white leading-tight mb-2">
+                    <div className="text-[10px] xl:text-[10.5px] min-[1400px]:text-[11px] font-black tracking-[0.2em] text-white/50 mb-1 xl:mb-1.5 min-[1400px]:mb-2">— {r.number}</div>
+                    <h3 className="text-xl lg:text-[18px] xl:text-[20px] min-[1400px]:text-[26px] font-extrabold text-white leading-tight mb-1 xl:mb-1.5 min-[1400px]:mb-2">
                       {r.title}
                     </h3>
-                    <p className="text-white/65 text-sm leading-relaxed max-w-[300px]">{r.desc}</p>
+                    <p className="text-white/65 text-[12px] xl:text-[13px] min-[1400px]:text-sm leading-relaxed max-w-[240px] xl:max-w-[270px] min-[1400px]:max-w-[300px]">{r.desc}</p>
                   </div>
 
                   {/* Collapsed: tag + title */}
@@ -288,15 +288,15 @@ export default function WhyProdbiz() {
                     }}
                   >
                     <span
-                      className="inline-block text-[10px] font-bold tracking-[0.2em] uppercase px-2.5 py-1 rounded-full mb-3"
+                      className="inline-block text-[9px] xl:text-[9.5px] min-[1400px]:text-[10px] font-bold tracking-[0.2em] uppercase px-2 py-0.5 xl:px-2.5 xl:py-1 min-[1400px]:px-2.5 min-[1400px]:py-1 rounded-full mb-1.5 xl:mb-2 min-[1400px]:mb-3"
                       style={{ background: "rgba(255,255,255,0.12)", color: r.accent }}
                     >
                       {r.tag}
                     </span>
-                    <h3 className="text-[17px] font-extrabold text-white leading-snug mb-1.5 whitespace-normal">
+                    <h3 className="text-[14px] xl:text-[15.5px] min-[1400px]:text-[17px] font-extrabold text-white leading-snug mb-1 min-[1400px]:mb-1.5 whitespace-normal">
                       {r.title}
                     </h3>
-                    <p className="text-white/55 text-[12px] leading-relaxed">{r.desc}</p>
+                    <p className="text-white/55 text-[10.5px] xl:text-[11px] min-[1400px]:text-[12px] leading-relaxed">{r.desc}</p>
                   </div>
                 </div>
               </div>
