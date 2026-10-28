@@ -324,7 +324,7 @@ export default function GalleryPage() {
       />
 
       {/* ── Hero Section ── */}
-      <section className="relative z-10 w-full bg-[#fff2e8] h-[480px] sm:h-[540px] md:h-auto flex flex-col items-center justify-center pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 border-l-2 border-b-2 border-[#fff2e8] rounded-bl-[4.5rem] sm:rounded-bl-[6.5rem] lg:rounded-bl-[9rem] shadow-[0_22px_35px_-10px_rgba(180,110,40,0.22),0_8px_16px_-6px_rgba(0,0,0,0.06)]">
+      <section className="relative z-10 w-full bg-[#fff2e8] h-[480px] sm:h-[540px] md:h-auto lg:h-[475px] lg:min-h-[475px] xl:h-[495px] xl:min-h-[495px] min-[1400px]:h-auto min-[1400px]:min-h-0 flex flex-col items-center justify-center pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 border-l-2 border-b-2 border-[#fff2e8] rounded-bl-[4.5rem] sm:rounded-bl-[6.5rem] lg:rounded-bl-[9rem] shadow-[0_22px_35px_-10px_rgba(180,110,40,0.22),0_8px_16px_-6px_rgba(0,0,0,0.06)]">
         {/* Top-Left Abstract Waves */}
         <img
           src="/services/logo-branding/top-corner-transparent.png"
@@ -341,13 +341,13 @@ export default function GalleryPage() {
         {/* Hero Content Column */}
         <div className="max-w-[860px] w-full mx-auto flex flex-col items-center text-center my-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 border border-[hsl(38,40%,72%)] rounded-full py-[6px] px-[18px] text-[0.72rem] sm:text-xs font-bold tracking-[0.12em] text-[hsl(28,30%,35%)] bg-[hsla(40,60%,96%,0.7)] backdrop-blur-[6px] mb-5 sm:mb-6 shadow-sm">
-            <span className="text-[hsl(40,70%,52%)] text-[0.85rem]">✦</span>
+          <div className="inline-flex items-center gap-1.5 border border-[hsl(38,40%,72%)] rounded-full py-[6px] px-[18px] text-[0.72rem] sm:text-xs lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-xs font-bold tracking-[0.12em] lg:tracking-[0.2em] xl:tracking-[0.22em] min-[1400px]:tracking-[0.12em] text-[hsl(28,30%,35%)] bg-[hsla(40,60%,96%,0.7)] backdrop-blur-[6px] mb-5 sm:mb-6 lg:mb-3.5 xl:mb-4 min-[1400px]:mb-6 shadow-sm">
+            <span className="text-[hsl(40,70%,52%)] text-[0.85rem] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[0.85rem]">✦</span>
             OUR GALLERY
           </div>
 
           {/* Headline */}
-          <div className="w-full mb-5 sm:mb-6 flex flex-col items-center">
+          <div className="w-full mb-5 sm:mb-6 lg:mb-3.5 xl:mb-4 min-[1400px]:mb-6 flex flex-col items-center">
             {/* Line 1 — Star + 'A Glimpse Into' + ThreeLines */}
             <div className="flex items-center justify-center gap-1.5 sm:gap-2.5">
               <div className="flex items-center shrink-0 pointer-events-none">
@@ -356,29 +356,29 @@ export default function GalleryPage() {
                   alt="sparkle stars"
                   width={80}
                   height={80}
-                  className="w-8 sm:w-12 md:w-16 h-auto object-contain opacity-90"
+                  className="w-8 sm:w-12 md:w-16 lg:w-10 xl:w-12 min-[1400px]:w-16 h-auto object-contain opacity-90"
                 />
               </div>
 
-              <h1 className="inline font-extrabold leading-[1.15] tracking-[-0.02em] text-[clamp(1.75rem,4.5vw,3.75rem)] text-[#1a1206] px-1 whitespace-nowrap">
+              <h1 className="inline font-extrabold leading-[1.15] lg:leading-[1.05] xl:leading-[1.05] min-[1400px]:leading-[1.15] tracking-[-0.02em] text-[clamp(1.75rem,4.5vw,3.75rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(1.75rem,4.5vw,3.75rem)] text-[#1a1206] px-1 whitespace-nowrap">
                 A Glimpse Into
               </h1>
 
-              <div className="flex items-center shrink-0 pointer-events-none -mt-4 sm:-mt-6">
+              <div className="flex items-center shrink-0 pointer-events-none -mt-4 sm:-mt-6 lg:-mt-3.5 xl:-mt-4 min-[1400px]:-mt-6">
                 <Image
                   src="/services/logo-branding/threelines.png"
                   alt="decorative accent lines"
                   width={64}
                   height={64}
-                  className="w-7 sm:w-10 md:w-14 h-auto object-contain opacity-90"
+                  className="w-7 sm:w-10 md:w-14 lg:w-9 xl:w-10 min-[1400px]:w-14 h-auto object-contain opacity-90"
                 />
               </div>
             </div>
 
             {/* Line 2 — 'Prodbiz.' in chocolate/terracotta gradient */}
-            <div className="flex items-center justify-center mt-0.5 sm:mt-1">
+            <div className="flex items-center justify-center mt-0.5 sm:mt-1 lg:mt-0.5 xl:mt-1">
               <span
-                className="inline font-extrabold leading-[1.15] tracking-[-0.02em] text-[clamp(2rem,5vw,4.2rem)] bg-clip-text text-transparent"
+                className="inline font-extrabold leading-[1.15] lg:leading-[1.05] xl:leading-[1.05] min-[1400px]:leading-[1.15] tracking-[-0.02em] text-[clamp(2rem,5vw,4.2rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(2rem,5vw,4.2rem)] bg-clip-text text-transparent"
                 style={{
                   backgroundImage:
                     "linear-gradient(to right, #361508 0%, #4a1e0a 20%, #6b2d14 40%, #7a3318 60%, #8c3d1e 78%, #a85228 100%)",
@@ -390,7 +390,7 @@ export default function GalleryPage() {
           </div>
 
           {/* Body Copy */}
-          <p className="text-[clamp(0.95rem,1.6vw,1.05rem)] leading-[1.65] text-[hsl(25,15%,38%)] text-center max-w-[780px] w-full mx-auto">
+          <p className="text-[clamp(0.95rem,1.6vw,1.05rem)] lg:text-[15px] xl:text-[16px] min-[1400px]:text-[clamp(0.95rem,1.6vw,1.05rem)] leading-[1.65] lg:leading-relaxed min-[1400px]:leading-[1.65] text-[hsl(25,15%,38%)] text-center max-w-[780px] lg:max-w-[560px] xl:max-w-[620px] min-[1400px]:max-w-[780px] w-full mx-auto">
             Explore the people, moments and experiences that make Prodbiz what it is.
           </p>
         </div>
@@ -484,16 +484,16 @@ export default function GalleryPage() {
 
         {/* Bottom Section */}
         <div className="mt-8 sm:mt-12 flex flex-col items-center justify-center text-center">
-          <div className="h-0.5 bg-[#ff863c] w-12 mb-8 rounded-full"></div>
+          <div className="h-0.5 bg-[#ff863c] w-12 mb-8 lg:mb-4 xl:mb-5 min-[1400px]:mb-8 rounded-full"></div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-gray-900 mb-2 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[42px] font-bold text-gray-900 mb-2 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-2 tracking-tight lg:leading-[1.15] xl:leading-[1.15]">
             More Than Work.
           </h2>
-          <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-[#047880] mb-8 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[42px] font-bold text-[#047880] mb-8 lg:mb-4 xl:mb-5 min-[1400px]:mb-8 tracking-tight lg:leading-[1.15] xl:leading-[1.15]">
             It's the People Behind It.
           </h2>
 
-          <p className="text-gray-500 max-w-2xl mx-auto text-[17px] leading-relaxed mb-8">
+          <p className="text-gray-500 max-w-2xl lg:max-w-xl xl:max-w-2xl min-[1400px]:max-w-2xl mx-auto text-[17px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[17px] leading-relaxed lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed mb-8 lg:mb-4 xl:mb-5 min-[1400px]:mb-8">
             Great work starts with great people, ideas and collaboration.{" "}
             <br className="hidden sm:block" />
             Our gallery captures the moments, experiences and people{" "}

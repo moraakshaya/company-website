@@ -8,7 +8,7 @@ import ServiceFeatures from "@/components/services/ServiceFeatures";
 
 /* ── shared style tokens (avoids repeating long strings) ── */
 const headlineBase =
-  "font-extrabold leading-[1.15] tracking-[-0.03em] md:tracking-[-0.02em] whitespace-nowrap text-[28px] md:text-[clamp(2.2rem,4.5vw,3.8rem)]";
+  "font-extrabold leading-[1.15] tracking-[-0.03em] md:tracking-[-0.02em] whitespace-nowrap text-[28px] md:text-[clamp(2.2rem,4.5vw,3.8rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(2.2rem,4.5vw,3.8rem)]";
 
 const servicesData = [
   {
@@ -113,7 +113,7 @@ export default function LogoBrandingPage() {
     <main className="bg-[var(--bg-primary)] min-h-screen overflow-x-clip">
       {/* ── Hero section ─────────────────────────────────── */}
       <section
-        className="relative w-full flex flex-col items-center justify-center h-[580px] sm:h-[620px] md:h-auto md:min-h-[100svh] pt-20 pb-6 md:pt-[120px] md:pb-32 px-4 sm:px-6 bg-gradient-to-b from-[#fff2e8] to-[var(--bg-primary)] overflow-hidden z-10"
+        className="relative w-full flex flex-col items-center justify-center h-[580px] sm:h-[620px] md:h-auto md:min-h-[100svh] lg:h-screen lg:min-h-0 lg:max-h-screen xl:h-screen xl:min-h-0 xl:max-h-screen min-[1400px]:h-auto min-[1400px]:min-h-[100svh] pt-20 pb-6 md:pt-[120px] md:pb-32 lg:pt-[76px] lg:pb-6 xl:pt-[84px] xl:pb-8 min-[1400px]:pt-[120px] min-[1400px]:pb-32 px-4 sm:px-6 bg-gradient-to-b from-[#fff2e8] to-[var(--bg-primary)] overflow-hidden z-10"
       >
         {/* Top-Left Abstract Waves */}
         <img
@@ -151,14 +151,14 @@ export default function LogoBrandingPage() {
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="inline-flex items-center gap-1.5 border border-[hsl(38,40%,72%)] rounded-full py-[5px] md:py-[6px] px-[16px] md:px-[18px] text-[0.68rem] md:text-[0.72rem] font-bold tracking-[0.12em] text-[hsl(28,30%,35%)] bg-[hsla(40,60%,96%,0.7)] backdrop-blur-[6px] mb-3 md:mb-7"
+            className="inline-flex items-center gap-1.5 border border-[hsl(38,40%,72%)] rounded-full py-[5px] md:py-[6px] lg:py-1 xl:py-1 min-[1400px]:py-[6px] px-[16px] md:px-[18px] lg:px-3.5 xl:px-3.5 min-[1400px]:px-[18px] text-[0.68rem] md:text-[0.72rem] lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-[0.72rem] font-bold tracking-[0.12em] text-[hsl(28,30%,35%)] bg-[hsla(40,60%,96%,0.7)] backdrop-blur-[6px] mb-3 md:mb-7 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-7"
           >
-            <span className="text-[hsl(40,70%,52%)] text-[0.85rem]">✦</span>
+            <span className="text-[hsl(40,70%,52%)] text-[0.85rem] lg:text-[0.72rem] xl:text-[0.76rem] min-[1400px]:text-[0.85rem]">✦</span>
             LOGO &amp; BRANDING
           </motion.div>
 
           {/* ── Headline ───────────────────────────────────── */}
-          <div className="w-full mb-3 md:mb-7 flex flex-col items-center">
+          <div className="w-full mb-3 md:mb-7 lg:mb-2.5 xl:mb-3.5 min-[1400px]:mb-7 flex flex-col items-center">
 
             {/* Line 1 — star + "Give Your Business" inline */}
             <div className="flex items-center justify-center gap-1 sm:gap-1.5 max-w-full px-2">
@@ -173,7 +173,7 @@ export default function LogoBrandingPage() {
                   alt="sparkle stars"
                   width={90}
                   height={90}
-                  className="w-6 sm:w-10 md:w-16 h-auto object-contain opacity-90"
+                  className="w-6 sm:w-10 md:w-16 lg:w-10 xl:w-12 min-[1400px]:w-16 h-auto object-contain opacity-90"
                 />
               </motion.div>
 
@@ -190,14 +190,14 @@ export default function LogoBrandingPage() {
                 initial={{ opacity: 0, scale: 0.6 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-                className="flex items-center shrink-0 pointer-events-none -mt-3 md:-mt-8"
+                className="flex items-center shrink-0 pointer-events-none -mt-3 md:-mt-8 lg:-mt-4 xl:-mt-5 min-[1400px]:-mt-8"
               >
                 <Image
                   src="/services/logo-branding/threelines.png"
                   alt="decorative accent lines"
                   width={64}
                   height={64}
-                  className="w-5 sm:w-8 md:w-[60px] h-auto object-contain opacity-90"
+                  className="w-5 sm:w-8 md:w-[60px] lg:w-[40px] xl:w-[46px] min-[1400px]:w-[60px] h-auto object-contain opacity-90"
                 />
               </motion.div>
             </div>
@@ -232,14 +232,14 @@ export default function LogoBrandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-col items-center gap-1.5 md:gap-2.5 mb-4 md:mb-9 px-2 md:px-0"
+            className="flex flex-col items-center gap-1.5 md:gap-2.5 lg:gap-1.5 xl:gap-2 min-[1400px]:gap-2.5 mb-4 md:mb-9 lg:mb-4 xl:mb-5 min-[1400px]:mb-9 px-2 md:px-0"
           >
-            <p className="text-[13px] sm:text-[14px] md:text-[clamp(0.95rem,1.6vw,1.05rem)] leading-relaxed md:leading-[1.65] text-[hsl(25,15%,38%)] text-center max-w-[690px]">
+            <p className="text-[13px] sm:text-[14px] md:text-[clamp(0.95rem,1.6vw,1.05rem)] lg:text-[13.5px] xl:text-[14.5px] min-[1400px]:text-[clamp(0.95rem,1.6vw,1.05rem)] leading-relaxed lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed text-[hsl(25,15%,38%)] text-center max-w-[690px] lg:max-w-[630px] xl:max-w-[670px]">
               Your logo is just the beginning. We create the visual pieces your
               business needs — from logos and business cards to brochures, menus,
               social media creatives, and more.
             </p>
-            <p className="text-[clamp(0.95rem,1.6vw,1.05rem)] leading-[1.65] text-[hsl(25,15%,38%)] text-center max-w-[690px] mt-1">
+            <p className="text-[clamp(0.95rem,1.6vw,1.05rem)] lg:text-[13.5px] xl:text-[14.5px] min-[1400px]:text-[clamp(0.95rem,1.6vw,1.05rem)] leading-[1.65] lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-[1.65] text-[hsl(25,15%,38%)] text-center max-w-[690px] lg:max-w-[630px] xl:max-w-[670px] mt-1 lg:mt-0.5 xl:mt-1 min-[1400px]:mt-1">
               Everything is designed to match your business, look professional,
               and stay consistent wherever your brand is seen.
             </p>
@@ -356,7 +356,7 @@ export default function LogoBrandingPage() {
                 </motion.div>
 
                 {/* Content Column */}
-                <div className="w-full md:w-1/2 flex flex-col items-start font-['Inter',sans-serif]">
+                <div className="w-full md:w-1/2 lg:w-[56%] xl:w-[55%] min-[1400px]:w-1/2 flex flex-col items-start font-['Inter',sans-serif]">
 
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -365,10 +365,10 @@ export default function LogoBrandingPage() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                   >
                     {/* Title */}
-                    <h2 className="text-[32px] md:text-[40px] font-extrabold text-[#43261a] tracking-tight leading-[1.05] mb-4 font-['Manrope',sans-serif]">
+                    <h2 className="text-[32px] md:text-[40px] lg:text-[26px] xl:text-[30px] min-[1400px]:text-[40px] font-extrabold text-[#43261a] tracking-tight leading-[1.05] mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 font-['Manrope',sans-serif]">
                       {service.title}
                     </h2>
-                    <div className="w-[50px] h-[3px] bg-[#f37636] mb-8 rounded-full"></div>
+                    <div className="w-[50px] lg:w-[38px] xl:w-[44px] min-[1400px]:w-[50px] h-[3px] lg:h-[2.5px] xl:h-[3px] min-[1400px]:h-[3px] bg-[#f37636] mb-8 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 rounded-full"></div>
                   </motion.div>
 
                   <motion.div
@@ -378,12 +378,12 @@ export default function LogoBrandingPage() {
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
                   >
                     {/* Subtitle */}
-                    <h3 className="text-[1.3rem] md:text-[1.4rem] font-bold text-[#71594d] mb-4 tracking-tight">
+                    <h3 className="text-[1.3rem] md:text-[1.4rem] lg:text-[15px] xl:text-[17px] min-[1400px]:text-[1.4rem] font-bold text-[#71594d] mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 tracking-tight">
                       {service.subtitle}
                     </h3>
 
                     {/* Paragraph */}
-                    <p className="text-[#645c55] text-[1.05rem] leading-[1.7] mb-8 w-full">
+                    <p className="text-[#645c55] text-[1.05rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-8 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 w-full">
                       {service.desc}
                     </p>
                   </motion.div>
@@ -396,7 +396,7 @@ export default function LogoBrandingPage() {
                     className="w-full"
                   >
                     {/* What We Create */}
-                    <h4 className="text-[1.2rem] font-bold text-[#0e747c] mb-5">
+                    <h4 className="text-[1.2rem] lg:text-[13.5px] xl:text-[14.5px] min-[1400px]:text-[1.2rem] font-bold text-[#0e747c] mb-5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5">
                       What We Create
                     </h4>
 
@@ -404,11 +404,11 @@ export default function LogoBrandingPage() {
                     {service.features ? (
                       <ServiceFeatures features={service.features} />
                     ) : (
-                      <div className="flex flex-col gap-6 mb-12 w-full">
+                      <div className="flex flex-col gap-6 lg:gap-3 xl:gap-3.5 min-[1400px]:gap-6 mb-12 lg:mb-5 xl:mb-6 min-[1400px]:mb-12 w-full">
                         {service.featureBlocks?.map((block, idx) => (
                           <div key={idx}>
-                            <h5 className="font-bold text-[#43261a] text-[1rem] mb-1.5">{block.title}</h5>
-                            <p className="text-[#645c55] text-[0.95rem] leading-relaxed">{block.desc}</p>
+                            <h5 className="font-bold text-[#43261a] text-[1rem] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[1rem] mb-1.5 lg:mb-1">{block.title}</h5>
+                            <p className="text-[#645c55] text-[0.95rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[0.95rem] leading-relaxed lg:leading-[1.5]">{block.desc}</p>
                           </div>
                         ))}
                       </div>
@@ -416,28 +416,28 @@ export default function LogoBrandingPage() {
 
                     {/* Extra Description (e.g. Service 06) */}
                     {service.extraDesc && (
-                      <p className="text-[#645c55] text-[1.05rem] leading-[1.7] mb-8 w-full">
+                      <p className="text-[#645c55] text-[1.05rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-8 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 w-full">
                         {service.extraDesc}
                       </p>
                     )}
 
                     {/* Bottom CTA */}
-                    <div className="flex flex-row items-center justify-between sm:justify-end gap-2.5 sm:gap-5 w-full mt-4">
-                      <span className="text-[#43261a] font-bold text-[0.85rem] sm:text-[1rem] leading-snug">
+                    <div className="flex flex-row items-center justify-between sm:justify-end gap-2.5 sm:gap-5 lg:gap-3 xl:gap-4 min-[1400px]:gap-5 w-full mt-4 lg:mt-2 xl:mt-2.5 min-[1400px]:mt-4">
+                      <span className="text-[#43261a] font-bold text-[0.85rem] sm:text-[1rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[1rem] leading-snug">
                         {service.ctaText}
                       </span>
                       <Link
                         href="/contact"
-                        className="group inline-flex items-center justify-center bg-[#0e747c] hover:bg-[#0a575d] text-white font-bold py-1 sm:py-1.5 pl-3.5 sm:pl-6 pr-1 sm:pr-1.5 rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(14,116,124,0.35)] hover:shadow-[0_6px_20px_rgba(14,116,124,0.45)] hover:-translate-y-0.5 whitespace-nowrap shrink-0 text-xs sm:text-base"
+                        className="group inline-flex items-center justify-center bg-[#0e747c] hover:bg-[#0a575d] text-white font-bold py-1 sm:py-1.5 lg:py-1 xl:py-1 pl-3.5 sm:pl-6 lg:pl-3.5 xl:pl-4 pr-1 sm:pr-1.5 lg:pr-1 xl:pr-1 min-[1400px]:py-1.5 min-[1400px]:pl-6 min-[1400px]:pr-1.5 rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(14,116,124,0.35)] hover:shadow-[0_6px_20px_rgba(14,116,124,0.45)] hover:-translate-y-0.5 whitespace-nowrap shrink-0 text-xs sm:text-base lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-base"
                       >
                         Let's Talk
-                        <span className="ml-2.5 sm:ml-4 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full overflow-hidden shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
+                        <span className="ml-2.5 sm:ml-4 lg:ml-2.5 xl:ml-3 min-[1400px]:ml-4 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-10 min-[1400px]:h-10 bg-white rounded-full overflow-hidden shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
                           <Image
                             src="/icons/contact-3d.jpg"
                             alt="Contact Icon"
                             width={40}
                             height={40}
-                            className="w-full h-full object-contain p-[2px] sm:p-[3px]"
+                            className="w-full h-full object-contain p-[2px] sm:p-[3px] lg:p-[1.5px] xl:p-[2px] min-[1400px]:p-[3px]"
                           />
                         </span>
                       </Link>
@@ -452,40 +452,40 @@ export default function LogoBrandingPage() {
       </div>
 
       {/* ── Our Work / Clean Grid Section ──────────────── */}
-      <section className="relative w-full pt-16 pb-32 flex flex-col items-center">
+      <section className="relative w-full pt-16 pb-32 lg:pt-10 lg:pb-20 xl:pt-12 xl:pb-24 min-[1400px]:pt-16 min-[1400px]:pb-32 flex flex-col items-center">
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="relative z-20 flex flex-col items-center text-center px-6 max-w-[800px] mb-16"
+          className="relative z-20 flex flex-col items-center text-center px-6 max-w-[800px] mb-16 lg:mb-8 xl:mb-10 min-[1400px]:mb-16"
         >
           {/* Lined Badge */}
-          <div className="flex items-center gap-6 mb-6">
-            <div className="h-[1px] w-12 md:w-20 bg-[#f37636]/30"></div>
-            <span className="text-[0.95rem] font-bold tracking-[0.2em] text-[#f37636] uppercase">
+          <div className="flex items-center gap-6 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6 mb-6 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-6">
+            <div className="h-[1px] w-12 md:w-20 lg:w-12 xl:w-14 min-[1400px]:w-20 bg-[#f37636]/30"></div>
+            <span className="text-[0.95rem] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[0.95rem] font-bold tracking-[0.2em] text-[#f37636] uppercase font-['Inter',sans-serif]">
               OUR WORK
             </span>
-            <div className="h-[1px] w-12 md:w-20 bg-[#f37636]/30"></div>
+            <div className="h-[1px] w-12 md:w-20 lg:w-12 xl:w-14 min-[1400px]:w-20 bg-[#f37636]/30"></div>
           </div>
 
-          <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] font-extrabold text-[#43261a] tracking-tight leading-[1.1] mb-5 font-['Manrope',sans-serif]">
+          <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[28px] xl:text-[32px] min-[1400px]:text-[4rem] font-extrabold text-[#43261a] tracking-tight leading-[1.1] lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.1] mb-5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5 font-['Manrope',sans-serif]">
             See What We <span className="!text-[#0e747c]">Create</span>
           </h2>
 
-          <p className="text-[#8c8275] text-[1.1rem] md:text-[1.25rem] leading-[1.6] max-w-[640px] mb-10">
+          <p className="text-[#8c8275] text-[1.1rem] md:text-[1.25rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.25rem] leading-[1.6] lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.6] max-w-[640px] lg:max-w-[480px] xl:max-w-[520px] min-[1400px]:max-w-[640px] mb-10 lg:mb-5 xl:mb-6 min-[1400px]:mb-10 font-['Inter',sans-serif]">
             From complete brand identities to individual business materials, explore some of the creative work we've created for businesses.
           </p>
 
           <Link
             href="/work"
-            className="group inline-flex items-center gap-4 bg-[#0e747c] hover:bg-[#0a575d] rounded-full py-1.5 pl-6 pr-1.5 transition-all duration-300 shadow-[0_8px_20px_rgba(14,116,124,0.25)] hover:shadow-[0_12px_25px_rgba(14,116,124,0.35)] hover:-translate-y-1"
+            className="group inline-flex items-center gap-4 lg:gap-3 xl:gap-3.5 min-[1400px]:gap-4 bg-[#0e747c] hover:bg-[#0a575d] rounded-full py-1.5 lg:py-1 xl:py-1 pl-6 lg:pl-4 xl:pl-4.5 pr-1.5 lg:pr-1 xl:pr-1 min-[1400px]:py-1.5 min-[1400px]:pl-6 min-[1400px]:pr-1.5 transition-all duration-300 shadow-[0_8px_20px_rgba(14,116,124,0.25)] hover:shadow-[0_12px_25px_rgba(14,116,124,0.35)] hover:-translate-y-1"
           >
-            <span className="text-[1.1rem] font-bold text-white tracking-wide">
+            <span className="text-[1.1rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[1.1rem] font-bold text-white tracking-wide">
               View Our Work
             </span>
-            <span className="flex items-center justify-center w-11 h-11 rounded-full bg-white shrink-0 overflow-hidden shadow-inner">
+            <span className="flex items-center justify-center w-11 h-11 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-11 min-[1400px]:h-11 rounded-full bg-white shrink-0 overflow-hidden shadow-inner">
               <img
                 src="/services/logo-branding/3d-icon-view-work.jpg"
                 alt="Arrow Icon"

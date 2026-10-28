@@ -84,7 +84,7 @@ export default function BlogPage() {
       />
 
       {/* ── Hero Section ── */}
-      <section className="relative z-10 w-full bg-[#fff2e8] h-[480px] sm:h-[540px] md:h-auto flex flex-col items-center justify-center pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 border-l-2 border-b-2 border-[#fff2e8] rounded-bl-[4.5rem] sm:rounded-bl-[6.5rem] lg:rounded-bl-[9rem] shadow-[0_22px_35px_-10px_rgba(180,110,40,0.22),0_8px_16px_-6px_rgba(0,0,0,0.06)]">
+      <section className="relative z-10 w-full bg-[#fff2e8] h-[480px] sm:h-[540px] md:h-auto lg:h-[475px] lg:min-h-[475px] xl:h-[495px] xl:min-h-[495px] min-[1400px]:h-auto min-[1400px]:min-h-0 flex flex-col items-center justify-center pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 border-l-2 border-b-2 border-[#fff2e8] rounded-bl-[4.5rem] sm:rounded-bl-[6.5rem] lg:rounded-bl-[9rem] shadow-[0_22px_35px_-10px_rgba(180,110,40,0.22),0_8px_16px_-6px_rgba(0,0,0,0.06)]">
         {/* Top-Left Abstract Waves */}
         <img
           src="/services/logo-branding/top-corner-transparent.png"
@@ -102,13 +102,13 @@ export default function BlogPage() {
         {/* Hero Content Column */}
         <div className="max-w-[860px] w-full mx-auto flex flex-col items-center text-center my-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 border border-[hsl(38,40%,72%)] rounded-full py-[6px] px-[18px] text-[0.72rem] sm:text-xs font-bold tracking-[0.12em] text-[hsl(28,30%,35%)] bg-[hsla(40,60%,96%,0.7)] backdrop-blur-[6px] mb-5 sm:mb-6 shadow-sm">
-            <span className="text-[hsl(40,70%,52%)] text-[0.85rem]">✦</span>
+          <div className="inline-flex items-center gap-1.5 border border-[hsl(38,40%,72%)] rounded-full py-[6px] px-[18px] text-[0.72rem] sm:text-xs lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-xs font-bold tracking-[0.12em] lg:tracking-[0.2em] xl:tracking-[0.22em] min-[1400px]:tracking-[0.12em] text-[hsl(28,30%,35%)] bg-[hsla(40,60%,96%,0.7)] backdrop-blur-[6px] mb-5 sm:mb-6 lg:mb-3.5 xl:mb-4 min-[1400px]:mb-6 shadow-sm">
+            <span className="text-[hsl(40,70%,52%)] text-[0.85rem] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[0.85rem]">✦</span>
             OUR BLOG
           </div>
 
           {/* Headline */}
-          <div className="w-full mb-5 sm:mb-6 flex flex-col items-center">
+          <div className="w-full mb-5 sm:mb-6 lg:mb-3.5 xl:mb-4 min-[1400px]:mb-6 flex flex-col items-center">
             {/* Line 1 — Star + 'Our Insightful' + ThreeLines */}
             <div className="flex items-center justify-center gap-1.5 sm:gap-2.5">
               <div className="flex items-center shrink-0 pointer-events-none">
@@ -117,29 +117,29 @@ export default function BlogPage() {
                   alt="sparkle stars"
                   width={80}
                   height={80}
-                  className="w-8 sm:w-12 md:w-16 h-auto object-contain opacity-90"
+                  className="w-8 sm:w-12 md:w-16 lg:w-10 xl:w-12 min-[1400px]:w-16 h-auto object-contain opacity-90"
                 />
               </div>
 
-              <h1 className="inline font-extrabold leading-[1.15] tracking-[-0.02em] text-[clamp(1.75rem,4.5vw,3.75rem)] text-[#1a1206] px-1 whitespace-nowrap">
+              <h1 className="inline font-extrabold leading-[1.15] lg:leading-[1.05] xl:leading-[1.05] min-[1400px]:leading-[1.15] tracking-[-0.02em] text-[clamp(1.75rem,4.5vw,3.75rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(1.75rem,4.5vw,3.75rem)] text-[#1a1206] px-1 whitespace-nowrap">
                 Our Insightful
               </h1>
 
-              <div className="flex items-center shrink-0 pointer-events-none -mt-4 sm:-mt-6">
+              <div className="flex items-center shrink-0 pointer-events-none -mt-4 sm:-mt-6 lg:-mt-3.5 xl:-mt-4 min-[1400px]:-mt-6">
                 <Image
                   src="/services/logo-branding/threelines.png"
                   alt="decorative accent lines"
                   width={64}
                   height={64}
-                  className="w-7 sm:w-10 md:w-14 h-auto object-contain opacity-90"
+                  className="w-7 sm:w-10 md:w-14 lg:w-9 xl:w-10 min-[1400px]:w-14 h-auto object-contain opacity-90"
                 />
               </div>
             </div>
 
             {/* Line 2 — 'Blog.' in chocolate/terracotta gradient */}
-            <div className="flex items-center justify-center mt-0.5 sm:mt-1">
+            <div className="flex items-center justify-center mt-0.5 sm:mt-1 lg:mt-0.5 xl:mt-1">
               <span
-                className="inline font-extrabold leading-[1.15] tracking-[-0.02em] text-[clamp(2rem,5vw,4.2rem)] bg-clip-text text-transparent"
+                className="inline font-extrabold leading-[1.15] lg:leading-[1.05] xl:leading-[1.05] min-[1400px]:leading-[1.15] tracking-[-0.02em] text-[clamp(2rem,5vw,4.2rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(2rem,5vw,4.2rem)] bg-clip-text text-transparent"
                 style={{
                   backgroundImage:
                     "linear-gradient(to right, #361508 0%, #4a1e0a 20%, #6b2d14 40%, #7a3318 60%, #8c3d1e 78%, #a85228 100%)",
@@ -151,23 +151,23 @@ export default function BlogPage() {
           </div>
 
           {/* Body Copy */}
-          <p className="text-[clamp(0.95rem,1.6vw,1.05rem)] leading-[1.65] text-[hsl(25,15%,38%)] text-center max-w-[780px] w-full mx-auto">
+          <p className="text-[clamp(0.95rem,1.6vw,1.05rem)] lg:text-[15px] xl:text-[16px] min-[1400px]:text-[clamp(0.95rem,1.6vw,1.05rem)] leading-[1.65] lg:leading-relaxed min-[1400px]:leading-[1.65] text-[hsl(25,15%,38%)] text-center max-w-[780px] lg:max-w-[620px] xl:max-w-[680px] min-[1400px]:max-w-[780px] w-full mx-auto">
             Simple ideas, useful tips, and practical insights on websites, branding, social media, SEO, content, and online advertising to help your business grow.
           </p>
         </div>
       </section>
 
       {/* Main Content Area */}
-      <div className="relative z-10 mt-8 sm:mt-12 md:mt-16 pt-4 sm:pt-6 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="relative z-10 mt-8 sm:mt-12 md:mt-16 pt-4 sm:pt-6 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl lg:max-w-[940px] xl:max-w-[1140px] min-[1400px]:max-w-7xl mx-auto">
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 xl:gap-5 min-[1400px]:gap-8">
           {/* Featured Post (Left, spans 7 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full lg:col-span-7 relative rounded-2xl overflow-hidden group h-[520px] sm:h-auto sm:aspect-[4/3] lg:aspect-auto lg:min-h-[500px]"
+            className="w-full lg:col-span-7 relative rounded-2xl lg:rounded-xl xl:rounded-2xl min-[1400px]:rounded-2xl overflow-hidden group h-[520px] sm:h-auto sm:aspect-[4/3] lg:aspect-auto lg:min-h-[390px] xl:min-h-[440px] min-[1400px]:min-h-[500px]"
           >
             {/* Background Image */}
             <Image
@@ -192,31 +192,31 @@ export default function BlogPage() {
             </svg>
 
             {/* Content */}
-            <div className="absolute bottom-0 left-0 w-full p-6 sm:p-8 md:p-10 z-20 flex flex-col justify-end">
-              <span className="inline-block bg-[#f37636] text-white text-[11px] font-bold uppercase tracking-wider py-1.5 px-4 rounded-full w-max mb-3 sm:mb-4">
+            <div className="absolute bottom-0 left-0 w-full p-6 sm:p-8 md:p-10 lg:p-4 xl:p-5 min-[1400px]:p-10 z-20 flex flex-col justify-end">
+              <span className="inline-block bg-[#f37636] text-white text-[11px] lg:text-[9.5px] xl:text-[10px] min-[1400px]:text-[11px] font-bold uppercase tracking-wider py-1.5 px-4 lg:py-1 lg:px-3 xl:py-1 xl:px-3.5 min-[1400px]:py-1.5 min-[1400px]:px-4 rounded-full w-max mb-3 sm:mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4">
                 WEBSITE
               </span>
 
-              <Link href="/blog/does-your-business-really-need-a-website" className="block mb-3 sm:mb-4">
-                <h2 className="text-2xl sm:text-3xl md:text-[2.5rem] leading-[1.15] font-extrabold text-white hover:text-[#f37636] transition-colors font-['Manrope',sans-serif]">
+              <Link href="/blog/does-your-business-really-need-a-website" className="block mb-3 sm:mb-4 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-[2.5rem] lg:text-[20px] xl:text-[24px] min-[1400px]:text-[2.5rem] leading-[1.15] lg:leading-[1.15] xl:leading-[1.15] font-extrabold text-white hover:text-[#f37636] transition-colors font-['Manrope',sans-serif]">
                   Does Your Business Really Need a Website?
                 </h2>
               </Link>
 
-              <div className="flex items-center gap-2 text-white/90 text-sm mb-3 sm:mb-4">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center gap-2 lg:gap-1.5 xl:gap-2 min-[1400px]:gap-2 text-white/90 text-sm lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-sm mb-3 sm:mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4">
+                <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                 </svg>
                 <span>October 10, 2026</span>
               </div>
 
-              <p className="text-white/80 text-sm md:text-base leading-relaxed mb-5 sm:mb-6 max-w-[90%]">
+              <p className="text-white/80 text-sm md:text-base lg:text-[13px] xl:text-[13px] min-[1400px]:text-base leading-relaxed lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed mb-5 sm:mb-6 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-6 max-w-[90%]">
                 A website helps people learn about your business, services, and contact details in one place. Learn how a professional website can build trust and help customers connect with your business.
               </p>
 
-              <Link href="/blog/does-your-business-really-need-a-website" className="inline-flex items-center gap-2 text-[#f37636] font-bold hover:gap-3 transition-all">
+              <Link href="/blog/does-your-business-really-need-a-website" className="inline-flex items-center gap-2 lg:gap-1.5 xl:gap-1.5 min-[1400px]:gap-2 text-[#f37636] text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold hover:gap-3 transition-all">
                 Read More
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-5 min-[1400px]:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
               </Link>
@@ -334,16 +334,16 @@ export default function BlogPage() {
             </div>
 
             {/* ── Desktop View: Vertical 3-Card Stack ── */}
-            <div className="hidden lg:flex flex-col gap-6">
+            <div className="hidden lg:flex flex-col gap-6 lg:gap-2.5 xl:gap-3.5 min-[1400px]:gap-6">
               {SIDE_POSTS.map((post, index) => (
                 <motion.div
                   key={post.slug}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="flex flex-col sm:flex-row bg-[#fffdfa] rounded-2xl p-4 gap-5 border border-[#f5ece0] shadow-sm hover:shadow-md transition-shadow group"
+                  className="flex flex-col sm:flex-row bg-[#fffdfa] rounded-2xl lg:rounded-xl xl:rounded-2xl min-[1400px]:rounded-2xl p-4 lg:p-2 xl:p-2.5 min-[1400px]:p-4 gap-5 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-5 border border-[#f5ece0] shadow-sm hover:shadow-md transition-shadow group"
                 >
-                  <div className="w-full sm:w-[40%] aspect-[4/3] relative rounded-xl overflow-hidden shrink-0">
+                  <div className="w-full sm:w-[40%] lg:w-[34%] xl:w-[36%] min-[1400px]:w-[40%] aspect-[4/3] relative rounded-xl lg:rounded-lg xl:rounded-xl min-[1400px]:rounded-xl overflow-hidden shrink-0">
                     <Image
                       src={post.imageSrc}
                       alt={post.title}
@@ -351,27 +351,27 @@ export default function BlogPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  <div className="flex flex-col justify-center py-1 w-full">
-                    <span className={`inline-block ${post.categoryBg} ${post.categoryText} text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full w-max mb-3`}>
+                  <div className="flex flex-col justify-center py-1 lg:py-0 w-full min-w-0">
+                    <span className={`inline-block ${post.categoryBg} ${post.categoryText} text-[10px] lg:text-[9.5px] xl:text-[10px] min-[1400px]:text-[10px] font-bold uppercase tracking-wider py-1 px-3 lg:py-0.5 lg:px-2 xl:py-0.5 xl:px-2.5 min-[1400px]:py-1 min-[1400px]:px-3 rounded-full w-max mb-3 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-3`}>
                       {post.category}
                     </span>
                     <Link href={`/blog/${post.slug}`}>
-                      <h3 className={`text-lg lg:text-xl font-extrabold text-[#43261a] leading-tight mb-3 ${post.hoverColor} transition-colors font-['Manrope',sans-serif]`}>
+                      <h3 className={`text-lg lg:text-[13.5px] xl:text-[15px] min-[1400px]:text-xl font-extrabold text-[#43261a] leading-tight lg:leading-[1.25] xl:leading-[1.25] mb-3 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-3 ${post.hoverColor} transition-colors font-['Manrope',sans-serif]`}>
                         {post.title}
                       </h3>
                     </Link>
-                    <div className="flex items-center gap-2 text-[#8c8275] text-xs font-medium mb-3">
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex items-center gap-2 lg:gap-1.5 xl:gap-1.5 min-[1400px]:gap-2 text-[#8c8275] text-xs lg:text-[10.5px] xl:text-[11px] min-[1400px]:text-xs font-medium mb-3 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-3">
+                      <svg className="w-3.5 h-3.5 lg:w-3 lg:h-3 xl:w-3 xl:h-3 min-[1400px]:w-3.5 min-[1400px]:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                       </svg>
                       <span>{post.date}</span>
                     </div>
-                    <p className="text-[#8c8275] text-sm line-clamp-2 mb-3">
+                    <p className="text-[#8c8275] text-sm lg:text-[13px] xl:text-[13px] min-[1400px]:text-sm line-clamp-2 leading-normal lg:leading-[1.4] xl:leading-[1.45] mb-3 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-3">
                       {post.desc}
                     </p>
-                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-1.5 text-[#f37636] text-sm font-bold hover:gap-2 transition-all mt-auto">
+                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-1.5 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-1.5 text-[#f37636] text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold hover:gap-2 transition-all mt-auto">
                       Read More
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                       </svg>
                     </Link>
@@ -383,10 +383,10 @@ export default function BlogPage() {
         </div>
 
         {/* Latest Articles Section */}
-        <div className="mt-32 pb-16 sm:pb-24">
+        <div className="mt-32 lg:mt-16 xl:mt-20 min-[1400px]:mt-32 pb-16 sm:pb-24">
           {/* Header Row */}
-          <div className="flex flex-col md:flex-row items-center md:items-center mb-16 gap-6 md:gap-12 lg:gap-16 text-center md:text-left">
-            <h2 className="text-center md:text-left text-[2.2rem] sm:text-[3rem] md:text-[3.5rem] font-extrabold text-[#43261a] tracking-tight font-['Manrope',sans-serif] leading-[1.1] shrink-0 w-full md:w-auto">
+          <div className="flex flex-col md:flex-row items-center md:items-center mb-16 lg:mb-8 xl:mb-10 min-[1400px]:mb-16 gap-6 md:gap-12 lg:gap-8 xl:gap-10 min-[1400px]:gap-16 text-center md:text-left">
+            <h2 className="text-center md:text-left text-[2.2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[28px] xl:text-[32px] min-[1400px]:text-[3.5rem] font-extrabold text-[#43261a] tracking-tight font-['Manrope',sans-serif] leading-[1.1] shrink-0 w-full md:w-auto">
               Explore Our Latest{" "}
               <span className="text-[#0e747c] relative inline-block font-[family-name:var(--font-caveat)] font-bold text-[1.2em] -rotate-2 pb-2">
                 Articles
@@ -408,48 +408,48 @@ export default function BlogPage() {
             </h2>
 
             <div className="flex flex-col md:flex-row items-center md:items-center gap-4 text-center md:text-left w-full md:w-auto">
-              <div className="hidden md:block w-[2px] h-20 bg-[#f37636]/30 shrink-0"></div>
+              <div className="hidden md:block w-[2px] h-20 lg:h-12 xl:h-14 min-[1400px]:h-20 bg-[#f37636]/30 shrink-0"></div>
               <div className="w-16 h-[2px] bg-[#f37636]/30 md:hidden mb-2 mx-auto"></div>
-              <p className="text-[#8c8275] text-[1.05rem] md:text-[1.1rem] leading-relaxed max-w-lg md:max-w-none mx-auto w-full">
+              <p className="text-[#8c8275] text-[1.05rem] md:text-[1.1rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.1rem] leading-relaxed lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed max-w-lg md:max-w-none mx-auto w-full">
                 Discover practical tips, strategies, and insights to help your business grow online and build a stronger digital presence.
               </p>
             </div>
           </div>
 
           {/* Articles Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4 xl:gap-5 min-[1400px]:gap-8">
             {/* Article 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] p-4 sm:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
+              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] lg:rounded-[20px] xl:rounded-[24px] min-[1400px]:rounded-[24px] p-4 sm:p-5 lg:p-3 xl:p-3.5 min-[1400px]:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
             >
-              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] overflow-hidden mb-5">
+              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] lg:rounded-[12px] xl:rounded-[14px] min-[1400px]:rounded-[16px] overflow-hidden mb-5 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-5">
                 <Image src="/blog-details/article-1.jpg" alt="Why Isn't Your Business Showing on Google?" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="flex flex-col flex-grow px-2 pb-2">
-                <span className="inline-block bg-[#fadbb6] text-[#43261a] text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 rounded-full w-max mb-4">
+              <div className="flex flex-col flex-grow px-2 pb-2 lg:px-1 lg:pb-1">
+                <span className="inline-block bg-[#fadbb6] text-[#43261a] text-[10px] lg:text-[8.5px] xl:text-[9px] min-[1400px]:text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 lg:py-0.5 lg:px-2.5 xl:py-1 xl:px-3 min-[1400px]:py-1.5 min-[1400px]:px-4 rounded-full w-max mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
                   SEO
                 </span>
                 <Link href="/blog/why-isnt-your-business-showing-on-google" className="block w-full">
-                  <h3 className="text-xl lg:text-[22px] font-extrabold text-[#492c28] leading-snug mb-4 hover:text-[#f37636] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
+                  <h3 className="text-xl lg:text-[15.5px] xl:text-[17px] min-[1400px]:text-[22px] font-extrabold text-[#492c28] leading-snug lg:leading-snug mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 hover:text-[#f37636] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
                     Why Isn't Your Business Showing on Google?
                   </h3>
                 </Link>
-                <div className="flex items-center gap-2.5 text-sm font-medium mb-4">
-                  <svg className="w-[18px] h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2.5 lg:gap-2 text-sm lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-sm font-medium mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
+                  <svg className="w-[18px] h-[18px] lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-[18px] min-[1400px]:h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z M5 10h14v10H5V10z M7 12h2v2H7v-2z M11 12h2v2h-2v-2z M15 12h2v2h-2v-2z M7 16h2v2H7v-2z M11 16h2v2h-2v-2z M15 16h2v2h-2v-2z"></path>
                   </svg>
                   <span className="text-[#a09489]">October 2, 2026</span>
                 </div>
-                <p className="text-[#8c8275] text-sm line-clamp-3 mb-6">
+                <p className="text-[#8c8275] text-sm lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-sm line-clamp-3 leading-normal lg:leading-[1.4] xl:leading-[1.45] mb-6 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-6">
                   There can be several reasons your business isn't appearing in search results. Here are some important things to check and improve.
                 </p>
-                <Link href="/blog/why-isnt-your-business-showing-on-google" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
+                <Link href="/blog/why-isnt-your-business-showing-on-google" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
                   Read More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </Link>
               </div>
             </motion.div>
@@ -460,32 +460,32 @@ export default function BlogPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] p-4 sm:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
+              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] lg:rounded-[20px] xl:rounded-[24px] min-[1400px]:rounded-[24px] p-4 sm:p-5 lg:p-3 xl:p-3.5 min-[1400px]:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
             >
-              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] overflow-hidden mb-5">
+              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] lg:rounded-[12px] xl:rounded-[14px] min-[1400px]:rounded-[16px] overflow-hidden mb-5 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-5">
                 <Image src="/blog-details/article-2.jpg" alt="Google Ads vs Instagram Ads: Which Is Better?" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="flex flex-col flex-grow px-2 pb-2">
-                <span className="inline-block bg-[#dccad6] text-[#43261a] text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 rounded-full w-max mb-4">
+              <div className="flex flex-col flex-grow px-2 pb-2 lg:px-1 lg:pb-1">
+                <span className="inline-block bg-[#dccad6] text-[#43261a] text-[10px] lg:text-[8.5px] xl:text-[9px] min-[1400px]:text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 lg:py-0.5 lg:px-2.5 xl:py-1 xl:px-3 min-[1400px]:py-1.5 min-[1400px]:px-4 rounded-full w-max mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
                   ONLINE ADVERTISING
                 </span>
                 <Link href="/blog/google-ads-vs-instagram-ads" className="block w-full">
-                  <h3 className="text-xl lg:text-[22px] font-extrabold text-[#492c28] leading-snug mb-4 hover:text-[#0e747c] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
+                  <h3 className="text-xl lg:text-[15.5px] xl:text-[17px] min-[1400px]:text-[22px] font-extrabold text-[#492c28] leading-snug lg:leading-snug mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 hover:text-[#0e747c] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
                     Google Ads vs Instagram Ads: Which Is Better?
                   </h3>
                 </Link>
-                <div className="flex items-center gap-2.5 text-sm font-medium mb-4">
-                  <svg className="w-[18px] h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2.5 lg:gap-2 text-sm lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-sm font-medium mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
+                  <svg className="w-[18px] h-[18px] lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-[18px] min-[1400px]:h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z M5 10h14v10H5V10z M7 12h2v2H7v-2z M11 12h2v2h-2v-2z M15 12h2v2h-2v-2z M7 16h2v2H7v-2z M11 16h2v2h-2v-2z M15 16h2v2h-2v-2z"></path>
                   </svg>
                   <span className="text-[#a09489]">September 30, 2026</span>
                 </div>
-                <p className="text-[#8c8275] text-sm line-clamp-3 mb-6">
+                <p className="text-[#8c8275] text-sm lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-sm line-clamp-3 leading-normal lg:leading-[1.4] xl:leading-[1.45] mb-6 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-6">
                   Both platforms can help you reach customers, but they work differently. Learn which option may be a better fit for your business.
                 </p>
-                <Link href="/blog/google-ads-vs-instagram-ads" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
+                <Link href="/blog/google-ads-vs-instagram-ads" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
                   Read More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </Link>
               </div>
             </motion.div>
@@ -496,32 +496,32 @@ export default function BlogPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] p-4 sm:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
+              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] lg:rounded-[20px] xl:rounded-[24px] min-[1400px]:rounded-[24px] p-4 sm:p-5 lg:p-3 xl:p-3.5 min-[1400px]:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
             >
-              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] overflow-hidden mb-5">
+              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] lg:rounded-[12px] xl:rounded-[14px] min-[1400px]:rounded-[16px] overflow-hidden mb-5 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-5">
                 <Image src="/blog-details/article-3.jpg" alt="Why Good Content Matters for Your Business" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="flex flex-col flex-grow px-2 pb-2">
-                <span className="inline-block bg-[#096a73] text-white text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 rounded-full w-max mb-4">
+              <div className="flex flex-col flex-grow px-2 pb-2 lg:px-1 lg:pb-1">
+                <span className="inline-block bg-[#096a73] text-white text-[10px] lg:text-[8.5px] xl:text-[9px] min-[1400px]:text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 lg:py-0.5 lg:px-2.5 xl:py-1 xl:px-3 min-[1400px]:py-1.5 min-[1400px]:px-4 rounded-full w-max mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
                   CONTENT MARKETING
                 </span>
                 <Link href="/blog/why-good-content-matters-for-your-business" className="block w-full">
-                  <h3 className="text-xl lg:text-[22px] font-extrabold text-[#492c28] leading-snug mb-4 hover:text-[#0e747c] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
+                  <h3 className="text-xl lg:text-[15.5px] xl:text-[17px] min-[1400px]:text-[22px] font-extrabold text-[#492c28] leading-snug lg:leading-snug mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 hover:text-[#0e747c] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
                     Why Good Content Matters for Your Business
                   </h3>
                 </Link>
-                <div className="flex items-center gap-2.5 text-sm font-medium mb-4">
-                  <svg className="w-[18px] h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2.5 lg:gap-2 text-sm lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-sm font-medium mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
+                  <svg className="w-[18px] h-[18px] lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-[18px] min-[1400px]:h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z M5 10h14v10H5V10z M7 12h2v2H7v-2z M11 12h2v2h-2v-2z M15 12h2v2h-2v-2z M7 16h2v2H7v-2z M11 16h2v2h-2v-2z M15 16h2v2h-2v-2z"></path>
                   </svg>
                   <span className="text-[#a09489]">September 28, 2026</span>
                 </div>
-                <p className="text-[#8c8275] text-sm line-clamp-3 mb-6">
+                <p className="text-[#8c8275] text-sm lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-sm line-clamp-3 leading-normal lg:leading-[1.4] xl:leading-[1.45] mb-6 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-6">
                   Good content helps customers understand your business, connect with your brand, and know why they should choose your products or services.
                 </p>
-                <Link href="/blog/why-good-content-matters-for-your-business" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
+                <Link href="/blog/why-good-content-matters-for-your-business" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
                   Read More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </Link>
               </div>
             </motion.div>
@@ -532,32 +532,32 @@ export default function BlogPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] p-4 sm:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
+              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] lg:rounded-[20px] xl:rounded-[24px] min-[1400px]:rounded-[24px] p-4 sm:p-5 lg:p-3 xl:p-3.5 min-[1400px]:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
             >
-              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] overflow-hidden mb-5">
+              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] lg:rounded-[12px] xl:rounded-[14px] min-[1400px]:rounded-[16px] overflow-hidden mb-5 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-5">
                 <Image src="/blog-details/article-4.jpg" alt="How to Make Your Business Website More Professional" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="flex flex-col flex-grow px-2 pb-2">
-                <span className="inline-block bg-[#fadbb6] text-[#43261a] text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 rounded-full w-max mb-4">
+              <div className="flex flex-col flex-grow px-2 pb-2 lg:px-1 lg:pb-1">
+                <span className="inline-block bg-[#fadbb6] text-[#43261a] text-[10px] lg:text-[8.5px] xl:text-[9px] min-[1400px]:text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 lg:py-0.5 lg:px-2.5 xl:py-1 xl:px-3 min-[1400px]:py-1.5 min-[1400px]:px-4 rounded-full w-max mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
                   WEBSITE
                 </span>
                 <Link href="/blog/how-to-make-your-business-website-more-professional" className="block w-full">
-                  <h3 className="text-xl lg:text-[22px] font-extrabold text-[#492c28] leading-snug mb-4 hover:text-[#f37636] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
+                  <h3 className="text-xl lg:text-[15.5px] xl:text-[17px] min-[1400px]:text-[22px] font-extrabold text-[#492c28] leading-snug lg:leading-snug mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 hover:text-[#f37636] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
                     How to Make Your Business Website More Professional
                   </h3>
                 </Link>
-                <div className="flex items-center gap-2.5 text-sm font-medium mb-4">
-                  <svg className="w-[18px] h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2.5 lg:gap-2 text-sm lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-sm font-medium mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
+                  <svg className="w-[18px] h-[18px] lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-[18px] min-[1400px]:h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z M5 10h14v10H5V10z M7 12h2v2H7v-2z M11 12h2v2h-2v-2z M15 12h2v2h-2v-2z M7 16h2v2H7v-2z M11 16h2v2h-2v-2z M15 16h2v2h-2v-2z"></path>
                   </svg>
                   <span className="text-[#a09489]">September 26, 2026</span>
                 </div>
-                <p className="text-[#8c8275] text-sm line-clamp-3 mb-6">
+                <p className="text-[#8c8275] text-sm lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-sm line-clamp-3 leading-normal lg:leading-[1.4] xl:leading-[1.45] mb-6 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-6">
                   A professional website is more than good visuals. Learn how layout, content, images, navigation, and contact options can improve your website.
                 </p>
-                <Link href="/blog/how-to-make-your-business-website-more-professional" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
+                <Link href="/blog/how-to-make-your-business-website-more-professional" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
                   Read More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </Link>
               </div>
             </motion.div>
@@ -568,32 +568,32 @@ export default function BlogPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] p-4 sm:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
+              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] lg:rounded-[20px] xl:rounded-[24px] min-[1400px]:rounded-[24px] p-4 sm:p-5 lg:p-3 xl:p-3.5 min-[1400px]:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
             >
-              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] overflow-hidden mb-5">
+              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] lg:rounded-[12px] xl:rounded-[14px] min-[1400px]:rounded-[16px] overflow-hidden mb-5 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-5">
                 <Image src="/blog-details/article-5.jpg" alt="How Often Should Your Business Post on Social Media?" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="flex flex-col flex-grow px-2 pb-2">
-                <span className="inline-block bg-[#dccad6] text-[#43261a] text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 rounded-full w-max mb-4">
+              <div className="flex flex-col flex-grow px-2 pb-2 lg:px-1 lg:pb-1">
+                <span className="inline-block bg-[#dccad6] text-[#43261a] text-[10px] lg:text-[8.5px] xl:text-[9px] min-[1400px]:text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 lg:py-0.5 lg:px-2.5 xl:py-1 xl:px-3 min-[1400px]:py-1.5 min-[1400px]:px-4 rounded-full w-max mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
                   SOCIAL MEDIA
                 </span>
                 <Link href="/blog/how-often-should-your-business-post-on-social-media" className="block w-full">
-                  <h3 className="text-xl lg:text-[22px] font-extrabold text-[#492c28] leading-snug mb-4 hover:text-[#43261a]/70 transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
+                  <h3 className="text-xl lg:text-[15.5px] xl:text-[17px] min-[1400px]:text-[22px] font-extrabold text-[#492c28] leading-snug lg:leading-snug mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 hover:text-[#43261a]/70 transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
                     How Often Should Your Business Post on Social Media?
                   </h3>
                 </Link>
-                <div className="flex items-center gap-2.5 text-sm font-medium mb-4">
-                  <svg className="w-[18px] h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2.5 lg:gap-2 text-sm lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-sm font-medium mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
+                  <svg className="w-[18px] h-[18px] lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-[18px] min-[1400px]:h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z M5 10h14v10H5V10z M7 12h2v2H7v-2z M11 12h2v2h-2v-2z M15 12h2v2h-2v-2z M7 16h2v2H7v-2z M11 16h2v2h-2v-2z M15 16h2v2h-2v-2z"></path>
                   </svg>
                   <span className="text-[#a09489]">September 24, 2026</span>
                 </div>
-                <p className="text-[#8c8275] text-sm line-clamp-3 mb-6">
+                <p className="text-[#8c8275] text-sm lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-sm line-clamp-3 leading-normal lg:leading-[1.4] xl:leading-[1.45] mb-6 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-6">
                   Posting consistently can help your business stay visible online. Learn how to create a simple posting routine without running out of ideas.
                 </p>
-                <Link href="/blog/how-often-should-your-business-post-on-social-media" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
+                <Link href="/blog/how-often-should-your-business-post-on-social-media" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
                   Read More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </Link>
               </div>
             </motion.div>
@@ -604,32 +604,32 @@ export default function BlogPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] p-4 sm:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
+              className="flex flex-col bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(73,44,40,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] rounded-[24px] lg:rounded-[20px] xl:rounded-[24px] min-[1400px]:rounded-[24px] p-4 sm:p-5 lg:p-3 xl:p-3.5 min-[1400px]:p-5 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_40px_rgba(73,44,40,0.12),inset_0_2px_4px_rgba(255,255,255,1)] transition-all duration-500"
             >
-              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] overflow-hidden mb-5">
+              <div className="aspect-[16/10] relative w-full shrink-0 rounded-[16px] lg:rounded-[12px] xl:rounded-[14px] min-[1400px]:rounded-[16px] overflow-hidden mb-5 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-5">
                 <Image src="/blog-details/article-6.jpg" alt="7 Simple Ways to Grow Your Business Online" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="flex flex-col flex-grow px-2 pb-2">
-                <span className="inline-block bg-[#fadbb6] text-[#43261a] text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 rounded-full w-max mb-4">
+              <div className="flex flex-col flex-grow px-2 pb-2 lg:px-1 lg:pb-1">
+                <span className="inline-block bg-[#fadbb6] text-[#43261a] text-[10px] lg:text-[8.5px] xl:text-[9px] min-[1400px]:text-[10px] font-bold uppercase tracking-wider py-1.5 px-4 lg:py-0.5 lg:px-2.5 xl:py-1 xl:px-3 min-[1400px]:py-1.5 min-[1400px]:px-4 rounded-full w-max mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
                   DIGITAL MARKETING
                 </span>
                 <Link href="/blog/7-simple-ways-to-grow-your-business-online" className="block w-full">
-                  <h3 className="text-xl lg:text-[22px] font-extrabold text-[#492c28] leading-snug mb-4 hover:text-[#f37636] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
+                  <h3 className="text-xl lg:text-[15.5px] xl:text-[17px] min-[1400px]:text-[22px] font-extrabold text-[#492c28] leading-snug lg:leading-snug mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 hover:text-[#f37636] transition-colors font-['Manrope',sans-serif] [text-wrap:wrap]">
                     7 Simple Ways to Grow Your Business Online
                   </h3>
                 </Link>
-                <div className="flex items-center gap-2.5 text-sm font-medium mb-4">
-                  <svg className="w-[18px] h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2.5 lg:gap-2 text-sm lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-sm font-medium mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4">
+                  <svg className="w-[18px] h-[18px] lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-[18px] min-[1400px]:h-[18px] text-[#43261a]" fill="currentColor" viewBox="0 0 24 24">
                     <path fillRule="evenodd" clipRule="evenodd" d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z M5 10h14v10H5V10z M7 12h2v2H7v-2z M11 12h2v2h-2v-2z M15 12h2v2h-2v-2z M7 16h2v2H7v-2z M11 16h2v2h-2v-2z M15 16h2v2h-2v-2z"></path>
                   </svg>
                   <span className="text-[#a09489]">September 22, 2026</span>
                 </div>
-                <p className="text-[#8c8275] text-sm line-clamp-3 mb-6">
+                <p className="text-[#8c8275] text-sm lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-sm line-clamp-3 leading-normal lg:leading-[1.4] xl:leading-[1.45] mb-6 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-6">
                   From having a good website to using social media, SEO, and online advertising, discover simple ways to improve your business presence online.
                 </p>
-                <Link href="/blog/7-simple-ways-to-grow-your-business-online" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
+                <Link href="/blog/7-simple-ways-to-grow-your-business-online" className="inline-flex items-center gap-1.5 text-[#f37636] text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold hover:gap-2 transition-all mt-auto pt-2 border-t border-[#f5ece0]/50">
                   Read More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </Link>
               </div>
             </motion.div>

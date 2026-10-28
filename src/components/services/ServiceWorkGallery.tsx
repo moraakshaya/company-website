@@ -329,59 +329,59 @@ export default function ServiceWorkGallery({ images, service }: ServiceWorkGalle
       </div>
 
       {/* ── Clean 5-Column Grid (Desktop View, Dynamically Loaded from galleryImages) ── */}
-      <div className="w-full max-w-[1400px] mx-auto px-6 hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 items-center">
+      <div className="w-full max-w-[1400px] lg:max-w-[960px] xl:max-w-[1120px] min-[1400px]:max-w-[1400px] mx-auto px-6 lg:px-8 xl:px-10 min-[1400px]:px-6 hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-3.5 xl:gap-4.5 min-[1400px]:gap-6 items-center">
         {/* Col 1 */}
-        <div className="flex flex-col gap-4 md:gap-6 hidden lg:flex">
+        <div className="flex flex-col gap-4 md:gap-6 lg:gap-3.5 xl:gap-4.5 min-[1400px]:gap-6 hidden lg:flex">
           <img
             src={getImage(0).src}
             alt={getImage(0).alt}
-            className="w-full aspect-[3/4] object-cover rounded-[2rem] shadow-lg"
+            className="w-full aspect-[3/4] object-cover rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] shadow-lg"
           />
         </div>
 
         {/* Col 2 */}
-        <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex flex-col gap-4 md:gap-6 lg:gap-3.5 xl:gap-4.5 min-[1400px]:gap-6">
           <img
             src={getImage(1).src}
             alt={getImage(1).alt}
-            className="w-full aspect-[4/3] object-cover rounded-[2rem] shadow-lg"
+            className="w-full aspect-[4/3] object-cover rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] shadow-lg"
           />
           <img
             src={getImage(2).src}
             alt={getImage(2).alt}
-            className="w-full aspect-[4/3] object-cover rounded-[2rem] shadow-lg"
+            className="w-full aspect-[4/3] object-cover rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] shadow-lg"
           />
         </div>
 
         {/* Col 3 (Center focus) */}
-        <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex flex-col gap-4 md:gap-6 lg:gap-3.5 xl:gap-4.5 min-[1400px]:gap-6">
           <img
             src={getImage(3).src}
             alt={getImage(3).alt}
-            className="w-full aspect-[2/3.2] object-cover rounded-[2rem] shadow-xl"
+            className="w-full aspect-[2/3.2] object-cover rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] shadow-xl"
           />
         </div>
 
         {/* Col 4 */}
-        <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex flex-col gap-4 md:gap-6 lg:gap-3.5 xl:gap-4.5 min-[1400px]:gap-6">
           <img
             src={getImage(4).src}
             alt={getImage(4).alt}
-            className="w-full aspect-[4/3] object-cover rounded-[2rem] shadow-lg"
+            className="w-full aspect-[4/3] object-cover rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] shadow-lg"
           />
           <img
             src={getImage(5).src}
             alt={getImage(5).alt}
-            className="w-full aspect-[4/3] object-cover rounded-[2rem] shadow-lg"
+            className="w-full aspect-[4/3] object-cover rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] shadow-lg"
           />
         </div>
 
         {/* Col 5 */}
-        <div className="flex flex-col gap-4 md:gap-6 hidden md:flex">
+        <div className="flex flex-col gap-4 md:gap-6 lg:gap-3.5 xl:gap-4.5 min-[1400px]:gap-6 hidden md:flex">
           <img
             src={getImage(6).src}
             alt={getImage(6).alt}
-            className="w-full aspect-[3/4] object-cover rounded-[2rem] shadow-lg"
+            className="w-full aspect-[3/4] object-cover rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] shadow-lg"
           />
         </div>
       </div>

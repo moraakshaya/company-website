@@ -13,11 +13,11 @@ export default function ServiceFeatures({ features }: ServiceFeaturesProps) {
   return (
     <>
       {/* ── Desktop View (Clean 2-Column Grid, Untouched) ── */}
-      <div className="hidden md:grid md:grid-cols-2 gap-y-3.5 gap-x-6 mb-12 w-full">
+      <div className="hidden md:grid md:grid-cols-2 gap-y-3.5 lg:gap-y-2 xl:gap-y-2.5 min-[1400px]:gap-y-3.5 gap-x-6 lg:gap-x-4 xl:gap-x-5 min-[1400px]:gap-x-6 mb-12 lg:mb-5 xl:mb-6 min-[1400px]:mb-12 w-full">
         {features.map((item, idx) => (
-          <div key={idx} className="flex items-center gap-3">
-            <div className="w-[20px] h-[20px] rounded-full bg-[#f37636] flex items-center justify-center shrink-0">
-              <svg className="w-3 h-3 text-white" viewBox="0 0 20 20" fill="currentColor">
+          <div key={idx} className="flex items-center gap-3 lg:gap-2 xl:gap-2.5 min-[1400px]:gap-3">
+            <div className="w-[20px] h-[20px] lg:w-[17px] lg:h-[17px] xl:w-[18px] xl:h-[18px] min-[1400px]:w-[20px] min-[1400px]:h-[20px] rounded-full bg-[#f37636] flex items-center justify-center shrink-0">
+              <svg className="w-3 h-3 lg:w-2.5 lg:h-2.5 xl:w-2.5 xl:h-2.5 min-[1400px]:w-3 min-[1400px]:h-3 text-white" viewBox="0 0 20 20" fill="currentColor">
                 <path
                   fillRule="evenodd"
                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -25,7 +25,7 @@ export default function ServiceFeatures({ features }: ServiceFeaturesProps) {
                 />
               </svg>
             </div>
-            <span className="text-[#645c55] text-[0.95rem] font-medium">{item}</span>
+            <span className="text-[#645c55] text-[0.95rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[0.95rem] font-medium leading-snug">{item}</span>
           </div>
         ))}
       </div>

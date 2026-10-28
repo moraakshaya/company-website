@@ -242,7 +242,7 @@ h6 {
 
   letter-spacing: -0.025em;
 
-  text-wrap: balance;
+  text-wrap: wrap;
 }
 
 
@@ -1520,6 +1520,7 @@ textarea {
   .ow-arrow--left {
     left: 2px;
   }
+
   .ow-arrow--right {
     right: 2px;
   }
@@ -1951,21 +1952,223 @@ textarea {
     -webkit-overflow-scrolling: touch;
     padding-bottom: 10px;
   }
+
   .gallery-filter-scroll::-webkit-scrollbar {
     height: 5px;
     display: block;
   }
+
   .gallery-filter-scroll::-webkit-scrollbar-track {
     background: rgba(4, 120, 128, 0.08);
     border-radius: 9999px;
   }
+
   .gallery-filter-scroll::-webkit-scrollbar-thumb {
     background: #047880;
     border-radius: 9999px;
   }
 }
+
 @media (min-width: 640px) {
   .gallery-filter-scroll {
     overflow-x: visible;
+  }
+}
+
+/* ─── Blog Article Content: Natural text wrap on any screen (fills 1st row before wrapping) ─── */
+.blog-article-content article h1,
+.blog-article-content article h2,
+.blog-article-content article h3,
+.blog-article-content article h4,
+.blog-article-content article h5,
+.blog-article-content article h6 {
+  text-wrap: wrap !important;
+}
+
+/* ─── Blog Article Content Scaling for 1024px - 1400px (matches Our Story typography) ─── */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .blog-article-content article {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+
+  .blog-article-content article p {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .blog-article-content article p.text-xl,
+  .blog-article-content article p.sm\:text-2xl,
+  .blog-article-content article p.font-medium {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .blog-article-content article h2 {
+    font-size: 17.5px !important;
+    line-height: 1.3 !important;
+    margin-top: 1.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .blog-article-content article h3:not(.text-white) {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .blog-article-content article ul,
+  .blog-article-content article ol {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .blog-article-content article li {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .blog-article-content article .mb-12 {
+    margin-bottom: 1.75rem !important;
+  }
+
+  .blog-article-content article .mb-8 {
+    margin-bottom: 1.25rem !important;
+  }
+
+  .blog-article-content article .mb-6 {
+    margin-bottom: 1rem !important;
+  }
+
+  .blog-article-content article .mb-4 {
+    margin-bottom: 0.65rem !important;
+  }
+
+  .blog-article-content .my-14 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .blog-article-content .sm\:grid.gap-6 {
+    gap: 1rem !important;
+  }
+
+  /* Bottom CTA Heading & Sparkles Scaling (1024px - 1400px) */
+  .blog-article-content article h3.text-white,
+  .blog-article-content .my-14 h3 {
+    font-size: 26px !important;
+    line-height: 1.25 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Decreased gap below heading to the paragraph below */
+  .blog-article-content article .flex.items-center.justify-center,
+  .blog-article-content .my-14 .flex.items-center.justify-center {
+    margin-bottom: 0.35rem !important;
+  }
+
+  .blog-article-content article p.text-white\/90,
+  .blog-article-content article p[class*="text-white"],
+  .blog-article-content .my-14 p {
+    margin-top: 0 !important;
+  }
+
+  .blog-article-content article .flex.items-center.justify-center>div:first-child,
+  .blog-article-content .my-14 .flex.items-center.justify-center>div:first-child {
+    width: 3.75rem !important;
+    height: 3.75rem !important;
+    margin-right: 0.5rem !important;
+    margin-left: 0 !important;
+  }
+
+  .blog-article-content article .flex.items-center.justify-center>div:last-child,
+  .blog-article-content .my-14 .flex.items-center.justify-center>div:last-child {
+    width: 3.75rem !important;
+    height: 3.75rem !important;
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+  }
+
+  /* Bottom CTA Talk to Us Button Scaling (1024px - 1400px) */
+  .blog-article-content a[href="/contact"].w-max {
+    min-height: 40px !important;
+    height: 40px !important;
+    padding-left: 1.25rem !important;
+    box-shadow: 0 3px 0 #d45f1a !important;
+  }
+
+  .blog-article-content a[href="/contact"].w-max span {
+    font-size: 13px !important;
+    padding-right: 0.875rem !important;
+  }
+
+  .blog-article-content a[href="/contact"].w-max div {
+    width: 30px !important;
+    height: 30px !important;
+    margin-right: 0.25rem !important;
+  }
+
+  .blog-article-content a[href="/contact"].w-max svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+/* ─── Blog Article Content for Screen Sizes Above 1400px (fills each line completely before wrapping) ─── */
+@media (min-width: 1400px) {
+
+  /* Prevent artificial line breaks in headings: disable hard <br> breaks so lines fill completely */
+  .blog-article-content article h1 br,
+  .blog-article-content article h2 br,
+  .blog-article-content article h3 br,
+  .blog-article-content article h4 br,
+  .blog-article-content article h5 br,
+  .blog-article-content article h6 br {
+    display: none !important;
+  }
+
+  /* Natural greedy text wrap across all headings and paragraphs (no early breaks or orphan adjustments) */
+  .blog-article-content article h1,
+  .blog-article-content article h2,
+  .blog-article-content article h3,
+  .blog-article-content article h4,
+  .blog-article-content article h5,
+  .blog-article-content article h6,
+  .blog-article-content article p {
+    text-wrap: wrap !important;
+  }
+
+  /* Bottom CTA Box Heading on >= 1400px: optimal size & width so line 1 fills without premature overflow */
+  .blog-article-content article h3.text-white,
+  .blog-article-content .my-14 h3 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    max-width: 100% !important;
+    text-wrap: wrap !important;
+  }
+
+  /* Decorative sparkles in CTA: proportionate width so they don't squeeze the heading */
+  .blog-article-content article .flex.items-center.justify-center>div:first-child,
+  .blog-article-content article .flex.items-center.justify-center>div:last-child,
+  .blog-article-content .my-14 .flex.items-center.justify-center>div:first-child,
+  .blog-article-content .my-14 .flex.items-center.justify-center>div:last-child {
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+  }
+
+  /* Bottom CTA Paragraph: allow full natural line width without restricted container */
+  .blog-article-content article p.text-white\/90,
+  .blog-article-content article p[class*="text-white"],
+  .blog-article-content .my-14 p {
+    max-width: 100% !important;
+    text-wrap: wrap !important;
   }
 }
