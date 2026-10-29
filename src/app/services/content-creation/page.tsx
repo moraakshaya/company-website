@@ -26,7 +26,7 @@ const servicesData = [
       "Business announcements"
     ],
     ctaText: "Have something to promote?",
-    imageSrc: "/home-page/hero-section/slide-2/campaign-ads.png"
+    imageSrc: "/services/content-creation/promotional.png"
   },
   {
     num: "02",
@@ -43,7 +43,7 @@ const servicesData = [
       "Creative variations"
     ],
     ctaText: "Need creatives for your next ad campaign?",
-    imageSrc: "/home-page/hero-section/slide-2/businesscard.png"
+    imageSrc: "/services/content-creation/ads.png"
   },
   {
     num: "03",
@@ -60,7 +60,7 @@ const servicesData = [
       "SEO-friendly content"
     ],
     ctaText: "Have a topic you want to write about?",
-    imageSrc: "/home-page/hero-section/slide-2/posters-design.png"
+    imageSrc: "/services/content-creation/blogs.png"
   },
   {
     num: "04",
@@ -77,7 +77,7 @@ const servicesData = [
       "FAQ & CTA content"
     ],
     ctaText: "Need content for your website?",
-    imageSrc: "/home-page/hero-section/slide-2/menucard.png"
+    imageSrc: "/services/content-creation/website.png"
   },
   {
     num: "05",
@@ -94,7 +94,7 @@ const servicesData = [
       "Festival & business updates"
     ],
     ctaText: "Need regular content for your social pages?",
-    imageSrc: "/home-page/hero-section/slide-2/campaign-ads.png"
+    imageSrc: "/services/content-creation/social-media.png"
   },
   {
     num: "06",
@@ -111,7 +111,7 @@ const servicesData = [
       "Social media video content"
     ],
     ctaText: "Have an idea for a video?",
-    imageSrc: "/home-page/hero-section/slide-2/businesscard.png"
+    imageSrc: "/services/content-creation/video.png"
   },
   {
     num: "07",
@@ -129,7 +129,7 @@ const servicesData = [
       "Website content ideas"
     ],
     ctaText: "Not sure what content your business needs?",
-    imageSrc: "/home-page/hero-section/slide-2/menucard.png"
+    imageSrc: "/services/content-creation/content.png"
   }
 ];
 
@@ -492,7 +492,7 @@ export default function ContentCreationPage() {
             </span>
             <span className="flex items-center justify-center w-11 h-11 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-11 min-[1400px]:h-11 rounded-full bg-white shrink-0 overflow-hidden shadow-inner">
               <img
-                src="/images/3d-icon-view-work.jpg"
+                src="/services/social-media/3d-icon-view-work.jpg"
                 alt="Arrow Icon"
                 className="w-full h-full object-cover scale-[1.15] group-hover:scale-[1.25] transition-transform duration-300"
               />

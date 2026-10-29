@@ -27,7 +27,7 @@ const servicesData = [
       "Campaign monitoring"
     ],
     ctaText: "Want your business to appear on Google?",
-    imageSrc: "/images/card3-ads.jpg"
+    imageSrc: "/services/online-advertising/google.png"
   },
   {
     num: "02",
@@ -45,7 +45,7 @@ const servicesData = [
       "Campaign monitoring"
     ],
     ctaText: "Want more people to discover your business?",
-    imageSrc: "/images/reels-videos.jpg"
+    imageSrc: "/services/online-advertising/insta.png"
   },
   {
     num: "03",
@@ -63,7 +63,7 @@ const servicesData = [
       "Performance monitoring"
     ],
     ctaText: "Have a product or service to promote?",
-    imageSrc: "/images/facebook-management.jpg"
+    imageSrc: "/services/online-advertising/facebook.png"
   },
   {
     num: "04",
@@ -80,7 +80,7 @@ const servicesData = [
       "Call-to-action messaging"
     ],
     ctaText: "Have an offer you want to promote?",
-    imageSrc: "/images/promotional-content.jpg"
+    imageSrc: "/services/online-advertising/ads.png"
   },
   {
     num: "05",
@@ -98,7 +98,7 @@ const servicesData = [
       "Campaign adjustments"
     ],
     ctaText: "Already running ads?",
-    imageSrc: "/images/card4-targeting.jpg"
+    imageSrc: "/services/online-advertising/camp-setup.png"
   }
 ];
 export default function OnlineAdvertisingPage() {
@@ -416,7 +416,7 @@ export default function OnlineAdvertisingPage() {
             </span>
             <span className="flex items-center justify-center w-11 h-11 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-11 min-[1400px]:h-11 rounded-full bg-white shrink-0 overflow-hidden shadow-inner">
               <img
-                src="/images/3d-icon-view-work.jpg"
+                src="/services/online-advertising/3d-icon-view-work.jpg"
                 alt="Arrow Icon"
                 className="w-full h-full object-cover scale-[1.15] group-hover:scale-[1.25] transition-transform duration-300"
               />

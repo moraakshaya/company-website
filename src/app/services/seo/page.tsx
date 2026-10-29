@@ -100,42 +100,6 @@ const servicesData = [
     ctaText: "Not sure what your customers search for?",
     imageSrc: "/home-page/hero-section/slide-2/campaign-ads.png"
   },
-  {
-    num: "06",
-    title: "Content Strategy",
-    subtitle: "Create Content With a Clear Purpose",
-    desc: "We plan useful content around your business, keywords, services, and customer searches to support your SEO and online visibility.",
-    featuresTitle: "What We Plan",
-    features: [
-      "Website content",
-      "Blog topics",
-      "Service page content",
-      "Location-based content",
-      "Educational topics",
-      "Keyword-focused content",
-      "Monthly content ideas"
-    ],
-    ctaText: "Need ideas for what to publish?",
-    imageSrc: "/home-page/hero-section/slide-2/businesscard.png"
-  },
-  {
-    num: "07",
-    title: "Technical SEO",
-    subtitle: "Build a Strong SEO Foundation",
-    desc: "We improve the technical parts of your website that help search engines crawl, understand, and index your pages.",
-    featuresTitle: "What We Work On",
-    features: [
-      "Website structure",
-      "Page speed",
-      "Mobile responsiveness",
-      "Broken links",
-      "Sitemap & robots.txt",
-      "Indexing issues",
-      "Technical checks"
-    ],
-    ctaText: "Think something is affecting your SEO?",
-    imageSrc: "/home-page/hero-section/slide-2/menucard.png"
-  }
 ];
 
 export default function SeoPage() {
