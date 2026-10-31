@@ -72,121 +72,121 @@ export const serviceGalleries: Record<string, GalleryImage[]> = {
   ],
   "social-media": [
     {
-      src: "/home-page/hero-section/slide-3/social-posts.jpg",
+      src: "/services/social-media/image-1.png",
       alt: "Social Media Posts",
     },
     {
-      src: "/home-page/hero-section/slide-3/facebook-management.jpg",
+      src: "/services/social-media/image-2.png",
       alt: "Channel Management",
     },
     {
-      src: "/home-page/hero-section/slide-3/reels-videos.jpg",
+      src: "/services/social-media/image-3.png",
       alt: "Instagram Reels & Videos",
     },
     {
-      src: "/home-page/hero-section/slide-3/promotional-content.jpg",
+      src: "/services/social-media/image-4.png",
       alt: "Promotional Creative",
     },
     {
-      src: "/home-page/hero-section/slide-3/brand-creation.jpg",
+      src: "/services/social-media/image-5.png",
       alt: "Brand Visuals",
     },
     {
-      src: "/home-page/services/shriswara.png",
+      src: "/services/social-media/image-6.png",
       alt: "Social Feed Curation",
     },
     {
-      src: "/images/slides/slide3.jpg",
+      src: "/services/social-media/image-7.png",
       alt: "Brand Campaign Assets",
     },
   ],
   "content-creation": [
     {
-      src: "/home-page/hero-section/slide-3/promotional-content.jpg",
+      src: "/services/content-creation/image-1.png",
       alt: "Promotional Content",
     },
     {
-      src: "/images/blog-creative.jpg",
+      src: "/services/content-creation/image-2.png",
       alt: "Creative Visual Production",
     },
     {
-      src: "/home-page/hero-section/slide-3/reels-videos.jpg",
+      src: "/services/content-creation/image-3.png",
       alt: "Short-form Video & Reels",
     },
     {
-      src: "/images/blog-innovation.jpg",
+      src: "/services/content-creation/image-4.png",
       alt: "Brand Storytelling",
     },
     {
-      src: "/home-page/hero-section/slide-3/social-posts.jpg",
+      src: "/services/content-creation/image-5.png",
       alt: "Social Graphic Content",
     },
     {
-      src: "/images/slides/slide1.jpg",
+      src: "/services/content-creation/image-6.png",
       alt: "Creative Photography",
     },
     {
-      src: "/images/slides/slide3.jpg",
+      src: "/services/content-creation/image-7.png",
       alt: "Visual Styling",
     },
   ],
   "online-advertising": [
     {
-      src: "/home-page/hero-section/slide-2/campaign-ads.png",
+      src: "/services/online-advertising/image-1.png",
       alt: "Digital Ad Creatives",
     },
     {
-      src: "/home-page/hero-section/slide-4/card3-ads.jpg",
+      src: "/services/online-advertising/image-2.png",
       alt: "Performance Ads",
     },
     {
-      src: "/home-page/hero-section/slide-4/card4-targeting.jpg",
+      src: "/services/online-advertising/image-3.png",
       alt: "Audience Targeting",
     },
     {
-      src: "/about/marketing.png",
+      src: "/services/online-advertising/image-4.png",
       alt: "Growth Campaign",
     },
     {
-      src: "/home-page/hero-section/slide-4/card2-analytics.jpg",
+      src: "/services/online-advertising/image-5.png",
       alt: "Analytics & Conversions",
     },
     {
-      src: "/images/slides/slide2.jpg",
+      src: "/services/online-advertising/image-6.png",
       alt: "Ad Strategy",
     },
     {
-      src: "/home-page/hero-section/slide-4/card1-seo.jpg",
+      src: "/services/online-advertising/image-7.png",
       alt: "Paid Search Ads",
     },
   ],
   "seo": [
     {
-      src: "/home-page/hero-section/slide-4/card1-seo.jpg",
+      src: "/services/seo/image-1.png",
       alt: "Search Engine Optimization",
     },
     {
-      src: "/home-page/hero-section/slide-4/card2-analytics.jpg",
+      src: "/services/seo/image-2.png",
       alt: "Rankings & Traffic Analytics",
     },
     {
-      src: "/home-page/hero-section/slide-4/card4-targeting.jpg",
+      src: "/services/seo/image-3.png",
       alt: "Keyword & Audience Research",
     },
     {
-      src: "/about/marketing.png",
+      src: "/services/seo/image-4.png",
       alt: "Organic Growth Strategy",
     },
     {
-      src: "/images/slides/slide4.jpg",
+      src: "/services/seo/image-5.png",
       alt: "Technical Site Audit",
     },
     {
-      src: "/images/slides/slide5.jpg",
+      src: "/services/seo/image-6.png",
       alt: "Content Optimization",
     },
     {
-      src: "/images/slides/slide6.jpg",
+      src: "/services/seo/image-7.png",
       alt: "Backlink & Authority Building",
     },
   ],

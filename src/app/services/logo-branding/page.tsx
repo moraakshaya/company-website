@@ -71,7 +71,7 @@ const servicesData = [
       "Digital menus"
     ],
     ctaText: "Need a menu for your business?",
-    imageSrc: "/services/logo-branding/ricch-menu.png"
+    imageSrc: "/services/logo-branding/ricchmenu.png"
   },
   {
     num: "05",

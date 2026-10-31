@@ -10,7 +10,19 @@ import ServiceFeatures from "@/components/services/ServiceFeatures";
 const headlineBase =
   "font-extrabold leading-[1.15] tracking-[-0.03em] md:tracking-[-0.02em] whitespace-nowrap text-[28px] md:text-[clamp(2.2rem,4.5vw,3.8rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(2.2rem,4.5vw,3.8rem)]";
 
-const servicesData = [
+interface ServiceItem {
+  num: string;
+  title: string;
+  subtitle: string;
+  desc: string;
+  featuresTitle?: string;
+  features: string[];
+  ctaText: string;
+  imageSrc: string;
+  extraDesc?: string;
+}
+
+const servicesData: ServiceItem[] = [
   {
     num: "01",
     title: "Business Website",
@@ -25,42 +37,26 @@ const servicesData = [
       "Forms & integrations"
     ],
     ctaText: "Need a website for your business?",
-    imageSrc: "/home-page/hero-section/slide-2/businesscard.png" // Replace with actual website design image later
+    imageSrc: "/services/website-design/shriswaraa.png" // Replace with actual website design image later
   },
   {
     num: "02",
-    title: "Landing Pages",
-    subtitle: "A Focused Page for Your Goal",
-    desc: "We create focused landing pages for products, services, campaigns, and promotions designed to drive enquiries and actions.",
+    title: "Landing Pages & E-Commerce",
+    subtitle: "Designed to Sell Products and Drive Action",
+    desc: "Whether you need a high-converting landing page for a targeted campaign or a complete online store with cart and payment checkout, we build seamless experiences that turn visitors into customers.",
     features: [
-      "Product & service pages",
-      "Campaign landing pages",
-      "Lead generation pages",
-      "Promotional pages",
-      "Call-to-action sections",
-      "Contact & enquiry forms"
+      "Product & campaign landing pages",
+      "Full online store & category setup",
+      "Shopping cart & secure checkout",
+      "Payment gateway integration",
+      "Lead generation & enquiry forms",
+      "Fast, mobile-friendly shopping experience"
     ],
-    ctaText: "Have something to promote?",
-    imageSrc: "/home-page/hero-section/slide-2/posters-design.png" // Placeholder
+    ctaText: "Ready to sell or launch your campaign?",
+    imageSrc: "/services/website-design/gvr.png" // Placeholder
   },
   {
     num: "03",
-    title: "E-Commerce Website",
-    subtitle: "Turn Your Products Into an Online Store",
-    desc: "We create e-commerce websites where customers can browse your products, view details, add items to their cart, and place orders online.",
-    features: [
-      "Product pages & categories",
-      "Online store",
-      "Shopping cart & checkout",
-      "Order management",
-      "Payment gateway integration",
-      "Mobile-friendly design"
-    ],
-    ctaText: "Ready to take your products online?",
-    imageSrc: "/home-page/hero-section/slide-2/menucard.png" // Placeholder
-  },
-  {
-    num: "04",
     title: "Website Redesign",
     subtitle: "Give Your Existing Website a Fresh Start",
     desc: "If your current website looks outdated, feels difficult to use, or no longer represents your business, we can redesign it with a cleaner and more modern look.",
@@ -74,10 +70,10 @@ const servicesData = [
       "Calls to action"
     ],
     ctaText: "Ready to refresh your website?",
-    imageSrc: "/home-page/hero-section/slide-2/campaign-ads.png" // Placeholder
+    imageSrc: "/services/website-design/russh.png" // Placeholder
   },
   {
-    num: "05",
+    num: "04",
     title: "Website Maintenance",
     subtitle: "Keep Your Website Running Smoothly",
     desc: "A website needs attention even after it goes live. We help keep your website updated with the changes, content, and improvements your business needs over time.",
@@ -91,7 +87,7 @@ const servicesData = [
       "General improvements"
     ],
     ctaText: "Need a website update?",
-    imageSrc: "/home-page/hero-section/slide-2/campaign-ads.png" // Placeholder
+    imageSrc: "/services/website-design/shriswaraa-maint.png" // Placeholder
   }
 ];
 

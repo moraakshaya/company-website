@@ -43,7 +43,7 @@ const servicesData = [
       "Regular posting"
     ],
     ctaText: "Need help managing your Facebook page?",
-    imageSrc: "/home-page/hero-section/slide-2/businesscard.png"
+    imageSrc: "/services/social-media/facebook.png"
   },
   {
     num: "03",

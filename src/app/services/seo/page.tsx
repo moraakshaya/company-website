@@ -10,7 +10,21 @@ import ServiceFeatures from "@/components/services/ServiceFeatures";
 const headlineBase =
   "font-extrabold leading-[1.15] tracking-[-0.03em] md:tracking-[-0.02em] whitespace-nowrap text-[28px] md:text-[clamp(2.2rem,4.5vw,3.8rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(2.2rem,4.5vw,3.8rem)]";
 
-const servicesData = [
+interface ServiceItem {
+  num: string;
+  title: string;
+  subtitle: string;
+  desc: string;
+  featuresTitle?: string;
+  features?: string[];
+  ctaText: string;
+  imageSrc?: string;
+  isCustomGraphic?: boolean;
+  featureBlocks?: { title: string; desc: string }[];
+  extraDesc?: string;
+}
+
+const servicesData: ServiceItem[] = [
   {
     num: "01",
     title: "Local SEO",
@@ -26,7 +40,7 @@ const servicesData = [
       "Local search visibility"
     ],
     ctaText: "Want more local visibility?",
-    imageSrc: "/home-page/hero-section/slide-2/campaign-ads.png"
+    imageSrc: "/services/seo/seo-local.png"
   },
   {
     num: "02",
@@ -43,29 +57,10 @@ const servicesData = [
       "Review management"
     ],
     ctaText: "Need help with your Google Business Profile?",
-    imageSrc: "/home-page/hero-section/slide-2/businesscard.png"
+    imageSrc: "/services/seo/gmb.png"
   },
   {
     num: "03",
-    title: "Website SEO",
-    subtitle: "Help Your Website Get Found in Search",
-    desc: "We optimise your website content and structure to make your pages more search-friendly and easier for customers to discover.",
-    featuresTitle: "What We Provide",
-    features: [
-      "Page titles & descriptions",
-      "Keyword optimisation",
-      "Heading structure",
-      "Website content",
-      "Image optimisation",
-      "Internal linking",
-      "URL optimisation",
-      "Backlink building"
-    ],
-    ctaText: "Want your website to be more search-friendly?",
-    imageSrc: "/home-page/hero-section/slide-2/menucard.png"
-  },
-  {
-    num: "04",
     title: "SEO Monitoring",
     subtitle: "Keep Track of Your SEO Progress",
     desc: "We monitor your website's search performance and key SEO areas to identify improvements and areas that need attention.",
@@ -80,10 +75,10 @@ const servicesData = [
       "Technical issues"
     ],
     ctaText: "Want to track your SEO progress?",
-    imageSrc: "/home-page/hero-section/slide-2/posters-design.png"
+    imageSrc: "/services/seo/seo-mon.png"
   },
   {
-    num: "05",
+    num: "04",
     title: "Keyword Research",
     subtitle: "Find What Your Customers Are Searching For",
     desc: "We research relevant keywords based on your business, services, products, location, and what your customers are searching for.",
@@ -98,7 +93,7 @@ const servicesData = [
       "Search opportunities"
     ],
     ctaText: "Not sure what your customers search for?",
-    imageSrc: "/home-page/hero-section/slide-2/campaign-ads.png"
+    imageSrc: "/services/seo/keyword.png"
   },
 ];
 
@@ -467,7 +462,7 @@ export default function SeoPage() {
             </span>
             <span className="flex items-center justify-center w-11 h-11 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-11 min-[1400px]:h-11 rounded-full bg-white shrink-0 overflow-hidden shadow-inner">
               <img
-                src="/images/3d-icon-view-work.jpg"
+                src="/services/seo/3d-icon-view-work.jpg"
                 alt="Arrow Icon"
                 className="w-full h-full object-cover scale-[1.15] group-hover:scale-[1.25] transition-transform duration-300"
               />
