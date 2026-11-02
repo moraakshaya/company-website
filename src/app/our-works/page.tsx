@@ -4,101 +4,756 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LayoutTemplate, PenTool, Megaphone, X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
-// --- Types & Dummy Content ---
-const baseContent = {
-  gallery: ["/our-work/russh.jpg", "/our-work/origin.jpg", "/our-work/shri-swara.jpg", "/our-work/ricch-hotels.jpg"],
-  clientOverview: "The client approached us with a vision to completely revamp their digital presence, aiming for a cleaner, modern look that converts visitors into customers.",
-  services: ["Creative Direction", "UI/UX Design", "Frontend Development", "Digital Marketing"],
-  challenge: "They were struggling with low conversion rates due to an outdated user journey. Our team restructured the entire flow, resulting in a 40% increase in user engagement within the first month.",
-  link: "https://example.com"
-};
+// --- Types & Portfolio Items ---
+interface PortfolioItem {
+  id: number;
+  title: string;
+  category: string;
+  filter: string;
+  image: string;
+  height: string;
+  bgColor: string;
+  gallery: string[];
+  clientOverview: string;
+  services: string[];
+  challenge: string;
+  link?: string;
+  isVideo?: boolean;
+  videoUrl?: string;
+}
 
 const filters = [
-  "ALL",
   "WEBSITES",
   "LOGO DESIGN",
   "BUSINESS CARDS",
   "BROCHURES",
   "FLYERS",
   "MENU CARDS",
-  "POSTERS",
   "HOARDINGS",
   "AUTO ADS",
-  "CAMPAIGNS",
-  "CONTENT CREATION",
   "VIDEO EDITING & REELS",
-  "SOCIAL MEDIA MANAGEMENT",
-  "ONLINE ADVERTISING"
+  "SOCIAL MEDIA MANAGEMENT"
 ];
 
-const portfolioItems = [
+const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
+    title: "RICCH HOTELS",
+    category: "Website Design",
+    filter: "WEBSITES",
+    image: "/our-work/websites/ricch-website-3.png",
+    height: "380px",
+    bgColor: "bg-[#184a41]",
+    link: "https://ricchhotels.com",
+    gallery: [
+      "/our-work/websites/ricch-website-1.png",
+      "/our-work/websites/ricch-website-2.png",
+      "/our-work/websites/ricch-website-3.png",
+    ],
+    clientOverview: "Ricch Hotels needed an elegant, mobile-friendly website to showcase luxury room stays, banquet spaces, and enable direct room inquiries.",
+    services: [
+      "Luxury UI/UX Design",
+      "Mobile-First Layout",
+      "Room Showcase & Gallery",
+      "Online Booking Flow"
+    ],
+    challenge: "Presenting hospitality amenities, room tiers, and booking inquiries seamlessly across mobile and desktop devices."
+  },
+  {
+    id: 2,
     title: "RUSSH HOSPITAL",
     category: "Website Design",
     filter: "WEBSITES",
-    image: "/our-work/russh.png",
+    image: "/our-work/websites/russh-website-1.png",
     height: "380px",
     bgColor: "bg-[#047880]",
-    ...baseContent,
+    link: "https://russhhospital.com",
     gallery: [
-      "/our-work/russh.png",
-      "/our-work/russh-00.png",
-      "/our-work/russh-00.png",
-      "/our-work/russh-00.png",
+      "/our-work/websites/russh-website-1.png",
+      "/our-work/websites/russh-website-2.png",
+      "/our-work/websites/russh-website-3.png",
     ],
-    clientOverview: "Russh Hospital needed a modern web platform to streamline patient bookings.",
-    challenge: "Organizing doctor schedules was complex. We built a custom interface."
+    clientOverview: "Russh Hospital needed a modern, responsive website to showcase their medical specialties and streamline patient appointment bookings.",
+    services: [
+      "UI/UX Design",
+      "Responsive Web Design",
+      "Frontend Development",
+      "Doctor Booking Flow"
+    ],
+    challenge: "Organizing multi-department doctor schedules, services, and emergency contacts into an intuitive mobile-first interface."
   },
   {
     id: 3,
-    title: "ORIGIN HOMEO",
-    category: "Logo Design",
-    filter: "LOGO DESIGN",
-    image: "/our-work/origin.png",
+    title: "SHRISWARAA HOSPITAL",
+    category: "Website Design",
+    filter: "WEBSITES",
+    image: "/our-work/websites/shriswaraa-website-1.png",
+    height: "380px",
+    bgColor: "bg-[#ff863c]",
+    link: "https://shriswaraa.com",
+    gallery: [
+      "/our-work/websites/shriswaraa-website-1.png",
+      "/our-work/websites/shriswaraa-website-2.png",
+      "/our-work/websites/shriswaraa-website-3.png",
+    ],
+    clientOverview: "Shriswaraa Hospital needed a comprehensive healthcare web presence to highlight medical departments, consultant schedules, and emergency care.",
+    services: [
+      "Healthcare Web Design",
+      "Responsive Layout",
+      "Department Showcase",
+      "Appointment Inquiry System"
+    ],
+    challenge: "Structuring high-volume medical information clearly so patients and families can quickly locate treatment details and book visits."
+  },
+  {
+    id: 4,
+    title: "GVR INFOSYSTEM",
+    category: "Website Design",
+    filter: "WEBSITES",
+    image: "/our-work/websites/gvr-website-2.png",
     height: "380px",
     bgColor: "bg-[#492c28]",
-    ...baseContent,
+    link: "https://gvrinfosystem.com",
     gallery: [
-      "/our-work/origin.png",
-      "/our-work/origin-00.png",
-      "/our-work/origin-00.png",
-      "/our-work/origin-00.png",
+      "/our-work/websites/gvr-website-1.png",
+      "/our-work/websites/gvr-website-2.png",
+      "/our-work/websites/gvr-website-3.png",
     ],
-    clientOverview: "Origin Homeo needed a professional and trustworthy visual identity to represent their holistic healthcare practice.",
-    challenge: "Designing a clean, timeless logo and brand mark that communicates medical credibility, natural healing, and gentle care."
+    clientOverview: "GVR Infosystem required a modern IT corporate website to highlight their enterprise software services, cloud solutions, and consulting capabilities.",
+    services: [
+      "Corporate UI/UX Design",
+      "Technology Showcase",
+      "Responsive Frontend",
+      "B2B Lead Generation Flow"
+    ],
+    challenge: "Communicating complex technical IT consulting solutions into clean, persuasive web copy and interactive feature sections."
   },
-  { id: 2, title: "LAKE TITICACA", category: "Video Editing & Reels", filter: "VIDEO EDITING & REELS", image: "/our-work/russh.jpg", height: "500px", bgColor: "bg-[#492c28]", isVideo: true, ...baseContent },
-  { id: 6, title: "LUMINA", category: "Brochures", filter: "BROCHURES", image: "/our-work/russh.jpg", height: "400px", bgColor: "bg-[#184a41]", ...baseContent },
-  { id: 4, title: "SHRI SWARA", category: "Social Media", filter: "SOCIAL MEDIA MANAGEMENT", image: "/our-work/shri-swara.jpg", height: "400px", bgColor: "bg-[#ff863c]", ...baseContent },
-  { id: 7, title: "GLOBAL CAMPAIGN", category: "Campaigns", filter: "CAMPAIGNS", image: "/our-work/shri-swara.jpg", height: "450px", bgColor: "bg-[#ff863c]", ...baseContent },
-  { id: 5, title: "RICCH HOTELS", category: "Online Ads", filter: "ONLINE ADVERTISING", image: "/our-work/ricch-hotels.jpg", height: "450px", bgColor: "bg-[#d3c5c7]", ...baseContent },
-  { id: 8, title: "TASTE BITES", category: "Menu Cards", filter: "MENU CARDS", image: "/our-work/origin.jpg", height: "350px", bgColor: "bg-[#492c28]", ...baseContent },
-  { id: 9, title: "AUTO MAX", category: "Auto Ads", filter: "AUTO ADS", image: "/our-work/ricch-hotels.jpg", height: "350px", bgColor: "bg-[#d3c5c7]", ...baseContent },
-  { id: 10, title: "NEXUS APP", category: "App Development", filter: "WEBSITES", image: "/our-work/russh.jpg", height: "380px", bgColor: "bg-[#047880]", ...baseContent },
-  { id: 11, title: "ELEVATE 2026", category: "Posters", filter: "POSTERS", image: "/our-work/shri-swara.jpg", height: "380px", bgColor: "bg-[#ff863c]", ...baseContent },
-  { id: 12, title: "GLOW BEAUTY", category: "Content Creation", filter: "CONTENT CREATION", image: "/our-work/ricch-hotels.jpg", height: "500px", bgColor: "bg-[#d3c5c7]", ...baseContent },
-  { id: 13, title: "GREEN LEAF", category: "Brochures", filter: "BROCHURES", image: "/our-work/russh.jpg", height: "400px", bgColor: "bg-[#184a41]", ...baseContent },
-  { id: 14, title: "PIZZA PLANET", category: "Menu Cards", filter: "MENU CARDS", image: "/our-work/origin.jpg", height: "400px", bgColor: "bg-[#492c28]", ...baseContent },
+  {
+    id: 5,
+    title: "PADMAVATHI HOSPITAL",
+    category: "Website Design",
+    filter: "WEBSITES",
+    image: "/our-work/websites/padmavati-website-2.png",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    link: "https://padmavathihospital.com",
+    gallery: [
+      "/our-work/websites/padmavati-website-1.png",
+      "/our-work/websites/padmavati-website-2.png",
+      "/our-work/websites/padmavati-website-3.png",
+    ],
+    clientOverview: "Padmavathi Hospital required a patient-first hospital website to provide transparent details on clinical care, doctor profiles, and emergency admission.",
+    services: [
+      "Clinical Web Design",
+      "Emergency Services Hub",
+      "Doctor Directory",
+      "Patient Contact System"
+    ],
+    challenge: "Designing an accessible, high-contrast, fast-loading healthcare portal optimized for urgent mobile queries and patient assistance."
+  },
+  {
+    id: 6,
+    title: "FIRE & TUNS",
+    category: "Logo Design",
+    filter: "LOGO DESIGN",
+    image: "/our-work/logos/fireandtuns-1.png",
+    height: "380px",
+    bgColor: "bg-[#492c28]",
+    gallery: [
+      "/our-work/logos/fireandtuns-1.png",
+      "/our-work/logos/fireandtuns-2.png",
+      "/our-work/logos/fireandtuns-3.png",
+    ],
+    clientOverview: "Fire & Tuns needed a bold, energetic visual identity and distinctive logo mark that embodies their distinct brand presence and culinary rhythm.",
+    services: [
+      "Logo Concept & Design",
+      "Brand Identity System",
+      "Custom Brand Iconography",
+      "Typography & Color Guide"
+    ],
+    challenge: "Designing a high-contrast, versatile brand mark that scales effortlessly across physical signage, merchandise, and digital channels."
+  },
+  {
+    id: 7,
+    title: "RICCH HOTELS",
+    category: "Logo Design",
+    filter: "LOGO DESIGN",
+    image: "/our-work/logos/ricch-1.png",
+    height: "380px",
+    bgColor: "bg-[#184a41]",
+    gallery: [
+      "/our-work/logos/ricch-1.png",
+      "/our-work/logos/ricch-2.png",
+      "/our-work/logos/ricch-3.png",
+    ],
+    clientOverview: "Ricch Hotels required an elegant, timeless monogram and corporate insignia to reflect their luxury hospitality experience.",
+    services: [
+      "Luxury Monogram Design",
+      "Brand Crest & Emblem",
+      "Hospitality Identity Palette",
+      "Stationery & Collateral Guidelines"
+    ],
+    challenge: "Crafting a sophisticated insignia with delicate vector geometry that reproduces impeccably on architectural signage, uniform embroidery, and mobile screens."
+  },
+  {
+    id: 8,
+    title: "TERRACE POND",
+    category: "Logo Design",
+    filter: "LOGO DESIGN",
+    image: "/our-work/logos/terracepond-1.png",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    gallery: [
+      "/our-work/logos/terracepond-1.png",
+      "/our-work/logos/terracepond-2.png",
+      "/our-work/logos/terracepond-3.png",
+    ],
+    clientOverview: "Terrace Pond needed a modern, tranquil logo identity that captures the serene aesthetic of nature, water, and open terrace architecture.",
+    services: [
+      "Brand Identity Design",
+      "Symbol & Wordmark Creation",
+      "Color Harmony Guide",
+      "Visual Brand Standards"
+    ],
+    challenge: "Balancing fluid organic forms with structured geometric lettering to convey calm sophistication and premium architectural craftsmanship."
+  },
+  {
+    id: 9,
+    title: "PRODBIZ",
+    category: "Business Cards",
+    filter: "BUSINESS CARDS",
+    image: "/our-work/businesscards/prodbiz.png",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    gallery: [
+      "/our-work/businesscards/prodbiz.png",
+    ],
+    clientOverview: "ProdBiz needed a sophisticated, modern corporate business card design that showcases executive branding with clean contact hierarchy.",
+    services: [
+      "Executive Business Card Layout",
+      "Brand Color Palette & Accents",
+      "Typography & Contact Hierarchy",
+      "Print & Finish Specifications"
+    ],
+    challenge: "Designing a compact, memorable card format that balances digital elements and brand sophistication without visual clutter."
+  },
+  {
+    id: 10,
+    title: "ESTHETIX DENTAL",
+    category: "Video Editing & Reels",
+    filter: "VIDEO EDITING & REELS",
+    image: "/our-work/videoeditingandreels/esthetix-poster.jpg",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    isVideo: true,
+    videoUrl: "/our-work/videoeditingandreels/esthetix.mp4",
+    gallery: ["/our-work/videoeditingandreels/esthetix-poster.jpg"],
+    clientOverview: "Complete end-to-end video production for Esthetix Dental. Our team handled everything from on-site shooting with professional lighting and cinema gear to post-production editing, creating engaging patient-education reels.",
+    services: [
+      "On-Site Clinical Shoot",
+      "Professional Lighting & Audio",
+      "Precision Reel Editing",
+      "Motion Graphics & Captions"
+    ],
+    challenge: "Capturing authentic clinical treatments and dentist expertise on camera in a non-intimidating, cinematic way, followed by tight, rhythm-based editing to keep viewers hooked."
+  },
+  {
+    id: 11,
+    title: "FIRE & TUNS",
+    category: "Video Editing & Reels",
+    filter: "VIDEO EDITING & REELS",
+    image: "/our-work/videoeditingandreels/fireandtuns-poster.jpg",
+    height: "380px",
+    bgColor: "bg-[#492c28]",
+    isVideo: true,
+    videoUrl: "/our-work/videoeditingandreels/fireandtuns.mp4",
+    gallery: ["/our-work/videoeditingandreels/fireandtuns-poster.jpg"],
+    clientOverview: "Full-service on-location shoot and high-energy reel production for Fire & Tuns. We captured sizzling culinary action and ambient dining with professional camera rigs, then edited the footage with beat-matched cuts and rich color grading.",
+    services: [
+      "On-Location Food & Ambience Shoot",
+      "Cinematic Slow-Motion Capture",
+      "Beat-Synced Video Editing",
+      "Sound Design & Color Grading"
+    ],
+    challenge: "Filming live culinary flames and fast kitchen pacing without disrupting service, then cutting and color-tuning the footage to ignite appetite in short-form feeds."
+  },
+  {
+    id: 12,
+    title: "RICCH HOTELS",
+    category: "Video Editing & Reels",
+    filter: "VIDEO EDITING & REELS",
+    image: "/our-work/videoeditingandreels/ricchhotel-poster.jpg",
+    height: "380px",
+    bgColor: "bg-[#184a41]",
+    isVideo: true,
+    videoUrl: "/our-work/videoeditingandreels/ricchhotel.mp4",
+    gallery: ["/our-work/videoeditingandreels/ricchhotel-poster.jpg"],
+    clientOverview: "Turnkey luxury hospitality shoot and reel production for Ricch Hotels. We directed and shot the complete property on-site — from luxury suites to grand banquet spaces — and crafted seamless cinematic reel edits designed for high social engagement.",
+    services: [
+      "Property & Suite Camera Shoot",
+      "Architectural Lighting Setup",
+      "Cinematic Transition Editing",
+      "Color Grading & Audio Mastering"
+    ],
+    challenge: "Composing wide architectural shots and intimate suite details with consistent luxury lighting, then editing seamless vertical transitions to maximize viewer retention."
+  },
+  {
+    id: 13,
+    title: "RUSSH HOSPITAL",
+    category: "Video Editing & Reels",
+    filter: "VIDEO EDITING & REELS",
+    image: "/our-work/videoeditingandreels/russh-poster.jpg",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    isVideo: true,
+    videoUrl: "/our-work/videoeditingandreels/russh.mp4",
+    gallery: ["/our-work/videoeditingandreels/russh-poster.jpg"],
+    clientOverview: "End-to-end healthcare documentary and awareness reels for Russh Hospital. Our crew managed on-site filming of advanced medical equipment and doctor interviews, followed by meticulous video editing with on-screen medical pointers.",
+    services: [
+      "On-Site Hospital Shoot",
+      "Doctor Interviews & B-Roll",
+      "High-Paced Reel Editing",
+      "Custom Motion Subtitles"
+    ],
+    challenge: "Balancing sensitive patient environments with professional camera gear, and distilling complex medical treatments into engaging, shareable 30-second reels."
+  },
+  {
+    id: 14,
+    title: "SHRISWARAA HOSPITAL",
+    category: "Video Editing & Reels",
+    filter: "VIDEO EDITING & REELS",
+    image: "/our-work/videoeditingandreels/shriswaraa-poster.jpg",
+    height: "380px",
+    bgColor: "bg-[#ff863c]",
+    isVideo: true,
+    videoUrl: "/our-work/videoeditingandreels/shriswaraa.mp4",
+    gallery: ["/our-work/videoeditingandreels/shriswaraa-poster.jpg"],
+    clientOverview: "Comprehensive shoot and post-production reel series for Shriswaraa Hospital. We planned, directed, and shot patient journey stories and specialty departments, editing every clip with clarity, pacing, and engaging kinetic subtitles.",
+    services: [
+      "Full Production On-Site Shoot",
+      "Direction & Lighting Setup",
+      "Dynamic Short-Form Editing",
+      "Engaging Kinetic Typography"
+    ],
+    challenge: "Translating clinical expertise and emergency care into trustworthy, humanized visual storytelling through deliberate shooting angles and crisp editing."
+  },
+  {
+    id: 15,
+    title: "TERRACE POND",
+    category: "Video Editing & Reels",
+    filter: "VIDEO EDITING & REELS",
+    image: "/our-work/videoeditingandreels/terracepond-poster.jpg",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    isVideo: true,
+    videoUrl: "/our-work/videoeditingandreels/terracepond.mp4",
+    gallery: ["/our-work/videoeditingandreels/terracepond-poster.jpg"],
+    clientOverview: "Cinematic on-site capture and reel production for Terrace Pond. Our production crew captured golden-hour landscapes, waterfront gatherings, and architectural viewpoints, followed by rhythmic editing with ambient soundscapes.",
+    services: [
+      "On-Site Scenic & Event Shoot",
+      "Stabilized Gimbal & Camera Angles",
+      "Paced Narrative Editing",
+      "Atmospheric Sound Design"
+    ],
+    challenge: "Capturing the subtle, tranquil nuances of natural water and evening light on camera, and editing them with rhythm that evokes a true sensory destination experience."
+  },
+  {
+    id: 16,
+    title: "RICCH HOTELS",
+    category: "Brochures",
+    filter: "BROCHURES",
+    image: "/our-work/brouchers/ricch.png",
+    height: "380px",
+    bgColor: "bg-[#184a41]",
+    gallery: [
+      "/our-work/brouchers/ricch.png",
+    ],
+    clientOverview: "Luxury hospitality brochure designed for Ricch Hotels, presenting premium suite accommodations, event halls, and exclusive dining packages.",
+    services: [
+      "Luxury Brochure Layout",
+      "Hospitality Asset Showcase",
+      "Typography & Color Harmony",
+      "Print & Foil Finishing Specs"
+    ],
+    challenge: "Curating expansive banquet and hotel stay offerings into an elegant, unhurried multi-page brochure format."
+  },
+  {
+    id: 17,
+    title: "SHRISWARAA HOSPITAL",
+    category: "Brochures",
+    filter: "BROCHURES",
+    image: "/our-work/brouchers/shri.png",
+    height: "380px",
+    bgColor: "bg-[#ff863c]",
+    gallery: [
+      "/our-work/brouchers/shri.png",
+    ],
+    clientOverview: "Comprehensive healthcare service brochure designed for Shriswaraa Hospital, highlighting clinical departments, consultant doctors, and diagnostic facilities.",
+    services: [
+      "Medical Information Architecture",
+      "Departmental Breakdown",
+      "Emergency Care Highlights",
+      "High-Quality Print Layout"
+    ],
+    challenge: "Presenting complex clinical capabilities, doctor credentials, and health packages in a reassuring, easily digestible layout for patients."
+  },
+  {
+    id: 18,
+    title: "LALITHA",
+    category: "Brochures",
+    filter: "BROCHURES",
+    image: "/our-work/brouchers/lalitha.png",
+    height: "380px",
+    bgColor: "bg-[#492c28]",
+    gallery: [
+      "/our-work/brouchers/lalitha.png",
+    ],
+    clientOverview: "Exquisite jewelry and retail collection brochure designed for Lalitha, spotlighting signature craftsmanship, bridal designs, and festive offers.",
+    services: [
+      "Catalog & Brochure Grid",
+      "High-Resolution Product Styling",
+      "Editorial Typography",
+      "Premium Print Specifications"
+    ],
+    challenge: "Balancing high-end jewelry imagery with promotional pricing clarity while preserving brand prestige."
+  },
+  {
+    id: 19,
+    title: "ESTHETIX DENTAL",
+    category: "Flyers",
+    filter: "FLYERS",
+    image: "/our-work/flyers/esth-1.png",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    gallery: [
+      "/our-work/flyers/esth-1.png",
+      "/our-work/flyers/esth-2.png",
+      "/our-work/flyers/esth-3.png",
+    ],
+    clientOverview: "Informative dental clinic promotional flyer suite designed for Esthetix Dental, highlighting specialized treatments, cosmetic dentistry, and dental health packages.",
+    services: [
+      "Dental Clinic Flyer Design",
+      "Treatment & Pricing Layout",
+      "Patient Education Graphics",
+      "Print & Digital Formats"
+    ],
+    challenge: "Organizing medical procedures and consultation packages into an approachable, reassuring layout that builds patient confidence."
+  },
+  {
+    id: 20,
+    title: "RUSSH HOSPITAL",
+    category: "Flyers",
+    filter: "FLYERS",
+    image: "/our-work/flyers/russh-1.jpg",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    gallery: [
+      "/our-work/flyers/russh-1.jpg",
+      "/our-work/flyers/russh-2.jpg",
+      "/our-work/flyers/russh-3.jpg",
+    ],
+    clientOverview: "Clinical healthcare flyer designs created for Russh Hospital, spotlighting seasonal health checkups, emergency care facilities, and specialist doctor clinics.",
+    services: [
+      "Hospital Campaign Flyers",
+      "Specialty Clinic Highlights",
+      "Emergency Contact Prominence",
+      "Print Production Specifications"
+    ],
+    challenge: "Structuring multi-specialty checkup camps and emergency helpline details clearly to maximize patient outreach and inquiries."
+  },
+  {
+    id: 21,
+    title: "SHRISWARAA HOSPITAL",
+    category: "Flyers",
+    filter: "FLYERS",
+    image: "/our-work/flyers/shri-1.png",
+    height: "380px",
+    bgColor: "bg-[#ff863c]",
+    gallery: [
+      "/our-work/flyers/shri-1.png",
+      "/our-work/flyers/shri-2.png",
+      "/our-work/flyers/shri-3.png",
+    ],
+    clientOverview: "Targeted healthcare announcement and health camp flyers crafted for Shriswaraa Hospital to drive community health awareness and consultation bookings.",
+    services: [
+      "Health Camp Promotional Flyers",
+      "Doctor Profile Callouts",
+      "Visual Medical Hierarchy",
+      "High-Quality Print Prep"
+    ],
+    challenge: "Balancing clinical depth with clean visual hierarchy so patient families can quickly understand health checkup benefits and registration steps."
+  },
+  {
+    id: 22,
+    title: "TERRACE POND",
+    category: "Flyers",
+    filter: "FLYERS",
+    image: "/our-work/flyers/terracepond-1.png",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    gallery: [
+      "/our-work/flyers/terracepond-1.png",
+      "/our-work/flyers/terracepond-2.png",
+      "/our-work/flyers/terracepond-3.png",
+    ],
+    clientOverview: "Lifestyle and venue promotional flyers created for Terrace Pond, capturing ambient scenic beauty, open-air gatherings, and event bookings.",
+    services: [
+      "Scenic Venue Flyers",
+      "Event Showcase Layout",
+      "Atmospheric Typography",
+      "Print & Social Collateral"
+    ],
+    challenge: "Translating tranquil outdoor atmosphere and premium event hospitality into an eye-catching, informative promotional flyer layout."
+  },
+  {
+    id: 23,
+    title: "RICCH HOTELS",
+    category: "Flyers",
+    filter: "FLYERS",
+    image: "/our-work/flyers/ricchhotel-1.png",
+    height: "380px",
+    bgColor: "bg-[#184a41]",
+    gallery: [
+      "/our-work/flyers/ricchhotel-1.png",
+      "/our-work/flyers/ricchhotel-2.jpg",
+      "/our-work/flyers/ricchhotel-3.png",
+    ],
+    clientOverview: "Luxury hospitality and weekend staycation flyer series designed for Ricch Hotels, highlighting room packages, banquet spaces, and premier guest amenities.",
+    services: [
+      "Hospitality Offer Flyers",
+      "Room & Suite Highlights",
+      "Package Pricing Display",
+      "Direct Booking Call-to-Actions"
+    ],
+    challenge: "Showcasing premium room amenities and limited-time hospitality packages with enticing visual hierarchy that drives direct reservations."
+  },
+  {
+    id: 24,
+    title: "RICCH",
+    category: "Flyers",
+    filter: "FLYERS",
+    image: "/our-work/flyers/ricch-1.png",
+    height: "380px",
+    bgColor: "bg-[#492c28]",
+    gallery: [
+      "/our-work/flyers/ricch-1.png",
+      "/our-work/flyers/ricch-2.png",
+      "/our-work/flyers/ricch-3.png",
+    ],
+    clientOverview: "Culinary and restaurant promotional flyers designed for Ricch, showcasing signature chef dishes, weekend food festivals, and banquet catering.",
+    services: [
+      "Restaurant Event Flyers",
+      "Appetizing Food Typography",
+      "Festival Offer Banners",
+      "Print & Handout Layout"
+    ],
+    challenge: "Creating mouth-watering visual layouts that highlight seasonal culinary specials and drive weekend table bookings."
+  },
+  {
+    id: 25,
+    title: "ESTHETIX DENTAL",
+    category: "Social Media",
+    filter: "SOCIAL MEDIA MANAGEMENT",
+    image: "/our-work/socialmedia/esth-2.png",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    gallery: [
+      "/our-work/socialmedia/esth-1.png",
+      "/our-work/socialmedia/esth-2.png",
+    ],
+    clientOverview: "Comprehensive social media feed curation and patient engagement creatives for Esthetix Dental, spotlighting smile makeovers, dental hygiene tips, and clinic offers.",
+    services: [
+      "Instagram Grid Architecture",
+      "Patient Education Posts",
+      "Offer & Camp Carousels",
+      "Story & Highlight Branding"
+    ],
+    challenge: "Transforming complex clinical dentistry procedures into clean, aesthetically pleasing, and reassuring social media graphics that drive direct appointment inquiries."
+  },
+  {
+    id: 26,
+    title: "FIRE & TUNS",
+    category: "Social Media",
+    filter: "SOCIAL MEDIA MANAGEMENT",
+    image: "/our-work/socialmedia/fireandtuns-1.png",
+    height: "380px",
+    bgColor: "bg-[#492c28]",
+    gallery: [
+      "/our-work/socialmedia/fireandtuns-1.png",
+      "/our-work/socialmedia/fireandtuns-2.png",
+      "/our-work/socialmedia/fireandtuns-3.png",
+      "/our-work/socialmedia/fireandtns-4.png",
+    ],
+    clientOverview: "High-flavor, visually appetizing social media content suite crafted for Fire & Tuns, featuring weekly chef specials, weekend dining buzz, and interactive foodie stories.",
+    services: [
+      "Culinary Content Strategy",
+      "Appetizing Food Creatives",
+      "Weekend Buzz Campaigns",
+      "Community Engagement Posts"
+    ],
+    challenge: "Creating mouth-watering visual rhythm across Instagram grid posts and stories that captures culinary sizzle and converts viewers into dining guests."
+  },
+  {
+    id: 27,
+    title: "RUSSH HOSPITAL",
+    category: "Social Media",
+    filter: "SOCIAL MEDIA MANAGEMENT",
+    image: "/our-work/socialmedia/russh-2.png",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    gallery: [
+      "/our-work/socialmedia/russh-1.png",
+      "/our-work/socialmedia/russh-2.png",
+    ],
+    clientOverview: "Trust-building healthcare social media campaign management for Russh Hospital, communicating preventative health advice, doctor schedules, and emergency care access.",
+    services: [
+      "Healthcare Post Design",
+      "Doctor Feature Creatives",
+      "Health Day Campaigns",
+      "Emergency & Helpline Awareness"
+    ],
+    challenge: "Balancing medical credibility and clinical accuracy with warm, empathetic visual storytelling that resonates with families and community followers."
+  },
+  {
+    id: 28,
+    title: "RICCH HOTELS",
+    category: "Menu Cards",
+    filter: "MENU CARDS",
+    image: "/our-work/menucards/ricch-1.png",
+    height: "380px",
+    bgColor: "bg-[#184a41]",
+    gallery: [
+      "/our-work/menucards/ricch-1.png",
+      "/our-work/menucards/ricch-2.png",
+    ],
+    clientOverview: "Sophisticated multi-course dining and banquet menu card design crafted for Ricch Hotels, blending fine-dining elegance with clear typographic dish categorization.",
+    services: [
+      "Luxury Menu Layout & Typography",
+      "Multi-Cuisine Section Hierarchy",
+      "Chef Specials & Pricing System",
+      "Premium Texture & Print Layout"
+    ],
+    challenge: "Arranging diverse multi-cuisine culinary offerings into an organized, legible hierarchy while preserving a premium hospitality feel."
+  },
+  {
+    id: 29,
+    title: "LALITHA",
+    category: "Auto Ads",
+    filter: "AUTO ADS",
+    image: "/our-work/autoads/lalitha-1.jpg",
+    height: "380px",
+    bgColor: "bg-[#184a41]",
+    gallery: [
+      "/our-work/autoads/lalitha-1.jpg",
+      "/our-work/autoads/lalitha-2.jpg",
+      "/our-work/autoads/lalitha-3.jpg",
+    ],
+    clientOverview: "Dynamic outdoor transit advertising graphics designed for Lalitha across auto-rickshaw backs and hood wraps, ensuring high brand visibility across busy city roads.",
+    services: [
+      "Transit Auto Ad Layout",
+      "High-Contrast Brand Visuals",
+      "Vehicle Proportion Sizing",
+      "Outdoor Print & Vinyl Prep"
+    ],
+    challenge: "Structuring key promotional messaging, brand identity, and contact information into an instantly readable format for moving urban traffic."
+  },
+  {
+    id: 30,
+    title: "SHRISWARAA HOSPITAL",
+    category: "Hoardings",
+    filter: "HOARDINGS",
+    image: "/our-work/hoardings/shri-1.png",
+    height: "380px",
+    bgColor: "bg-[#ff863c]",
+    gallery: [
+      "/our-work/hoardings/shri-1.png",
+      "/our-work/hoardings/shri-2.png",
+      "/our-work/hoardings/shri-3.jpg",
+    ],
+    clientOverview: "High-impact outdoor hoarding and billboard designs crafted for Shriswaraa Hospital to enhance citywide visibility, emergency awareness, and healthcare services.",
+    services: [
+      "Large-Format Hoarding Design",
+      "High-Contrast Visual Hierarchy",
+      "Outdoor Print Specifications",
+      "Emergency & Specialty Highlights"
+    ],
+    challenge: "Designing large-format outdoor graphics that communicate hospital specialties and 24/7 emergency contacts clearly within 3 seconds to passing motorists."
+  },
+  {
+    id: 31,
+    title: "RUSSH HOSPITAL",
+    category: "Hoardings",
+    filter: "HOARDINGS",
+    image: "/our-work/hoardings/russh.jpg",
+    height: "380px",
+    bgColor: "bg-[#047880]",
+    gallery: [
+      "/our-work/hoardings/russh.jpg",
+    ],
+    clientOverview: "Prominent outdoor hoarding and billboard graphics created for Russh Hospital to highlight multi-specialty clinical departments and emergency response.",
+    services: [
+      "Large-Format Hoarding Layout",
+      "Emergency Hotline Prominence",
+      "Doctor Specialty Highlights",
+      "Outdoor Print Specs"
+    ],
+    challenge: "Ensuring critical hospital service offerings and emergency telephone numbers remain instantly recognizable and readable from fast-moving traffic."
+  },
 ];
 
 // --- Modal Component ---
 const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-  // Prevent background scrolling when modal is open
+  // Normalize images: use project.gallery if available and non-empty, otherwise fallback to project.image
+  const images: string[] =
+    Array.isArray(project.gallery) && project.gallery.length > 0
+      ? project.gallery
+      : project.image
+        ? [project.image]
+        : [];
+
+  const hasMultipleImages = images.length > 1;
+
+  // Prevent background scrolling and handle keyboard left/right arrow navigation
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = 'auto'; };
-  }, []);
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (!hasMultipleImages) return;
+      if (e.key === "ArrowLeft") {
+        setDirection(-1);
+        setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+      } else if (e.key === "ArrowRight") {
+        setDirection(1);
+        setCurrentImageIndex((prev) => (prev + 1) % images.length);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [hasMultipleImages, images.length, onClose]);
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev + 1) % project.gallery.length);
+    if (!hasMultipleImages) return;
+    setDirection(1);
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
+
   const prevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev - 1 + project.gallery.length) % project.gallery.length);
+    if (!hasMultipleImages) return;
+    setDirection(-1);
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
@@ -126,50 +781,82 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
           <X size={18} strokeWidth={2.5} className="w-4.5 h-4.5 sm:w-5 sm:h-5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-5 min-[1400px]:h-5" />
         </button>
 
-        {/* Left Side: Media (Increased height on mobile for clear, immersive viewing) */}
-        <div className="w-full md:w-1/2 h-[260px] sm:h-[300px] md:h-full shrink-0 relative bg-[#1a100e] overflow-hidden">
+        {/* Left Side: Media (Full responsive contain with ambient backdrop so no image gets cut on mobile or desktop) */}
+        <div className="w-full md:w-1/2 h-[280px] sm:h-[340px] md:h-full shrink-0 relative bg-[#130c0a] overflow-hidden flex items-center justify-center">
           {project.isVideo ? (
             <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-black">
               <video
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-black"
                 controls
                 autoPlay
                 muted
+                playsInline
                 loop
                 poster={project.image}
               >
-                <source src={project.videoUrl || "https://www.w3schools.com/html/mov_bbb.mp4"} type="video/mp4" />
+                <source src={project.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
           ) : (
             <>
-              <AnimatePresence mode="wait">
+              {/* Ambient blurred backdrop so brand colors naturally expand into background without empty black bars */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+                <img
+                  src={images[currentImageIndex] || project.image}
+                  alt=""
+                  className="w-full h-full object-cover blur-2xl opacity-40 scale-125"
+                  aria-hidden="true"
+                />
+                <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+              </div>
+
+              <AnimatePresence initial={false} custom={direction} mode="popLayout">
                 <motion.img
                   key={currentImageIndex}
-                  src={project.gallery[currentImageIndex]}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  src={images[currentImageIndex] || project.image}
+                  alt={`${project.title} image ${currentImageIndex + 1}`}
+                  custom={direction}
+                  initial={{ opacity: 0, x: direction > 0 ? 60 : direction < 0 ? -60 : 0 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: direction > 0 ? -60 : 60 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="relative z-10 w-full h-full object-contain select-none p-2 sm:p-3 md:p-4"
                 />
               </AnimatePresence>
 
-              {/* Carousel Controls */}
-              {project.gallery && project.gallery.length > 1 && (
+              {/* Carousel Controls - Only rendered if there are 2 or more images */}
+              {hasMultipleImages && (
                 <>
-                  <button onClick={prevImage} className="absolute left-3 sm:left-4 lg:left-2 xl:left-3 min-[1400px]:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/30 hover:bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all">
+                  <button
+                    onClick={prevImage}
+                    aria-label="Previous slide"
+                    className="absolute left-3 sm:left-4 lg:left-2 xl:left-3 min-[1400px]:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/40 hover:bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all shadow-md z-20 cursor-pointer"
+                  >
                     <ChevronLeft size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-6 min-[1400px]:h-6" />
                   </button>
-                  <button onClick={nextImage} className="absolute right-3 sm:right-4 lg:right-2 xl:right-3 min-[1400px]:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/30 hover:bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all">
+                  <button
+                    onClick={nextImage}
+                    aria-label="Next slide"
+                    className="absolute right-3 sm:right-4 lg:right-2 xl:right-3 min-[1400px]:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/40 hover:bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all shadow-md z-20 cursor-pointer"
+                  >
                     <ChevronRight size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-6 min-[1400px]:h-6" />
                   </button>
 
-                  {/* Dots */}
-                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2">
-                    {project.gallery.map((_: any, i: number) => (
-                      <div key={i} className={`h-1.5 rounded-full transition-all ${i === currentImageIndex ? "w-5 sm:w-6 bg-[#ff863c]" : "w-1.5 bg-white/50"}`} />
+                  {/* Dots Indicator */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 sm:gap-2 z-20 bg-black/30 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                    {images.map((_: string, i: number) => (
+                      <button
+                        key={i}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setDirection(i > currentImageIndex ? 1 : -1);
+                          setCurrentImageIndex(i);
+                        }}
+                        aria-label={`Go to slide ${i + 1}`}
+                        className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${i === currentImageIndex ? "w-5 sm:w-6 bg-[#ff863c]" : "w-1.5 bg-white/60 hover:bg-white"
+                          }`}
+                      />
                     ))}
                   </div>
                 </>
@@ -238,44 +925,45 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
   );
 };
 
-const getGridPattern = (index: number) => {
-  const patternIndex = index % 7;
-  switch (patternIndex) {
-    case 0:
-    case 1:
-      return "md:col-span-5";
-    case 2:
-      return "md:col-span-10";
-    case 3:
-      return "md:col-span-4 lg:col-span-3";
-    case 4:
-      return "md:col-span-6 lg:col-span-7";
-    case 5:
-      return "md:col-span-6 lg:col-span-7";
-    case 6:
-      return "md:col-span-4 lg:col-span-3";
-    default:
-      return "md:col-span-5";
-  }
-};
-
 export default function OurWorksPage() {
-  const [activeFilter, setActiveFilter] = useState("ALL");
+  const [activeFilter, setActiveFilter] = useState("WEBSITES");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedProject, setSelectedProject] = useState<any>(null);
-  const itemsPerPage = 7;
+  const [itemsPerPage, setItemsPerPage] = useState(6);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1400) {
+        setItemsPerPage(9); // >= 1400px: 3 cards * 3 rows = 9
+      } else {
+        setItemsPerPage(6); // Mobile (1 col * 6) & 1024-1400px (2 cols * 3 rows) = 6
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [itemsPerPage, activeFilter]);
 
   const handleFilterChange = (filter: string) => {
-    if (activeFilter === filter && filter !== "ALL") {
-      setActiveFilter("ALL");
-    } else {
-      setActiveFilter(filter);
-    }
+    setActiveFilter(filter);
     setCurrentPage(1);
   };
 
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    const element = document.getElementById("works-grid");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   const filteredItems = portfolioItems.filter(
-    (item) => activeFilter === "ALL" || item.filter === activeFilter
+    (item) => item.filter === activeFilter
   );
 
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
@@ -506,10 +1194,9 @@ export default function OurWorksPage() {
                 <button
                   key={filter}
                   onClick={() => handleFilterChange(filter)}
-                  className={`shrink-0 whitespace-nowrap px-5 py-3 lg:px-3.5 lg:py-2 xl:px-4 xl:py-2.5 min-[1400px]:px-5 min-[1400px]:py-3 rounded-full lg:rounded-lg xl:rounded-xl min-[1400px]:rounded-xl text-center lg:text-left text-xs md:text-sm lg:text-[11px] xl:text-[12px] min-[1400px]:text-sm font-bold tracking-wider uppercase transition-all duration-300 w-auto lg:w-full ${filter === "ALL" ? "hidden lg:block" : "inline-flex items-center justify-center lg:block"
-                    } ${activeFilter === filter
-                      ? "bg-[#492c28] text-white shadow-md"
-                      : "bg-gray-100 lg:bg-transparent text-[#796864] hover:bg-gray-200 lg:hover:bg-[#492c28]/5 hover:text-[#492c28]"
+                  className={`shrink-0 whitespace-nowrap px-5 py-3 lg:px-3.5 lg:py-2 xl:px-4 xl:py-2.5 min-[1400px]:px-5 min-[1400px]:py-3 rounded-full lg:rounded-lg xl:rounded-xl min-[1400px]:rounded-xl text-center lg:text-left text-xs md:text-sm lg:text-[11px] xl:text-[12px] min-[1400px]:text-sm font-bold tracking-wider uppercase transition-all duration-300 w-auto lg:w-full inline-flex items-center justify-center lg:block ${activeFilter === filter
+                    ? "bg-[#492c28] text-white shadow-md"
+                    : "bg-gray-100 lg:bg-transparent text-[#796864] hover:bg-gray-200 lg:hover:bg-[#492c28]/5 hover:text-[#492c28]"
                     }`}
                 >
                   {filter}
@@ -517,27 +1204,26 @@ export default function OurWorksPage() {
               ))}
             </motion.div>
 
-            {/* Bento Grid Container */}
-            <div className="w-full flex-1 flex flex-col">
+            {/* Cards Grid Container (Responsive: Mobile 1 col x 6, 1024-1400px 2 cols x 3, >1400px 3 cols x 3) */}
+            <div id="works-grid" className="w-full flex-1 flex flex-col scroll-mt-28">
               <motion.div
-                className="w-full grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-6 lg:gap-3.5 xl:gap-4.5 min-[1400px]:gap-6"
+                className="w-full grid grid-cols-1 lg:grid-cols-2 min-[1400px]:grid-cols-3 gap-6 lg:gap-5 min-[1400px]:gap-6"
                 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {paginatedItems.map((item, index) => (
                   <motion.div
                     key={item.id}
                     onClick={() => setSelectedProject(item)}
-                    className={`relative group rounded-2xl lg:rounded-xl xl:rounded-2xl min-[1400px]:rounded-2xl overflow-hidden cursor-pointer w-full ${item.bgColor} shadow-sm hover:shadow-xl transition-all duration-300 ${getGridPattern(index)}`}
-                    style={{ height: `calc(${item.height} * var(--card-scale, 1))` }}
+                    className={`relative group rounded-2xl lg:rounded-xl xl:rounded-2xl min-[1400px]:rounded-2xl overflow-hidden cursor-pointer w-full h-[340px] sm:h-[360px] lg:h-[320px] xl:h-[340px] min-[1400px]:h-[350px] ${item.bgColor} shadow-sm hover:shadow-xl transition-all duration-300`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
                   >
                     <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent"></div>
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-cover object-top sm:object-center transition-transform duration-700 group-hover:scale-105"
                       onError={(e) => {
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}
@@ -586,7 +1272,7 @@ export default function OurWorksPage() {
                   initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
                 >
                   <button
-                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
                     disabled={currentPage === 1}
                     className="w-10 h-10 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center bg-gray-100 text-[#492c28] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#ff863c] hover:text-white transition-all duration-300 shadow-sm"
                   >
@@ -597,7 +1283,7 @@ export default function OurWorksPage() {
                     {Array.from({ length: totalPages }).map((_, i) => (
                       <button
                         key={i}
-                        onClick={() => setCurrentPage(i + 1)}
+                        onClick={() => handlePageChange(i + 1)}
                         className={`w-10 h-10 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center font-bold text-sm lg:text-xs xl:text-xs min-[1400px]:text-sm transition-all duration-300 shadow-sm ${currentPage === i + 1
                           ? "bg-[#492c28] text-white"
                           : "bg-gray-100 text-[#796864] hover:bg-gray-200"
@@ -609,7 +1295,7 @@ export default function OurWorksPage() {
                   </div>
 
                   <button
-                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                    onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
                     disabled={currentPage === totalPages}
                     className="w-10 h-10 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center bg-gray-100 text-[#492c28] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#ff863c] hover:text-white transition-all duration-300 shadow-sm"
                   >
