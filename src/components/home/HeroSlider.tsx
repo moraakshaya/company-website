@@ -231,7 +231,7 @@ function Slide2() {
       <div className="relative z-10 w-full h-full flex flex-col justify-center lg:flex-row items-center px-4 md:px-8 min-[1400px]:px-12 py-3 sm:py-4 md:py-5 min-[1400px]:py-6 overflow-hidden rounded-3xl">
 
         {/* LEFT: TEXT (48%) */}
-        <div className="w-full lg:w-[48%] flex flex-col items-center md:items-start text-center md:text-left pt-2 sm:pt-4 lg:pt-0 lg:pl-[4%] xl:pl-[6%] min-[1400px]:pl-0 z-40 relative">
+        <div className="w-full lg:w-[48%] flex flex-col items-center md:items-start text-center md:text-left pt-2 sm:pt-4 lg:pt-0 lg:pl-[4%] xl:pl-[6%] min-[1400px]:pl-[9%] 2xl:min-[1400px]:pl-[11%] z-40 relative">
           {/* Category Tag with Orange Bar */}
           <div className="flex items-center justify-center md:justify-start gap-3 mb-2.5 md:mb-3 min-[1400px]:mb-6">
             <span className="w-7 h-[3px] min-[1400px]:w-9 min-[1400px]:h-[3.5px] bg-[#ff7828] rounded-full inline-block shrink-0" />
@@ -311,10 +311,10 @@ function Slide2() {
         </div>
 
         {/* RIGHT: EXACT SCATTERED COLLAGE (52%) — Low opacity background on mobile, right column on desktop */}
-        <div className="absolute inset-0 md:relative md:inset-auto w-full md:w-[52%] h-full flex items-center justify-center md:justify-end lg:justify-center min-[1400px]:justify-end pr-0 lg:pr-0 min-[1400px]:pr-12 pointer-events-none md:pointer-events-auto overflow-visible">
+        <div className="absolute inset-0 md:relative md:inset-auto w-full md:w-[52%] h-full flex items-center justify-center md:justify-end lg:justify-center min-[1400px]:justify-end pr-0 lg:pr-0 min-[1400px]:pr-6 pointer-events-none md:pointer-events-auto overflow-visible">
 
           {/* Fixed coordinate space so collage elements never separate */}
-          <div className="relative w-[500px] h-[540px] shrink-0 transform scale-[0.52] sm:scale-[0.6] md:scale-[0.65] lg:scale-[0.72] min-[1400px]:scale-[0.84] 2xl:scale-[0.9] origin-center md:origin-right lg:origin-center min-[1400px]:origin-right translate-x-0 md:translate-x-0 lg:-translate-x-8 xl:-translate-x-14 min-[1400px]:translate-x-0 opacity-20 sm:opacity-25 md:opacity-100 transition-opacity duration-300">
+          <div className="relative w-[500px] h-[540px] shrink-0 transform scale-[0.52] sm:scale-[0.6] md:scale-[0.65] lg:scale-[0.72] min-[1400px]:scale-[0.84] 2xl:scale-[0.9] origin-center md:origin-right lg:origin-center min-[1400px]:origin-right translate-x-0 md:translate-x-0 lg:-translate-x-8 xl:-translate-x-14 min-[1400px]:-translate-x-14 2xl:min-[1400px]:-translate-x-20 opacity-20 sm:opacity-25 md:opacity-100 transition-opacity duration-300">
 
             {/* Decorative Sparks Matching Reference Image 2 */}
             {/* Orange Sparks (Left of White Card - Exact Match to Image 2) */}
@@ -603,15 +603,14 @@ function Slide3() {
                 </div>
               </div>
 
-              {/* CENTER NEST: "Grow Your Brand" Button + COLUMN 3 CARD (Pure Image) */}
+              {/* CENTER NEST: "Grow Your Brand" Badge + COLUMN 3 CARD (Pure Image) */}
               <div className="flex flex-col items-center gap-1.5 sm:gap-2 md:gap-2.5 w-[105px] sm:w-[128px] md:w-[130px] lg:w-[145px] xl:w-[175px] min-[1400px]:w-[224px] 2xl:w-[278px] shrink-0">
-                {/* CTA Button nestled directly above Card 3 */}
-                <Link
-                  href="/contact"
-                  className="w-full bg-[#115e63] hover:bg-[#0c4a4e] text-white font-bold text-[11px] sm:text-xs md:text-sm 2xl:text-[15px] py-1.5 sm:py-2 md:py-2 px-2 sm:px-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer whitespace-nowrap"
+                {/* Static Badge nestled directly above Card 3 */}
+                <div
+                  className="w-full bg-[#115e63] text-white font-bold text-[11px] sm:text-xs md:text-sm 2xl:text-[15px] py-1.5 sm:py-2 md:py-2 px-2 sm:px-2.5 rounded-full shadow-md flex items-center justify-center gap-1 sm:gap-1.5 select-none whitespace-nowrap"
                 >
                   <span>Grow Your Brand</span>
-                </Link>
+                </div>
 
                 {/* COLUMN 3: Photo Card (Pure Image) */}
                 <div className="w-full h-[135px] sm:h-[160px] md:h-[160px] lg:h-[175px] xl:h-[205px] min-[1400px]:h-[250px] 2xl:h-[290px] relative rounded-3xl overflow-hidden shadow-xl border border-black/5 bg-[#ead8c7] group transition-transform duration-300 hover:scale-[1.03]">
