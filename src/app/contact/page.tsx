@@ -319,8 +319,8 @@ export default function ContactPage() {
                 <div className="flex flex-col pt-1 lg:pt-0.5">
                   <h4 className="text-white font-bold text-[17px] lg:text-[14px] xl:text-[14.5px] min-[1400px]:text-[17px] mb-1 lg:mb-0.5 min-[1400px]:mb-1 font-['Manrope',sans-serif]">Our Office</h4>
                   <p className="text-white/80 text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] font-medium leading-relaxed lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
-                    Flat No: 101, 1st Floor, Sri Ikon Residency,<br />
-                    Plot No 496, Near Miyapur, Mathrusree Nagar,<br />
+                    Plot No: 496, 1st Floor, Sree Ikon Residency,<br />
+                    Road No 3/2, Mathrusree Nagar, Miyapur,<br />
                     Hyderabad, Telangana – 500049.
                   </p>
                 </div>

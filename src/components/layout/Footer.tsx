@@ -143,7 +143,7 @@ const Footer = () => {
                     <div className="w-[46px] h-[46px] lg:w-[35px] lg:h-[35px] xl:w-[40px] xl:h-[40px] min-[1400px]:w-[46px] min-[1400px]:h-[46px] rounded-full bg-[#126b64] flex items-center justify-center flex-shrink-0 shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]">
                       <svg className="w-5 h-5 lg:w-[15px] lg:h-[15px] xl:w-[17px] xl:h-[17px] min-[1400px]:w-5 min-[1400px]:h-5 text-[#ff863c]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                     </div>
-                    <span className="pt-1 lg:pt-0">Flat No: 101, 1st Floor, Sri Ikon Residency,<br />Plot No 496, Near Miyapur, Mathrusree Nagar,<br />Hyderabad, Telangana – 500049.</span>
+                    <span className="pt-1 lg:pt-0">Plot No: 496, 1st Floor, Sree Ikon Residency,<br />Road No 3/2, Mathrusree Nagar, Miyapur,<br />Hyderabad, Telangana – 500049.</span>
                   </li>
                 </ul>
               </div>
