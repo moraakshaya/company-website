@@ -22,8 +22,19 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Your Company Name",
+  title: {
+    default: "Prodbiz Solutions",
+    template: "%s | Prodbiz Solutions",
+  },
   description: "Digital marketing, web development, branding and creative solutions.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/company-logo/pb-icon.png", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 import Footer from "@/components/layout/Footer";
