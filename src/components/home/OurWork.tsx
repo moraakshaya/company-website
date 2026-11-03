@@ -385,16 +385,16 @@ export default function OurWork() {
               Whether you need a website, a new brand identity, engaging content or better online visibility, let&apos;s create something that works for your business.
             </p>
             <div className="flex flex-row items-center gap-2 sm:gap-4 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-4 w-full sm:w-auto">
-              <Link href="/work" className="group flex-1 sm:flex-initial inline-flex items-center justify-between bg-transparent border-[1.5px] border-white text-white hover:bg-white hover:text-[#114e4b] hover:-translate-y-1 active:scale-95 rounded-full pl-3 sm:pl-5 pr-1 sm:pr-1.5 py-1.5 lg:pl-3.5 lg:pr-1 lg:py-1 xl:pl-4 xl:pr-1.5 xl:py-1 min-[1400px]:pl-6 min-[1400px]:pr-1.5 min-[1400px]:py-1.5 transition-all duration-300 shadow-md hover:shadow-lg min-w-0">
+              <Link href="/our-works" className="group flex-1 sm:flex-initial inline-flex items-center justify-between bg-transparent border-[1.5px] border-white text-white hover:bg-white hover:text-[#114e4b] hover:-translate-y-1 active:scale-95 rounded-full pl-3 sm:pl-5 pr-1 sm:pr-1.5 py-1.5 lg:pl-3.5 lg:pr-1 lg:py-1 xl:pl-4 xl:pr-1.5 xl:py-1 min-[1400px]:pl-6 min-[1400px]:pr-1.5 min-[1400px]:py-1.5 transition-all duration-300 shadow-md hover:shadow-lg min-w-0">
                 <span className="font-extrabold text-[11.5px] sm:text-[14px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[15px] mr-1.5 sm:mr-3 lg:mr-2 xl:mr-2.5 min-[1400px]:mr-3 tracking-wide whitespace-nowrap">View All Our Work</span>
                 <div className="bg-white rounded-full flex items-center justify-center w-[28px] h-[28px] sm:w-[36px] sm:h-[36px] lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-[38px] min-[1400px]:h-[38px] shadow-sm relative overflow-hidden flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <Image src="/images/3d-icon-view-work.jpg" alt="View Work Icon" fill style={{ objectFit: 'cover', transform: 'scale(1.15)' }} />
+                  <Image src="/home-page/our-work/3d-icon-view-work.jpg" alt="View Work Icon" fill style={{ objectFit: 'cover', transform: 'scale(1.15)' }} />
                 </div>
               </Link>
               <Link href="/contact" className="group flex-1 sm:flex-initial inline-flex items-center justify-between bg-[#ff863c] hover:bg-[#ea580c] hover:-translate-y-1 active:scale-95 rounded-full pl-3 sm:pl-5 pr-1 sm:pr-1.5 py-1.5 lg:pl-3.5 lg:pr-1 lg:py-1 xl:pl-4 xl:pr-1.5 xl:py-1 min-[1400px]:pl-6 min-[1400px]:pr-1.5 min-[1400px]:py-1.5 transition-all duration-300 shadow-md hover:shadow-lg min-w-0">
                 <span className="font-extrabold text-white text-[11.5px] sm:text-[14px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[15px] mr-1.5 sm:mr-3 lg:mr-2 xl:mr-2.5 min-[1400px]:mr-3 tracking-wide whitespace-nowrap">Start Your Project</span>
                 <div className="bg-white rounded-full flex items-center justify-center w-[28px] h-[28px] sm:w-[36px] sm:h-[36px] lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-[38px] min-[1400px]:h-[38px] shadow-sm relative overflow-hidden flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
-                  <Image src="/images/start-project-icon.jpg" alt="Start Project Icon" fill style={{ objectFit: 'cover', transform: 'scale(1.15)' }} />
+                  <Image src="/home-page/our-work/start-project-icon.jpg" alt="Start Project Icon" fill style={{ objectFit: 'cover', transform: 'scale(1.15)' }} />
                 </div>
               </Link>
             </div>
