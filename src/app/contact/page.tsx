@@ -121,100 +121,176 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <form className="space-y-6 lg:space-y-3.5 xl:space-y-4 min-[1400px]:space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6">
-                <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                  <label htmlFor="name" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Name</label>
-                  <input type="text" id="name" placeholder="Your Name" className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]" />
+            {isSubmitted ? (
+              <div className="bg-[#184a41]/5 border-2 border-[#184a41] rounded-2xl p-8 sm:p-10 text-center flex flex-col items-center justify-center gap-4 my-4 shadow-sm animate-fade-in">
+                <div className="w-16 h-16 rounded-full bg-[#184a41] text-white flex items-center justify-center shadow-md">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
-                <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                  <label htmlFor="company" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Company</label>
-                  <input type="text" id="company" placeholder="Your Company" className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]" />
-                </div>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#492c28] font-['Manrope',sans-serif]">Thank You!</h3>
+                <p className="text-[#8c8275] text-[15px] sm:text-[16px] font-['Inter',sans-serif] max-w-md leading-relaxed">
+                  Your message has been sent successfully. We've received your request and will get back to you shortly.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setIsSubmitted(false)}
+                  className="mt-4 px-6 py-2.5 rounded-full bg-[#184a41] text-white font-bold text-sm font-['Manrope',sans-serif] hover:bg-[#12362f] transition-all"
+                >
+                  Send Another Message
+                </button>
               </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6">
-                <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                  <label htmlFor="phone" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Phone</label>
-                  <input type="tel" id="phone" placeholder="Phone Number" className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]" />
-                </div>
-                <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                  <label htmlFor="email" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Email</label>
-                  <input type="email" id="email" placeholder="Email Address" className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]" />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2" ref={dropdownRef}>
-                <label className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Subject</label>
-                <div className="relative">
-                  {/* Hidden input to store value for native form submission if needed */}
-                  <input type="hidden" name="subject" value={selectedService} />
-
-                  <button
-                    type="button"
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className={`w-full !bg-transparent backdrop-blur-md !border-2 !border-solid rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif] text-left flex justify-between items-center ${isDropdownOpen ? '!border-[#184a41] !shadow-[0_8px_25px_rgba(24,74,65,0.12)]' : '!border-[#184a41]'}`}
-                  >
-                    <span className={selectedService ? "text-[#492c28]" : "text-[#bcaea4]"}>
-                      {selectedService || "What can we help you with?"}
-                    </span>
-                    <svg className={`w-5 h-5 text-[#bcaea4] transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            ) : (
+              <form
+                action="https://formspree.io/f/mpppogqp"
+                method="POST"
+                onSubmit={handleSubmit}
+                className="space-y-6 lg:space-y-3.5 xl:space-y-4 min-[1400px]:space-y-6"
+              >
+                {errorMessage && (
+                  <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm font-['Inter',sans-serif] flex items-center gap-3">
+                    <svg className="w-5 h-5 flex-shrink-0 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                  </button>
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
 
-                  {isDropdownOpen && (
-                    <div
-                      className="absolute z-50 w-full mt-2 bg-[#fffff0]/95 backdrop-blur-xl border-2 border-[#184a41] shadow-[0_12px_40px_rgba(24,74,65,0.15)] rounded-xl overflow-y-auto overflow-x-hidden flex flex-col max-h-[310px] transition-all duration-300 origin-top animate-[dropdownOpen_0.2s_ease-out_forwards]"
-                      style={{ scrollBehavior: 'smooth' }}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6">
+                  <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                    <label htmlFor="name" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Name *</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      placeholder="Your Name"
+                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                    <label htmlFor="company" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Company</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      placeholder="Your Company"
+                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6">
+                  <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                    <label htmlFor="phone" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Phone</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone Number"
+                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                    <label htmlFor="email" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Email *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="Email Address"
+                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2" ref={dropdownRef}>
+                  <label className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Subject</label>
+                  <div className="relative">
+                    {/* Hidden input to store value for form submission */}
+                    <input type="hidden" name="subject" value={selectedService} />
+
+                    <button
+                      type="button"
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      className={`w-full !bg-transparent backdrop-blur-md !border-2 !border-solid rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif] text-left flex justify-between items-center ${isDropdownOpen ? '!border-[#184a41] !shadow-[0_8px_25px_rgba(24,74,65,0.12)]' : '!border-[#184a41]'}`}
                     >
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setSelectedService("");
-                          setIsDropdownOpen(false);
-                        }}
-                        className={`w-full text-left px-4 py-3 lg:px-3 lg:py-2 xl:px-3.5 xl:py-2.5 font-['Inter',sans-serif] text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] transition-colors flex-shrink-0 ${!selectedService ? 'bg-[#492c28] text-white font-medium' : 'bg-transparent text-[#8c8275] hover:bg-[#492c28] hover:text-white'}`}
+                      <span className={selectedService ? "text-[#492c28]" : "text-[#bcaea4]"}>
+                        {selectedService || "What can we help you with?"}
+                      </span>
+                      <svg className={`w-5 h-5 text-[#bcaea4] transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {isDropdownOpen && (
+                      <div
+                        className="absolute z-50 w-full mt-2 bg-[#fffff0]/95 backdrop-blur-xl border-2 border-[#184a41] shadow-[0_12px_40px_rgba(24,74,65,0.15)] rounded-xl overflow-y-auto overflow-x-hidden flex flex-col max-h-[310px] transition-all duration-300 origin-top animate-[dropdownOpen_0.2s_ease-out_forwards]"
+                        style={{ scrollBehavior: 'smooth' }}
                       >
-                        What can we help you with?
-                      </button>
-                      {servicesList.map((service, index) => (
                         <button
-                          key={index}
                           type="button"
                           onClick={() => {
-                            setSelectedService(service);
+                            setSelectedService("");
                             setIsDropdownOpen(false);
                           }}
-                          className={`w-full text-left px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 font-['Inter',sans-serif] text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] border-t border-[#184a41]/20 transition-colors flex-shrink-0 ${selectedService === service ? 'bg-[#492c28] text-white font-medium' : 'text-[#492c28] hover:bg-[#492c28] hover:text-white'}`}
+                          className={`w-full text-left px-4 py-3 lg:px-3 lg:py-2 xl:px-3.5 xl:py-2.5 font-['Inter',sans-serif] text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] transition-colors flex-shrink-0 ${!selectedService ? 'bg-[#492c28] text-white font-medium' : 'bg-transparent text-[#8c8275] hover:bg-[#492c28] hover:text-white'}`}
                         >
-                          {service}
+                          What can we help you with?
                         </button>
-                      ))}
-                    </div>
-                  )}
+                        {servicesList.map((service, index) => (
+                          <button
+                            key={index}
+                            type="button"
+                            onClick={() => {
+                              setSelectedService(service);
+                              setIsDropdownOpen(false);
+                            }}
+                            className={`w-full text-left px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 font-['Inter',sans-serif] text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] border-t border-[#184a41]/20 transition-colors flex-shrink-0 ${selectedService === service ? 'bg-[#492c28] text-white font-medium' : 'text-[#492c28] hover:bg-[#492c28] hover:text-white'}`}
+                          >
+                            {service}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                <label htmlFor="message" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Message</label>
-                <textarea id="message" rows={5} placeholder="Your Message..." className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all resize-none font-['Inter',sans-serif]"></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="group flex items-center justify-between gap-5 bg-[#184a41] text-white pl-7 pr-1.5 lg:pl-5 lg:pr-1 xl:pl-6 xl:pr-1 min-[1400px]:pl-7 min-[1400px]:pr-1.5 h-[56px] lg:h-[42px] xl:h-[46px] min-[1400px]:h-[56px] rounded-full font-extrabold text-[16px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[16px] tracking-wide hover:bg-[#12362f] transition-all active:scale-95 mt-4 lg:mt-2.5 xl:mt-3 min-[1400px]:mt-4 w-max shadow-lg"
-              >
-                Let's Talk
-                <div className="w-[44px] h-[44px] lg:w-[32px] lg:h-[32px] xl:w-[36px] xl:h-[36px] min-[1400px]:w-[44px] min-[1400px]:h-[44px] rounded-full border-[2px] border-white/50 flex items-center justify-center bg-gradient-to-br from-[#126b64] to-[#052b29] shadow-[inset_0_2px_6px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform overflow-hidden">
-                  <img
-                    src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Telephone%20Receiver.png"
-                    alt="Phone"
-                    className="w-6 h-6 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6 object-contain drop-shadow-lg"
-                  />
+                <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                  <label htmlFor="message" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    placeholder="Your Message..."
+                    className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all resize-none font-['Inter',sans-serif]"
+                  ></textarea>
                 </div>
-              </button>
-            </form>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="group flex items-center justify-between gap-5 bg-[#184a41] text-white pl-7 pr-1.5 lg:pl-5 lg:pr-1 xl:pl-6 xl:pr-1 min-[1400px]:pl-7 min-[1400px]:pr-1.5 h-[56px] lg:h-[42px] xl:h-[46px] min-[1400px]:h-[56px] rounded-full font-extrabold text-[16px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[16px] tracking-wide hover:bg-[#12362f] transition-all active:scale-95 mt-4 lg:mt-2.5 xl:mt-3 min-[1400px]:mt-4 w-max shadow-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                >
+                  {isSubmitting ? "Sending..." : "Let's Talk"}
+                  <div className="w-[44px] h-[44px] lg:w-[32px] lg:h-[32px] xl:w-[36px] xl:h-[36px] min-[1400px]:w-[44px] min-[1400px]:h-[44px] rounded-full border-[2px] border-white/50 flex items-center justify-center bg-gradient-to-br from-[#126b64] to-[#052b29] shadow-[inset_0_2px_6px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform overflow-hidden">
+                    {isSubmitting ? (
+                      <svg className="w-5 h-5 text-white animate-spin" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                    ) : (
+                      <img
+                        src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Telephone%20Receiver.png"
+                        alt="Phone"
+                        className="w-6 h-6 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6 object-contain drop-shadow-lg"
+                      />
+                    )}
+                  </div>
+                </button>
+              </form>
+            )}
           </div>
 
           {/* Right Column - Contact Info Card */}
