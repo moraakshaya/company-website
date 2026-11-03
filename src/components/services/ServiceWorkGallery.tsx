@@ -203,7 +203,7 @@ const slideVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      x: { type: "spring", stiffness: 320, damping: 32 },
+      x: { type: "spring" as const, stiffness: 320, damping: 32 },
       opacity: { duration: 0.25 },
       scale: { duration: 0.25 },
     },
@@ -213,7 +213,7 @@ const slideVariants = {
     opacity: 0,
     scale: 0.96,
     transition: {
-      x: { type: "spring", stiffness: 320, damping: 32 },
+      x: { type: "spring" as const, stiffness: 320, damping: 32 },
       opacity: { duration: 0.25 },
       scale: { duration: 0.25 },
     },

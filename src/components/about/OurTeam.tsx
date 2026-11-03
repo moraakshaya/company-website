@@ -1,14 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useMotionTemplate,
-  AnimatePresence,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface TeamMember {
@@ -48,120 +41,41 @@ function TeamCard3D({
   index: number;
   isMobile?: boolean;
 }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  // Mouse coordinates normalized from -0.5 to 0.5
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  // Spring physics for natural, buttery-smooth 3D tilt
-  const smoothMouseX = useSpring(mouseX, { stiffness: 280, damping: 24, mass: 0.6 });
-  const smoothMouseY = useSpring(mouseY, { stiffness: 280, damping: 24, mass: 0.6 });
-
-  // 3D rotation angles (mapped from mouse coords)
-  const rotateX = useTransform(smoothMouseY, [-0.5, 0.5], [8.5, -8.5]);
-  const rotateY = useTransform(smoothMouseX, [-0.5, 0.5], [-8.5, 8.5]);
-
-  // Dynamic specular light reflection follows cursor across glass
-  const glareX = useTransform(smoothMouseX, [-0.5, 0.5], [15, 85]);
-  const glareY = useTransform(smoothMouseY, [-0.5, 0.5], [15, 85]);
-
-  // Reactive shadow shifts based on 3D angle
-  const shadowX = useTransform(smoothMouseX, [-0.5, 0.5], [10, -10]);
-  const shadowY = useTransform(smoothMouseY, [-0.5, 0.5], [16, 4]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const xPct = (e.clientX - rect.left) / rect.width - 0.5;
-    const yPct = (e.clientY - rect.top) / rect.height - 0.5;
-    mouseX.set(xPct);
-    mouseY.set(yPct);
-  };
-
-  const handleMouseLeave = () => {
-    mouseX.set(0);
-    mouseY.set(0);
-  };
-
   return (
     <motion.div
       initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
       whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.6, delay: isMobile ? 0 : index * 0.12 }}
-      className="perspective-[1200px] w-full"
+      className="w-full"
     >
-      <motion.div
-        ref={cardRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
+      <div
         style={{
-          rotateX,
-          rotateY,
-          transformStyle: "preserve-3d",
-          // Brand Glassmorphism: Translucent crystal glass with lavender/ivory tones (NO solid white)
           background:
             "linear-gradient(145deg, rgba(225, 215, 217, 0.62) 0%, rgba(212, 198, 202, 0.38) 55%, rgba(235, 226, 228, 0.22) 100%)",
           borderColor: "rgba(255, 255, 255, 0.85)",
-          boxShadow: useMotionTemplate`
-            ${shadowX}px ${shadowY}px 30px rgba(73, 44, 40, 0.08),
-            0 4px 18px -2px rgba(0, 0, 0, 0.03),
-            inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95),
-            inset 0 -1px 1px 0 rgba(73, 44, 40, 0.04)
-          `,
         }}
-        whileHover={{
-          scale: 1.025,
-          transition: { type: "spring", stiffness: 350, damping: 25 },
-        }}
-        className="group relative select-none rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.75rem] min-[1400px]:rounded-[2rem] border backdrop-blur-2xl backdrop-saturate-[180%] p-5 sm:p-6 lg:p-3 xl:p-4 min-[1400px]:p-6 flex flex-col items-center text-center transition-all duration-300 overflow-hidden cursor-default"
+        className="group relative select-none rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.75rem] min-[1400px]:rounded-[2rem] border p-5 sm:p-6 lg:p-3 xl:p-4 min-[1400px]:p-6 flex flex-col items-center text-center shadow-[0_10px_25px_rgba(73,44,40,0.06)] hover:shadow-[0_22px_45px_rgba(73,44,40,0.15)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.025] cursor-default overflow-hidden"
       >
-        {/* Dynamic Specular Light Glare across the glass */}
-        <motion.div
-          className="pointer-events-none absolute inset-0 rounded-[2rem] overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
-          style={{
-            background: useMotionTemplate`radial-gradient(450px circle at ${glareX}% ${glareY}%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.08) 50%, transparent 80%)`,
-          }}
-        />
-
-        {/* 3D Floating Glassmorphic Image Frame */}
-        <div
-          className="relative w-full aspect-[4/4.8] rounded-[1.4rem] lg:rounded-[1rem] xl:rounded-[1.2rem] min-[1400px]:rounded-[1.4rem] overflow-hidden mb-5 lg:mb-2.5 xl:mb-3.5 min-[1400px]:mb-5 shadow-[0_10px_25px_rgba(73,44,40,0.08)] border border-white/90 bg-white"
-          style={{
-            transform: "translateZ(38px)",
-            transformStyle: "preserve-3d",
-          }}
-        >
+        {/* Image Frame */}
+        <div className="relative w-full aspect-[4/4.8] rounded-[1.4rem] lg:rounded-[1rem] xl:rounded-[1.2rem] min-[1400px]:rounded-[1.4rem] overflow-hidden mb-5 lg:mb-2.5 xl:mb-3.5 min-[1400px]:mb-5 shadow-[0_6px_20px_rgba(73,44,40,0.07)] bg-white">
           <img
             src={member.image}
             alt={member.name}
-            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
           />
-
-          {/* Frosted Glass Sheen Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/30 pointer-events-none" />
-
-          {/* Glass Beveled Rim */}
-          <div className="absolute inset-0 rounded-[1.4rem] border border-white/50 pointer-events-none shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.7)]" />
         </div>
 
-        {/* Name and Role Floating in 3D Depth */}
-        <div
-          className="flex flex-col items-center text-center"
-          style={{
-            transform: "translateZ(48px)",
-            transformStyle: "preserve-3d",
-          }}
-        >
-          <h3 className="text-xl sm:text-2xl lg:text-[15px] xl:text-[17px] min-[1400px]:text-2xl font-extrabold text-[#2d1e18] tracking-tight group-hover:text-[#047880] transition-colors leading-snug">
+        {/* Name and Role */}
+        <div className="flex flex-col items-center text-center">
+          <h3 className="text-xl sm:text-2xl lg:text-[15px] xl:text-[17px] min-[1400px]:text-2xl font-extrabold text-[#2d1e18] tracking-tight leading-snug">
             {member.name}
           </h3>
           <p className="text-sm lg:!text-[11px] xl:!text-[12px] min-[1400px]:!text-sm font-bold text-[#047880] mt-1.5 lg:mt-0.5 xl:mt-1 min-[1400px]:mt-1.5 tracking-wide">
             {member.role}
           </p>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 }

@@ -12,8 +12,8 @@ const servicesList = [
       "Logo Design", "Brand Identity", "Business Cards", "Letterheads", "Brochures & Profiles", "Brand Guidelines", "Marketing Materials"
     ],
     forWho: "New businesses • Rebranding • Growing businesses",
-    linkText: "EXPLORE BRANDING",
-    linkHref: "/services/branding",
+    linkText: "Explore Branding",
+    linkHref: "/services/logo-branding",
     gradientFrom: "#ffa76b",
     gradientTo: "#ff5e00",
     shadowColor: "rgba(255, 94, 0, 0.4)",
@@ -28,8 +28,8 @@ const servicesList = [
       "Business Websites", "Company Websites", "Service Websites", "Landing Pages", "E-commerce Websites", "Website Redesign", "Website Maintenance"
     ],
     forWho: "Clinics • Hospitals • Restaurants • Real Estate • Manufacturers • Shops",
-    linkText: "EXPLORE WEB DESIGN",
-    linkHref: "/services/web-design",
+    linkText: "Explore Web Design",
+    linkHref: "/services/website-design",
     gradientFrom: "#0fdbe6",
     gradientTo: "#047880",
     shadowColor: "rgba(4, 120, 128, 0.4)",
@@ -37,14 +37,14 @@ const servicesList = [
   },
   {
     id: "03",
-    title: "Social Media & Content",
-    subtitle: "Keep Your Business Visible and Connected.",
-    desc: "We create professional content that helps your business stay active on social media and communicate with your customers.",
+    title: "Social Media Marketing",
+    subtitle: "Keep Your Business Visible, Engaging & Connected.",
+    desc: "We create and manage dynamic social media campaigns that build brand loyalty, drive audience engagement, and turn followers into paying customers.",
     offerings: [
-      "Social Media Posts", "Reels & Short Videos", "Promotional Creatives", "Festival & Occasion Posts", "Product & Service Content", "Social Media Management"
+      "Social Media Management", "Instagram & Facebook Marketing", "Reels & Short Videos", "Promotional Creatives", "Content Calendars", "Audience Engagement"
     ],
     forWho: "Local businesses • Brands • Professionals • Growing companies",
-    linkText: "EXPLORE SOCIAL MEDIA",
+    linkText: "Explore Social Media",
     linkHref: "/services/social-media",
     gradientFrom: "#ffdd6b",
     gradientTo: "#eab308",
@@ -53,15 +53,15 @@ const servicesList = [
   },
   {
     id: "04",
-    title: "SEO & Online Advertising",
-    subtitle: "Help Customers Find Your Business Online.",
-    desc: "We help businesses improve their online visibility and reach potential customers through search engines and online advertising.",
+    title: "SEO",
+    subtitle: "Help Customers Find Your Business on Search Engines.",
+    desc: "We optimize your website and Google Business Profile to rank higher on search engines, driving high-intent organic traffic and qualified customer enquiries.",
     offerings: [
-      "Search Engine Optimization", "Local SEO", "Google Business Profile", "Google Ads", "Social Media Advertising", "Lead Generation Campaigns"
+      "Local SEO", "Google Business Profile", "Keyword Research", "On-Page Optimization", "Search Visibility", "SEO Performance Monitoring"
     ],
-    forWho: "Businesses looking for more visibility, enquiries and customers.",
-    linkText: "EXPLORE DIGITAL MARKETING",
-    linkHref: "/services/digital-marketing",
+    forWho: "Businesses looking for higher search rankings, Google visibility, and organic customer inquiries.",
+    linkText: "Explore SEO",
+    linkHref: "/services/seo",
     gradientFrom: "#b785f5",
     gradientTo: "#7c3aed",
     shadowColor: "rgba(124, 58, 237, 0.4)",
@@ -69,15 +69,15 @@ const servicesList = [
   },
   {
     id: "05",
-    title: "Creative Design",
-    subtitle: "Create Marketing Materials That Get Noticed.",
-    desc: "Need something specific for your business? We create professional visual materials for both digital and offline use.",
+    title: "Content Creation along with Creative Designs",
+    subtitle: "Create Marketing Materials & Content That Get Noticed.",
+    desc: "We craft compelling visual materials and written content—from brochures, flyers, banners, and presentation designs to blogs, promotional copy, and website content.",
     offerings: [
-      "Posters", "Banners", "Brochures", "Flyers", "Advertisements", "Presentation Designs", "Menus", "Promotional Materials"
+      "Brochures & Profiles", "Flyers & Leaflets", "Banners & Posters", "Promotional Content", "Blogs & Articles", "Website Copywriting"
     ],
     forWho: "Events • Offers • Campaigns • Businesses • Products • Services",
-    linkText: "EXPLORE CREATIVE DESIGN",
-    linkHref: "/services/creative-design",
+    linkText: "Explore Content & Design",
+    linkHref: "/services/content-creation",
     gradientFrom: "#ff8c5a",
     gradientTo: "#ea580c",
     shadowColor: "rgba(234, 88, 12, 0.4)",
@@ -85,15 +85,15 @@ const servicesList = [
   },
   {
     id: "06",
-    title: "Ongoing Digital Support",
-    subtitle: "Need Someone to Handle the Digital Side?",
-    desc: "We can continue supporting your business after the initial project with regular updates, content, marketing and other digital requirements.",
+    title: "Online Ads along with Ongoing Digital Support",
+    subtitle: "Targeted Ad Campaigns & Continuous Digital Support.",
+    desc: "We run high-converting ad campaigns across Google, Instagram, and Facebook to generate targeted leads, backed by regular website maintenance, updates, and dedicated digital support.",
     offerings: [
-      "Website Updates", "Social Media Support", "SEO Support", "Advertising Management", "Creative Requirements", "Digital Consultation"
+      "Google Ads", "Meta Ads (Instagram & FB)", "Lead Generation", "Website Updates & Maintenance", "Campaign Optimization", "Ongoing Digital Support"
     ],
-    forWho: "Businesses that need ongoing digital support without managing everything themselves.",
-    linkText: "TALK TO US",
-    linkHref: "/contact",
+    forWho: "Businesses that need high-performing ads and continuous digital support without managing everything themselves.",
+    linkText: "Explore Online Ads",
+    linkHref: "/services/online-advertising",
     gradientFrom: "#67d5ff",
     gradientTo: "#0284c7",
     shadowColor: "rgba(2, 132, 199, 0.4)",
@@ -103,14 +103,16 @@ const servicesList = [
 
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Auto-slide effect
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setActiveIndex((current) => (current + 1) % servicesList.length);
     }, 4500); // 4.5 seconds per slide
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   return (
     <section className="py-20 lg:py-[96px] min-[1400px]:py-32 bg-[#fffff0] relative overflow-hidden">
@@ -133,7 +135,11 @@ const Services = () => {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative w-full max-w-[1000px] lg:max-w-[880px] xl:max-w-[940px] min-[1400px]:max-w-[1000px] mx-auto pb-12 sm:pb-0 sm:min-h-[480px] lg:min-h-[340px] xl:min-h-[360px] min-[1400px]:min-h-[480px]">
+        <div
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          className="relative w-full max-w-[1000px] lg:max-w-[880px] xl:max-w-[940px] min-[1400px]:max-w-[1000px] mx-auto pb-12 sm:pb-0 sm:min-h-[480px] lg:min-h-[340px] xl:min-h-[360px] min-[1400px]:min-h-[480px]"
+        >
 
           <div className="relative w-full sm:w-[calc(100%-4rem)] lg:w-[calc(100%-3rem)] xl:w-[calc(100%-3.5rem)] min-[1400px]:w-[calc(100%-4rem)] bg-white rounded-[32px] lg:rounded-[22px] xl:rounded-[26px] min-[1400px]:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] ml-0 sm:ml-16 lg:ml-10 xl:ml-12 min-[1400px]:ml-16 mt-32 sm:mt-0 min-h-[660px] sm:min-h-[460px] lg:min-h-[330px] xl:min-h-[350px] min-[1400px]:min-h-[460px]">
 
@@ -197,9 +203,9 @@ const Services = () => {
                     <div>
                       <Link
                         href={service.linkHref}
-                        className="group inline-flex items-center gap-3 lg:gap-2 min-[1400px]:gap-3 bg-[#047880] text-white pl-7 pr-2 py-2 lg:pl-4 xl:pl-5 min-[1400px]:pl-7 lg:pr-1 xl:pr-1.5 min-[1400px]:pr-2 lg:py-1 xl:py-1 min-[1400px]:py-2 rounded-full font-bold text-[15px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[15px] hover:bg-[#114e4b] transition-all hover:-translate-y-1 active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap capitalize"
+                        className="group inline-flex items-center gap-3 lg:gap-2 min-[1400px]:gap-3 bg-[#047880] text-white pl-7 pr-2 py-2 lg:pl-4 xl:pl-5 min-[1400px]:pl-7 lg:pr-1 xl:pr-1.5 min-[1400px]:pr-2 lg:py-1 xl:py-1 min-[1400px]:py-2 rounded-full font-bold text-[15px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[15px] hover:bg-[#114e4b] transition-all hover:-translate-y-1 active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap"
                       >
-                        {service.linkText.toLowerCase()}
+                        {service.linkText}
                         <div className="w-10 h-10 lg:w-6 lg:h-6 xl:w-7 xl:h-7 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5 group-hover:scale-110 transition-transform">
                           <img src="/icons/about-arrow-3d.jpg" alt="Arrow Icon" className="w-full h-full object-contain p-0.5 group-hover:animate-ring" />
                         </div>

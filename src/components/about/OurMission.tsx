@@ -24,7 +24,7 @@ export default function OurMission() {
                 {/* Left Column: Primary Tall Photo */}
                 <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden group">
                   <img
-                    src="/about/mission/website.png"
+                    src="/about/mission/mission-photo-1.png"
                     alt="Our Mission - Helping Businesses Build a Strong Presence"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />

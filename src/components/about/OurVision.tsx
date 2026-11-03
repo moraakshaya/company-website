@@ -73,7 +73,7 @@ export default function OurVision() {
                 {/* Left Column: Primary Tall Photo */}
                 <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden shadow-[0_16px_36px_rgba(73,44,40,0.08)] bg-white group">
                   <img
-                    src="/about/mission/vision-photo-1.jpg"
+                    src="/about/mission/vision-photo-1.png"
                     alt="Our Vision - Trusted Business Partner"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
@@ -83,14 +83,14 @@ export default function OurVision() {
                 <div className="flex flex-col gap-3 sm:gap-4 lg:gap-2.5 xl:gap-3.5 min-[1400px]:gap-4 justify-between">
                   <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden shadow-[0_16px_36px_rgba(73,44,40,0.08)] bg-white group aspect-square">
                     <img
-                      src="/about/mission/vision-photo-2.jpg"
+                      src="/about/mission/vision-photo-2.png"
                       alt="Our Vision - Creative Design and Branding"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
                   <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden shadow-[0_16px_36px_rgba(73,44,40,0.08)] bg-white group aspect-square">
                     <img
-                      src="/about/mission/vision-photo-3.jpg"
+                      src="/about/mission/vision-photo-3.png"
                       alt="Our Vision - Digital Business Growth Analytics"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />

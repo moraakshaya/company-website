@@ -90,7 +90,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/our-work/websites/shriswaraa-website-1.png",
     height: "380px",
     bgColor: "bg-[#ff863c]",
-    link: "https://shriswaraa.com",
+    link: "https://www.shriswaraamultispecialityhospital.com/",
     gallery: [
       "/our-work/websites/shriswaraa-website-1.png",
       "/our-work/websites/shriswaraa-website-2.png",
@@ -113,7 +113,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/our-work/websites/gvr-website-2.png",
     height: "380px",
     bgColor: "bg-[#492c28]",
-    link: "https://gvrinfosystem.com",
+    link: "https://www.gvrinfosystems.com/",
     gallery: [
       "/our-work/websites/gvr-website-1.png",
       "/our-work/websites/gvr-website-2.png",
@@ -136,7 +136,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/our-work/websites/padmavati-website-2.png",
     height: "380px",
     bgColor: "bg-[#047880]",
-    link: "https://padmavathihospital.com",
+    link: "https://www.padmavathimedicalcenter.com/",
     gallery: [
       "/our-work/websites/padmavati-website-1.png",
       "/our-work/websites/padmavati-website-2.png",

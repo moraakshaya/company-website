@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 
 // -----------------------------
@@ -11,17 +12,17 @@ function Slide1() {
     {
       id: 1,
       title: "CONTENT CREATION",
-      image: "/images/slides/slide6.jpg",
+      image: "/home-page/hero-section/slide-1/1.png",
     },
     {
       id: 2,
       title: "WEB DESIGN",
-      image: "/images/slides/slide2.jpg",
+      image: "/home-page/hero-section/slide-1/2.png",
     },
     {
       id: 3,
       title: "LOGO & BRANDING",
-      image: "/images/slides/slide3.jpg",
+      image: "/home-page/hero-section/slide-1/3.png",
     },
   ];
 
@@ -149,7 +150,8 @@ function Slide1() {
           {/* Action Buttons Row — Single row on mobile & desktop */}
           <div className="flex flex-row items-center justify-center md:justify-start gap-2.5 sm:gap-4 md:gap-7 lg:gap-4 min-[1400px]:gap-7 flex-nowrap">
             {/* Build Your Website Button */}
-            <button
+            <Link
+              href="/contact"
               className="btn !min-h-10 sm:!min-h-12 lg:!min-h-10 min-[1400px]:!min-h-12 !h-10 sm:!h-12 lg:!h-10 min-[1400px]:!h-12 !p-0 !pl-3.5 sm:!pl-6 lg:!pl-4 min-[1400px]:!pl-6 flex items-center gap-2 sm:gap-4 lg:gap-3 min-[1400px]:gap-4 transition-transform hover:scale-105 group border-none shrink-0"
               style={{ backgroundColor: "var(--color-orange)", color: "var(--color-ivory)", borderRadius: "9999px" }}
             >
@@ -157,10 +159,13 @@ function Slide1() {
               <div className="w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 lg:w-9 lg:h-9 min-[1400px]:w-12 min-[1400px]:h-12 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5">
                 <Image src="/icons/website-3d.jpg" alt="Website 3D Icon" width={48} height={48} className="w-full h-full object-contain p-1.5 sm:p-2 lg:p-1.5 min-[1400px]:p-2 group-hover:animate-ring" />
               </div>
-            </button>
+            </Link>
 
             {/* See Our Work Play Button */}
-            <button className="flex items-center gap-2 sm:gap-3 md:gap-3.5 lg:gap-2.5 min-[1400px]:gap-3.5 text-white hover:opacity-85 transition-opacity group cursor-pointer select-none shrink-0">
+            <Link
+              href="/our-works"
+              className="flex items-center gap-2 sm:gap-3 md:gap-3.5 lg:gap-2.5 min-[1400px]:gap-3.5 text-white hover:opacity-85 transition-opacity group cursor-pointer select-none shrink-0"
+            >
               <div className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-8 lg:h-8 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full border-[1.5px] sm:border-[1.8px] border-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform bg-black/10">
                 <svg
                   className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 lg:w-3.5 lg:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4 text-white fill-white ml-0.5"
@@ -172,7 +177,7 @@ function Slide1() {
               <span className="font-semibold text-[12px] sm:text-sm md:text-[15px] lg:text-[13.5px] min-[1400px]:text-[15px] tracking-wide text-white whitespace-nowrap">
                 See Our Work
               </span>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -556,7 +561,7 @@ function Slide3() {
             {/* Inner Image Container */}
             <div className="w-full h-full relative rounded-3xl overflow-hidden border border-black/5 bg-[#ead8c7]">
               <Image
-                src="/home-page/hero-section/slide-3/social-posts.jpg"
+                src="/home-page/hero-section/slide-3/01.png"
                 alt="Social media content"
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -589,7 +594,7 @@ function Slide3() {
                 </div>
                 <div className="w-full h-full relative rounded-3xl overflow-hidden border border-black/5 bg-[#1a1a1a]">
                   <Image
-                    src="/home-page/hero-section/slide-3/reels-videos.jpg"
+                    src="/home-page/hero-section/slide-3/2.png"
                     alt="Reels and video production"
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -601,18 +606,17 @@ function Slide3() {
               {/* CENTER NEST: "Grow Your Brand" Button + COLUMN 3 CARD (Pure Image) */}
               <div className="flex flex-col items-center gap-1.5 sm:gap-2 md:gap-2.5 w-[105px] sm:w-[128px] md:w-[130px] lg:w-[145px] xl:w-[175px] min-[1400px]:w-[224px] 2xl:w-[278px] shrink-0">
                 {/* CTA Button nestled directly above Card 3 */}
-                <button className="w-full bg-[#115e63] hover:bg-[#0c4a4e] text-white font-bold text-[11px] sm:text-xs md:text-sm 2xl:text-[15px] py-1.5 sm:py-2 md:py-2 px-2 sm:px-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer whitespace-nowrap">
+                <Link
+                  href="/contact"
+                  className="w-full bg-[#115e63] hover:bg-[#0c4a4e] text-white font-bold text-[11px] sm:text-xs md:text-sm 2xl:text-[15px] py-1.5 sm:py-2 md:py-2 px-2 sm:px-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 flex items-center justify-center gap-1 sm:gap-1.5 cursor-pointer whitespace-nowrap"
+                >
                   <span>Grow Your Brand</span>
-                  <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </button>
+                </Link>
 
                 {/* COLUMN 3: Photo Card (Pure Image) */}
                 <div className="w-full h-[135px] sm:h-[160px] md:h-[160px] lg:h-[175px] xl:h-[205px] min-[1400px]:h-[250px] 2xl:h-[290px] relative rounded-3xl overflow-hidden shadow-xl border border-black/5 bg-[#ead8c7] group transition-transform duration-300 hover:scale-[1.03]">
                   <Image
-                    src="/home-page/hero-section/slide-3/brand-creation.jpg"
+                    src="/home-page/hero-section/slide-3/03.png"
                     alt="Creative brand creation"
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -624,7 +628,7 @@ function Slide3() {
               {/* COLUMN 4: Photo Card (Pure Image) */}
               <div className="w-[105px] sm:w-[128px] md:w-[130px] lg:w-[145px] xl:w-[175px] min-[1400px]:w-[224px] 2xl:w-[278px] h-[170px] sm:h-[200px] md:h-[205px] lg:h-[220px] xl:h-[255px] min-[1400px]:h-[315px] 2xl:h-[360px] shrink-0 relative rounded-3xl overflow-hidden shadow-lg group transition-transform duration-300 hover:scale-[1.03] border border-black/5 bg-[#ead4c4]">
                 <Image
-                  src="/home-page/hero-section/slide-3/promotional-content.jpg"
+                  src="/home-page/hero-section/slide-3/4.png"
                   alt="Social media network connection"
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -638,7 +642,7 @@ function Slide3() {
           {/* COLUMN 5: RIGHT SINGLE TALL CARD (Hidden on mobile to render only 3 images) */}
           <div className="hidden md:block w-[105px] sm:w-[128px] md:w-[130px] lg:w-[145px] xl:w-[175px] min-[1400px]:w-[224px] 2xl:w-[278px] h-[200px] sm:h-[240px] md:h-[240px] lg:h-[260px] xl:h-[300px] min-[1400px]:h-[365px] 2xl:h-[415px] shrink-0 relative rounded-3xl overflow-hidden shadow-lg group transition-transform duration-300 hover:scale-[1.03] border border-black/5 bg-[#2a2a2a]">
             <Image
-              src="/home-page/hero-section/slide-3/facebook-management.jpg"
+              src="/home-page/hero-section/slide-3/05.png"
               alt="Marketing analytics dashboard"
               fill
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500"

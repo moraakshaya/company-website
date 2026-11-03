@@ -10,7 +10,21 @@ import ServiceFeatures from "@/components/services/ServiceFeatures";
 const headlineBase =
   "font-extrabold leading-[1.15] tracking-[-0.03em] md:tracking-[-0.02em] whitespace-nowrap text-[28px] md:text-[clamp(2.2rem,4.5vw,3.8rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(2.2rem,4.5vw,3.8rem)]";
 
-const servicesData = [
+interface ServiceItem {
+  num: string;
+  title: string;
+  subtitle: string;
+  desc: string;
+  featuresTitle?: string;
+  features?: string[];
+  ctaText: string;
+  imageSrc?: string;
+  isCustomGraphic?: boolean;
+  featureBlocks?: { title: string; desc: string }[];
+  extraDesc?: string;
+}
+
+const servicesData: ServiceItem[] = [
   {
     num: "01",
     title: "Promotional Content",
