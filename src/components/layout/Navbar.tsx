@@ -92,7 +92,7 @@ export default function Navbar() {
             alt="Prodbiz Logo"
             width={160}
             height={48}
-            className="object-contain h-10 w-auto"
+            className="object-contain h-10 max-[439px]:h-8 w-auto"
             priority
           />
         </Link>
@@ -251,17 +251,17 @@ export default function Navbar() {
 
         {/* MOBILE TOGGLE BUTTON */}
         <button
-          className="md:hidden flex items-center justify-center p-2 z-50 relative"
+          className="md:hidden flex items-center justify-center p-2 max-[439px]:p-1.5 z-50 relative"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
           style={{ color: isMobileMenuOpen ? "var(--color-brown)" : "var(--color-teal)" }}
         >
           {isMobileMenuOpen ? (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 max-[439px]:w-6.5 max-[439px]:h-6.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           ) : (
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 max-[439px]:w-6.5 max-[439px]:h-6.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           )}
@@ -278,42 +278,42 @@ export default function Navbar() {
           maxHeight: isMobileMenuOpen ? "100vh" : "0"
         }}
       >
-        <div className="container flex flex-col py-5 gap-3">
+        <div className="container flex flex-col py-5 max-[439px]:py-3.5 gap-3 max-[439px]:gap-2">
           <Link
             href="/about"
             onClick={closeMenu}
-            className="flex items-center justify-between w-full px-5 py-3.5 rounded-2xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] text-lg font-bold text-[#492c28] hover:text-orange active:scale-[0.99] transition-all"
+            className="flex items-center justify-between w-full px-5 py-3.5 max-[439px]:px-4 max-[439px]:py-2.5 rounded-2xl max-[439px]:rounded-xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] text-lg max-[439px]:text-[15px] font-bold text-[#492c28] hover:text-orange active:scale-[0.99] transition-all"
           >
             <span>About</span>
           </Link>
 
-          <div className="flex flex-col w-full rounded-2xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] transition-all overflow-hidden">
+          <div className="flex flex-col w-full rounded-2xl max-[439px]:rounded-xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] transition-all overflow-hidden">
             <button
               onClick={toggleServices}
-              className="flex justify-between items-center w-full px-5 py-3.5 text-left text-lg font-bold text-[#492c28] hover:text-orange active:text-orange transition-colors"
+              className="flex justify-between items-center w-full px-5 py-3.5 max-[439px]:px-4 max-[439px]:py-2.5 text-left text-lg max-[439px]:text-[15px] font-bold text-[#492c28] hover:text-orange active:text-orange transition-colors"
             >
               <span>Services</span>
-              <span className="text-2xl leading-none text-orange font-semibold">
+              <span className="text-2xl max-[439px]:text-xl leading-none text-orange font-semibold">
                 {isServicesOpen ? "−" : "+"}
               </span>
             </button>
 
             <div
-              className={`flex flex-col gap-2.5 px-3.5 transition-all duration-300 ease-in-out mobile-services-dropdown ${isServicesOpen ? "opacity-100 pb-3.5 max-h-[165px] overflow-y-auto" : "max-h-0 opacity-0 overflow-hidden pointer-events-none pb-0"}`}
+              className={`flex flex-col gap-2.5 max-[439px]:gap-1.5 px-3.5 max-[439px]:px-2.5 transition-all duration-300 ease-in-out mobile-services-dropdown ${isServicesOpen ? "opacity-100 pb-3.5 max-[439px]:pb-2 max-h-[165px] max-[439px]:max-h-[145px] overflow-y-auto" : "max-h-0 opacity-0 overflow-hidden pointer-events-none pb-0"}`}
             >
-              <Link href="/services/website-design" onClick={closeMenu} className="px-3.5 py-2.5 rounded-xl bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] font-semibold text-[#492c28] hover:text-orange transition-all">Website Design & Development</Link>
-              <Link href="/services/logo-branding" onClick={closeMenu} className="px-3.5 py-2.5 rounded-xl bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] font-semibold text-[#492c28] hover:text-orange transition-all">Logo & Branding</Link>
-              <Link href="/services/social-media" onClick={closeMenu} className="px-3.5 py-2.5 rounded-xl bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] font-semibold text-[#492c28] hover:text-orange transition-all">Social Media</Link>
-              <Link href="/services/seo" onClick={closeMenu} className="px-3.5 py-2.5 rounded-xl bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] font-semibold text-[#492c28] hover:text-orange transition-all">SEO</Link>
-              <Link href="/services/online-advertising" onClick={closeMenu} className="px-3.5 py-2.5 rounded-xl bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] font-semibold text-[#492c28] hover:text-orange transition-all">Online Advertising</Link>
-              <Link href="/services/content-creation" onClick={closeMenu} className="px-3.5 py-2.5 rounded-xl bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] font-semibold text-[#492c28] hover:text-orange transition-all">Content Creation</Link>
+              <Link href="/services/website-design" onClick={closeMenu} className="px-3.5 py-2.5 max-[439px]:px-3 max-[439px]:py-2 rounded-xl max-[439px]:rounded-lg bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] max-[439px]:text-[13px] font-semibold text-[#492c28] hover:text-orange transition-all">Website Design & Development</Link>
+              <Link href="/services/logo-branding" onClick={closeMenu} className="px-3.5 py-2.5 max-[439px]:px-3 max-[439px]:py-2 rounded-xl max-[439px]:rounded-lg bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] max-[439px]:text-[13px] font-semibold text-[#492c28] hover:text-orange transition-all">Logo & Branding</Link>
+              <Link href="/services/social-media" onClick={closeMenu} className="px-3.5 py-2.5 max-[439px]:px-3 max-[439px]:py-2 rounded-xl max-[439px]:rounded-lg bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] max-[439px]:text-[13px] font-semibold text-[#492c28] hover:text-orange transition-all">Social Media</Link>
+              <Link href="/services/seo" onClick={closeMenu} className="px-3.5 py-2.5 max-[439px]:px-3 max-[439px]:py-2 rounded-xl max-[439px]:rounded-lg bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] max-[439px]:text-[13px] font-semibold text-[#492c28] hover:text-orange transition-all">SEO</Link>
+              <Link href="/services/online-advertising" onClick={closeMenu} className="px-3.5 py-2.5 max-[439px]:px-3 max-[439px]:py-2 rounded-xl max-[439px]:rounded-lg bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] max-[439px]:text-[13px] font-semibold text-[#492c28] hover:text-orange transition-all">Online Advertising</Link>
+              <Link href="/services/content-creation" onClick={closeMenu} className="px-3.5 py-2.5 max-[439px]:px-3 max-[439px]:py-2 rounded-xl max-[439px]:rounded-lg bg-white/80 backdrop-blur-sm border border-[#492c28]/08 shadow-sm text-[14.5px] max-[439px]:text-[13px] font-semibold text-[#492c28] hover:text-orange transition-all">Content Creation</Link>
             </div>
           </div>
 
           <Link
             href="/our-works"
             onClick={closeMenu}
-            className="flex items-center justify-between w-full px-5 py-3.5 rounded-2xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] text-lg font-bold text-[#492c28] hover:text-orange active:scale-[0.99] transition-all"
+            className="flex items-center justify-between w-full px-5 py-3.5 max-[439px]:px-4 max-[439px]:py-2.5 rounded-2xl max-[439px]:rounded-xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] text-lg max-[439px]:text-[15px] font-bold text-[#492c28] hover:text-orange active:scale-[0.99] transition-all"
           >
             <span>Our Works</span>
           </Link>
@@ -321,7 +321,7 @@ export default function Navbar() {
           <Link
             href="/gallery"
             onClick={closeMenu}
-            className="flex items-center justify-between w-full px-5 py-3.5 rounded-2xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] text-lg font-bold text-[#492c28] hover:text-orange active:scale-[0.99] transition-all"
+            className="flex items-center justify-between w-full px-5 py-3.5 max-[439px]:px-4 max-[439px]:py-2.5 rounded-2xl max-[439px]:rounded-xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] text-lg max-[439px]:text-[15px] font-bold text-[#492c28] hover:text-orange active:scale-[0.99] transition-all"
           >
             <span>Gallery</span>
           </Link>
@@ -329,15 +329,15 @@ export default function Navbar() {
           <Link
             href="/blog"
             onClick={closeMenu}
-            className="flex items-center justify-between w-full px-5 py-3.5 rounded-2xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] text-lg font-bold text-[#492c28] hover:text-orange active:scale-[0.99] transition-all"
+            className="flex items-center justify-between w-full px-5 py-3.5 max-[439px]:px-4 max-[439px]:py-2.5 rounded-2xl max-[439px]:rounded-xl bg-white/70 backdrop-blur-md border border-[#492c28]/10 shadow-[0_4px_16px_rgba(73,44,40,0.05)] text-lg max-[439px]:text-[15px] font-bold text-[#492c28] hover:text-orange active:scale-[0.99] transition-all"
           >
             <span>Blog</span>
           </Link>
 
-          <div className="pt-2 mt-1">
-            <Link href="/contact" onClick={closeMenu} className="btn !min-h-12 !h-12 !p-0 !pl-6 flex items-center justify-between w-full shadow-lg" style={{ backgroundColor: "var(--color-orange)", color: "var(--color-ivory)" }}>
-              <span className="font-semibold">Contact Us</span>
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5">
+          <div className="pt-2 mt-1 max-[439px]:pt-1 max-[439px]:mt-0">
+            <Link href="/contact" onClick={closeMenu} className="btn !min-h-12 !h-12 max-[439px]:!min-h-10 max-[439px]:!h-10 !p-0 !pl-6 max-[439px]:!pl-4 flex items-center justify-between w-full shadow-lg" style={{ backgroundColor: "var(--color-orange)", color: "var(--color-ivory)" }}>
+              <span className="font-semibold text-base max-[439px]:text-sm">Contact Us</span>
+              <div className="w-12 h-12 max-[439px]:w-10 max-[439px]:h-10 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5">
                 <Image src="/icons/contact-3d.jpg" alt="Contact 3D Icon" width={48} height={48} className="w-full h-full object-contain p-2 animate-ring-periodic" />
               </div>
             </Link>

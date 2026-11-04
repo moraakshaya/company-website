@@ -5,42 +5,42 @@ import { motion } from 'framer-motion';
 
 const CtaSection = () => {
   return (
-    <section className="py-16 lg:py-[96px] min-[1400px]:py-24 bg-[#fffff0] relative overflow-hidden">
+    <section className="py-16 max-[439px]:py-10 lg:py-[96px] min-[1400px]:py-24 bg-[#fffff0] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 relative z-10">
 
         {/* CTA Card */}
-        <div className="relative rounded-[24px] bg-[#184a41] p-5 sm:p-8 md:p-12 lg:py-8 lg:px-10 xl:py-10 xl:px-14 min-[1400px]:py-10 min-[1400px]:px-16 flex flex-col shadow-xl min-h-[400px] lg:min-h-[350px] xl:min-h-[380px] min-[1400px]:min-h-[400px] justify-center overflow-hidden lg:overflow-visible">
+        <div className="relative rounded-[24px] bg-[#184a41] p-5 max-[439px]:p-4 max-[439px]:pt-5 sm:p-8 md:p-12 lg:py-8 lg:px-10 xl:py-10 xl:px-14 min-[1400px]:py-10 min-[1400px]:px-16 flex flex-col shadow-xl min-h-[400px] max-[439px]:min-h-0 lg:min-h-[350px] xl:min-h-[380px] min-[1400px]:min-h-[400px] justify-center overflow-hidden lg:overflow-visible">
 
           {/* Main Content (Text & Buttons) */}
           <div className="w-full lg:max-w-[55%] xl:max-w-[52%] min-[1400px]:max-w-none text-left relative z-10 flex flex-col pt-4 lg:pt-0 min-[1400px]:pt-4 pointer-events-none">
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[50px] font-bold text-white mb-6 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-6 !leading-[1.15] tracking-tight max-w-[900px] pointer-events-auto">
+            <h2 className="text-3xl max-[439px]:text-[22px] max-[439px]:!leading-[1.2] md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[50px] font-bold text-white mb-6 max-[439px]:mb-3 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-6 !leading-[1.15] tracking-tight max-w-[900px] pointer-events-auto">
               Let’s Build Something That Works for <span className="text-[#ff863c]">Your Business.</span>
             </h2>
 
             {/* Paragraphs */}
-            <p className="text-base md:text-[17px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[17px] text-white/80 leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed max-w-[500px] mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 font-medium pointer-events-auto">
+            <p className="text-base max-[439px]:text-[13.5px] md:text-[17px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[17px] text-white/80 leading-relaxed max-[439px]:leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed max-w-[500px] mb-4 max-[439px]:mb-2.5 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 font-medium pointer-events-auto">
               Whether you need a single creative, a new website, stronger branding, better online visibility, or a complete digital solution — let's talk about what your business needs.
             </p>
-            <p className="text-base md:text-[17px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[17px] text-white/90 font-bold max-w-[500px] mb-8 lg:mb-5 xl:mb-6 min-[1400px]:mb-8 pointer-events-auto">
+            <p className="text-base max-[439px]:text-[14px] md:text-[17px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[17px] text-white/90 font-bold max-w-[500px] mb-8 max-[439px]:mb-5 lg:mb-5 xl:mb-6 min-[1400px]:mb-8 pointer-events-auto">
               Have a project in mind? Let's make it happen.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-row items-center gap-2.5 sm:gap-4 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-4 relative z-10 w-full sm:w-auto pointer-events-auto">
+            <div className="flex flex-row items-center gap-2.5 max-[439px]:gap-2 sm:gap-4 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-4 relative z-10 w-full sm:w-auto pointer-events-auto">
 
               {/* Secondary Button (Hollow) - Talk to Us */}
               <Link
                 href="/contact"
-                className="group flex-1 sm:flex-initial inline-flex items-center justify-between gap-2 sm:gap-5 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-5 border-[1.5px] border-white/90 text-white pl-3.5 sm:pl-7 pr-1 sm:pr-1.5 lg:pl-3.5 lg:pr-1 xl:pl-4 xl:pr-1.5 min-[1400px]:pl-7 min-[1400px]:pr-1.5 h-[48px] sm:h-[56px] lg:h-[36px] xl:h-[38px] min-[1400px]:h-[56px] rounded-full font-extrabold text-[12.5px] sm:text-[16px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[16px] tracking-wide hover:bg-white/10 transition-all active:scale-95 whitespace-nowrap"
+                className="group flex-1 sm:flex-initial inline-flex items-center justify-between gap-2 max-[439px]:gap-1.5 sm:gap-5 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-5 border-[1.5px] border-white/90 text-white pl-3.5 max-[439px]:pl-3 sm:pl-7 pr-1 max-[439px]:pr-1 sm:pr-1.5 lg:pl-3.5 lg:pr-1 xl:pl-4 xl:pr-1.5 min-[1400px]:pl-7 min-[1400px]:pr-1.5 h-[48px] max-[439px]:h-[42px] sm:h-[56px] lg:h-[36px] xl:h-[38px] min-[1400px]:h-[56px] rounded-full font-extrabold text-[12.5px] max-[439px]:text-[11.5px] sm:text-[16px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[16px] tracking-wide hover:bg-white/10 transition-all active:scale-95 whitespace-nowrap"
               >
                 <span>Talk to Us</span>
-                <div className="w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-[44px] min-[1400px]:h-[44px] rounded-full border-[2px] border-white flex items-center justify-center bg-gradient-to-br from-[#126b64] to-[#052b29] shadow-[inset_0_2px_6px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform overflow-hidden flex-shrink-0">
+                <div className="w-[36px] h-[36px] max-[439px]:w-[32px] max-[439px]:h-[32px] sm:w-[44px] sm:h-[44px] lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-[44px] min-[1400px]:h-[44px] rounded-full border-[2px] border-white flex items-center justify-center bg-gradient-to-br from-[#126b64] to-[#052b29] shadow-[inset_0_2px_6px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform overflow-hidden flex-shrink-0">
                   <img
                     src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Telephone%20Receiver.png"
                     alt="Phone"
-                    className="w-5 h-5 sm:w-6 sm:h-6 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-6 min-[1400px]:h-6 object-contain drop-shadow-lg"
+                    className="w-5 h-5 max-[439px]:w-4 max-[439px]:h-4 sm:w-6 sm:h-6 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-6 min-[1400px]:h-6 object-contain drop-shadow-lg"
                   />
                 </div>
               </Link>
@@ -48,14 +48,14 @@ const CtaSection = () => {
               {/* Primary Button (Orange) - Start Your Project */}
               <Link
                 href="/contact"
-                className="group flex-1 sm:flex-initial inline-flex items-center justify-between gap-2 sm:gap-5 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-5 bg-[#ff863c] text-white pl-3.5 sm:pl-7 pr-1 sm:pr-1.5 lg:pl-3.5 lg:pr-1 xl:pl-4 xl:pr-1.5 min-[1400px]:pl-7 min-[1400px]:pr-1.5 h-[48px] sm:h-[56px] lg:h-[36px] xl:h-[38px] min-[1400px]:h-[56px] rounded-full font-extrabold text-[12.5px] sm:text-[16px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[16px] tracking-wide hover:bg-[#f27b32] transition-all active:scale-95 shadow-lg whitespace-nowrap"
+                className="group flex-1 sm:flex-initial inline-flex items-center justify-between gap-2 max-[439px]:gap-1.5 sm:gap-5 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-5 bg-[#ff863c] text-white pl-3.5 max-[439px]:pl-3 sm:pl-7 pr-1 max-[439px]:pr-1 sm:pr-1.5 lg:pl-3.5 lg:pr-1 xl:pl-4 xl:pr-1.5 min-[1400px]:pl-7 min-[1400px]:pr-1.5 h-[48px] max-[439px]:h-[42px] sm:h-[56px] lg:h-[36px] xl:h-[38px] min-[1400px]:h-[56px] rounded-full font-extrabold text-[12.5px] max-[439px]:text-[11.5px] sm:text-[16px] lg:text-[12px] xl:text-[13px] min-[1400px]:text-[16px] tracking-wide hover:bg-[#f27b32] transition-all active:scale-95 shadow-lg whitespace-nowrap"
               >
                 <span>Start Your Project</span>
-                <div className="w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-[44px] min-[1400px]:h-[44px] rounded-full border-[2px] border-white flex items-center justify-center bg-gradient-to-br from-[#ffa46b] to-[#c75000] shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)] group-hover:scale-105 transition-transform overflow-hidden flex-shrink-0">
+                <div className="w-[36px] h-[36px] max-[439px]:w-[32px] max-[439px]:h-[32px] sm:w-[44px] sm:h-[44px] lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-[44px] min-[1400px]:h-[44px] rounded-full border-[2px] border-white flex items-center justify-center bg-gradient-to-br from-[#ffa46b] to-[#c75000] shadow-[inset_0_2px_6px_rgba(0,0,0,0.3)] group-hover:scale-105 transition-transform overflow-hidden flex-shrink-0">
                   <img
                     src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png"
                     alt="Rocket"
-                    className="w-5 h-5 sm:w-7 sm:h-7 lg:w-4 lg:h-4 xl:w-4.5 xl:h-4.5 min-[1400px]:w-7 min-[1400px]:h-7 object-contain drop-shadow-lg scale-110 translate-x-[1px] -translate-y-[1px]"
+                    className="w-5 h-5 max-[439px]:w-4 max-[439px]:h-4 sm:w-7 sm:h-7 lg:w-4 lg:h-4 xl:w-4.5 xl:h-4.5 min-[1400px]:w-7 min-[1400px]:h-7 object-contain drop-shadow-lg scale-110 translate-x-[1px] -translate-y-[1px]"
                   />
                 </div>
               </Link>
