@@ -86,20 +86,20 @@ export default function WhyProdbiz() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fffff0] py-20 lg:py-[96px] min-[1400px]:py-32">
+    <section className="relative overflow-hidden bg-[#fffff0] py-20 max-[439px]:py-12 lg:py-[96px] min-[1400px]:py-32">
 
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 relative z-10">
 
         {/* ── Header ──────────────────────────────────────────────── */}
-        <div className="text-center w-full max-w-[950px] lg:max-w-full min-[1400px]:max-w-[950px] mx-auto mb-14 lg:mb-4 xl:mb-5 min-[1400px]:mb-16 flex flex-col items-center">
-          <div className="flex items-center gap-3 mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4">
-            <span className="w-8 h-[2px] bg-[#ff863c]"></span>
-            <p className="text-[14px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px] font-extrabold text-[#ff863c] uppercase tracking-widest">WHY PRODBIZ</p>
+        <div className="text-center w-full max-w-[950px] lg:max-w-full min-[1400px]:max-w-[950px] mx-auto mb-14 max-[439px]:mb-8 lg:mb-4 xl:mb-5 min-[1400px]:mb-16 flex flex-col items-center">
+          <div className="flex items-center gap-3 mb-4 max-[439px]:mb-2 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4">
+            <span className="w-8 max-[439px]:w-6 h-[2px] bg-[#ff863c]"></span>
+            <p className="text-[14px] max-[439px]:text-[12px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px] font-extrabold text-[#ff863c] uppercase tracking-widest">WHY PRODBIZ</p>
           </div>
-          <h2 className="w-full section-title lg:w-full lg:max-w-full lg:mx-auto lg:text-center min-[1400px]:max-w-[900px] min-[1400px]:mx-0 text-3xl sm:text-4xl md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] leading-[1.1] lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight mb-5 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-5 md:whitespace-nowrap">
-            Here&apos;s Why Businesses <span className="text-[#047880]">Choose Us<span className="text-[#ff863c]">.</span></span>
+          <h2 className="w-full section-title lg:w-full lg:max-w-full lg:mx-auto lg:text-center min-[1400px]:max-w-[900px] min-[1400px]:mx-0 text-3xl max-[439px]:text-[23px] sm:text-4xl md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] leading-[1.1] max-[439px]:leading-snug lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight mb-5 max-[439px]:mb-3 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-5 md:whitespace-nowrap">
+            Here&apos;s Why Businesses <span className="text-[#047880]">Choose Us.</span>
           </h2>
-          <p className="text-lg md:text-[19px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[19px] text-[#492c28]/70 leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed font-medium max-w-[760px] lg:max-w-[650px] xl:max-w-[720px] min-[1400px]:max-w-[760px]">
+          <p className="text-lg max-[439px]:text-[13.5px] md:text-[19px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[19px] text-[#492c28]/70 leading-relaxed max-[439px]:leading-normal lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed font-medium max-w-[760px] lg:max-w-[650px] xl:max-w-[720px] min-[1400px]:max-w-[760px]">
             We don&apos;t believe every business needs the same digital solution. We understand what you need, create what fits, and work with you to build a professional presence that grows with you.
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function WhyProdbiz() {
           <div className="relative">
             {/* Viewport for horizontal track */}
             <div
-              className="overflow-hidden rounded-3xl"
+              className="overflow-hidden rounded-3xl max-[439px]:rounded-2xl"
               onTouchStart={onTouchStart}
               onTouchMove={onTouchMove}
               onTouchEnd={onTouchEnd}
@@ -122,7 +122,7 @@ export default function WhyProdbiz() {
                 {reasons.map((r) => (
                   <div
                     key={r.number}
-                    className="w-full flex-shrink-0 relative rounded-3xl overflow-hidden min-h-[380px] sm:min-h-[400px] p-6 sm:p-8 flex flex-col justify-between shadow-lg"
+                    className="w-full flex-shrink-0 relative rounded-3xl max-[439px]:rounded-2xl overflow-hidden min-h-[380px] max-[439px]:min-h-[330px] sm:min-h-[400px] p-6 max-[439px]:p-4.5 sm:p-8 flex flex-col justify-between shadow-lg"
                     style={{
                       backgroundImage: `linear-gradient(to top, ${r.shadowColor}ff 0%, ${r.shadowColor}e6 35%, ${r.shadowColor}00 90%), url(${r.bgImage})`,
                       backgroundSize: "cover",
@@ -133,25 +133,25 @@ export default function WhyProdbiz() {
                     {/* Top row: Category tag & slide index */}
                     <div className="flex items-center justify-between z-10">
                       <span
-                        className="text-[11px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded-full backdrop-blur-md"
+                        className="text-[11px] max-[439px]:text-[10px] font-bold tracking-[0.2em] uppercase px-3 max-[439px]:px-2.5 py-1 max-[439px]:py-0.5 rounded-full backdrop-blur-md"
                         style={{ background: "rgba(255,255,255,0.15)", color: r.accent }}
                       >
                         {r.tag}
                       </span>
-                      <span className="text-[12px] font-black tracking-[0.2em] text-white/50">
+                      <span className="text-[12px] max-[439px]:text-[11px] font-black tracking-[0.2em] text-white/50">
                         {r.number} / 04
                       </span>
                     </div>
 
                     {/* Bottom Content */}
-                    <div className="z-10 mt-auto pt-16">
-                      <div className="text-[11px] font-black tracking-[0.2em] text-white/50 mb-2">
+                    <div className="z-10 mt-auto pt-16 max-[439px]:pt-8">
+                      <div className="text-[11px] max-[439px]:text-[10px] font-black tracking-[0.2em] text-white/50 mb-2 max-[439px]:mb-1">
                         — {r.number}
                       </div>
-                      <h3 className="text-2xl sm:text-[26px] font-extrabold text-white leading-tight mb-2.5">
+                      <h3 className="text-2xl max-[439px]:text-[19px] sm:text-[26px] font-extrabold text-white leading-tight mb-2.5 max-[439px]:mb-1.5">
                         {r.title}
                       </h3>
-                      <p className="text-white/75 text-[14px] sm:text-[15px] leading-relaxed">
+                      <p className="text-white/75 text-[14px] max-[439px]:text-[12.5px] sm:text-[15px] leading-relaxed max-[439px]:leading-snug">
                         {r.desc}
                       </p>
                     </div>
@@ -165,9 +165,9 @@ export default function WhyProdbiz() {
               <button
                 onClick={goLeft}
                 aria-label="Previous card"
-                className="absolute left-1 sm:left-0 sm:-translate-x-1/2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-[#241411] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.35)] border border-white/20 active:scale-90 transition-all duration-200"
+                className="absolute left-1 sm:left-0 sm:-translate-x-1/2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 max-[439px]:w-8 max-[439px]:h-8 rounded-full bg-[#241411] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.35)] border border-white/20 active:scale-90 transition-all duration-200"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-[18px] h-[18px] max-[439px]:w-[14px] max-[439px]:h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="15 18 9 12 15 6" />
                 </svg>
               </button>
@@ -178,9 +178,9 @@ export default function WhyProdbiz() {
               <button
                 onClick={goRight}
                 aria-label="Next card"
-                className="absolute right-1 sm:right-0 sm:translate-x-1/2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-[#241411] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.35)] border border-white/20 active:scale-90 transition-all duration-200"
+                className="absolute right-1 sm:right-0 sm:translate-x-1/2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 max-[439px]:w-8 max-[439px]:h-8 rounded-full bg-[#241411] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.35)] border border-white/20 active:scale-90 transition-all duration-200"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-[18px] h-[18px] max-[439px]:w-[14px] max-[439px]:h-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="9 18 15 12 9 6" />
                 </svg>
               </button>
@@ -188,7 +188,7 @@ export default function WhyProdbiz() {
           </div>
 
           {/* Dots Pagination Below */}
-          <div className="flex justify-center items-center gap-2 mt-5">
+          <div className="flex justify-center items-center gap-2 mt-5 max-[439px]:mt-3">
             {reasons.map((_, i) => {
               const isActive = mobileIndex === i;
               return (

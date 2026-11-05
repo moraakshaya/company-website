@@ -92,28 +92,28 @@ const AboutVisual = () => (
 
 const About = () => {
   return (
-    <section className="py-20 lg:py-[96px] min-[1400px]:py-28 bg-[#fffff0] relative overflow-hidden">
+    <section className="py-20 max-[439px]:py-12 lg:py-[96px] min-[1400px]:py-28 bg-[#fffff0] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-0">
 
           {/* Left Column: Content */}
           <div className="w-full lg:w-1/2">
-            <p className="section-label mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 inline-flex lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">WHO WE ARE</p>
-            <h2 className="w-full section-title text-4xl md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 leading-[1.1] lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight">
+            <p className="section-label mb-4 max-[439px]:mb-2 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 inline-flex max-[439px]:text-[12px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">WHO WE ARE</p>
+            <h2 className="w-full section-title text-4xl max-[439px]:text-[23px] md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] mb-6 max-[439px]:mb-3 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 leading-[1.1] max-[439px]:leading-snug lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight">
               More Than Just a <br className="hidden md:block" />
               <span className="text-[#047880]">Digital Agency<span className="text-[#ff863c]">.</span></span>
             </h2>
 
             {/* Visual: Mobile only (rendered directly below heading) */}
-            <div className="block lg:hidden my-8 w-full max-w-[500px] mx-auto">
+            <div className="block lg:hidden my-8 max-[439px]:my-5 w-full max-w-[500px] max-[439px]:max-w-[320px] mx-auto">
               <AboutVisual />
             </div>
 
-            <div className="mb-10 lg:mb-5 xl:mb-6 min-[1400px]:mb-10 space-y-4 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-4 max-w-[650px] lg:max-w-[580px] xl:max-w-[620px] min-[1400px]:max-w-[650px]">
-              <p className="text-lg lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg text-[#492c28]/80 leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed">
+            <div className="mb-10 max-[439px]:mb-6 lg:mb-5 xl:mb-6 min-[1400px]:mb-10 space-y-4 max-[439px]:space-y-2.5 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-4 max-w-[650px] lg:max-w-[580px] xl:max-w-[620px] min-[1400px]:max-w-[650px]">
+              <p className="text-lg max-[439px]:text-[13.5px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg text-[#492c28]/80 leading-relaxed max-[439px]:leading-normal lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed">
                 Prodbiz Solutions helps businesses build a professional and effective presence in the digital world. From branding and websites to social media and online marketing, we bring creative thinking and practical digital solutions together under one roof.
               </p>
-              <p className="text-lg lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg text-[#492c28]/80 leading-relaxed lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed">
+              <p className="text-lg max-[439px]:text-[13.5px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg text-[#492c28]/80 leading-relaxed max-[439px]:leading-normal lg:leading-normal xl:leading-normal min-[1400px]:leading-relaxed">
                 Whether you&apos;re a local business looking for a single creative or a growing company looking for a complete digital solution, we work around your business needs.
               </p>
             </div>
@@ -134,7 +134,7 @@ const About = () => {
             </div>
 
             {/* Feature Icons Row (Mobile View — Single Row Looping Continuously) */}
-            <div className="block sm:hidden w-full overflow-hidden mb-12 py-1 relative [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
+            <div className="block sm:hidden w-full overflow-hidden mb-12 max-[439px]:mb-7 py-1 relative [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]">
               <motion.div
                 className="flex items-start gap-8 w-max"
                 animate={{ x: ["0%", "-50%"] }}
@@ -147,13 +147,13 @@ const About = () => {
                 {[...ABOUT_FEATURES, ...ABOUT_FEATURES].map((item, idx) => (
                   <div
                     key={idx}
-                    className="w-[220px] shrink-0 flex flex-col justify-start"
+                    className="w-[220px] max-[439px]:w-[180px] shrink-0 flex flex-col justify-start"
                   >
-                    <div className={`w-12 h-12 rounded-full ${item.iconBg} ${item.iconColor} flex items-center justify-center mb-4 shrink-0`}>
+                    <div className={`w-12 h-12 max-[439px]:w-10 max-[439px]:h-10 rounded-full ${item.iconBg} ${item.iconColor} flex items-center justify-center mb-4 max-[439px]:mb-2.5 shrink-0 [&>svg]:max-[439px]:w-4.5 [&>svg]:max-[439px]:h-4.5`}>
                       {item.icon}
                     </div>
-                    <h4 className="text-[17px] font-bold text-[#492c28] mb-2">{item.title}</h4>
-                    <p className="text-[15px] text-[#492c28]/70 leading-relaxed">
+                    <h4 className="text-[17px] max-[439px]:text-[15px] font-bold text-[#492c28] mb-2 max-[439px]:mb-1">{item.title}</h4>
+                    <p className="text-[15px] max-[439px]:text-[12.5px] text-[#492c28]/70 leading-relaxed max-[439px]:leading-snug">
                       {item.desc}
                     </p>
                   </div>
@@ -161,9 +161,9 @@ const About = () => {
               </motion.div>
             </div>
 
-            <Link href="/about" className="group inline-flex items-center gap-3 lg:gap-2 xl:gap-2.5 min-[1400px]:gap-3 bg-[#047880] text-white pl-7 pr-2 py-2 lg:pl-4 lg:pr-1 lg:py-1 xl:pl-4.5 xl:pr-1.5 xl:py-1 min-[1400px]:pl-7 min-[1400px]:pr-2 min-[1400px]:py-2 rounded-full font-bold text-[15px] lg:text-[11.5px] xl:text-[12.5px] min-[1400px]:text-[15px] hover:bg-[#114e4b] transition-all hover:-translate-y-1 active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap">
+            <Link href="/about" className="group inline-flex items-center gap-3 max-[439px]:gap-2 lg:gap-2 xl:gap-2.5 min-[1400px]:gap-3 bg-[#047880] text-white pl-7 max-[439px]:pl-5 pr-2 max-[439px]:pr-1.5 py-2 max-[439px]:py-1.5 lg:pl-4 lg:pr-1 lg:py-1 xl:pl-4.5 xl:pr-1.5 xl:py-1 min-[1400px]:pl-7 min-[1400px]:pr-2 min-[1400px]:py-2 rounded-full font-bold text-[15px] max-[439px]:text-[13px] lg:text-[11.5px] xl:text-[12.5px] min-[1400px]:text-[15px] hover:bg-[#114e4b] transition-all hover:-translate-y-1 active:scale-95 shadow-md hover:shadow-lg whitespace-nowrap">
               More About Prodbiz
-              <div className="w-10 h-10 lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-10 min-[1400px]:h-10 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5 group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 max-[439px]:w-8 max-[439px]:h-8 lg:w-[28px] lg:h-[28px] xl:w-[30px] xl:h-[30px] min-[1400px]:w-10 min-[1400px]:h-10 rounded-full overflow-hidden bg-white shadow-md flex-shrink-0 flex items-center justify-center relative z-10 border border-black/5 group-hover:scale-110 transition-transform">
                 <Image src="/home-page/about/about-arrow-3d.jpg" alt="Arrow Icon" width={40} height={40} className="w-full h-full object-contain p-0.5 group-hover:animate-ring" />
               </div>
             </Link>
