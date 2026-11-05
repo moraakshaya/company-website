@@ -2172,3 +2172,148 @@ textarea {
     text-wrap: wrap !important;
   }
 }
+
+/* ─── Blog Article Content Scaling for Screens Below 440px (< 440px) ─── */
+@media (max-width: 439px) {
+  .blog-article-content article {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  .blog-article-content article p {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0.875rem !important;
+  }
+
+  .blog-article-content article p.text-xl,
+  .blog-article-content article p.sm\:text-2xl,
+  .blog-article-content article p.font-medium {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .blog-article-content article h2 {
+    font-size: 19px !important;
+    line-height: 1.3 !important;
+    margin-top: 1.75rem !important;
+    margin-bottom: 0.875rem !important;
+  }
+
+  .blog-article-content article h3:not(.text-white) {
+    font-size: 15.5px !important;
+    line-height: 1.3 !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .blog-article-content article ul,
+  .blog-article-content article ol {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
+    padding-left: 1.25rem !important;
+  }
+
+  .blog-article-content article li {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .blog-article-content article .mb-12 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .blog-article-content article .mb-8 {
+    margin-bottom: 1rem !important;
+  }
+
+  .blog-article-content article .mb-6 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .blog-article-content article .mb-4 {
+    margin-bottom: 0.65rem !important;
+  }
+
+  .blog-article-content .my-14 {
+    margin-top: 1.75rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  /* Comparison table styling below 440px */
+  .blog-article-content table th {
+    padding: 0.875rem !important;
+    font-size: 13px !important;
+  }
+
+  .blog-article-content table td {
+    padding: 0.875rem !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Bottom CTA Heading & Sparkles Scaling (< 440px) */
+  .blog-article-content article h3.text-white,
+  .blog-article-content .my-14 h3 {
+    font-size: 17.5px !important;
+    line-height: 1.25 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .blog-article-content article .flex.items-center.justify-center,
+  .blog-article-content .my-14 .flex.items-center.justify-center {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .blog-article-content article p.text-white\/90,
+  .blog-article-content article p[class*="text-white"],
+  .blog-article-content .my-14 p {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .blog-article-content article .flex.items-center.justify-center>div:first-child,
+  .blog-article-content .my-14 .flex.items-center.justify-center>div:first-child {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    margin-right: -0.5rem !important;
+    margin-left: 0 !important;
+  }
+
+  .blog-article-content article .flex.items-center.justify-center>div:last-child,
+  .blog-article-content .my-14 .flex.items-center.justify-center>div:last-child {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    margin-left: -0.5rem !important;
+    margin-right: 0 !important;
+  }
+
+  /* Bottom CTA Button Scaling (< 440px) */
+  .blog-article-content a[href="/contact"].w-max {
+    min-height: 42px !important;
+    height: 42px !important;
+    padding-left: 1.25rem !important;
+    box-shadow: 0 3px 0 #d45f1a !important;
+  }
+
+  .blog-article-content a[href="/contact"].w-max span {
+    font-size: 12px !important;
+    padding-right: 0.875rem !important;
+  }
+
+  .blog-article-content a[href="/contact"].w-max div {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 0.25rem !important;
+  }
+
+  .blog-article-content a[href="/contact"].w-max svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}

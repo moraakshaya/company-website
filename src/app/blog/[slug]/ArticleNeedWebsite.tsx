@@ -210,41 +210,41 @@ export function ArticleNeedWebsite() {
       <hr className="my-12 border-[#f5ece0]" />
 
       {/* Bottom Sections */}
-      <h2 className="text-[30px] leading-[1.3] font-extrabold text-[#492c28] font-['Manrope',sans-serif] mb-6">Website vs Social Media</h2>
+      <h2 className="text-[30px] max-[439px]:text-[19px] leading-[1.3] font-extrabold text-[#492c28] font-['Manrope',sans-serif] mb-6 max-[439px]:mb-4">Website vs Social Media</h2>
       <p className="mb-6">Social media and websites don't have to compete with each other. They can work together.</p>
 
       <div className="overflow-x-auto mb-12 rounded-2xl border border-[#e8dac8] bg-white">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="bg-[#fff8f0]">
-              <th className="p-5 sm:p-6 font-bold text-[#492c28] border-b border-r border-[#e8dac8] w-1/2">Website</th>
-              <th className="p-5 sm:p-6 font-bold text-[#492c28] border-b border-[#e8dac8] w-1/2">Social Media</th>
+              <th className="p-5 max-[439px]:p-3.5 max-[439px]:text-[13px] sm:p-6 font-bold text-[#492c28] border-b border-r border-[#e8dac8] w-1/2">Website</th>
+              <th className="p-5 max-[439px]:p-3.5 max-[439px]:text-[13px] sm:p-6 font-bold text-[#492c28] border-b border-[#e8dac8] w-1/2">Social Media</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">Detailed business information</td>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Quick updates</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">Detailed business information</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Quick updates</td>
             </tr>
             <tr>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">Services and products</td>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Regular content</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">Services and products</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Regular content</td>
             </tr>
             <tr>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">Portfolio and work</td>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Engagement</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">Portfolio and work</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Engagement</td>
             </tr>
             <tr>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">Contact information</td>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Conversations</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">Contact information</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Conversations</td>
             </tr>
             <tr>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">SEO and search visibility</td>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Audience building</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-r border-[#e8dac8]">SEO and search visibility</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-b border-[#e8dac8]">Audience building</td>
             </tr>
             <tr>
-              <td className="p-5 sm:p-6 text-[#5d4945] border-r border-[#e8dac8]">Your own business space</td>
-              <td className="p-5 sm:p-6 text-[#5d4945]">Platform-based presence</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945] border-r border-[#e8dac8]">Your own business space</td>
+              <td className="p-5 max-[439px]:p-3.5 max-[439px]:text-[12px] max-[439px]:leading-[1.4] sm:p-6 text-[#5d4945]">Platform-based presence</td>
             </tr>
           </tbody>
         </table>
@@ -295,7 +295,7 @@ export function ArticleNeedWebsite() {
       <p className="mb-12">If people are already searching for your business online, giving them a professional place to find you can make a big difference.</p>
 
       {/* CTA Box */}
-      <div className="mt-20 rounded-[2rem] px-4 sm:px-16 py-10 sm:py-16 text-center text-white shadow-2xl relative overflow-hidden bg-[url('/blog-details/cta-img.png')] bg-cover bg-center">
+      <div className="mt-20 max-[439px]:mt-10 rounded-[2rem] max-[439px]:rounded-2xl px-4 max-[439px]:px-4 sm:px-16 py-10 max-[439px]:py-7 sm:py-16 text-center text-white shadow-2xl relative overflow-hidden bg-[url('/blog-details/cta-img.png')] bg-cover bg-center">
         {/* Glassmorphism Overlay */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-[12px] pointer-events-none"></div>
 
@@ -304,34 +304,34 @@ export function ArticleNeedWebsite() {
           <div className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[120%] rounded-t-full bg-white/[0.04] rotate-[30deg] blur-2xl"></div>
         </div>
 
-        <div className="flex items-center justify-center mb-5 relative z-10 w-full max-w-full">
+        <div className="flex items-center justify-center mb-5 max-[439px]:mb-3.5 relative z-10 w-full max-w-full">
           {/* Left Sparkles */}
-          <div className="relative w-14 h-14 sm:w-28 sm:h-28 shrink-0 pointer-events-none -mr-3 sm:-mr-6">
+          <div className="relative w-14 h-14 max-[439px]:w-9 max-[439px]:h-9 sm:w-28 sm:h-28 shrink-0 pointer-events-none -mr-3 max-[439px]:-mr-2 sm:-mr-6">
             <Image src="/blog-details/cta-leftside.png" alt="Decorative Left" fill className="object-contain" />
           </div>
 
-          <h3 className="text-xl sm:text-[2.2rem] font-extrabold font-['Manrope',sans-serif] text-white leading-[1.3] text-center">
+          <h3 className="text-xl max-[439px]:text-[17.5px] sm:text-[2.2rem] font-extrabold font-['Manrope',sans-serif] text-white leading-[1.3] max-[439px]:leading-[1.25] text-center">
             Thinking About a Website <br className="hidden sm:block" />
             {' '}for Your <span className="text-[#f3945f]">Business?</span>
           </h3>
 
           {/* Right Sparkles */}
-          <div className="relative w-14 h-14 sm:w-28 sm:h-28 shrink-0 pointer-events-none -ml-3 sm:-ml-6">
+          <div className="relative w-14 h-14 max-[439px]:w-9 max-[439px]:h-9 sm:w-28 sm:h-28 shrink-0 pointer-events-none -ml-3 max-[439px]:-ml-2 sm:-ml-6">
             <Image src="/blog-details/cta-rightside.png" alt="Decorative Right" fill className="object-contain" />
           </div>
         </div>
 
-        <p className="text-white/90 mb-10 text-[1.05rem] sm:text-[1.1rem] leading-relaxed relative z-10 font-['Inter',sans-serif] w-full max-w-full sm:max-w-2xl mx-auto">
+        <p className="text-white/90 mb-10 max-[439px]:mb-6 text-[1.05rem] max-[439px]:text-[12.5px] sm:text-[1.1rem] leading-relaxed relative z-10 font-['Inter',sans-serif] w-full max-w-full sm:max-w-2xl mx-auto">
           Whether you need a simple business website, service-based website, portfolio, or a more complete online presence, we can help you create something that works for your business.
         </p>
 
         <Link
           href="/contact"
-          className="relative z-10 inline-flex items-center justify-between w-max mx-auto bg-[#ff863c] text-white !min-h-[52px] !h-[52px] lg:!min-h-[40px] lg:!h-[40px] xl:!min-h-[42px] xl:!h-[42px] min-[1400px]:!min-h-[52px] min-[1400px]:!h-[52px] !p-0 !pl-8 lg:!pl-5 xl:!pl-6 min-[1400px]:!pl-8 rounded-full hover:bg-[#fa7726] transition-all duration-300 group shadow-[0_4px_0_#d45f1a] lg:shadow-[0_3px_0_#d45f1a] min-[1400px]:shadow-[0_4px_0_#d45f1a] active:shadow-none active:translate-y-1"
+          className="relative z-10 inline-flex items-center justify-between w-max mx-auto bg-[#ff863c] text-white !min-h-[52px] !h-[52px] max-[439px]:!min-h-[42px] max-[439px]:!h-[42px] lg:!min-h-[40px] lg:!h-[40px] xl:!min-h-[42px] xl:!h-[42px] min-[1400px]:!min-h-[52px] min-[1400px]:!h-[52px] !p-0 !pl-8 max-[439px]:!pl-5 lg:!pl-5 xl:!pl-6 min-[1400px]:!pl-8 rounded-full hover:bg-[#fa7726] transition-all duration-300 group shadow-[0_4px_0_#d45f1a] lg:shadow-[0_3px_0_#d45f1a] min-[1400px]:shadow-[0_4px_0_#d45f1a] active:shadow-none active:translate-y-1"
         >
-          <span className="font-bold text-[16px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[16px] pr-5 lg:pr-3.5 xl:pr-4 min-[1400px]:pr-5">Start Your Project</span>
-          <div className="w-[42px] h-[42px] lg:w-[30px] lg:h-[30px] xl:w-[32px] xl:h-[32px] min-[1400px]:w-[42px] min-[1400px]:h-[42px] mr-1.5 lg:mr-1 xl:mr-1.5 min-[1400px]:mr-1.5 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center text-[#ff863c]">
-            <svg className="w-5 h-5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-5 min-[1400px]:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span className="font-bold text-[16px] max-[439px]:text-[12px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[16px] pr-5 max-[439px]:pr-3.5 lg:pr-3.5 xl:pr-4 min-[1400px]:pr-5">Start Your Project</span>
+          <div className="w-[42px] h-[42px] max-[439px]:w-[32px] max-[439px]:h-[32px] lg:w-[30px] lg:h-[30px] xl:w-[32px] xl:h-[32px] min-[1400px]:w-[42px] min-[1400px]:h-[42px] mr-1.5 lg:mr-1 xl:mr-1.5 min-[1400px]:mr-1.5 rounded-full bg-white shadow-sm flex-shrink-0 flex items-center justify-center text-[#ff863c]">
+            <svg className="w-5 h-5 max-[439px]:w-3.5 max-[439px]:h-3.5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-5 min-[1400px]:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </div>
