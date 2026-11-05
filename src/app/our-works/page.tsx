@@ -758,7 +758,7 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
 
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 md:p-8 lg:p-6 xl:p-8 min-[1400px]:p-8"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-3 max-[439px]:p-2.5 sm:p-4 md:p-8 lg:p-6 xl:p-8 min-[1400px]:p-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -766,7 +766,7 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm cursor-pointer" onClick={onClose}></div>
 
       <motion.div
-        className="relative bg-white w-full max-w-6xl lg:max-w-[660px] xl:max-w-[760px] min-[1400px]:max-w-6xl h-[82dvh] max-h-[85dvh] md:h-[80vh] md:max-h-[90vh] lg:h-[66vh] lg:max-h-[470px] xl:h-[70vh] xl:max-h-[530px] min-[1400px]:h-[80vh] min-[1400px]:max-h-[90vh] rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row z-10"
+        className="relative bg-white w-full max-w-6xl lg:max-w-[660px] xl:max-w-[760px] min-[1400px]:max-w-6xl h-[82dvh] max-[439px]:h-[88dvh] max-h-[85dvh] max-[439px]:max-h-[90dvh] md:h-[80vh] md:max-h-[90vh] lg:h-[66vh] lg:max-h-[470px] xl:h-[70vh] xl:max-h-[530px] min-[1400px]:h-[80vh] min-[1400px]:max-h-[90vh] rounded-2xl max-[439px]:rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row z-10"
         initial={{ y: 50, opacity: 0, scale: 0.95 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         exit={{ y: 20, opacity: 0, scale: 0.95 }}
@@ -775,14 +775,14 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 lg:top-2.5 lg:right-2.5 xl:top-3 xl:right-3 min-[1400px]:top-4 min-[1400px]:right-4 z-30 w-9 h-9 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/50 hover:bg-black/70 text-white backdrop-blur-md rounded-full flex items-center justify-center transition-all shadow-lg"
+          className="absolute top-3 max-[439px]:top-2.5 right-3 max-[439px]:right-2.5 sm:top-4 sm:right-4 lg:top-2.5 lg:right-2.5 xl:top-3 xl:right-3 min-[1400px]:top-4 min-[1400px]:right-4 z-30 w-9 max-[439px]:w-7.5 h-9 max-[439px]:h-7.5 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/50 hover:bg-black/70 text-white backdrop-blur-md rounded-full flex items-center justify-center transition-all shadow-lg"
           aria-label="Close modal"
         >
-          <X size={18} strokeWidth={2.5} className="w-4.5 h-4.5 sm:w-5 sm:h-5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-5 min-[1400px]:h-5" />
+          <X size={18} strokeWidth={2.5} className="w-4.5 max-[439px]:w-3.5 h-4.5 max-[439px]:h-3.5 sm:w-5 sm:h-5 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-5 min-[1400px]:h-5" />
         </button>
 
         {/* Left Side: Media (Full responsive contain with ambient backdrop so no image gets cut on mobile or desktop) */}
-        <div className="w-full md:w-1/2 h-[280px] sm:h-[340px] md:h-full shrink-0 relative bg-[#130c0a] overflow-hidden flex items-center justify-center">
+        <div className="w-full md:w-1/2 h-[280px] max-[439px]:h-[200px] sm:h-[340px] md:h-full shrink-0 relative bg-[#130c0a] overflow-hidden flex items-center justify-center">
           {project.isVideo ? (
             <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-black">
               <video
@@ -831,20 +831,20 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
                   <button
                     onClick={prevImage}
                     aria-label="Previous slide"
-                    className="absolute left-3 sm:left-4 lg:left-2 xl:left-3 min-[1400px]:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/40 hover:bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all shadow-md z-20 cursor-pointer"
+                    className="absolute left-3 max-[439px]:left-2 sm:left-4 lg:left-2 xl:left-3 min-[1400px]:left-4 top-1/2 -translate-y-1/2 w-8 max-[439px]:w-7 h-8 max-[439px]:h-7 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/40 hover:bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all shadow-md z-20 cursor-pointer"
                   >
-                    <ChevronLeft size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-6 min-[1400px]:h-6" />
+                    <ChevronLeft size={20} className="w-5 max-[439px]:w-4 h-5 max-[439px]:h-4 sm:w-6 sm:h-6 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-6 min-[1400px]:h-6" />
                   </button>
                   <button
                     onClick={nextImage}
                     aria-label="Next slide"
-                    className="absolute right-3 sm:right-4 lg:right-2 xl:right-3 min-[1400px]:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/40 hover:bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all shadow-md z-20 cursor-pointer"
+                    className="absolute right-3 max-[439px]:right-2 sm:right-4 lg:right-2 xl:right-3 min-[1400px]:right-4 top-1/2 -translate-y-1/2 w-8 max-[439px]:w-7 h-8 max-[439px]:h-7 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-10 min-[1400px]:h-10 bg-black/40 hover:bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-all shadow-md z-20 cursor-pointer"
                   >
-                    <ChevronRight size={20} className="w-5 h-5 sm:w-6 sm:h-6 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-6 min-[1400px]:h-6" />
+                    <ChevronRight size={20} className="w-5 max-[439px]:w-4 h-5 max-[439px]:h-4 sm:w-6 sm:h-6 lg:w-3.5 lg:h-3.5 xl:w-4 xl:h-4 min-[1400px]:w-6 min-[1400px]:h-6" />
                   </button>
 
                   {/* Dots Indicator */}
-                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 sm:gap-2 z-20 bg-black/30 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                  <div className="absolute bottom-3 max-[439px]:bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 sm:gap-2 z-20 bg-black/30 backdrop-blur-sm px-2.5 max-[439px]:px-2 py-1 max-[439px]:py-0.5 rounded-full">
                     {images.map((_: string, i: number) => (
                       <button
                         key={i}
@@ -867,31 +867,31 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
 
         {/* Right Side: Content (Scrollable on mobile) */}
         <div
-          className="w-full md:w-1/2 flex-1 min-h-0 p-5 sm:p-6 md:p-12 lg:p-5 xl:p-6 min-[1400px]:p-12 overflow-y-auto overscroll-contain bg-[var(--color-ivory)] scroll-smooth relative [scrollbar-width:thin] [scrollbar-color:#ff863c_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#ff863c]/50 hover:[&::-webkit-scrollbar-thumb]:bg-[#ff863c] [&::-webkit-scrollbar-thumb]:rounded-full shadow-[0_-8px_16px_rgba(0,0,0,0.06)]"
+          className="w-full md:w-1/2 flex-1 min-h-0 p-5 max-[439px]:p-4 max-[439px]:pt-3 sm:p-6 md:p-12 lg:p-5 xl:p-6 min-[1400px]:p-12 overflow-y-auto overscroll-contain bg-[var(--color-ivory)] scroll-smooth relative [scrollbar-width:thin] [scrollbar-color:#ff863c_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#ff863c]/50 hover:[&::-webkit-scrollbar-thumb]:bg-[#ff863c] [&::-webkit-scrollbar-thumb]:rounded-full shadow-[0_-8px_16px_rgba(0,0,0,0.06)]"
         >
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, delay: 0.1 }}
           >
-            <div className="flex items-center gap-3 mb-2 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-2">
-              <div className="w-8 h-[3px] lg:w-5 lg:h-[2px] xl:w-6 xl:h-[2.5px] min-[1400px]:w-8 min-[1400px]:h-[3px] bg-[#ff863c] rounded-full"></div>
-              <div className="uppercase tracking-widest text-xs sm:text-sm lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-sm font-black text-[#ff863c]">{project.category}</div>
+            <div className="flex items-center gap-3 max-[439px]:gap-2 mb-2 max-[439px]:mb-1 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-2">
+              <div className="w-8 max-[439px]:w-5 h-[3px] max-[439px]:h-[2px] lg:w-5 lg:h-[2px] xl:w-6 xl:h-[2.5px] min-[1400px]:w-8 min-[1400px]:h-[3px] bg-[#ff863c] rounded-full"></div>
+              <div className="uppercase tracking-widest text-xs max-[439px]:text-[10px] sm:text-sm lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-sm font-black text-[#ff863c]">{project.category}</div>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-[22px] xl:text-[24px] min-[1400px]:text-5xl font-black text-[#492c28] mb-4 md:mb-8 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-8 leading-tight lg:leading-[1.15]" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}>{project.title}</h2>
+            <h2 className="text-2xl max-[439px]:text-[17px] max-[439px]:leading-snug sm:text-3xl md:text-5xl lg:text-[22px] xl:text-[24px] min-[1400px]:text-5xl font-black text-[#492c28] mb-4 max-[439px]:mb-2 md:mb-8 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-8 leading-tight lg:leading-[1.15]" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.02em" }}>{project.title}</h2>
 
-            <div className="space-y-5 sm:space-y-6 md:space-y-8 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-8">
+            <div className="space-y-5 max-[439px]:space-y-3 sm:space-y-6 md:space-y-8 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-8">
               <div>
-                <h3 className="text-xs lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-xs font-bold text-[#492c28] uppercase tracking-widest mb-2 sm:mb-3 lg:mb-0.5 xl:mb-1 min-[1400px]:mb-3 opacity-60">The Brief</h3>
-                <p className="text-[#796864] leading-relaxed text-sm md:text-base lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-base font-medium lg:leading-[1.45] xl:leading-[1.5] font-['Inter',sans-serif]">{project.clientOverview}</p>
+                <h3 className="text-xs max-[439px]:text-[10px] lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-xs font-bold text-[#492c28] uppercase tracking-widest mb-2 max-[439px]:mb-1 sm:mb-3 lg:mb-0.5 xl:mb-1 min-[1400px]:mb-3 opacity-60">The Brief</h3>
+                <p className="text-[#796864] leading-relaxed text-sm max-[439px]:text-[12px] md:text-base lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-base font-medium lg:leading-[1.45] xl:leading-[1.5] font-['Inter',sans-serif]">{project.clientOverview}</p>
               </div>
 
               {project.services && project.services.length > 0 && (
                 <div>
-                  <h3 className="text-xs lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-xs font-bold text-[#492c28] uppercase tracking-widest mb-2 sm:mb-3 lg:mb-0.5 xl:mb-1 min-[1400px]:mb-3 opacity-60">What We Did</h3>
-                  <ul className="grid grid-cols-2 gap-y-2.5 sm:gap-y-3 lg:gap-y-1 xl:gap-y-1.5 min-[1400px]:gap-y-3 gap-x-4">
+                  <h3 className="text-xs max-[439px]:text-[10px] lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-xs font-bold text-[#492c28] uppercase tracking-widest mb-2 max-[439px]:mb-1 sm:mb-3 lg:mb-0.5 xl:mb-1 min-[1400px]:mb-3 opacity-60">What We Did</h3>
+                  <ul className="grid grid-cols-2 gap-y-2.5 max-[439px]:gap-y-1.5 sm:gap-y-3 lg:gap-y-1 xl:gap-y-1.5 min-[1400px]:gap-y-3 gap-x-4 max-[439px]:gap-x-2">
                     {project.services.map((service: string, idx: number) => (
-                      <li key={idx} className="flex items-center gap-2 text-[#796864] text-xs sm:text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold font-['Inter',sans-serif]">
+                      <li key={idx} className="flex items-center gap-2 text-[#796864] text-xs max-[439px]:text-[11px] sm:text-sm lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-sm font-bold font-['Inter',sans-serif]">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#ff863c]" />
                         {service}
                       </li>
@@ -901,17 +901,17 @@ const ProjectModal = ({ project, onClose }: { project: any, onClose: () => void 
               )}
 
               <div>
-                <h3 className="text-xs lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-xs font-bold text-[#492c28] uppercase tracking-widest mb-2 sm:mb-3 lg:mb-0.5 xl:mb-1 min-[1400px]:mb-3 opacity-60">Challenge & Solution</h3>
-                <p className="text-[#796864] leading-relaxed text-sm md:text-base lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-base font-medium lg:leading-[1.45] xl:leading-[1.5] font-['Inter',sans-serif]">{project.challenge}</p>
+                <h3 className="text-xs max-[439px]:text-[10px] lg:text-[10px] xl:text-[10.5px] min-[1400px]:text-xs font-bold text-[#492c28] uppercase tracking-widest mb-2 max-[439px]:mb-1 sm:mb-3 lg:mb-0.5 xl:mb-1 min-[1400px]:mb-3 opacity-60">Challenge & Solution</h3>
+                <p className="text-[#796864] leading-relaxed text-sm max-[439px]:text-[12px] md:text-base lg:text-[11.5px] xl:text-[12px] min-[1400px]:text-base font-medium lg:leading-[1.45] xl:leading-[1.5] font-['Inter',sans-serif]">{project.challenge}</p>
               </div>
 
               {(project.filter === "WEBSITES" || project.category === "Website Design") && (
-                <div className="pt-4 md:pt-6 lg:pt-1.5 xl:pt-2 min-[1400px]:pt-6 pb-2 md:pb-0">
+                <div className="pt-4 max-[439px]:pt-2.5 md:pt-6 lg:pt-1.5 xl:pt-2 min-[1400px]:pt-6 pb-2 max-[439px]:pb-1 md:pb-0">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 lg:gap-1.5 xl:gap-1.5 min-[1400px]:gap-2 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 lg:px-3 lg:py-1.5 xl:px-3.5 xl:py-1.5 min-[1400px]:px-8 min-[1400px]:py-4 bg-[#492c28] text-white rounded-full font-bold uppercase tracking-widest lg:tracking-wider xl:tracking-wider min-[1400px]:tracking-widest text-xs sm:text-sm lg:text-[9px] xl:text-[9.5px] min-[1400px]:text-sm hover:bg-[#ff863c] transition-colors shadow-xl hover:-translate-y-1 duration-300"
+                    className="inline-flex items-center justify-center gap-2 lg:gap-1.5 xl:gap-1.5 min-[1400px]:gap-2 w-full sm:w-auto px-6 max-[439px]:px-4 sm:px-8 py-3.5 max-[439px]:py-2.5 sm:py-4 lg:px-3 lg:py-1.5 xl:px-3.5 xl:py-1.5 min-[1400px]:px-8 min-[1400px]:py-4 bg-[#492c28] text-white rounded-full font-bold uppercase tracking-widest max-[439px]:tracking-wider lg:tracking-wider xl:tracking-wider min-[1400px]:tracking-widest text-xs max-[439px]:text-[10.5px] sm:text-sm lg:text-[9px] xl:text-[9.5px] min-[1400px]:text-sm hover:bg-[#ff863c] transition-colors shadow-xl hover:-translate-y-1 duration-300"
                   >
                     Visit Live Project <ExternalLink size={16} className="w-4 h-4 lg:w-2.5 lg:h-2.5 xl:w-3 xl:h-3 min-[1400px]:w-4 min-[1400px]:h-4 shrink-0" />
                   </a>
@@ -1153,23 +1153,23 @@ export default function OurWorksPage() {
       </div>
 
       {/* Explore Our Work Section */}
-      <section className="w-full pb-20 md:pb-32 lg:pb-16 xl:pb-20 min-[1400px]:pb-32 relative z-20 [--card-scale:1] lg:[--card-scale:0.72] xl:[--card-scale:0.84] min-[1400px]:[--card-scale:1]">
+      <section className="w-full pb-20 max-[439px]:pb-10 md:pb-32 lg:pb-16 xl:pb-20 min-[1400px]:pb-32 relative z-20 [--card-scale:1] lg:[--card-scale:0.72] xl:[--card-scale:0.84] min-[1400px]:[--card-scale:1]">
         <div className="w-full max-w-[1400px] lg:max-w-[940px] xl:max-w-[1140px] min-[1400px]:max-w-[1400px] mx-auto px-4 md:px-8 lg:px-6 xl:px-8 min-[1400px]:px-8">
 
           {/* Section Header */}
-          <div className="flex flex-col items-center text-center mb-16 md:mb-20 lg:mb-7 xl:mb-9 min-[1400px]:mb-20">
+          <div className="flex flex-col items-center text-center mb-16 max-[439px]:mb-6 md:mb-20 lg:mb-7 xl:mb-9 min-[1400px]:mb-20">
             <motion.div
-              className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6"
+              className="flex items-center gap-2.5 sm:gap-3 mb-4 max-[439px]:mb-2.5 sm:mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6"
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
             >
-              <div className="w-8 sm:w-10 lg:w-6 xl:w-7 min-[1400px]:w-10 h-[2px] bg-[#ff863c]"></div>
-              <span className="uppercase tracking-[0.2em] font-bold text-sm lg:text-[10px] xl:text-[11px] min-[1400px]:text-sm text-[#ff863c]">
+              <div className="w-8 max-[439px]:w-6 sm:w-10 lg:w-6 xl:w-7 min-[1400px]:w-10 h-[2px] bg-[#ff863c]"></div>
+              <span className="uppercase tracking-[0.2em] font-bold text-sm max-[439px]:text-[12px] lg:text-[10px] xl:text-[11px] min-[1400px]:text-sm text-[#ff863c]">
                 EXPLORE OUR WORK
               </span>
             </motion.div>
 
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-[24px] xl:text-[27px] min-[1400px]:text-6xl font-black text-[#492c28] mb-4 sm:mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 tracking-tight leading-tight lg:leading-[1.15] min-[1400px]:leading-tight"
+              className="text-4xl max-[439px]:text-[23px] max-[439px]:leading-[1.2] md:text-5xl lg:text-[24px] xl:text-[27px] min-[1400px]:text-6xl font-black text-[#492c28] mb-4 max-[439px]:mb-2.5 sm:mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 tracking-tight leading-tight lg:leading-[1.15] min-[1400px]:leading-tight"
               style={{ fontFamily: "var(--font-heading)" }}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
             >
@@ -1177,24 +1177,24 @@ export default function OurWorksPage() {
             </motion.h2>
 
             <motion.p
-              className="text-base md:text-lg lg:text-[12px] xl:text-[12.5px] min-[1400px]:text-lg text-[#5d4945] max-w-2xl lg:max-w-[450px] xl:max-w-[500px] min-[1400px]:max-w-2xl font-medium leading-relaxed lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed"
+              className="text-base max-[439px]:text-[13.5px] max-[439px]:leading-normal md:text-lg lg:text-[12px] xl:text-[12.5px] min-[1400px]:text-lg text-[#5d4945] max-w-2xl lg:max-w-[450px] xl:max-w-[500px] min-[1400px]:max-w-2xl font-medium leading-relaxed lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed"
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
             >
               Take a look at some of the websites, branding, social media designs, and marketing work we’ve created for businesses across different industries.
             </motion.p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-6 xl:gap-8 min-[1400px]:gap-16 items-start w-full">
+          <div className="flex flex-col lg:flex-row gap-10 max-[439px]:gap-6 lg:gap-6 xl:gap-8 min-[1400px]:gap-16 items-start w-full">
             {/* Sidebar Filters */}
             <motion.div
-              className="w-full lg:w-[195px] xl:w-[225px] min-[1400px]:w-[280px] shrink-0 flex flex-row lg:flex-col flex-nowrap lg:flex-wrap gap-2 md:gap-3 lg:gap-1.5 xl:gap-2 min-[1400px]:gap-3 overflow-x-auto lg:overflow-visible no-scrollbar pb-3 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 lg:sticky lg:top-32 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              className="w-full lg:w-[195px] xl:w-[225px] min-[1400px]:w-[280px] shrink-0 flex flex-row lg:flex-col flex-nowrap lg:flex-wrap gap-2 max-[439px]:gap-1.5 md:gap-3 lg:gap-1.5 xl:gap-2 min-[1400px]:gap-3 overflow-x-auto lg:overflow-visible no-scrollbar pb-3 max-[439px]:pb-2 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 lg:sticky lg:top-32 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
             >
               {filters.map((filter) => (
                 <button
                   key={filter}
                   onClick={() => handleFilterChange(filter)}
-                  className={`shrink-0 whitespace-nowrap px-5 py-3 lg:px-3.5 lg:py-2 xl:px-4 xl:py-2.5 min-[1400px]:px-5 min-[1400px]:py-3 rounded-full lg:rounded-lg xl:rounded-xl min-[1400px]:rounded-xl text-center lg:text-left text-xs md:text-sm lg:text-[11px] xl:text-[12px] min-[1400px]:text-sm font-bold tracking-wider uppercase transition-all duration-300 w-auto lg:w-full inline-flex items-center justify-center lg:block ${activeFilter === filter
+                  className={`shrink-0 whitespace-nowrap px-5 max-[439px]:px-3.5 py-3 max-[439px]:py-2 lg:px-3.5 lg:py-2 xl:px-4 xl:py-2.5 min-[1400px]:px-5 min-[1400px]:py-3 rounded-full lg:rounded-lg xl:rounded-xl min-[1400px]:rounded-xl text-center lg:text-left text-xs max-[439px]:text-[11px] max-[439px]:tracking-wide md:text-sm lg:text-[11px] xl:text-[12px] min-[1400px]:text-sm font-bold tracking-wider uppercase transition-all duration-300 w-auto lg:w-full inline-flex items-center justify-center lg:block ${activeFilter === filter
                     ? "bg-[#492c28] text-white shadow-md"
                     : "bg-gray-100 lg:bg-transparent text-[#796864] hover:bg-gray-200 lg:hover:bg-[#492c28]/5 hover:text-[#492c28]"
                     }`}
@@ -1207,14 +1207,14 @@ export default function OurWorksPage() {
             {/* Cards Grid Container (Responsive: Mobile 1 col x 6, 1024-1400px 2 cols x 3, >1400px 3 cols x 3) */}
             <div id="works-grid" className="w-full flex-1 flex flex-col scroll-mt-28">
               <motion.div
-                className="w-full grid grid-cols-1 lg:grid-cols-2 min-[1400px]:grid-cols-3 gap-6 lg:gap-5 min-[1400px]:gap-6"
+                className="w-full grid grid-cols-1 lg:grid-cols-2 min-[1400px]:grid-cols-3 gap-6 max-[439px]:gap-4.5 lg:gap-5 min-[1400px]:gap-6"
                 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {paginatedItems.map((item, index) => (
                   <motion.div
                     key={item.id}
                     onClick={() => setSelectedProject(item)}
-                    className={`relative group rounded-2xl lg:rounded-xl xl:rounded-2xl min-[1400px]:rounded-2xl overflow-hidden cursor-pointer w-full h-[340px] sm:h-[360px] lg:h-[320px] xl:h-[340px] min-[1400px]:h-[350px] ${item.bgColor} shadow-sm hover:shadow-xl transition-all duration-300`}
+                    className={`relative group rounded-2xl max-[439px]:rounded-xl lg:rounded-xl xl:rounded-2xl min-[1400px]:rounded-2xl overflow-hidden cursor-pointer w-full h-[340px] max-[439px]:h-[260px] sm:h-[360px] lg:h-[320px] xl:h-[340px] min-[1400px]:h-[350px] ${item.bgColor} shadow-sm hover:shadow-xl transition-all duration-300`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
@@ -1232,8 +1232,8 @@ export default function OurWorksPage() {
                     {/* Video Play Icon overlay for Video types */}
                     {item.isVideo && (
                       <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
-                        <div className="w-16 h-16 lg:w-11 lg:h-11 xl:w-13 xl:h-13 min-[1400px]:w-16 min-[1400px]:h-16 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center group-hover:scale-110 group-hover:bg-[#ff863c] transition-all duration-300 border border-white/20">
-                          <svg className="w-6 h-6 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                        <div className="w-16 h-16 max-[439px]:w-12 max-[439px]:h-12 lg:w-11 lg:h-11 xl:w-13 xl:h-13 min-[1400px]:w-16 min-[1400px]:h-16 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center group-hover:scale-110 group-hover:bg-[#ff863c] transition-all duration-300 border border-white/20">
+                          <svg className="w-6 h-6 max-[439px]:w-4.5 max-[439px]:h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                         </div>
                       </div>
                     )}
@@ -1244,12 +1244,12 @@ export default function OurWorksPage() {
 
 
                     {/* Content Bottom */}
-                    <div className="absolute bottom-0 left-0 w-full p-5 lg:p-3.5 xl:p-4 min-[1400px]:p-5 flex justify-between items-end z-10">
+                    <div className="absolute bottom-0 left-0 w-full p-5 max-[439px]:p-3.5 lg:p-3.5 xl:p-4 min-[1400px]:p-5 flex justify-between items-end z-10">
                       <div className="flex flex-col justify-end">
-                        <h3 className="text-white text-lg lg:text-[14px] xl:text-[16px] min-[1400px]:text-lg font-bold leading-tight tracking-wide mb-1 drop-shadow-md">
+                        <h3 className="text-white text-lg max-[439px]:text-[15px] lg:text-[14px] xl:text-[16px] min-[1400px]:text-lg font-bold leading-tight tracking-wide mb-1 drop-shadow-md">
                           {item.title}
                         </h3>
-                        <p className="text-white/70 text-xs lg:text-[10.5px] xl:text-[11px] min-[1400px]:text-xs font-medium tracking-wider uppercase drop-shadow-md">
+                        <p className="text-white/70 text-xs max-[439px]:text-[10px] lg:text-[10.5px] xl:text-[11px] min-[1400px]:text-xs font-medium tracking-wider uppercase drop-shadow-md">
                           {item.category}
                         </p>
                       </div>
@@ -1268,23 +1268,23 @@ export default function OurWorksPage() {
               {/* Pagination Controls */}
               {totalPages > 1 && (
                 <motion.div
-                  className="mt-12 lg:mt-8 xl:mt-10 min-[1400px]:mt-12 flex justify-center items-center gap-4 lg:gap-3 xl:gap-3.5 min-[1400px]:gap-4 w-full"
+                  className="mt-12 max-[439px]:mt-7 lg:mt-8 xl:mt-10 min-[1400px]:mt-12 flex justify-center items-center gap-4 max-[439px]:gap-2 lg:gap-3 xl:gap-3.5 min-[1400px]:gap-4 w-full"
                   initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
                 >
                   <button
                     onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
                     disabled={currentPage === 1}
-                    className="w-10 h-10 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center bg-gray-100 text-[#492c28] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#ff863c] hover:text-white transition-all duration-300 shadow-sm"
+                    className="w-10 h-10 max-[439px]:w-8 max-[439px]:h-8 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center bg-gray-100 text-[#492c28] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#ff863c] hover:text-white transition-all duration-300 shadow-sm"
                   >
                     &larr;
                   </button>
 
-                  <div className="flex gap-2 lg:gap-1.5 xl:gap-2 min-[1400px]:gap-2">
+                  <div className="flex gap-2 max-[439px]:gap-1.5 lg:gap-1.5 xl:gap-2 min-[1400px]:gap-2">
                     {Array.from({ length: totalPages }).map((_, i) => (
                       <button
                         key={i}
                         onClick={() => handlePageChange(i + 1)}
-                        className={`w-10 h-10 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center font-bold text-sm lg:text-xs xl:text-xs min-[1400px]:text-sm transition-all duration-300 shadow-sm ${currentPage === i + 1
+                        className={`w-10 h-10 max-[439px]:w-8 max-[439px]:h-8 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center font-bold text-sm max-[439px]:text-xs lg:text-xs xl:text-xs min-[1400px]:text-sm transition-all duration-300 shadow-sm ${currentPage === i + 1
                           ? "bg-[#492c28] text-white"
                           : "bg-gray-100 text-[#796864] hover:bg-gray-200"
                           }`}
@@ -1297,7 +1297,7 @@ export default function OurWorksPage() {
                   <button
                     onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
                     disabled={currentPage === totalPages}
-                    className="w-10 h-10 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center bg-gray-100 text-[#492c28] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#ff863c] hover:text-white transition-all duration-300 shadow-sm"
+                    className="w-10 h-10 max-[439px]:w-8 max-[439px]:h-8 lg:w-8 lg:h-8 xl:w-9 xl:h-9 min-[1400px]:w-10 min-[1400px]:h-10 rounded-full flex items-center justify-center bg-gray-100 text-[#492c28] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#ff863c] hover:text-white transition-all duration-300 shadow-sm"
                   >
                     &rarr;
                   </button>
