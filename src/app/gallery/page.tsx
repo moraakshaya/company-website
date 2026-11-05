@@ -127,9 +127,9 @@ function MobileGalleryRow({
           type="button"
           aria-label="Scroll row left"
           onClick={() => scroll('left')}
-          className="absolute left-1.5 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.22)] border border-white/90 flex items-center justify-center text-[#047880] hover:bg-[#047880] hover:text-white active:scale-90 transition-all cursor-pointer"
+          className="absolute left-1.5 max-[439px]:left-1 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-9 max-[439px]:w-7 h-9 max-[439px]:h-7 sm:w-10 sm:h-10 rounded-full bg-white/95 backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.22)] border border-white/90 flex items-center justify-center text-[#047880] hover:bg-[#047880] hover:text-white active:scale-90 transition-all cursor-pointer"
         >
-          <svg className="w-5 h-5 -ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+          <svg className="w-5 max-[439px]:w-3.5 h-5 max-[439px]:h-3.5 -ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
@@ -146,7 +146,7 @@ function MobileGalleryRow({
             <div
               key={image.id}
               onClick={() => onSelectImage(image)}
-              className="relative shrink-0 w-[220px] sm:w-[260px] h-[150px] sm:h-[170px] rounded-2xl overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md active:scale-[0.98] transition-all group"
+              className="relative shrink-0 w-[220px] max-[439px]:w-[190px] sm:w-[260px] h-[150px] max-[439px]:h-[130px] sm:h-[170px] rounded-2xl max-[439px]:rounded-xl overflow-hidden bg-gray-100 cursor-pointer shadow-sm hover:shadow-md active:scale-[0.98] transition-all group"
             >
               <Image
                 src={image.src}
@@ -168,8 +168,8 @@ function MobileGalleryRow({
               </div>
 
               {/* Category/Label Tag */}
-              <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
-                <div className="bg-black/60 backdrop-blur-sm text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10">
+              <div className="absolute bottom-3 max-[439px]:bottom-2 left-3 max-[439px]:left-2 z-10 pointer-events-none">
+                <div className="bg-black/60 backdrop-blur-sm text-white text-[11px] max-[439px]:text-[10px] font-medium px-3 max-[439px]:px-2 py-1 max-[439px]:py-0.5 rounded-full border border-white/10">
                   {image.label}
                 </div>
               </div>
@@ -184,9 +184,9 @@ function MobileGalleryRow({
           type="button"
           aria-label="Scroll row right"
           onClick={() => scroll('right')}
-          className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.22)] border border-white/90 flex items-center justify-center text-[#047880] hover:bg-[#047880] hover:text-white active:scale-90 transition-all cursor-pointer"
+          className="absolute right-1.5 max-[439px]:right-1 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-9 max-[439px]:w-7 h-9 max-[439px]:h-7 sm:w-10 sm:h-10 rounded-full bg-white/95 backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.22)] border border-white/90 flex items-center justify-center text-[#047880] hover:bg-[#047880] hover:text-white active:scale-90 transition-all cursor-pointer"
         >
-          <svg className="w-5 h-5 -mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+          <svg className="w-5 max-[439px]:w-3.5 h-5 max-[439px]:h-3.5 -mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
@@ -400,13 +400,13 @@ export default function GalleryPage() {
       <div className="relative z-10 mt-8 sm:mt-12 md:mt-16 pt-4 sm:pt-6 pb-24 max-[439px]:pb-12 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
 
         {/* Filter Buttons */}
-        <div className="w-full mb-12 sm:mb-16">
-          <div className="gallery-filter-scroll flex flex-nowrap sm:flex-wrap items-center justify-start sm:justify-center gap-2.5 sm:gap-3 pl-1 pr-6 sm:px-0">
+        <div className="w-full mb-12 max-[439px]:mb-6 sm:mb-16">
+          <div className="gallery-filter-scroll flex flex-nowrap sm:flex-wrap items-center justify-start sm:justify-center gap-2.5 max-[439px]:gap-2 sm:gap-3 pl-1 pr-6 max-[439px]:pr-4 sm:px-0">
             {['All', 'Team', 'Office', 'Events'].map(tab => (
               <button
                 key={tab}
                 onClick={() => handleTabChange(tab)}
-                className={`px-7 sm:px-8 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shrink-0 whitespace-nowrap cursor-pointer ${activeTab === tab
+                className={`px-7 max-[439px]:px-4 sm:px-8 py-2.5 max-[439px]:py-1.5 rounded-full text-sm max-[439px]:text-[12px] font-semibold transition-all duration-300 shrink-0 whitespace-nowrap cursor-pointer ${activeTab === tab
                   ? 'bg-[#047880] text-white shadow-md'
                   : 'bg-transparent text-gray-600 border border-gray-300 hover:border-[#047880] hover:text-[#047880]'
                   }`}
@@ -557,7 +557,7 @@ export default function GalleryPage() {
               priority
             />
             {/* Label in Modal */}
-            <div className="absolute bottom-6 max-[439px]:bottom-3 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white px-6 max-[439px]:px-3.5 py-2 max-[439px]:py-1.5 rounded-full font-medium max-[439px]:text-[12px] max-[439px]:leading-snug max-[439px]:max-w-[85%] max-[439px]:text-center shadow-lg border border-white/10 select-none">
+            <div className="absolute bottom-6 max-[439px]:bottom-3 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white px-6 max-[439px]:px-4 py-2 max-[439px]:py-1.5 rounded-full font-medium max-[439px]:text-[11.5px] max-[439px]:leading-snug max-[439px]:w-max max-[439px]:max-w-[92%] max-[439px]:whitespace-nowrap max-[439px]:text-center shadow-lg border border-white/10 select-none">
               {filteredImages[selectedIndex].label}
             </div>
           </div>
