@@ -397,7 +397,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Main Content Area */}
-      <div className="relative z-10 mt-8 sm:mt-12 md:mt-16 pt-4 sm:pt-6 pb-24 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
+      <div className="relative z-10 mt-8 sm:mt-12 md:mt-16 pt-4 sm:pt-6 pb-24 max-[439px]:pb-12 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
 
         {/* Filter Buttons */}
         <div className="w-full mb-12 sm:mb-16">
@@ -460,7 +460,7 @@ export default function GalleryPage() {
         </div>
 
         {/* Gallery Grid - Mobile Rows with Conditional Arrows */}
-        <div className="lg:hidden flex flex-col gap-5 sm:gap-6 w-full mb-20 sm:mb-28">
+        <div className="lg:hidden flex flex-col gap-5 sm:gap-6 w-full mb-20 max-[439px]:mb-10 sm:mb-28">
           {filteredImages.length > 4 ? (
             <>
               {/* Row 1 */}
@@ -483,17 +483,17 @@ export default function GalleryPage() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 sm:mt-12 flex flex-col items-center justify-center text-center">
-          <div className="h-0.5 bg-[#ff863c] w-12 mb-8 lg:mb-4 xl:mb-5 min-[1400px]:mb-8 rounded-full"></div>
+        <div className="mt-8 max-[439px]:mt-4 sm:mt-12 flex flex-col items-center justify-center text-center">
+          <div className="h-0.5 bg-[#ff863c] w-12 max-[439px]:w-10 mb-8 max-[439px]:mb-3.5 lg:mb-4 xl:mb-5 min-[1400px]:mb-8 rounded-full"></div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[42px] font-bold text-gray-900 mb-2 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-2 tracking-tight lg:leading-[1.15] xl:leading-[1.15]">
+          <h2 className="text-3xl max-[439px]:text-[23px] max-[439px]:leading-tight md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[42px] font-bold text-gray-900 mb-2 max-[439px]:mb-1 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-2 tracking-tight lg:leading-[1.15] xl:leading-[1.15]">
             More Than Work.
           </h2>
-          <h2 className="text-3xl md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[42px] font-bold text-[#047880] mb-8 lg:mb-4 xl:mb-5 min-[1400px]:mb-8 tracking-tight lg:leading-[1.15] xl:leading-[1.15]">
+          <h2 className="text-3xl max-[439px]:text-[23px] max-[439px]:leading-tight md:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[42px] font-bold text-[#047880] mb-8 max-[439px]:mb-3.5 lg:mb-4 xl:mb-5 min-[1400px]:mb-8 tracking-tight lg:leading-[1.15] xl:leading-[1.15]">
             It's the People Behind It.
           </h2>
 
-          <p className="text-gray-500 max-w-2xl lg:max-w-xl xl:max-w-2xl min-[1400px]:max-w-2xl mx-auto text-[17px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[17px] leading-relaxed lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed mb-8 lg:mb-4 xl:mb-5 min-[1400px]:mb-8">
+          <p className="text-gray-500 max-w-2xl lg:max-w-xl xl:max-w-2xl min-[1400px]:max-w-2xl mx-auto text-[17px] max-[439px]:text-[13.5px] max-[439px]:leading-normal lg:text-[13px] xl:text-[13px] min-[1400px]:text-[17px] leading-relaxed lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed mb-8 max-[439px]:mb-4 max-[439px]:px-2 lg:mb-4 xl:mb-5 min-[1400px]:mb-8">
             Great work starts with great people, ideas and collaboration.{" "}
             <br className="hidden sm:block" />
             Our gallery captures the moments, experiences and people{" "}
@@ -501,7 +501,7 @@ export default function GalleryPage() {
             that make everyday life at Prodbiz special.
           </p>
 
-          <div className="h-0.5 bg-[#ff863c] w-12 rounded-full"></div>
+          <div className="h-0.5 bg-[#ff863c] w-12 max-[439px]:w-10 rounded-full"></div>
         </div>
 
       </div>
@@ -509,38 +509,38 @@ export default function GalleryPage() {
       {/* Lightbox Modal */}
       {selectedIndex !== null && filteredImages[selectedIndex] && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 sm:p-8"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 max-[439px]:p-2 sm:p-8"
           onClick={() => setSelectedIndex(null)}
         >
           {/* Close Button - Circular shape at top right */}
           <button
             type="button"
             aria-label="Close pop up"
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white hover:text-white transition-all hover:scale-110 active:scale-95 z-[100] w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 shadow-2xl cursor-pointer"
+            className="absolute top-4 max-[439px]:top-3 right-4 max-[439px]:right-3 sm:top-6 sm:right-6 text-white hover:text-white transition-all hover:scale-110 active:scale-95 z-[100] w-11 max-[439px]:w-8 h-11 max-[439px]:h-8 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 shadow-2xl cursor-pointer"
             onClick={(e) => {
               e.stopPropagation();
               setSelectedIndex(null);
             }}
           >
-            <svg className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+            <svg className="w-5 max-[439px]:w-4 h-5 max-[439px]:h-4 sm:w-6 sm:h-6 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
           {/* Prev Button */}
           <button
-            className="absolute left-2 sm:left-8 text-white hover:text-white transition-all hover:scale-110 hover:-translate-y-0.5 z-50 w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] flex items-center justify-center rounded-full bg-gradient-to-b from-[#15b9bc] to-[#047880] shadow-[inset_0_2px_3px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3),0_6px_12px_rgba(0,0,0,0.5)] border border-[#03595f]"
+            className="absolute left-2 max-[439px]:left-1.5 sm:left-8 text-white hover:text-white transition-all hover:scale-110 hover:-translate-y-0.5 z-50 w-[50px] max-[439px]:w-[36px] h-[50px] max-[439px]:h-[36px] sm:w-[60px] sm:h-[60px] flex items-center justify-center rounded-full bg-gradient-to-b from-[#15b9bc] to-[#047880] shadow-[inset_0_2px_3px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3),0_6px_12px_rgba(0,0,0,0.5)] border border-[#03595f]"
             onClick={handlePrev}
           >
-            <svg className="w-6 h-6 sm:w-7 sm:h-7 mr-1 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" /></svg>
+            <svg className="w-6 max-[439px]:w-4 h-6 max-[439px]:h-4 sm:w-7 sm:h-7 mr-1 max-[439px]:mr-0.5 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" /></svg>
           </button>
 
           {/* Next Button */}
           <button
-            className="absolute right-2 sm:right-8 text-white hover:text-white transition-all hover:scale-110 hover:-translate-y-0.5 z-50 w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] flex items-center justify-center rounded-full bg-gradient-to-b from-[#15b9bc] to-[#047880] shadow-[inset_0_2px_3px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3),0_6px_12px_rgba(0,0,0,0.5)] border border-[#03595f]"
+            className="absolute right-2 max-[439px]:right-1.5 sm:right-8 text-white hover:text-white transition-all hover:scale-110 hover:-translate-y-0.5 z-50 w-[50px] max-[439px]:w-[36px] h-[50px] max-[439px]:h-[36px] sm:w-[60px] sm:h-[60px] flex items-center justify-center rounded-full bg-gradient-to-b from-[#15b9bc] to-[#047880] shadow-[inset_0_2px_3px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3),0_6px_12px_rgba(0,0,0,0.5)] border border-[#03595f]"
             onClick={handleNext}
           >
-            <svg className="w-6 h-6 sm:w-7 sm:h-7 ml-1 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
+            <svg className="w-6 max-[439px]:w-4 h-6 max-[439px]:h-4 sm:w-7 sm:h-7 ml-1 max-[439px]:ml-0.5 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
           </button>
 
           {/* Image Container */}
@@ -557,13 +557,13 @@ export default function GalleryPage() {
               priority
             />
             {/* Label in Modal */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white px-6 py-2 rounded-full font-medium shadow-lg border border-white/10 select-none">
+            <div className="absolute bottom-6 max-[439px]:bottom-3 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white px-6 max-[439px]:px-3.5 py-2 max-[439px]:py-1.5 rounded-full font-medium max-[439px]:text-[12px] max-[439px]:leading-snug max-[439px]:max-w-[85%] max-[439px]:text-center shadow-lg border border-white/10 select-none">
               {filteredImages[selectedIndex].label}
             </div>
           </div>
 
           {/* Image Counter */}
-          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 text-white/80 font-medium tracking-widest text-xs sm:text-sm bg-black/60 backdrop-blur-md px-3.5 py-1.5 sm:px-4 sm:py-1.5 rounded-full border border-white/15 select-none z-[100]">
+          <div className="absolute top-4 max-[439px]:top-3 left-4 max-[439px]:left-3 sm:top-6 sm:left-6 text-white/80 font-medium tracking-widest text-xs max-[439px]:text-[10.5px] sm:text-sm bg-black/60 backdrop-blur-md px-3.5 max-[439px]:px-2.5 py-1.5 max-[439px]:py-1 sm:px-4 sm:py-1.5 rounded-full border border-white/15 select-none z-[100]">
             {selectedIndex + 1} / {filteredImages.length}
           </div>
         </div>
