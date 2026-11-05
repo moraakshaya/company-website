@@ -26,7 +26,7 @@ function Counter({ from = 0, to, suffix }: { from?: number; to: number; suffix: 
   return (
     <span
       ref={nodeRef}
-      className="font-serif font-bold text-3xl sm:text-4xl md:text-[44px] lg:text-[22px] xl:text-[25px] min-[1400px]:text-[48px] text-white tracking-tight leading-none"
+      className="font-serif font-bold text-3xl max-[439px]:text-[24px] sm:text-4xl md:text-[44px] lg:text-[22px] xl:text-[25px] min-[1400px]:text-[48px] text-white tracking-tight leading-none"
     >
       {to}{suffix}
     </span>
@@ -70,10 +70,10 @@ const milestones = [
 
 export default function Milestones() {
   return (
-    <section className="relative z-20 w-full py-8 md:py-14 lg:py-12 xl:py-12 min-[1400px]:py-14 bg-ivory">
-      <div className="w-full px-6 sm:px-10 md:px-12 lg:px-4 xl:px-6 min-[1400px]:px-20 max-w-[1340px] lg:max-w-[800px] xl:max-w-[900px] min-[1400px]:max-w-[1340px] mx-auto">
-        <div className="relative bg-[#174d44] rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2.5rem] py-10 px-4 sm:py-12 sm:px-6 md:py-14 md:px-8 lg:py-5 lg:px-3 xl:py-6 xl:px-4 min-[1400px]:py-14 min-[1400px]:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-0 relative">
+    <section className="relative z-20 w-full py-8 max-[439px]:py-5 md:py-14 lg:py-12 xl:py-12 min-[1400px]:py-14 bg-ivory">
+      <div className="w-full px-6 max-[439px]:px-4 sm:px-10 md:px-12 lg:px-4 xl:px-6 min-[1400px]:px-20 max-w-[1340px] lg:max-w-[800px] xl:max-w-[900px] min-[1400px]:max-w-[1340px] mx-auto">
+        <div className="relative bg-[#174d44] rounded-[2rem] max-[439px]:rounded-2xl sm:rounded-[2.5rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2.5rem] py-10 max-[439px]:py-7 px-4 max-[439px]:px-3 sm:py-12 sm:px-6 md:py-14 md:px-8 lg:py-5 lg:px-3 xl:py-6 xl:px-4 min-[1400px]:py-14 min-[1400px]:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-[439px]:gap-x-4 max-[439px]:gap-y-6 sm:gap-10 lg:gap-0 relative">
             {milestones.map((item, index) => (
               <motion.div
                 key={index}
@@ -89,7 +89,7 @@ export default function Milestones() {
                 )}
 
                 {/* Blob Badge with Icon & 3 Radiant Rays */}
-                <div className="relative w-16 h-16 sm:w-[68px] sm:h-[68px] lg:w-[38px] lg:h-[38px] xl:w-[42px] xl:h-[42px] min-[1400px]:w-[68px] min-[1400px]:h-[68px] flex items-center justify-center mb-5 sm:mb-6 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-6">
+                <div className="relative w-16 h-16 max-[439px]:w-12 max-[439px]:h-12 sm:w-[68px] sm:h-[68px] lg:w-[38px] lg:h-[38px] xl:w-[42px] xl:h-[42px] min-[1400px]:w-[68px] min-[1400px]:h-[68px] flex items-center justify-center mb-5 max-[439px]:mb-3 sm:mb-6 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-6">
                   {/* Organic Pastel Blob */}
                   <div
                     className={`absolute inset-0 w-full h-full ${item.blobColor} rounded-[42%_58%_70%_30%/45%_45%_55%_55%] transform rotate-12 shadow-sm`}
@@ -97,13 +97,13 @@ export default function Milestones() {
 
                   {/* Icon */}
                   <div className="relative z-10 text-[#174d44]">
-                    <item.icon className="w-7 h-7 sm:w-8 sm:h-8 lg:w-4 lg:h-4 xl:w-4.5 xl:h-4.5 min-[1400px]:w-8 min-[1400px]:h-8" strokeWidth={2.4} />
+                    <item.icon className="w-7 h-7 max-[439px]:w-5 max-[439px]:h-5 sm:w-8 sm:h-8 lg:w-4 lg:h-4 xl:w-4.5 xl:h-4.5 min-[1400px]:w-8 min-[1400px]:h-8" strokeWidth={2.4} />
                   </div>
 
                   {/* 3 Radiating Doodle Rays on Top-Right */}
-                  <div className="absolute -top-1 -right-2.5 sm:-right-3 lg:-top-0.5 lg:-right-2 xl:-top-1 xl:-right-2.5 min-[1400px]:-top-1 min-[1400px]:-right-3 pointer-events-none select-none z-20">
+                  <div className="absolute -top-1 -right-2.5 max-[439px]:-right-2 max-[439px]:-top-1 sm:-right-3 lg:-top-0.5 lg:-right-2 xl:-top-1 xl:-right-2.5 min-[1400px]:-top-1 min-[1400px]:-right-3 pointer-events-none select-none z-20">
                     <svg
-                      className={`w-5 h-5 lg:w-3 lg:h-3 xl:w-3.5 xl:h-3.5 min-[1400px]:w-5 min-[1400px]:h-5 overflow-visible ${item.sparkleColor}`}
+                      className={`w-5 h-5 max-[439px]:w-4 max-[439px]:h-4 lg:w-3 lg:h-3 xl:w-3.5 xl:h-3.5 min-[1400px]:w-5 min-[1400px]:h-5 overflow-visible ${item.sparkleColor}`}
                       viewBox="0 0 20 20"
                       fill="none"
                       stroke="currentColor"
@@ -118,12 +118,12 @@ export default function Milestones() {
                 </div>
 
                 {/* Stat Number */}
-                <div className="mb-1.5 sm:mb-2 lg:mb-0.5 xl:mb-1 min-[1400px]:mb-2">
+                <div className="mb-1.5 max-[439px]:mb-1 sm:mb-2 lg:mb-0.5 xl:mb-1 min-[1400px]:mb-2">
                   <Counter from={0} to={item.value} suffix={item.suffix} />
                 </div>
 
                 {/* Stat Label */}
-                <p className="text-[#f5f8f6]/90 font-serif text-sm sm:text-[15px] md:text-base lg:!text-[10.5px] xl:!text-[11.5px] min-[1400px]:!text-base font-medium tracking-normal leading-tight lg:!leading-tight min-[1400px]:leading-normal">
+                <p className="text-[#f5f8f6]/90 font-serif text-sm max-[439px]:text-[12.5px] max-[439px]:leading-snug sm:text-[15px] md:text-base lg:!text-[10.5px] xl:!text-[11.5px] min-[1400px]:!text-base font-medium tracking-normal leading-tight lg:!leading-tight min-[1400px]:leading-normal">
                   {item.label}
                 </p>
               </motion.div>

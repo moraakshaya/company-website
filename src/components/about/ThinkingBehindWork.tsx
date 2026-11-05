@@ -92,19 +92,19 @@ const VALUES_CARDS = [
 function ValueCardMobile({ card }: { card: (typeof VALUES_CARDS)[0] }) {
   return (
     <div
-      className={`rounded-[1.25rem] sm:rounded-[1.5rem] ${card.bg} border ${card.border} p-3.5 sm:p-4.5 ${card.shadow} flex flex-col justify-between h-full transition-transform duration-300 hover:-translate-y-1`}
+      className={`rounded-[1.25rem] max-[439px]:rounded-xl sm:rounded-[1.5rem] ${card.bg} border ${card.border} p-3.5 max-[439px]:p-3 sm:p-4.5 ${card.shadow} flex flex-col justify-between h-full transition-transform duration-300 hover:-translate-y-1`}
     >
-      <div className="flex items-center gap-2.5 mb-2">
+      <div className="flex items-center gap-2.5 max-[439px]:gap-2 mb-2 max-[439px]:mb-1.5">
         <div
-          className={`w-8 h-8 sm:w-9 sm:h-9 rounded-full ${card.iconBg} text-white flex items-center justify-center shrink-0 shadow-sm`}
+          className={`w-8 h-8 max-[439px]:w-7 max-[439px]:h-7 sm:w-9 sm:h-9 rounded-full ${card.iconBg} text-white flex items-center justify-center shrink-0 shadow-sm max-[439px]:[&>svg]:w-3.5 max-[439px]:[&>svg]:h-3.5`}
         >
           {card.icon}
         </div>
-        <h3 className={`text-xs sm:text-[13px] font-bold ${card.textColor} tracking-wider uppercase leading-tight`}>
+        <h3 className={`text-xs max-[439px]:text-[11px] sm:text-[13px] font-bold ${card.textColor} tracking-wider uppercase leading-tight`}>
           {card.label}
         </h3>
       </div>
-      <p className="text-[11.5px] sm:text-xs text-[#492c28]/85 leading-relaxed font-['Inter',sans-serif]">
+      <p className="text-[11.5px] max-[439px]:text-[11px] max-[439px]:leading-normal sm:text-xs text-[#492c28]/85 leading-relaxed font-['Inter',sans-serif]">
         {card.desc}
       </p>
     </div>
@@ -147,16 +147,16 @@ export default function ThinkingBehindWork() {
   const card04 = VALUES_CARDS[3];
 
   return (
-    <section className="relative z-20 w-full py-16 md:py-24 lg:py-12 xl:py-12 min-[1400px]:py-28 bg-ivory overflow-hidden">
-      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-4 xl:px-6 min-[1400px]:px-20 max-w-[1340px] lg:max-w-[860px] xl:max-w-[980px] min-[1400px]:max-w-[1340px] mx-auto">
+    <section className="relative z-20 w-full py-16 max-[439px]:py-8 md:py-24 lg:py-12 xl:py-12 min-[1400px]:py-28 bg-ivory overflow-hidden">
+      <div className="w-full px-4 max-[439px]:px-3.5 sm:px-8 md:px-12 lg:px-4 xl:px-6 min-[1400px]:px-20 max-w-[1340px] lg:max-w-[860px] xl:max-w-[980px] min-[1400px]:max-w-[1340px] mx-auto">
         {/* --- Top Header Area --- */}
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-10 sm:mb-14 lg:mb-4 xl:mb-6 min-[1400px]:mb-18">
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mb-10 max-[439px]:mb-6 sm:mb-14 lg:mb-4 xl:mb-6 min-[1400px]:mb-18">
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="section-label mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]"
+            className="section-label mb-4 max-[439px]:mb-2 max-[439px]:text-[12px] lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]"
           >
             WHAT MATTERS TO US
           </motion.p>
@@ -166,7 +166,7 @@ export default function ThinkingBehindWork() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[40px] min-[1400px]:xl:text-[46px] font-extrabold text-[#492c28] tracking-tight flex flex-col items-center gap-1 md:gap-3 lg:gap-0.5 xl:gap-1 min-[1400px]:gap-3 leading-tight lg:leading-[1.15] min-[1400px]:leading-tight"
+            className="text-3xl max-[439px]:text-[23px] sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[40px] min-[1400px]:xl:text-[46px] font-extrabold text-[#492c28] tracking-tight flex flex-col items-center gap-1 md:gap-3 lg:gap-0.5 xl:gap-1 min-[1400px]:gap-3 leading-tight max-[439px]:leading-snug lg:leading-[1.15] min-[1400px]:leading-tight"
           >
             <span>The Values Behind</span>
             <span className="text-[#047880]">Our Work.</span>
@@ -177,7 +177,7 @@ export default function ThinkingBehindWork() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[#492c28]/85 text-base sm:text-lg lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-lg leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif] max-w-5xl lg:max-w-2xl xl:max-w-3xl min-[1400px]:max-w-5xl mx-auto mt-4 sm:mt-5 lg:mt-2 xl:mt-2.5 min-[1400px]:mt-5"
+            className="text-[#492c28]/85 text-base max-[439px]:text-[13.5px] max-[439px]:leading-normal sm:text-lg lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-lg leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif] max-w-5xl lg:max-w-2xl xl:max-w-3xl min-[1400px]:max-w-5xl mx-auto mt-4 max-[439px]:mt-2.5 sm:mt-5 lg:mt-2 xl:mt-2.5 min-[1400px]:mt-5"
           >
             Our values guide how we think, work, and create. They shape every project and help us build meaningful experiences for our clients.
           </motion.p>
@@ -188,15 +188,15 @@ export default function ThinkingBehindWork() {
             ======================================================== */}
         <div className="block lg:hidden w-full max-w-xl mx-auto">
           {/* Top Row: Left Top (Card 01) & Right Top (Card 02) */}
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 items-stretch">
+          <div className="grid grid-cols-2 gap-3 max-[439px]:gap-2.5 sm:gap-4 items-stretch">
             <ValueCardMobile card={card01} />
             <ValueCardMobile card={card02} />
           </div>
 
           {/* Center Row: Circular Portrait with 4 Connecting Arrows */}
-          <div className="relative flex items-center justify-center py-6 sm:py-8 my-2">
+          <div className="relative flex items-center justify-center py-6 max-[439px]:py-4 sm:py-8 my-2 max-[439px]:my-1">
             {/* Center Circular Avatar Frame */}
-            <div className="relative w-[110px] sm:w-[130px] aspect-square rounded-full bg-[#fde2d0] overflow-hidden border-[3.5px] border-white shadow-[0_10px_28px_rgba(73,44,40,0.12)] flex items-end justify-center select-none z-10">
+            <div className="relative w-[110px] max-[439px]:w-[95px] sm:w-[130px] aspect-square rounded-full bg-[#fde2d0] overflow-hidden border-[3.5px] max-[439px]:border-[3px] border-white shadow-[0_10px_28px_rgba(73,44,40,0.12)] flex items-end justify-center select-none z-10">
               <img
                 src="/about/thinking-portrait.png"
                 alt="The Thinking Behind Our Work"
@@ -265,7 +265,7 @@ export default function ThinkingBehindWork() {
           </div>
 
           {/* Bottom Row: Left Bottom (Card 03) & Right Bottom (Card 04) */}
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 items-stretch">
+          <div className="grid grid-cols-2 gap-3 max-[439px]:gap-2.5 sm:gap-4 items-stretch">
             <ValueCardMobile card={card03} />
             <ValueCardMobile card={card04} />
           </div>

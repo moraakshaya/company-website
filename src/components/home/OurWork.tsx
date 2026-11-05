@@ -185,7 +185,7 @@ export default function OurWork() {
         <div className="section-header text-center w-full max-w-5xl lg:max-w-full min-[1400px]:max-w-5xl mx-auto mb-10 max-[439px]:mb-6 lg:mb-4 xl:mb-5 min-[1400px]:mb-[clamp(35px,5vw,75px)]">
           <span className="section-label mb-4 max-[439px]:mb-2 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 inline-flex text-xs max-[439px]:text-[12px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">OUR WORK</span>
           <h2 className="w-full section-title lg:w-full lg:max-w-full lg:mx-auto lg:text-center min-[1400px]:max-w-[900px] min-[1400px]:mx-0 text-3xl max-[439px]:text-[23px] sm:text-4xl md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] mb-6 max-[439px]:mb-3 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 leading-[1.1] max-[439px]:leading-snug lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight md:whitespace-nowrap">
-            See What We Create <span className="text-[#047880]">for Businesses<span className="text-[#ff863c]">.</span></span>
+            See What We Create <span className="text-[#047880]">for Businesses.</span>
           </h2>
           <p className="section-description mx-auto text-muted text-lg max-[439px]:text-[13.5px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg leading-relaxed max-[439px]:leading-normal lg:leading-normal xl:leading-normal min-[1400px]:leading-normal lg:max-w-[650px] xl:max-w-[720px] min-[1400px]:max-w-[650px] max-[439px]:mb-4">
             From professional websites and memorable branding to engaging social media and digital marketing, we create digital solutions that help businesses build a stronger presence and connect with their customers.
@@ -366,7 +366,7 @@ export default function OurWork() {
                 <h2 className="text-3xl sm:text-4xl md:text-[42px] lg:text-[28px] xl:text-[32px] min-[1400px]:text-[50px] font-extrabold text-[#492c28] mb-6 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 leading-[1.2] lg:leading-[1.15] min-[1400px]:leading-[1.2] tracking-tight max-[439px]:text-[23px] max-[439px]:leading-snug max-[439px]:mb-3">
                   <span className="block">Built for Businesses</span>
                   <span className="block mt-1.5 sm:mt-2 max-[439px]:mt-1 text-[#047880]">
-                    of Every Size<span className="text-[#ff863c]">.</span>
+                    of Every Size.
                   </span>
                 </h2>
                 <p className="section-description text-muted text-lg lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-lg lg:leading-normal xl:leading-normal min-[1400px]:leading-normal mx-auto mb-6 sm:mb-8 md:mb-0 lg:max-w-[580px] xl:max-w-[620px] min-[1400px]:max-w-[650px] max-[439px]:text-[13.5px] max-[439px]:leading-normal max-[439px]:mb-4" style={{ maxWidth: "42ch" }}>

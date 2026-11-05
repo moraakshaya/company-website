@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 export default function OurMission() {
   return (
-    <section className="relative z-20 w-full pt-16 md:pt-20 lg:pt-12 xl:pt-12 min-[1400px]:pt-24 pb-4 md:pb-6 lg:pb-12 xl:pb-12 min-[1400px]:pb-6 bg-ivory overflow-hidden">
-      <div className="relative z-10 w-full px-6 sm:px-10 md:px-12 lg:px-4 xl:px-6 min-[1400px]:px-20 max-w-[1340px] lg:max-w-[920px] xl:max-w-[1040px] min-[1400px]:max-w-[1340px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 xl:gap-8 min-[1400px]:gap-16 items-center">
+    <section className="relative z-20 w-full pt-16 max-[439px]:pt-8 md:pt-20 lg:pt-12 xl:pt-12 min-[1400px]:pt-24 pb-4 md:pb-6 lg:pb-12 xl:pb-12 min-[1400px]:pb-6 bg-ivory overflow-hidden">
+      <div className="relative z-10 w-full px-6 max-[439px]:px-4 sm:px-10 md:px-12 lg:px-4 xl:px-6 min-[1400px]:px-20 max-w-[1340px] lg:max-w-[920px] xl:max-w-[1040px] min-[1400px]:max-w-[1340px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 max-[439px]:gap-6 lg:gap-6 xl:gap-8 min-[1400px]:gap-16 items-center">
 
           {/* ========================================================
               LEFT COLUMN: Photo Collage with Organic Blob & Doodles
@@ -20,9 +20,9 @@ export default function OurMission() {
             className="lg:col-span-6 flex justify-center lg:justify-center min-[1400px]:lg:justify-start order-2 lg:order-1"
           >
             <div className="relative w-full max-w-[480px] sm:max-w-[520px] lg:max-w-[390px] xl:max-w-[450px] min-[1400px]:max-w-[540px]">
-              <div className="grid grid-cols-[1.3fr_1fr] gap-3 sm:gap-4 lg:gap-2.5 xl:gap-3.5 min-[1400px]:gap-4 items-stretch">
+              <div className="grid grid-cols-[1.3fr_1fr] gap-3 max-[439px]:gap-2.5 sm:gap-4 lg:gap-2.5 xl:gap-3.5 min-[1400px]:gap-4 items-stretch">
                 {/* Left Column: Primary Tall Photo */}
-                <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden group">
+                <div className="relative rounded-2xl max-[439px]:rounded-xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden group">
                   <img
                     src="/about/mission/mission-photo-1.png"
                     alt="Our Mission - Helping Businesses Build a Strong Presence"
@@ -31,15 +31,15 @@ export default function OurMission() {
                 </div>
 
                 {/* Right Column: Stacked Photos */}
-                <div className="flex flex-col gap-3 sm:gap-4 lg:gap-2.5 xl:gap-3.5 min-[1400px]:gap-4 justify-between">
-                  <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden group flex-1">
+                <div className="flex flex-col gap-3 max-[439px]:gap-2.5 sm:gap-4 lg:gap-2.5 xl:gap-3.5 min-[1400px]:gap-4 justify-between">
+                  <div className="relative rounded-2xl max-[439px]:rounded-xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden group flex-1">
                     <img
                       src="/about/mission/mission-photo-2.png"
                       alt="Our Mission - Community Impact"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
-                  <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden group flex-1">
+                  <div className="relative rounded-2xl max-[439px]:rounded-xl sm:rounded-3xl lg:rounded-2xl xl:rounded-3xl min-[1400px]:rounded-3xl overflow-hidden group flex-1">
                     <img
                       src="/about/mission/mission-photo-3.png"
                       alt="Our Mission - Purpose-Driven Work"
@@ -62,7 +62,7 @@ export default function OurMission() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="section-label mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]"
+              className="section-label mb-4 max-[439px]:mb-2 max-[439px]:text-[12px] lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]"
             >
               OUR MISSION
             </motion.p>
@@ -73,7 +73,7 @@ export default function OurMission() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[38px] min-[1400px]:xl:text-[42px] font-extrabold text-[#492c28] leading-[1.16] sm:leading-[1.20] lg:leading-[1.15] min-[1400px]:leading-[1.16] min-[1400px]:xl:leading-[1.20] tracking-tight mb-6 lg:mb-2.5 xl:mb-3.5 min-[1400px]:mb-6 text-center lg:text-left flex flex-col items-center lg:items-start gap-1 sm:gap-1.5 lg:gap-0.5 xl:gap-1 min-[1400px]:gap-1.5"
+              className="text-3xl max-[439px]:text-[23px] sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[38px] min-[1400px]:xl:text-[42px] font-extrabold text-[#492c28] leading-[1.16] max-[439px]:leading-snug sm:leading-[1.20] lg:leading-[1.15] min-[1400px]:leading-[1.16] min-[1400px]:xl:leading-[1.20] tracking-tight mb-6 max-[439px]:mb-3 lg:mb-2.5 xl:mb-3.5 min-[1400px]:mb-6 text-center lg:text-left flex flex-col items-center lg:items-start gap-1 sm:gap-1.5 lg:gap-0.5 xl:gap-1 min-[1400px]:gap-1.5"
             >
               <span className="block sm:whitespace-nowrap">Helping Businesses</span>
               <span className="block">
@@ -87,12 +87,12 @@ export default function OurMission() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-[#492c28]/85 text-base sm:text-lg leading-relaxed font-['Inter',sans-serif] space-y-4 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-4 max-w-xl lg:max-w-[480px] xl:max-w-[530px] min-[1400px]:max-w-xl mx-auto lg:mx-0 text-center lg:text-left"
+              className="text-[#492c28]/85 text-base sm:text-lg leading-relaxed font-['Inter',sans-serif] space-y-4 max-[439px]:space-y-3 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-4 max-w-xl lg:max-w-[480px] xl:max-w-[530px] min-[1400px]:max-w-xl mx-auto lg:mx-0 text-center lg:text-left"
             >
-              <p className="text-base sm:text-lg lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-lg leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
+              <p className="text-base max-[439px]:text-[13.5px] max-[439px]:leading-normal sm:text-lg lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-lg leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
                 Our mission is to help businesses present themselves better through good design, websites, branding, and digital marketing.
               </p>
-              <p className="text-base sm:text-lg lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-lg leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
+              <p className="text-base max-[439px]:text-[13.5px] max-[439px]:leading-normal sm:text-lg lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-lg leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
                 We aim to make it easier for businesses to reach people, share what they offer, and grow.
               </p>
             </motion.div>

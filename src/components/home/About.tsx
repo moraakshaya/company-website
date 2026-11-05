@@ -101,7 +101,7 @@ const About = () => {
             <p className="section-label mb-4 max-[439px]:mb-2 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 inline-flex max-[439px]:text-[12px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">WHO WE ARE</p>
             <h2 className="w-full section-title text-4xl max-[439px]:text-[23px] md:text-5xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[52px] font-extrabold text-[#492c28] mb-6 max-[439px]:mb-3 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-6 leading-[1.1] max-[439px]:leading-snug lg:leading-[1.15] min-[1400px]:leading-[1.1] tracking-tight">
               More Than Just a <br className="hidden md:block" />
-              <span className="text-[#047880]">Digital Agency<span className="text-[#ff863c]">.</span></span>
+              <span className="text-[#047880]">Digital Agency.</span>
             </h2>
 
             {/* Visual: Mobile only (rendered directly below heading) */}

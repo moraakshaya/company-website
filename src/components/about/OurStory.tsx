@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 function TeamImageCard({ className = "" }: { className?: string }) {
   return (
-    <div className={`relative w-full max-w-[500px] sm:max-w-[540px] lg:max-w-[420px] xl:max-w-[470px] min-[1400px]:max-w-[620px] -rotate-2 sm:-rotate-[2.5deg] transition-transform duration-500 hover:-rotate-1 ${className}`}>
+    <div className={`relative w-full max-w-[500px] max-[439px]:max-w-[310px] sm:max-w-[540px] lg:max-w-[420px] xl:max-w-[470px] min-[1400px]:max-w-[620px] -rotate-2 sm:-rotate-[2.5deg] transition-transform duration-500 hover:-rotate-1 ${className}`}>
       {/* Main Team Image Card */}
-      <div className="relative w-full aspect-[3/2] rounded-[1.75rem] sm:rounded-[2.2rem] lg:rounded-[1.75rem] xl:rounded-[2rem] min-[1400px]:rounded-[2.5rem] overflow-hidden border-[3px] sm:border-4 border-white shadow-[0_16px_36px_rgba(73,44,40,0.12)] bg-white">
+      <div className="relative w-full aspect-[3/2] rounded-[1.75rem] max-[439px]:rounded-2xl sm:rounded-[2.2rem] lg:rounded-[1.75rem] xl:rounded-[2rem] min-[1400px]:rounded-[2.5rem] overflow-hidden border-[3px] max-[439px]:border-2 sm:border-4 border-white shadow-[0_16px_36px_rgba(73,44,40,0.12)] bg-white">
         <img
           src="/about/our-story.png"
           alt="Prodbiz Solutions Team"
@@ -16,7 +16,7 @@ function TeamImageCard({ className = "" }: { className?: string }) {
       </div>
 
       {/* Top-Left Badge: our-story-top.png */}
-      <div className="absolute -top-7 -left-7 sm:-top-9 sm:-left-9 md:-top-11 md:-left-11 lg:-top-8 lg:-left-8 xl:-top-10 xl:-left-10 min-[1400px]:-top-12 min-[1400px]:-left-12 z-20 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[90px] lg:h-[90px] xl:w-[105px] xl:h-[105px] min-[1400px]:w-32 min-[1400px]:h-32 drop-shadow-[0_10px_20px_rgba(0,0,0,0.14)] transition-transform duration-300 hover:scale-105 select-none pointer-events-none">
+      <div className="absolute -top-7 -left-7 max-[439px]:-top-4 max-[439px]:-left-4 sm:-top-9 sm:-left-9 md:-top-11 md:-left-11 lg:-top-8 lg:-left-8 xl:-top-10 xl:-left-10 min-[1400px]:-top-12 min-[1400px]:-left-12 z-20 w-20 h-20 max-[439px]:w-14 max-[439px]:h-14 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[90px] lg:h-[90px] xl:w-[105px] xl:h-[105px] min-[1400px]:w-32 min-[1400px]:h-32 drop-shadow-[0_10px_20px_rgba(0,0,0,0.14)] transition-transform duration-300 hover:scale-105 select-none pointer-events-none">
         <img
           src="/about/our-story-top.png"
           alt="Creative Ideas Lightbulb Badge"
@@ -29,8 +29,8 @@ function TeamImageCard({ className = "" }: { className?: string }) {
 
 export default function OurStory() {
   return (
-    <section className="relative z-20 w-full py-12 md:py-20 lg:py-12 xl:py-12 min-[1400px]:py-20 bg-ivory">
-      <div className="w-full px-6 sm:px-10 md:px-12 lg:px-10 xl:px-14 min-[1400px]:px-20">
+    <section className="relative z-20 w-full py-12 max-[439px]:py-8 md:py-20 lg:py-12 xl:py-12 min-[1400px]:py-20 bg-ivory">
+      <div className="w-full px-6 max-[439px]:px-4 sm:px-10 md:px-12 lg:px-10 xl:px-14 min-[1400px]:px-20">
         {/* Two-Column Grid: Left Image with Badges (Desktop), Right Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12 min-[1400px]:gap-16 items-center w-full max-w-[1340px] mx-auto">
 
@@ -54,10 +54,10 @@ export default function OurStory() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {/* Tag: OUR STORY matching Image 2 */}
-            <p className="section-label mb-4 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">OUR STORY</p>
+            <p className="section-label mb-4 max-[439px]:mb-2 max-[439px]:text-[12px] lg:mb-1.5 xl:mb-2 min-[1400px]:mb-4 lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px]">OUR STORY</p>
 
             {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[40px] min-[1400px]:xl:text-[46px] font-extrabold text-[#492c28] mb-2 sm:mb-3 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-6 tracking-tight text-center lg:text-left flex flex-col items-center lg:items-start gap-1 md:gap-3 lg:gap-0.5 xl:gap-1 min-[1400px]:gap-3 leading-tight lg:leading-[1.15] min-[1400px]:leading-tight">
+            <h2 className="text-3xl max-[439px]:text-[23px] sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[40px] min-[1400px]:xl:text-[46px] font-extrabold text-[#492c28] mb-2 max-[439px]:mb-2 sm:mb-3 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-6 tracking-tight text-center lg:text-left flex flex-col items-center lg:items-start gap-1 md:gap-3 lg:gap-0.5 xl:gap-1 min-[1400px]:gap-3 leading-tight max-[439px]:leading-snug lg:leading-[1.15] min-[1400px]:leading-tight">
               <span className="block sm:whitespace-nowrap">Creative Work That Helps</span>
               <span className="text-[#047880]">
                 Businesses Grow.
@@ -65,28 +65,28 @@ export default function OurStory() {
             </h2>
 
             {/* Mobile Only: Team Image below heading */}
-            <div className="block lg:hidden mt-2 sm:mt-3 mb-6 sm:mb-8 pt-1 pb-2 px-2 sm:px-4 w-full flex justify-center">
+            <div className="block lg:hidden mt-2 max-[439px]:mt-2 sm:mt-3 mb-6 max-[439px]:mb-5 sm:mb-8 pt-1 pb-2 px-2 sm:px-4 w-full flex justify-center">
               <TeamImageCard className="mx-auto" />
             </div>
 
             {/* Paragraphs */}
-            <div className="space-y-4 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-4 mb-6 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-6 max-w-xl lg:max-w-[480px] xl:max-w-[530px] min-[1400px]:max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-              <p className="text-sm sm:text-base lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-[16px] text-[#492c28]/85 leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
+            <div className="space-y-4 max-[439px]:space-y-3 lg:space-y-2 xl:space-y-2.5 min-[1400px]:space-y-4 mb-6 max-[439px]:mb-5 lg:mb-3 xl:mb-3.5 min-[1400px]:mb-6 max-w-xl lg:max-w-[480px] xl:max-w-[530px] min-[1400px]:max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+              <p className="text-sm max-[439px]:text-[13.5px] sm:text-base lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-[16px] text-[#492c28]/85 leading-relaxed max-[439px]:leading-normal lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
                 Prodbiz Solutions started with a simple idea: help businesses show who they are, what they do, and why customers should choose them.
               </p>
-              <p className="text-sm sm:text-base lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-[16px] text-[#492c28]/85 leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
+              <p className="text-sm max-[439px]:text-[13.5px] sm:text-base lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-[16px] text-[#492c28]/85 leading-relaxed max-[439px]:leading-normal lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
                 We bring design, technology, and marketing together to help businesses build their brand and reach more people. Whether it&apos;s creating a logo, building a website, or designing content for social media, we focus on work that serves a real purpose.
               </p>
-              <p className="text-sm sm:text-base lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-[16px] text-[#492c28]/85 leading-relaxed lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
+              <p className="text-sm max-[439px]:text-[13.5px] sm:text-base lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-[16px] text-[#492c28]/85 leading-relaxed max-[439px]:leading-normal lg:!leading-[1.5] xl:!leading-[1.5] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
                 We work with all kinds of businesses, from small businesses just getting started to established companies looking to grow. We first understand your business and your goals, then work with you to find the right solutions.
               </p>
             </div>
 
             {/* Bottom Highlight Goal Statement with Vertical Line & Target-with-Arrow Icon */}
-            <div className="flex items-center gap-3.5 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-3.5 pl-4 lg:pl-3 min-[1400px]:pl-4 border-l-[3.5px] border-[#ff863c] max-w-xl lg:max-w-[480px] xl:max-w-[530px] min-[1400px]:max-w-xl py-0.5 mx-auto lg:mx-0 text-left">
+            <div className="flex items-center gap-3.5 max-[439px]:gap-2.5 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-3.5 pl-4 max-[439px]:pl-3 lg:pl-3 min-[1400px]:pl-4 border-l-[3.5px] max-[439px]:border-l-[3px] border-[#ff863c] max-w-xl lg:max-w-[480px] xl:max-w-[530px] min-[1400px]:max-w-xl py-0.5 mx-auto lg:mx-0 text-left">
               {/* Target with Arrow Present Icon */}
               <svg
-                className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-6 lg:h-6 xl:w-7 xl:h-7 min-[1400px]:w-9 min-[1400px]:h-9 text-[#ff863c] shrink-0"
+                className="w-7 h-7 max-[439px]:w-6 max-[439px]:h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-6 lg:h-6 xl:w-7 xl:h-7 min-[1400px]:w-9 min-[1400px]:h-9 text-[#ff863c] shrink-0"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -106,7 +106,7 @@ export default function OurStory() {
                 <path d="M17.5 2.5 L21.5 2.5 L21.5 6.5" />
                 <line x1="16.5" y1="7.5" x2="19.5" y2="4.5" />
               </svg>
-              <p className="font-bold text-sm sm:text-base lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-[16px] leading-snug lg:!leading-snug text-[#492c28] font-['Inter',sans-serif]">
+              <p className="font-bold text-sm max-[439px]:text-[13px] sm:text-base lg:!text-[13px] xl:!text-[13px] min-[1400px]:!text-[16px] leading-snug lg:!leading-snug text-[#492c28] font-['Inter',sans-serif]">
                 Our goal is to understand your business, bring your ideas to life, and create work that makes a difference.
               </p>
             </div>
