@@ -243,23 +243,23 @@ export default function WebsiteDesignPage() {
       </section>
 
       {/* ── Services Sections ──────────────────────── */}
-      <div className="flex flex-col gap-24 md:gap-32 lg:gap-16 xl:gap-20 min-[1400px]:gap-32 pb-48 lg:pb-32 xl:pb-36 min-[1400px]:pb-48 -mt-4 md:-mt-12 px-4 md:px-8 lg:px-12 xl:px-0">
+      <div className="flex flex-col gap-24 max-[439px]:gap-12 md:gap-32 lg:gap-16 xl:gap-20 min-[1400px]:gap-32 pb-48 max-[439px]:pb-24 lg:pb-32 xl:pb-36 min-[1400px]:pb-48 -mt-4 md:-mt-12 px-4 max-[439px]:px-3 md:px-8 lg:px-12 xl:px-0">
         {servicesData.map((service, index) => {
           // even index (0, 2, 4...) -> Image Left
           // odd index (1, 3, 5...) -> Image Right
           const isImageLeft = index % 2 === 0;
 
           return (
-            <section key={service.num} className="sticky top-6 md:top-12 w-full z-10 mx-auto max-w-[1100px] lg:max-w-[920px] xl:max-w-[1000px] min-[1400px]:max-w-[1100px] bg-[#fffff0]/70 backdrop-blur-2xl border border-white/60 pt-10 md:pt-12 lg:pt-6 lg:pb-8 xl:pt-8 xl:pb-10 min-[1400px]:pt-12 min-[1400px]:pb-20 px-6 md:px-10 lg:px-7 xl:px-9 min-[1400px]:px-10 overflow-hidden rounded-[2.5rem] lg:rounded-[1.75rem] xl:rounded-[2rem] min-[1400px]:rounded-[2.5rem] shadow-[0_-20px_50px_rgba(0,0,0,0.06)]">
+            <section key={service.num} className="sticky top-6 max-[439px]:top-3 md:top-12 w-full z-10 mx-auto max-w-[1100px] lg:max-w-[920px] xl:max-w-[1000px] min-[1400px]:max-w-[1100px] bg-[#fffff0]/70 backdrop-blur-2xl border border-white/60 pt-10 max-[439px]:pt-3.5 max-[439px]:pb-3.5 md:pt-12 lg:pt-6 lg:pb-8 xl:pt-8 xl:pb-10 min-[1400px]:pt-12 min-[1400px]:pb-20 px-6 max-[439px]:px-3.5 md:px-10 lg:px-7 xl:px-9 min-[1400px]:px-10 overflow-hidden rounded-[2.5rem] max-[439px]:rounded-2xl lg:rounded-[1.75rem] xl:rounded-[2rem] min-[1400px]:rounded-[2.5rem] shadow-[0_-20px_50px_rgba(0,0,0,0.06)]">
 
               {/* Top Left Number Indicator */}
-              <div className="absolute top-6 left-6 md:top-10 md:left-10 lg:top-5 lg:left-7 xl:top-6 xl:left-9 min-[1400px]:top-10 min-[1400px]:left-10 flex items-center gap-1 font-black text-2xl lg:text-[18px] xl:text-[20px] min-[1400px]:text-2xl tracking-tight z-30">
-                <span className="text-[#0e747c]">{service.num}</span>
-                <span className="text-[#f37636] mx-1">/</span>
-                <span className="text-[#a49a93] text-xl lg:text-[15px] xl:text-[17px] min-[1400px]:text-xl">0{servicesData.length}</span>
+              <div className="absolute top-6 left-6 max-[439px]:top-3 max-[439px]:left-3.5 md:top-10 md:left-10 lg:top-5 lg:left-7 xl:top-6 xl:left-9 min-[1400px]:top-10 min-[1400px]:left-10 flex items-center gap-1 font-black text-2xl max-[439px]:text-lg lg:text-[18px] xl:text-[20px] min-[1400px]:text-2xl tracking-tight z-30">
+                <span className="text-[#0e747c] max-[439px]:text-base">{service.num}</span>
+                <span className="text-[#f37636] mx-1 max-[439px]:mx-0.5">/</span>
+                <span className="text-[#a49a93] text-xl max-[439px]:text-sm lg:text-[15px] xl:text-[17px] min-[1400px]:text-xl">0{servicesData.length}</span>
               </div>
 
-              <div className={`w-full flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 md:gap-8 lg:gap-8 xl:gap-10 min-[1400px]:gap-14 mt-8 md:mt-12 lg:mt-4 xl:mt-6 min-[1400px]:mt-12 relative z-20`}>
+              <div className={`w-full flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 max-[439px]:gap-2.5 md:gap-8 lg:gap-8 xl:gap-10 min-[1400px]:gap-14 mt-8 max-[439px]:mt-3.5 md:mt-12 lg:mt-4 xl:mt-6 min-[1400px]:mt-12 relative z-20`}>
 
                 {/* Image Column */}
                 <motion.div
@@ -269,7 +269,7 @@ export default function WebsiteDesignPage() {
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   className="w-full md:w-1/2 lg:w-[44%] xl:w-[45%] min-[1400px]:w-1/2 flex justify-center md:justify-start"
                 >
-                  <div className={`relative w-[90%] md:w-full lg:max-w-[330px] xl:max-w-[370px] min-[1400px]:max-w-none aspect-[1.35/1] rounded-[2rem] lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] bg-[#F4EBE0] shadow-[0_20px_40px_rgba(0,0,0,0.12)] overflow-hidden flex items-center justify-center isolate group transition-all duration-700 ease-out hover:shadow-[0_30px_60px_rgba(0,0,0,0.2)] ${isImageLeft ? 'rotate-[-4deg] hover:rotate-0' : 'rotate-[4deg] hover:rotate-0'}`}>
+                  <div className={`relative w-[90%] max-[439px]:w-[62%] max-[439px]:max-w-[195px] max-[439px]:mx-auto md:w-full lg:max-w-[330px] xl:max-w-[370px] min-[1400px]:max-w-none aspect-[1.35/1] rounded-[2rem] max-[439px]:rounded-xl lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] bg-[#F4EBE0] shadow-[0_20px_40px_rgba(0,0,0,0.12)] overflow-hidden flex items-center justify-center isolate group transition-all duration-700 ease-out hover:shadow-[0_30px_60px_rgba(0,0,0,0.2)] ${isImageLeft ? 'rotate-[-4deg] hover:rotate-0' : 'rotate-[4deg] hover:rotate-0'}`}>
                     <Image
                       src={service.imageSrc}
                       alt={service.title}
@@ -289,10 +289,10 @@ export default function WebsiteDesignPage() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                   >
                     {/* Title */}
-                    <h2 className="text-[32px] md:text-[40px] lg:text-[26px] xl:text-[30px] min-[1400px]:text-[40px] font-extrabold text-[#43261a] tracking-tight leading-[1.05] mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 font-['Manrope',sans-serif]">
+                    <h2 className="text-[32px] max-[439px]:text-[22px] md:text-[40px] lg:text-[26px] xl:text-[30px] min-[1400px]:text-[40px] font-extrabold text-[#43261a] tracking-tight leading-[1.05] max-[439px]:leading-snug mb-4 max-[439px]:mb-1 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 font-['Manrope',sans-serif]">
                       {service.title}
                     </h2>
-                    <div className="w-[50px] lg:w-[38px] xl:w-[44px] min-[1400px]:w-[50px] h-[3px] lg:h-[2.5px] xl:h-[3px] min-[1400px]:h-[3px] bg-[#f37636] mb-8 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 rounded-full"></div>
+                    <div className="w-[50px] max-[439px]:w-[36px] lg:w-[38px] xl:w-[44px] min-[1400px]:w-[50px] h-[3px] max-[439px]:h-[2.5px] lg:h-[2.5px] xl:h-[3px] min-[1400px]:h-[3px] bg-[#f37636] mb-8 max-[439px]:mb-2 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 rounded-full"></div>
                   </motion.div>
 
                   <motion.div
@@ -302,12 +302,12 @@ export default function WebsiteDesignPage() {
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
                   >
                     {/* Subtitle */}
-                    <h3 className="text-[1.3rem] md:text-[1.4rem] lg:text-[15px] xl:text-[17px] min-[1400px]:text-[1.4rem] font-bold text-[#71594d] mb-4 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 tracking-tight">
+                    <h3 className="text-[1.3rem] max-[439px]:text-[15px] md:text-[1.4rem] lg:text-[15px] xl:text-[17px] min-[1400px]:text-[1.4rem] font-bold text-[#71594d] mb-4 max-[439px]:mb-1.5 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 tracking-tight max-[439px]:leading-snug">
                       {service.subtitle}
                     </h3>
 
                     {/* Paragraph */}
-                    <p className="text-[#645c55] text-[1.05rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-8 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 w-full">
+                    <p className="text-[#645c55] text-[1.05rem] max-[439px]:text-[13px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] max-[439px]:leading-relaxed lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-8 max-[439px]:mb-2.5 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 w-full">
                       {service.desc}
                     </p>
                   </motion.div>
@@ -320,7 +320,7 @@ export default function WebsiteDesignPage() {
                     className="w-full"
                   >
                     {/* What We Create / Improve */}
-                    <h4 className="text-[1.2rem] lg:text-[13.5px] xl:text-[14.5px] min-[1400px]:text-[1.2rem] font-bold text-[#0e747c] mb-5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5">
+                    <h4 className="text-[1.2rem] max-[439px]:text-[14px] lg:text-[13.5px] xl:text-[14.5px] min-[1400px]:text-[1.2rem] font-bold text-[#0e747c] mb-5 max-[439px]:mb-1.5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5">
                       {service.featuresTitle || "What We Create"}
                     </h4>
 
@@ -329,22 +329,22 @@ export default function WebsiteDesignPage() {
 
                     {/* Extra Description (Optional) */}
                     {service.extraDesc && (
-                      <p className="text-[#645c55] text-[1.05rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-12 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-12 w-full">
+                      <p className="text-[#645c55] text-[1.05rem] max-[439px]:text-[13px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] max-[439px]:leading-relaxed lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-12 max-[439px]:mb-3 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-12 w-full">
                         {service.extraDesc}
                       </p>
                     )}
 
                     {/* Bottom CTA */}
-                    <div className="flex flex-row items-center justify-between sm:justify-end gap-2.5 sm:gap-5 lg:gap-3 xl:gap-4 min-[1400px]:gap-5 w-full mt-4 lg:mt-2 xl:mt-2.5 min-[1400px]:mt-4">
-                      <span className="text-[#43261a] font-bold text-[0.85rem] sm:text-[1rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[1rem] leading-snug">
+                    <div className="flex flex-row items-center justify-between sm:justify-end gap-2.5 max-[439px]:gap-2 sm:gap-5 lg:gap-3 xl:gap-4 min-[1400px]:gap-5 w-full mt-4 max-[439px]:mt-1 lg:mt-2 xl:mt-2.5 min-[1400px]:mt-4">
+                      <span className="text-[#43261a] font-bold text-[0.85rem] max-[439px]:text-[12px] sm:text-[1rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[1rem] leading-snug">
                         {service.ctaText}
                       </span>
                       <Link
                         href="/contact"
-                        className="group inline-flex items-center justify-center bg-[#0e747c] hover:bg-[#0a575d] text-white font-bold py-1 sm:py-1.5 lg:py-1 xl:py-1 pl-3.5 sm:pl-6 lg:pl-3.5 xl:pl-4 pr-1 sm:pr-1.5 lg:pr-1 xl:pr-1 min-[1400px]:py-1.5 min-[1400px]:pl-6 min-[1400px]:pr-1.5 rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(14,116,124,0.35)] hover:shadow-[0_6px_20px_rgba(14,116,124,0.45)] hover:-translate-y-0.5 whitespace-nowrap shrink-0 text-xs sm:text-base lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-base"
+                        className="group inline-flex items-center justify-center bg-[#0e747c] hover:bg-[#0a575d] text-white font-bold py-1 sm:py-1.5 lg:py-1 xl:py-1 pl-3.5 max-[439px]:pl-3 sm:pl-6 lg:pl-3.5 xl:pl-4 pr-1 max-[439px]:pr-1 sm:pr-1.5 lg:pr-1 xl:pr-1 min-[1400px]:py-1.5 min-[1400px]:pl-6 min-[1400px]:pr-1.5 rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(14,116,124,0.35)] hover:shadow-[0_6px_20px_rgba(14,116,124,0.45)] hover:-translate-y-0.5 whitespace-nowrap shrink-0 text-xs max-[439px]:text-[11.5px] sm:text-base lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-base"
                       >
                         Let's Talk
-                        <span className="ml-2.5 sm:ml-4 lg:ml-2.5 xl:ml-3 min-[1400px]:ml-4 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-10 min-[1400px]:h-10 bg-white rounded-full overflow-hidden shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
+                        <span className="ml-2.5 max-[439px]:ml-2 sm:ml-4 lg:ml-2.5 xl:ml-3 min-[1400px]:ml-4 flex items-center justify-center w-8 h-8 max-[439px]:w-6.5 max-[439px]:h-6.5 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-10 min-[1400px]:h-10 bg-white rounded-full overflow-hidden shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
                           <Image
                             src="/icons/contact-3d.jpg"
                             alt="Contact Icon"

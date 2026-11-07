@@ -31,9 +31,9 @@ export default function ServiceFeatures({ features }: ServiceFeaturesProps) {
       </div>
 
       {/* ── Mobile View (Single Row, Looping Continuously Right-to-Left) ── */}
-      <div className="block md:hidden w-full overflow-hidden mb-10 py-1 relative [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+      <div className="block md:hidden w-full overflow-hidden mb-10 max-[439px]:mb-2.5 py-1 relative [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
         <motion.div
-          className="flex items-center gap-3 w-max"
+          className="flex items-center gap-3 max-[439px]:gap-2 w-max"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             duration: 22,
@@ -44,10 +44,10 @@ export default function ServiceFeatures({ features }: ServiceFeaturesProps) {
           {[...features, ...features].map((item, idx) => (
             <div
               key={idx}
-              className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-white/80 border border-[#f37636]/20 shadow-xs shrink-0 whitespace-nowrap"
+              className="inline-flex items-center gap-2.5 max-[439px]:gap-2 px-3.5 py-2 max-[439px]:px-2.5 max-[439px]:py-1.5 rounded-full bg-white/80 border border-[#f37636]/20 shadow-xs shrink-0 whitespace-nowrap"
             >
-              <div className="w-[18px] h-[18px] rounded-full bg-[#f37636] flex items-center justify-center shrink-0">
-                <svg className="w-2.5 h-2.5 text-white" viewBox="0 0 20 20" fill="currentColor">
+              <div className="w-[18px] h-[18px] max-[439px]:w-[15px] max-[439px]:h-[15px] rounded-full bg-[#f37636] flex items-center justify-center shrink-0">
+                <svg className="w-2.5 h-2.5 max-[439px]:w-2 max-[439px]:h-2 text-white" viewBox="0 0 20 20" fill="currentColor">
                   <path
                     fillRule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -55,7 +55,7 @@ export default function ServiceFeatures({ features }: ServiceFeaturesProps) {
                   />
                 </svg>
               </div>
-              <span className="text-[#43261a] text-[0.9rem] font-medium whitespace-nowrap">
+              <span className="text-[#43261a] text-[0.9rem] max-[439px]:text-[12px] font-medium whitespace-nowrap">
                 {item}
               </span>
             </div>
