@@ -8,7 +8,7 @@ import ServiceFeatures from "@/components/services/ServiceFeatures";
 
 /* ── shared style tokens (avoids repeating long strings) ── */
 const headlineBase =
-  "font-extrabold leading-[1.15] tracking-[-0.03em] md:tracking-[-0.02em] whitespace-nowrap text-[28px] md:text-[clamp(2.2rem,4.5vw,3.8rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(2.2rem,4.5vw,3.8rem)]";
+  "font-extrabold leading-[1.15] tracking-[-0.03em] md:tracking-[-0.02em] whitespace-nowrap text-[28px] max-[439px]:text-[21px] max-[375px]:text-[19px] md:text-[clamp(2.2rem,4.5vw,3.8rem)] lg:text-[42px] xl:text-[48px] min-[1400px]:text-[clamp(2.2rem,4.5vw,3.8rem)]";
 
 interface ServiceItem {
   num: string;
@@ -250,16 +250,16 @@ export default function WebsiteDesignPage() {
           const isImageLeft = index % 2 === 0;
 
           return (
-            <section key={service.num} className="sticky top-6 max-[439px]:top-3 md:top-12 w-full z-10 mx-auto max-w-[1100px] lg:max-w-[920px] xl:max-w-[1000px] min-[1400px]:max-w-[1100px] bg-[#fffff0]/70 backdrop-blur-2xl border border-white/60 pt-10 max-[439px]:pt-3.5 max-[439px]:pb-3.5 md:pt-12 lg:pt-6 lg:pb-8 xl:pt-8 xl:pb-10 min-[1400px]:pt-12 min-[1400px]:pb-20 px-6 max-[439px]:px-3.5 md:px-10 lg:px-7 xl:px-9 min-[1400px]:px-10 overflow-hidden rounded-[2.5rem] max-[439px]:rounded-2xl lg:rounded-[1.75rem] xl:rounded-[2rem] min-[1400px]:rounded-[2.5rem] shadow-[0_-20px_50px_rgba(0,0,0,0.06)]">
+            <section key={service.num} className="sticky top-6 max-[439px]:top-3 md:top-12 w-full z-10 mx-auto max-w-[1100px] lg:max-w-[920px] xl:max-w-[1000px] min-[1400px]:max-w-[1100px] bg-[#fffff0]/70 backdrop-blur-2xl border border-white/60 pt-10 max-[439px]:pt-3.5 max-[439px]:pb-3.5 min-[440px]:max-md:pt-5 min-[440px]:max-md:pb-6 md:pt-12 lg:pt-6 lg:pb-8 xl:pt-8 xl:pb-10 min-[1400px]:pt-12 min-[1400px]:pb-20 pb-16 md:pb-20 px-6 max-[439px]:px-3.5 min-[440px]:max-md:px-5 md:px-10 lg:px-7 xl:px-9 min-[1400px]:px-10 overflow-hidden rounded-[2.5rem] max-[439px]:rounded-2xl min-[440px]:max-md:rounded-3xl lg:rounded-[1.75rem] xl:rounded-[2rem] min-[1400px]:rounded-[2.5rem] shadow-[0_-20px_50px_rgba(0,0,0,0.06)]">
 
               {/* Top Left Number Indicator */}
-              <div className="absolute top-6 left-6 max-[439px]:top-3 max-[439px]:left-3.5 md:top-10 md:left-10 lg:top-5 lg:left-7 xl:top-6 xl:left-9 min-[1400px]:top-10 min-[1400px]:left-10 flex items-center gap-1 font-black text-2xl max-[439px]:text-lg lg:text-[18px] xl:text-[20px] min-[1400px]:text-2xl tracking-tight z-30">
-                <span className="text-[#0e747c] max-[439px]:text-base">{service.num}</span>
-                <span className="text-[#f37636] mx-1 max-[439px]:mx-0.5">/</span>
-                <span className="text-[#a49a93] text-xl max-[439px]:text-sm lg:text-[15px] xl:text-[17px] min-[1400px]:text-xl">0{servicesData.length}</span>
+              <div className="absolute top-6 left-6 max-[439px]:top-3 max-[439px]:left-3.5 min-[440px]:max-md:top-4 min-[440px]:max-md:left-5 md:top-10 md:left-10 lg:top-5 lg:left-7 xl:top-6 xl:left-9 min-[1400px]:top-10 min-[1400px]:left-10 flex items-center gap-1 font-black text-2xl max-[439px]:text-lg min-[440px]:max-md:text-xl lg:text-[18px] xl:text-[20px] min-[1400px]:text-2xl tracking-tight z-30">
+                <span className="text-[#0e747c] max-[439px]:text-base min-[440px]:max-md:text-lg">{service.num}</span>
+                <span className="text-[#f37636] mx-1 max-[439px]:mx-0.5 min-[440px]:max-md:mx-0.5">/</span>
+                <span className="text-[#a49a93] text-xl max-[439px]:text-sm min-[440px]:max-md:text-base lg:text-[15px] xl:text-[17px] min-[1400px]:text-xl">0{servicesData.length}</span>
               </div>
 
-              <div className={`w-full flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 max-[439px]:gap-2.5 md:gap-8 lg:gap-8 xl:gap-10 min-[1400px]:gap-14 mt-8 max-[439px]:mt-3.5 md:mt-12 lg:mt-4 xl:mt-6 min-[1400px]:mt-12 relative z-20`}>
+              <div className={`w-full flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 max-[439px]:gap-2.5 min-[440px]:max-md:gap-3.5 md:gap-8 lg:gap-8 xl:gap-10 min-[1400px]:gap-14 mt-8 max-[439px]:mt-3.5 min-[440px]:max-md:mt-4 md:mt-12 lg:mt-4 xl:mt-6 min-[1400px]:mt-12 relative z-20`}>
 
                 {/* Image Column */}
                 <motion.div
@@ -269,7 +269,7 @@ export default function WebsiteDesignPage() {
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   className="w-full md:w-1/2 lg:w-[44%] xl:w-[45%] min-[1400px]:w-1/2 flex justify-center md:justify-start"
                 >
-                  <div className={`relative w-[90%] max-[439px]:w-[62%] max-[439px]:max-w-[195px] max-[439px]:mx-auto md:w-full lg:max-w-[330px] xl:max-w-[370px] min-[1400px]:max-w-none aspect-[1.35/1] rounded-[2rem] max-[439px]:rounded-xl lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] bg-[#F4EBE0] shadow-[0_20px_40px_rgba(0,0,0,0.12)] overflow-hidden flex items-center justify-center isolate group transition-all duration-700 ease-out hover:shadow-[0_30px_60px_rgba(0,0,0,0.2)] ${isImageLeft ? 'rotate-[-4deg] hover:rotate-0' : 'rotate-[4deg] hover:rotate-0'}`}>
+                  <div className={`relative w-[90%] max-[439px]:w-[62%] max-[439px]:max-w-[195px] max-[439px]:mx-auto min-[440px]:max-md:w-[65%] min-[440px]:max-md:max-w-[270px] min-[440px]:max-md:mx-auto md:w-full lg:max-w-[330px] xl:max-w-[370px] min-[1400px]:max-w-none aspect-[1.35/1] rounded-[2rem] max-[439px]:rounded-xl min-[440px]:max-md:rounded-2xl lg:rounded-[1.4rem] xl:rounded-[1.6rem] min-[1400px]:rounded-[2rem] bg-[#F4EBE0] shadow-[0_20px_40px_rgba(0,0,0,0.12)] overflow-hidden flex items-center justify-center isolate group transition-all duration-700 ease-out hover:shadow-[0_30px_60px_rgba(0,0,0,0.2)] ${isImageLeft ? 'rotate-[-4deg] hover:rotate-0' : 'rotate-[4deg] hover:rotate-0'}`}>
                     <Image
                       src={service.imageSrc}
                       alt={service.title}
@@ -289,10 +289,10 @@ export default function WebsiteDesignPage() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                   >
                     {/* Title */}
-                    <h2 className="text-[32px] max-[439px]:text-[22px] md:text-[40px] lg:text-[26px] xl:text-[30px] min-[1400px]:text-[40px] font-extrabold text-[#43261a] tracking-tight leading-[1.05] max-[439px]:leading-snug mb-4 max-[439px]:mb-1 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 font-['Manrope',sans-serif]">
+                    <h2 className="text-[32px] max-[439px]:text-[22px] min-[440px]:max-md:text-[24px] md:text-[40px] lg:text-[26px] xl:text-[30px] min-[1400px]:text-[40px] font-extrabold text-[#43261a] tracking-tight leading-[1.05] max-[439px]:leading-snug min-[440px]:max-md:leading-snug mb-4 max-[439px]:mb-1 min-[440px]:max-md:mb-1.5 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 font-['Manrope',sans-serif]">
                       {service.title}
                     </h2>
-                    <div className="w-[50px] max-[439px]:w-[36px] lg:w-[38px] xl:w-[44px] min-[1400px]:w-[50px] h-[3px] max-[439px]:h-[2.5px] lg:h-[2.5px] xl:h-[3px] min-[1400px]:h-[3px] bg-[#f37636] mb-8 max-[439px]:mb-2 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 rounded-full"></div>
+                    <div className="w-[50px] max-[439px]:w-[36px] min-[440px]:max-md:w-[40px] lg:w-[38px] xl:w-[44px] min-[1400px]:w-[50px] h-[3px] max-[439px]:h-[2.5px] min-[440px]:max-md:h-[2.5px] lg:h-[2.5px] xl:h-[3px] min-[1400px]:h-[3px] bg-[#f37636] mb-8 max-[439px]:mb-2 min-[440px]:max-md:mb-2.5 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 rounded-full"></div>
                   </motion.div>
 
                   <motion.div
@@ -302,12 +302,12 @@ export default function WebsiteDesignPage() {
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
                   >
                     {/* Subtitle */}
-                    <h3 className="text-[1.3rem] max-[439px]:text-[15px] md:text-[1.4rem] lg:text-[15px] xl:text-[17px] min-[1400px]:text-[1.4rem] font-bold text-[#71594d] mb-4 max-[439px]:mb-1.5 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 tracking-tight max-[439px]:leading-snug">
+                    <h3 className="text-[1.3rem] max-[439px]:text-[15px] min-[440px]:max-md:text-[15.5px] md:text-[1.4rem] lg:text-[15px] xl:text-[17px] min-[1400px]:text-[1.4rem] font-bold text-[#71594d] mb-4 max-[439px]:mb-1.5 min-[440px]:max-md:mb-1.5 lg:mb-2 xl:mb-2.5 min-[1400px]:mb-4 tracking-tight max-[439px]:leading-snug min-[440px]:max-md:leading-snug">
                       {service.subtitle}
                     </h3>
 
                     {/* Paragraph */}
-                    <p className="text-[#645c55] text-[1.05rem] max-[439px]:text-[13px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] max-[439px]:leading-relaxed lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-8 max-[439px]:mb-2.5 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 w-full">
+                    <p className="text-[#645c55] text-[1.05rem] max-[439px]:text-[13px] min-[440px]:max-md:text-[13.5px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] max-[439px]:leading-relaxed min-[440px]:max-md:leading-normal lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-8 max-[439px]:mb-2.5 min-[440px]:max-md:mb-3 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-8 w-full">
                       {service.desc}
                     </p>
                   </motion.div>
@@ -320,7 +320,7 @@ export default function WebsiteDesignPage() {
                     className="w-full"
                   >
                     {/* What We Create / Improve */}
-                    <h4 className="text-[1.2rem] max-[439px]:text-[14px] lg:text-[13.5px] xl:text-[14.5px] min-[1400px]:text-[1.2rem] font-bold text-[#0e747c] mb-5 max-[439px]:mb-1.5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5">
+                    <h4 className="text-[1.2rem] max-[439px]:text-[14px] min-[440px]:max-md:text-[14px] lg:text-[13.5px] xl:text-[14.5px] min-[1400px]:text-[1.2rem] font-bold text-[#0e747c] mb-5 max-[439px]:mb-1.5 min-[440px]:max-md:mb-2 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5">
                       {service.featuresTitle || "What We Create"}
                     </h4>
 
@@ -329,28 +329,28 @@ export default function WebsiteDesignPage() {
 
                     {/* Extra Description (Optional) */}
                     {service.extraDesc && (
-                      <p className="text-[#645c55] text-[1.05rem] max-[439px]:text-[13px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] max-[439px]:leading-relaxed lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-12 max-[439px]:mb-3 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-12 w-full">
+                      <p className="text-[#645c55] text-[1.05rem] max-[439px]:text-[13px] min-[440px]:max-md:text-[13.5px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-[1.7] max-[439px]:leading-relaxed min-[440px]:max-md:leading-normal lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.7] mb-12 max-[439px]:mb-3 min-[440px]:max-md:mb-3 lg:mb-3.5 xl:mb-4.5 min-[1400px]:mb-12 w-full">
                         {service.extraDesc}
                       </p>
                     )}
 
                     {/* Bottom CTA */}
-                    <div className="flex flex-row items-center justify-between sm:justify-end gap-2.5 max-[439px]:gap-2 sm:gap-5 lg:gap-3 xl:gap-4 min-[1400px]:gap-5 w-full mt-4 max-[439px]:mt-1 lg:mt-2 xl:mt-2.5 min-[1400px]:mt-4">
-                      <span className="text-[#43261a] font-bold text-[0.85rem] max-[439px]:text-[12px] sm:text-[1rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[1rem] leading-snug">
+                    <div className="flex flex-row items-center justify-between sm:justify-end gap-2.5 max-[439px]:gap-2 min-[440px]:max-md:gap-2.5 sm:gap-5 lg:gap-3 xl:gap-4 min-[1400px]:gap-5 w-full mt-4 max-[439px]:mt-1 min-[440px]:max-md:mt-1.5 lg:mt-2 xl:mt-2.5 min-[1400px]:mt-4">
+                      <span className="text-[#43261a] font-bold text-[0.85rem] max-[439px]:text-[12px] min-[440px]:max-md:text-[13px] sm:text-[1rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[1rem] leading-snug">
                         {service.ctaText}
                       </span>
                       <Link
                         href="/contact"
-                        className="group inline-flex items-center justify-center bg-[#0e747c] hover:bg-[#0a575d] text-white font-bold py-1 sm:py-1.5 lg:py-1 xl:py-1 pl-3.5 max-[439px]:pl-3 sm:pl-6 lg:pl-3.5 xl:pl-4 pr-1 max-[439px]:pr-1 sm:pr-1.5 lg:pr-1 xl:pr-1 min-[1400px]:py-1.5 min-[1400px]:pl-6 min-[1400px]:pr-1.5 rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(14,116,124,0.35)] hover:shadow-[0_6px_20px_rgba(14,116,124,0.45)] hover:-translate-y-0.5 whitespace-nowrap shrink-0 text-xs max-[439px]:text-[11.5px] sm:text-base lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-base"
+                        className="group inline-flex items-center justify-center bg-[#0e747c] hover:bg-[#0a575d] text-white font-bold py-1 sm:py-1.5 min-[440px]:max-md:py-1 lg:py-1 xl:py-1 pl-3.5 max-[439px]:pl-3 sm:pl-6 min-[440px]:max-md:pl-3.5 lg:pl-3.5 xl:pl-4 pr-1 max-[439px]:pr-1 sm:pr-1.5 min-[440px]:max-md:pr-1 lg:pr-1 xl:pr-1 min-[1400px]:py-1.5 min-[1400px]:pl-6 min-[1400px]:pr-1.5 rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(14,116,124,0.35)] hover:shadow-[0_6px_20px_rgba(14,116,124,0.45)] hover:-translate-y-0.5 whitespace-nowrap shrink-0 text-xs max-[439px]:text-[11.5px] min-[440px]:max-md:text-[13px] sm:text-base lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-base"
                       >
                         Let's Talk
-                        <span className="ml-2.5 max-[439px]:ml-2 sm:ml-4 lg:ml-2.5 xl:ml-3 min-[1400px]:ml-4 flex items-center justify-center w-8 h-8 max-[439px]:w-6.5 max-[439px]:h-6.5 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-10 min-[1400px]:h-10 bg-white rounded-full overflow-hidden shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
+                        <span className="ml-2.5 max-[439px]:ml-2 sm:ml-4 min-[440px]:max-md:ml-2.5 lg:ml-2.5 xl:ml-3 min-[1400px]:ml-4 flex items-center justify-center w-8 h-8 max-[439px]:w-6.5 max-[439px]:h-6.5 sm:w-10 sm:h-10 min-[440px]:max-md:w-7.5 min-[440px]:max-md:h-7.5 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-10 min-[1400px]:h-10 bg-white rounded-full overflow-hidden shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
                           <Image
                             src="/icons/contact-3d.jpg"
                             alt="Contact Icon"
                             width={40}
                             height={40}
-                            className="w-full h-full object-contain p-[2px] sm:p-[3px] lg:p-[1.5px] xl:p-[2px] min-[1400px]:p-[3px]"
+                            className="w-full h-full object-contain p-[2px] sm:p-[3px] min-[440px]:max-md:p-[2px] lg:p-[1.5px] xl:p-[2px] min-[1400px]:p-[3px]"
                           />
                         </span>
                       </Link>
@@ -365,40 +365,40 @@ export default function WebsiteDesignPage() {
       </div>
 
       {/* ── Our Work / Clean Grid Section ──────────────── */}
-      <section className="relative w-full pt-16 pb-32 lg:pt-10 lg:pb-20 xl:pt-12 xl:pb-24 min-[1400px]:pt-16 min-[1400px]:pb-32 flex flex-col items-center">
+      <section className="relative w-full pt-16 max-[439px]:pt-8 pb-32 max-[439px]:pb-16 lg:pt-10 lg:pb-20 xl:pt-12 xl:pb-24 min-[1400px]:pt-16 min-[1400px]:pb-32 flex flex-col items-center">
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="relative z-20 flex flex-col items-center text-center px-6 max-w-[800px] mb-16 lg:mb-8 xl:mb-10 min-[1400px]:mb-16"
+          className="relative z-20 flex flex-col items-center text-center px-6 max-[439px]:px-4 max-w-[800px] mb-16 max-[439px]:mb-8 min-[440px]:max-md:mb-7 lg:mb-8 xl:mb-10 min-[1400px]:mb-16"
         >
           {/* Lined Badge */}
-          <div className="flex items-center gap-6 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6 mb-6 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-6">
-            <div className="h-[1px] w-12 md:w-20 lg:w-12 xl:w-14 min-[1400px]:w-20 bg-[#f37636]/30"></div>
-            <span className="text-[0.95rem] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[0.95rem] font-bold tracking-[0.2em] text-[#f37636] uppercase font-['Inter',sans-serif]">
+          <div className="flex items-center gap-6 max-[439px]:gap-3 min-[440px]:max-md:gap-3.5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6 mb-6 max-[439px]:mb-2.5 min-[440px]:max-md:mb-3 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-6">
+            <div className="h-[1px] w-12 max-[439px]:w-8 min-[440px]:max-md:w-9 md:w-20 lg:w-12 xl:w-14 min-[1400px]:w-20 bg-[#f37636]/30"></div>
+            <span className="text-[0.95rem] max-[439px]:text-[11px] min-[440px]:max-md:text-xs lg:text-[11px] xl:text-[12px] min-[1400px]:text-[0.95rem] font-bold tracking-[0.2em] text-[#f37636] uppercase font-['Inter',sans-serif]">
               OUR WORK
             </span>
-            <div className="h-[1px] w-12 md:w-20 lg:w-12 xl:w-14 min-[1400px]:w-20 bg-[#f37636]/30"></div>
+            <div className="h-[1px] w-12 max-[439px]:w-8 min-[440px]:max-md:w-9 md:w-20 lg:w-12 xl:w-14 min-[1400px]:w-20 bg-[#f37636]/30"></div>
           </div>
 
-          <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[28px] xl:text-[32px] min-[1400px]:text-[4rem] font-extrabold text-[#43261a] tracking-tight leading-[1.1] lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.1] mb-5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5 font-['Manrope',sans-serif]">
+          <h2 className="text-[2.5rem] max-[439px]:text-[24px] min-[440px]:max-md:text-[30px] sm:max-md:text-[34px] md:text-[3.5rem] lg:text-[28px] xl:text-[32px] min-[1400px]:text-[4rem] font-extrabold text-[#43261a] tracking-tight leading-[1.1] max-[439px]:leading-[1.15] min-[440px]:max-md:leading-tight lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.1] mb-5 max-[439px]:mb-2 min-[440px]:max-md:mb-3.5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5 font-['Manrope',sans-serif]">
             See What We've <span className="text-[#0e747c]">Built</span>
           </h2>
 
-          <p className="text-[#8c8275] text-[1.1rem] md:text-[1.25rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.25rem] leading-[1.6] lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.6] max-w-[640px] lg:max-w-[480px] xl:max-w-[520px] min-[1400px]:max-w-[640px] mb-10 lg:mb-5 xl:mb-6 min-[1400px]:mb-10 font-['Inter',sans-serif]">
+          <p className="text-[#8c8275] text-[1.1rem] max-[439px]:text-[13px] min-[440px]:max-md:text-[14.5px] md:text-[1.25rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.25rem] leading-[1.6] max-[439px]:leading-relaxed min-[440px]:max-md:leading-relaxed lg:leading-[1.5] xl:leading-[1.55] min-[1400px]:leading-[1.6] max-w-[640px] lg:max-w-[480px] xl:max-w-[520px] min-[1400px]:max-w-[640px] mb-10 max-[439px]:mb-4 min-[440px]:max-md:mb-5 lg:mb-5 xl:mb-6 min-[1400px]:mb-10 font-['Inter',sans-serif]">
             Take a look at some of the websites we've designed and developed for businesses.
           </p>
 
           <Link
             href="/work"
-            className="group inline-flex items-center gap-4 lg:gap-3 xl:gap-3.5 min-[1400px]:gap-4 bg-[#0e747c] hover:bg-[#0a575d] rounded-full py-1.5 lg:py-1 xl:py-1 pl-6 lg:pl-4 xl:pl-4.5 pr-1.5 lg:pr-1 xl:pr-1 min-[1400px]:py-1.5 min-[1400px]:pl-6 min-[1400px]:pr-1.5 transition-all duration-300 shadow-[0_8px_20px_rgba(14,116,124,0.25)] hover:shadow-[0_12px_25px_rgba(14,116,124,0.35)] hover:-translate-y-1"
+            className="group inline-flex items-center gap-4 max-[439px]:gap-1.5 min-[440px]:max-md:gap-2 sm:max-md:gap-2.5 lg:gap-3 xl:gap-3.5 min-[1400px]:gap-4 bg-[#0e747c] hover:bg-[#0a575d] rounded-full py-1.5 max-[439px]:py-0.5 min-[440px]:max-md:py-1 sm:max-md:py-1.5 lg:py-1 xl:py-1 pl-6 max-[439px]:pl-3 min-[440px]:max-md:pl-3.5 sm:max-md:pl-4.5 lg:pl-4 xl:pl-4.5 pr-1.5 max-[439px]:pr-0.5 min-[440px]:max-md:pr-1 sm:max-md:pr-1.5 lg:pr-1 xl:pr-1 min-[1400px]:py-1.5 min-[1400px]:pl-6 min-[1400px]:pr-1.5 transition-all duration-300 shadow-[0_8px_20px_rgba(14,116,124,0.25)] hover:shadow-[0_12px_25px_rgba(14,116,124,0.35)] hover:-translate-y-1"
           >
-            <span className="text-[1.1rem] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[1.1rem] font-bold text-white tracking-wide">
+            <span className="text-[1.1rem] max-[439px]:text-[11px] min-[440px]:max-md:text-[12px] sm:max-md:text-[13.5px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[1.1rem] font-bold text-white tracking-wide">
               View Our Work
             </span>
-            <span className="flex items-center justify-center w-11 h-11 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-11 min-[1400px]:h-11 rounded-full bg-white shrink-0 overflow-hidden shadow-inner">
+            <span className="flex items-center justify-center w-11 h-11 max-[439px]:w-6 max-[439px]:h-6 min-[440px]:max-md:w-7 min-[440px]:max-md:h-7 sm:max-md:w-8 sm:max-md:h-8 lg:w-7 lg:h-7 xl:w-7.5 xl:h-7.5 min-[1400px]:w-11 min-[1400px]:h-11 rounded-full bg-white shrink-0 overflow-hidden shadow-inner">
               <img
                 src="/services/website-design/3d-icon-view-work.jpg"
                 alt="Arrow Icon"

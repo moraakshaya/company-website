@@ -237,8 +237,14 @@ export default function ServiceWorkGallery({ images, service }: ServiceWorkGalle
         ? serviceGalleries[service]
         : serviceGalleries["logo-branding"];
 
+  // Mobile carousel images: exclude 1st, 4th, and 7th images (indices 0, 3, 6)
+  const mobileGalleryImages: GalleryImage[] = galleryImages.filter(
+    (_, idx) => idx !== 0 && idx !== 3 && idx !== 6
+  );
+
   const total = galleryImages.length;
-  const currentIndex = ((page % total) + total) % total;
+  const mobileTotal = mobileGalleryImages.length;
+  const currentMobileIndex = mobileTotal > 0 ? ((page % mobileTotal) + mobileTotal) % mobileTotal : 0;
 
   const nextSlide = () => {
     setDirection(1);
@@ -251,8 +257,8 @@ export default function ServiceWorkGallery({ images, service }: ServiceWorkGalle
   };
 
   const goToSlide = (idx: number) => {
-    if (idx === currentIndex) return;
-    const diff = idx - currentIndex;
+    if (idx === currentMobileIndex) return;
+    const diff = idx - currentMobileIndex;
     setDirection(diff > 0 ? 1 : -1);
     setPage((prev) => prev + diff);
   };
@@ -265,11 +271,11 @@ export default function ServiceWorkGallery({ images, service }: ServiceWorkGalle
   return (
     <>
       {/* ── Mobile Single-Row Carousel (One by one, loop continuously, dot pagination, right arrow) ── */}
-      <div className="w-full max-w-[420px] mx-auto px-6 block md:hidden">
+      <div className="w-full max-w-[420px] mx-auto px-6 max-[439px]:px-4 block md:hidden">
         {/* Card Frame (Relative container allowing arrow on the border) */}
         <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] max-h-[360px]">
           {/* Image Container (Overflow-hidden to clip slide images within rounded corners) */}
-          <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-xl bg-[#f5ede5]">
+          <div className="w-full h-full rounded-[2rem] max-[439px]:rounded-2xl overflow-hidden shadow-xl bg-[#f5ede5]">
             <AnimatePresence initial={false} custom={direction} mode="popLayout">
               <motion.div
                 key={page}
@@ -291,9 +297,9 @@ export default function ServiceWorkGallery({ images, service }: ServiceWorkGalle
                 className="w-full h-full cursor-grab active:cursor-grabbing touch-pan-y"
               >
                 <img
-                  src={galleryImages[currentIndex].src}
-                  alt={galleryImages[currentIndex].alt}
-                  className="w-full h-full object-cover select-none pointer-events-none rounded-[2rem]"
+                  src={mobileGalleryImages[currentMobileIndex]?.src}
+                  alt={mobileGalleryImages[currentMobileIndex]?.alt || ""}
+                  className="w-full h-full object-cover select-none pointer-events-none rounded-[2rem] max-[439px]:rounded-2xl"
                 />
               </motion.div>
             </AnimatePresence>
@@ -306,22 +312,22 @@ export default function ServiceWorkGallery({ images, service }: ServiceWorkGalle
               nextSlide();
             }}
             aria-label="Next image"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-30 w-11 h-11 rounded-full bg-[#184a41] shadow-[0_4px_18px_rgba(0,0,0,0.3)] border-2 border-white flex items-center justify-center text-white hover:bg-[#113730] active:bg-[#0c2722] active:scale-90 transition-all duration-200"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-30 w-11 h-11 max-[439px]:w-8 max-[439px]:h-8 min-[440px]:max-md:w-9 min-[440px]:max-md:h-9 rounded-full bg-[#184a41] shadow-[0_4px_18px_rgba(0,0,0,0.3)] border-2 border-white flex items-center justify-center text-white hover:bg-[#113730] active:bg-[#0c2722] active:scale-90 transition-all duration-200"
           >
-            <ChevronRight size={22} strokeWidth={2.5} className="translate-x-[1px] text-white" />
+            <ChevronRight size={22} strokeWidth={2.5} className="translate-x-[1px] text-white max-[439px]:!w-4 max-[439px]:!h-4 min-[440px]:max-md:!w-4.5 min-[440px]:max-md:!h-4.5" />
           </button>
         </div>
 
         {/* Dot Pagination at Bottom */}
-        <div className="flex items-center justify-center gap-2 mt-5">
-          {galleryImages.map((_, idx) => (
+        <div className="flex items-center justify-center gap-2 max-[439px]:gap-1.5 min-[440px]:max-md:gap-1.5 mt-5 max-[439px]:mt-3.5 min-[440px]:max-md:mt-4">
+          {mobileGalleryImages.map((_, idx) => (
             <button
               key={idx}
               onClick={() => goToSlide(idx)}
               aria-label={`Go to slide ${idx + 1}`}
-              className={`h-2.5 rounded-full transition-all duration-300 ${currentIndex === idx
-                ? "w-7 bg-[#0e747c]"
-                : "w-2.5 bg-[#43261a]/25 hover:bg-[#43261a]/40"
+              className={`h-2.5 max-[439px]:h-2 rounded-full transition-all duration-300 ${currentMobileIndex === idx
+                ? "w-7 max-[439px]:w-5 bg-[#0e747c]"
+                : "w-2.5 max-[439px]:w-2 bg-[#43261a]/25 hover:bg-[#43261a]/40"
                 }`}
             />
           ))}
