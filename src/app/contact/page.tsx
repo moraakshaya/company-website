@@ -400,12 +400,12 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="w-full pb-16 lg:pb-16 xl:pb-20 min-[1400px]:pb-24 pt-0 bg-transparent">
+      <section className="w-full pb-16 max-[439px]:pb-10 lg:pb-16 xl:pb-20 min-[1400px]:pb-24 pt-0 bg-transparent">
         <div className="max-w-[1200px] lg:max-w-[960px] xl:max-w-[1100px] min-[1400px]:max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 min-[1400px]:px-4">
           {/* Badge */}
-          <div className="flex justify-center mb-6 lg:mb-3.5 xl:mb-4 min-[1400px]:mb-6">
-            <div className="bg-[#fff8f0] text-[#492c28] px-5 py-2 lg:px-3.5 lg:py-1 xl:px-4 xl:py-1.5 min-[1400px]:px-5 min-[1400px]:py-2 rounded-full font-bold text-[14px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px] flex items-center gap-2 lg:gap-1.5 min-[1400px]:gap-2 shadow-sm border border-[#f37636]/10 font-['Inter',sans-serif]">
-              <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4 text-[#f37636]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <div className="flex justify-center mb-6 max-[439px]:mb-3 lg:mb-3.5 xl:mb-4 min-[1400px]:mb-6">
+            <div className="bg-[#fff8f0] text-[#492c28] px-5 py-2 max-[439px]:px-3.5 max-[439px]:py-1 lg:px-3.5 lg:py-1 xl:px-4 xl:py-1.5 min-[1400px]:px-5 min-[1400px]:py-2 rounded-full font-bold text-[14px] max-[439px]:text-[11.5px] lg:text-[11px] xl:text-[12px] min-[1400px]:text-[14px] flex items-center gap-2 max-[439px]:gap-1.5 lg:gap-1.5 min-[1400px]:gap-2 shadow-sm border border-[#f37636]/10 font-['Inter',sans-serif]">
+              <svg className="w-4 h-4 max-[439px]:w-3.5 max-[439px]:h-3.5 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4 text-[#f37636]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 4v16M4 12h16M6.34 6.34l11.32 11.32M17.66 6.34L6.34 17.66" />
               </svg>
               Our Location
@@ -413,18 +413,18 @@ export default function ContactPage() {
           </div>
 
           {/* Title */}
-          <h2 className="text-3xl sm:text-[3rem] md:text-[3.5rem] lg:text-[28px] xl:text-[32px] min-[1400px]:text-[3.5rem] font-extrabold text-[#492c28] tracking-tight text-center mx-auto leading-[1.1] lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.1] mb-12 lg:mb-6 xl:mb-8 min-[1400px]:mb-12 font-['Manrope',sans-serif]">
+          <h2 className="text-3xl max-[439px]:text-[23px] sm:text-[3rem] md:text-[3.5rem] lg:text-[28px] xl:text-[32px] min-[1400px]:text-[3.5rem] font-extrabold text-[#492c28] tracking-tight text-center mx-auto leading-[1.1] max-[439px]:leading-snug lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.1] mb-12 max-[439px]:mb-6 lg:mb-6 xl:mb-8 min-[1400px]:mb-12 font-['Manrope',sans-serif]">
             Visit Our Office For In-person<br className="hidden md:block" />{" "}
             <span className="relative inline-block pb-2 lg:pb-1 xl:pb-1.5 min-[1400px]:pb-2">
               <span className="text-[#f37636] inline-block font-[family-name:var(--font-caveat)] font-bold text-[1.2em] -rotate-2">
                 Meetings
               </span>
-              <span className="inline-block mx-3 lg:mx-2 xl:mx-2.5 min-[1400px]:mx-3">And</span>
+              <span className="inline-block mx-3 max-[439px]:mx-1.5 lg:mx-2 xl:mx-2.5 min-[1400px]:mx-3">And</span>
               <span className="text-[#f37636] inline-block font-[family-name:var(--font-caveat)] font-bold text-[1.2em] -rotate-2">
                 Consultations
               </span>
               <svg
-                className="absolute w-[105%] h-[14px] lg:h-[9px] xl:h-[11px] min-[1400px]:h-[14px] -bottom-2 lg:-bottom-1 xl:-bottom-1.5 min-[1400px]:-bottom-2 -left-[2.5%] text-[#f37636] -z-10"
+                className="absolute w-[105%] h-[14px] max-[439px]:h-[8px] lg:h-[9px] xl:h-[11px] min-[1400px]:h-[14px] -bottom-2 max-[439px]:-bottom-1 lg:-bottom-1 xl:-bottom-1.5 min-[1400px]:-bottom-2 -left-[2.5%] text-[#f37636] -z-10"
                 viewBox="0 0 100 20"
                 preserveAspectRatio="none"
                 fill="none"
@@ -441,21 +441,21 @@ export default function ContactPage() {
           </h2>
 
           {/* Map Container Wrapper */}
-          <div className="relative w-full mt-10 md:mt-16 lg:mt-8 xl:mt-10 min-[1400px]:mt-16">
+          <div className="relative w-full mt-10 max-[439px]:mt-6 md:mt-16 lg:mt-8 xl:mt-10 min-[1400px]:mt-16">
             {/* 3D Map Pin Overlay */}
-            <div className="absolute -bottom-8 -left-6 md:-bottom-12 md:-left-10 lg:-bottom-10 lg:-left-6 xl:-bottom-12 xl:-left-8 min-[1400px]:-bottom-16 min-[1400px]:-left-16 z-20">
+            <div className="absolute -bottom-8 max-[439px]:-bottom-6 -left-6 max-[439px]:-left-4 md:-bottom-12 md:-left-10 lg:-bottom-10 lg:-left-6 xl:-bottom-12 xl:-left-8 min-[1400px]:-bottom-16 min-[1400px]:-left-16 z-20">
               <img
                 src="/contact-page/location.png"
                 alt="Location Pin"
-                className="w-32 md:w-48 lg:w-44 xl:w-48 min-[1400px]:w-56 h-auto drop-shadow-2xl transition-transform hover:scale-105 duration-300"
+                className="w-32 max-[439px]:w-24 md:w-48 lg:w-44 xl:w-48 min-[1400px]:w-56 h-auto drop-shadow-2xl transition-transform hover:scale-105 duration-300"
               />
             </div>
 
             {/* Map Frame */}
-            <div className="w-full h-[400px] lg:h-[440px] xl:h-[490px] min-[1400px]:h-[550px] rounded-[2rem] lg:rounded-[2.25rem] xl:rounded-[2.5rem] min-[1400px]:rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(24,74,65,0.15)] relative border-[3px] lg:border-[3.5px] min-[1400px]:border-[4px] border-[#2d915f] bg-[#2d915f]">
+            <div className="w-full h-[400px] max-[439px]:h-[300px] lg:h-[440px] xl:h-[490px] min-[1400px]:h-[550px] rounded-[2rem] max-[439px]:rounded-2xl lg:rounded-[2.25rem] xl:rounded-[2.5rem] min-[1400px]:rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(24,74,65,0.15)] relative border-[3px] max-[439px]:border-[2.5px] lg:border-[3.5px] min-[1400px]:border-[4px] border-[#2d915f] bg-[#2d915f]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.539820573981!2d78.36394327506979!3d17.494887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91e32040fa7d%3A0xbe4ee8fdec67ba1a!2sPRODBIZ%20SOLUTIONS%20-%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2sus!4v1716301234567!5m2!1sen!2sus"
-                className="w-full h-full grayscale-[10%] contrast-110 rounded-[1.5rem] lg:rounded-[1.75rem] xl:rounded-[2rem] min-[1400px]:rounded-[2.5rem]"
+                className="w-full h-full grayscale-[10%] contrast-110 rounded-[1.5rem] max-[439px]:rounded-[14px] lg:rounded-[1.75rem] xl:rounded-[2rem] min-[1400px]:rounded-[2.5rem]"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
