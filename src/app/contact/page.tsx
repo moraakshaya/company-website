@@ -103,39 +103,39 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content Area */}
-      <section className="max-w-[1200px] lg:max-w-[960px] xl:max-w-[1100px] min-[1400px]:max-w-[1200px] mx-auto py-16 lg:py-14 xl:py-18 min-[1400px]:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 min-[1400px]:px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 xl:gap-10 min-[1400px]:gap-16 items-start">
+      <section className="max-w-[1200px] lg:max-w-[960px] xl:max-w-[1100px] min-[1400px]:max-w-[1200px] mx-auto py-16 max-[439px]:py-10 lg:py-14 xl:py-18 min-[1400px]:py-24 px-4 sm:px-6 lg:px-8 xl:px-10 min-[1400px]:px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-[439px]:gap-8 lg:gap-8 xl:gap-10 min-[1400px]:gap-16 items-start">
 
           {/* Left Column - Contact Form */}
           <div className="flex flex-col text-left">
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-              <span className="text-[#f37636] font-bold uppercase tracking-wider text-[13px] lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-[13px] mb-3 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-3 font-['Inter',sans-serif]">
+              <span className="text-[#f37636] font-bold uppercase tracking-wider text-[13px] max-[439px]:text-[11.5px] lg:text-[11px] xl:text-[11.5px] min-[1400px]:text-[13px] mb-3 max-[439px]:mb-1.5 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-3 font-['Inter',sans-serif]">
                 SEND US A MESSAGE
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[2.75rem] font-extrabold text-[#492c28] leading-[1.2] lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.2] mb-5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5 font-['Manrope',sans-serif]">
+              <h2 className="text-3xl max-[439px]:text-[23px] sm:text-4xl lg:text-[28px] xl:text-[32px] min-[1400px]:text-[2.75rem] font-extrabold text-[#492c28] leading-[1.2] max-[439px]:leading-snug lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.2] mb-5 max-[439px]:mb-2.5 lg:mb-2.5 xl:mb-3 min-[1400px]:mb-5 font-['Manrope',sans-serif]">
                 Got Something in <span className="text-[#047880]">Mind ?</span>
               </h2>
-              <div className="text-[#8c8275] text-[1.05rem] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-relaxed lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed mb-10 lg:mb-5 xl:mb-6 min-[1400px]:mb-10 font-['Inter',sans-serif]">
-                <p className="mb-2 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-2">A website? A fresh brand? Better content? More people finding you online?</p>
+              <div className="text-[#8c8275] text-[1.05rem] max-[439px]:text-[13.5px] lg:text-[13px] xl:text-[13px] min-[1400px]:text-[1.05rem] leading-relaxed max-[439px]:leading-normal lg:leading-[1.5] xl:leading-[1.5] min-[1400px]:leading-relaxed mb-10 max-[439px]:mb-6 lg:mb-5 xl:mb-6 min-[1400px]:mb-10 font-['Inter',sans-serif]">
+                <p className="mb-2 max-[439px]:mb-1 lg:mb-1 xl:mb-1.5 min-[1400px]:mb-2">A website? A fresh brand? Better content? More people finding you online?</p>
                 <p>Whatever you're thinking, let's make it happen.</p>
               </div>
             </div>
 
             {isSubmitted ? (
-              <div className="bg-[#184a41]/5 border-2 border-[#184a41] rounded-2xl p-8 sm:p-10 text-center flex flex-col items-center justify-center gap-4 my-4 shadow-sm animate-fade-in">
-                <div className="w-16 h-16 rounded-full bg-[#184a41] text-white flex items-center justify-center shadow-md">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-[#184a41]/5 border-2 border-[#184a41] rounded-2xl max-[439px]:rounded-xl p-8 max-[439px]:p-5 sm:p-10 text-center flex flex-col items-center justify-center gap-4 max-[439px]:gap-3 my-4 shadow-sm animate-fade-in">
+                <div className="w-16 h-16 max-[439px]:w-12 max-[439px]:h-12 rounded-full bg-[#184a41] text-white flex items-center justify-center shadow-md">
+                  <svg className="w-8 h-8 max-[439px]:w-6 max-[439px]:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#492c28] font-['Manrope',sans-serif]">Thank You!</h3>
-                <p className="text-[#8c8275] text-[15px] sm:text-[16px] font-['Inter',sans-serif] max-w-md leading-relaxed">
+                <h3 className="text-2xl max-[439px]:text-xl sm:text-3xl font-extrabold text-[#492c28] font-['Manrope',sans-serif]">Thank You!</h3>
+                <p className="text-[#8c8275] text-[15px] max-[439px]:text-[13px] sm:text-[16px] font-['Inter',sans-serif] max-w-md leading-relaxed max-[439px]:leading-normal">
                   Your message has been sent successfully. We've received your request and will get back to you shortly.
                 </p>
                 <button
                   type="button"
                   onClick={() => setIsSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-full bg-[#184a41] text-white font-bold text-sm font-['Manrope',sans-serif] hover:bg-[#12362f] transition-all"
+                  className="mt-4 max-[439px]:mt-2.5 px-6 max-[439px]:px-4 py-2.5 max-[439px]:py-2 rounded-full bg-[#184a41] text-white font-bold text-sm max-[439px]:text-[12.5px] font-['Manrope',sans-serif] hover:bg-[#12362f] transition-all"
                 >
                   Send Another Message
                 </button>
@@ -145,67 +145,67 @@ export default function ContactPage() {
                 action="https://formspree.io/f/mpppogqp"
                 method="POST"
                 onSubmit={handleSubmit}
-                className="space-y-6 lg:space-y-3.5 xl:space-y-4 min-[1400px]:space-y-6"
+                className="space-y-6 max-[439px]:space-y-3.5 lg:space-y-3.5 xl:space-y-4 min-[1400px]:space-y-6"
               >
                 {errorMessage && (
-                  <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm font-['Inter',sans-serif] flex items-center gap-3">
-                    <svg className="w-5 h-5 flex-shrink-0 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="p-4 max-[439px]:p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm max-[439px]:text-xs font-['Inter',sans-serif] flex items-center gap-3">
+                    <svg className="w-5 h-5 max-[439px]:w-4 max-[439px]:h-4 flex-shrink-0 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{errorMessage}</span>
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6">
-                  <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                    <label htmlFor="name" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Name *</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-[439px]:gap-3.5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6">
+                  <div className="flex flex-col gap-2 max-[439px]:gap-1 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                    <label htmlFor="name" className="text-[14px] max-[439px]:text-[12.5px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Name *</label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       required
                       placeholder="Your Name"
-                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
+                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 max-[439px]:px-3.5 max-[439px]:py-2.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
                     />
                   </div>
-                  <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                    <label htmlFor="company" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Company</label>
+                  <div className="flex flex-col gap-2 max-[439px]:gap-1 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                    <label htmlFor="company" className="text-[14px] max-[439px]:text-[12.5px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Company</label>
                     <input
                       type="text"
                       id="company"
                       name="company"
                       placeholder="Your Company"
-                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
+                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 max-[439px]:px-3.5 max-[439px]:py-2.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6">
-                  <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                    <label htmlFor="phone" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Phone</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-[439px]:gap-3.5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-6">
+                  <div className="flex flex-col gap-2 max-[439px]:gap-1 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                    <label htmlFor="phone" className="text-[14px] max-[439px]:text-[12.5px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Phone</label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       placeholder="Phone Number"
-                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
+                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 max-[439px]:px-3.5 max-[439px]:py-2.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
                     />
                   </div>
-                  <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                    <label htmlFor="email" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Email *</label>
+                  <div className="flex flex-col gap-2 max-[439px]:gap-1 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                    <label htmlFor="email" className="text-[14px] max-[439px]:text-[12.5px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Email *</label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       required
                       placeholder="Email Address"
-                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
+                      className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 max-[439px]:px-3.5 max-[439px]:py-2.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif]"
                     />
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2" ref={dropdownRef}>
-                  <label className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Subject</label>
+                <div className="flex flex-col gap-2 max-[439px]:gap-1 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2" ref={dropdownRef}>
+                  <label className="text-[14px] max-[439px]:text-[12.5px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Subject</label>
                   <div className="relative">
                     {/* Hidden input to store value for form submission */}
                     <input type="hidden" name="subject" value={selectedService} />
@@ -213,12 +213,12 @@ export default function ContactPage() {
                     <button
                       type="button"
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className={`w-full !bg-transparent backdrop-blur-md !border-2 !border-solid rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif] text-left flex justify-between items-center ${isDropdownOpen ? '!border-[#184a41] !shadow-[0_8px_25px_rgba(24,74,65,0.12)]' : '!border-[#184a41]'}`}
+                      className={`w-full !bg-transparent backdrop-blur-md !border-2 !border-solid rounded-xl px-4 py-3.5 max-[439px]:px-3.5 max-[439px]:py-2.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all font-['Inter',sans-serif] text-left flex justify-between items-center ${isDropdownOpen ? '!border-[#184a41] !shadow-[0_8px_25px_rgba(24,74,65,0.12)]' : '!border-[#184a41]'}`}
                     >
                       <span className={selectedService ? "text-[#492c28]" : "text-[#bcaea4]"}>
                         {selectedService || "What can we help you with?"}
                       </span>
-                      <svg className={`w-5 h-5 text-[#bcaea4] transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className={`w-5 h-5 max-[439px]:w-4 max-[439px]:h-4 text-[#bcaea4] transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                             setSelectedService("");
                             setIsDropdownOpen(false);
                           }}
-                          className={`w-full text-left px-4 py-3 lg:px-3 lg:py-2 xl:px-3.5 xl:py-2.5 font-['Inter',sans-serif] text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] transition-colors flex-shrink-0 ${!selectedService ? 'bg-[#492c28] text-white font-medium' : 'bg-transparent text-[#8c8275] hover:bg-[#492c28] hover:text-white'}`}
+                          className={`w-full text-left px-4 py-3 max-[439px]:px-3.5 max-[439px]:py-2.5 lg:px-3 lg:py-2 xl:px-3.5 xl:py-2.5 font-['Inter',sans-serif] text-[15px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] transition-colors flex-shrink-0 ${!selectedService ? 'bg-[#492c28] text-white font-medium' : 'bg-transparent text-[#8c8275] hover:bg-[#492c28] hover:text-white'}`}
                         >
                           What can we help you with?
                         </button>
@@ -246,7 +246,7 @@ export default function ContactPage() {
                               setSelectedService(service);
                               setIsDropdownOpen(false);
                             }}
-                            className={`w-full text-left px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 font-['Inter',sans-serif] text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] border-t border-[#184a41]/20 transition-colors flex-shrink-0 ${selectedService === service ? 'bg-[#492c28] text-white font-medium' : 'text-[#492c28] hover:bg-[#492c28] hover:text-white'}`}
+                            className={`w-full text-left px-4 py-3.5 max-[439px]:px-3.5 max-[439px]:py-2.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 font-['Inter',sans-serif] text-[15px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] border-t border-[#184a41]/20 transition-colors flex-shrink-0 ${selectedService === service ? 'bg-[#492c28] text-white font-medium' : 'text-[#492c28] hover:bg-[#492c28] hover:text-white'}`}
                           >
                             {service}
                           </button>
@@ -256,27 +256,27 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
-                  <label htmlFor="message" className="text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Message *</label>
+                <div className="flex flex-col gap-2 max-[439px]:gap-1 lg:gap-1 xl:gap-1.5 min-[1400px]:gap-2">
+                  <label htmlFor="message" className="text-[14px] max-[439px]:text-[12.5px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] font-bold text-[#492c28] font-['Manrope',sans-serif]">Message *</label>
                   <textarea
                     id="message"
                     name="message"
                     required
                     rows={5}
                     placeholder="Your Message..."
-                    className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all resize-none font-['Inter',sans-serif]"
+                    className="!bg-transparent backdrop-blur-md !border-2 !border-[#184a41] rounded-xl px-4 py-3.5 max-[439px]:px-3.5 max-[439px]:py-2.5 lg:px-3 lg:py-2.5 xl:px-3.5 xl:py-2.5 min-[1400px]:px-4 min-[1400px]:py-3.5 text-[14px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[14px] focus:outline-none focus:!border-[#184a41] text-[#492c28] placeholder-[#bcaea4] !shadow-[0_8px_20px_rgba(24,74,65,0.08)] hover:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] focus:!shadow-[0_8px_25px_rgba(24,74,65,0.12)] transition-all resize-none font-['Inter',sans-serif]"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group flex items-center justify-between gap-5 bg-[#184a41] text-white pl-7 pr-1.5 lg:pl-5 lg:pr-1 xl:pl-6 xl:pr-1 min-[1400px]:pl-7 min-[1400px]:pr-1.5 h-[56px] lg:h-[42px] xl:h-[46px] min-[1400px]:h-[56px] rounded-full font-extrabold text-[16px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[16px] tracking-wide hover:bg-[#12362f] transition-all active:scale-95 mt-4 lg:mt-2.5 xl:mt-3 min-[1400px]:mt-4 w-max shadow-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                  className="group flex items-center justify-between gap-5 max-[439px]:gap-3 bg-[#184a41] text-white pl-7 pr-1.5 max-[439px]:pl-5 max-[439px]:pr-1 lg:pl-5 lg:pr-1 xl:pl-6 xl:pr-1 min-[1400px]:pl-7 min-[1400px]:pr-1.5 h-[56px] max-[439px]:h-[42px] lg:h-[42px] xl:h-[46px] min-[1400px]:h-[56px] rounded-full font-extrabold text-[16px] max-[439px]:text-[13px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[16px] tracking-wide hover:bg-[#12362f] transition-all active:scale-95 mt-4 max-[439px]:mt-2.5 lg:mt-2.5 xl:mt-3 min-[1400px]:mt-4 w-max shadow-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {isSubmitting ? "Sending..." : "Let's Talk"}
-                  <div className="w-[44px] h-[44px] lg:w-[32px] lg:h-[32px] xl:w-[36px] xl:h-[36px] min-[1400px]:w-[44px] min-[1400px]:h-[44px] rounded-full border-[2px] border-white/50 flex items-center justify-center bg-gradient-to-br from-[#126b64] to-[#052b29] shadow-[inset_0_2px_6px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform overflow-hidden">
+                  <div className="w-[44px] h-[44px] max-[439px]:w-[32px] max-[439px]:h-[32px] lg:w-[32px] lg:h-[32px] xl:w-[36px] xl:h-[36px] min-[1400px]:w-[44px] min-[1400px]:h-[44px] rounded-full border-[2px] border-white/50 flex items-center justify-center bg-gradient-to-br from-[#126b64] to-[#052b29] shadow-[inset_0_2px_6px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform overflow-hidden">
                     {isSubmitting ? (
-                      <svg className="w-5 h-5 text-white animate-spin" fill="none" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 max-[439px]:w-4 max-[439px]:h-4 text-white animate-spin" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
@@ -284,7 +284,7 @@ export default function ContactPage() {
                       <img
                         src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Telephone%20Receiver.png"
                         alt="Phone"
-                        className="w-6 h-6 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6 object-contain drop-shadow-lg"
+                        className="w-6 h-6 max-[439px]:w-4.5 max-[439px]:h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6 object-contain drop-shadow-lg"
                       />
                     )}
                   </div>
@@ -294,31 +294,31 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column - Contact Info Card */}
-          <div className="bg-gradient-to-b from-[#184a41] to-[#0f312a] rounded-[2rem] lg:rounded-[1.5rem] xl:rounded-[1.75rem] min-[1400px]:rounded-[2rem] p-10 lg:p-6 xl:p-8 min-[1400px]:p-12 text-left shadow-2xl relative overflow-hidden">
+          <div className="bg-gradient-to-b from-[#184a41] to-[#0f312a] rounded-[2rem] max-[439px]:rounded-2xl lg:rounded-[1.5rem] xl:rounded-[1.75rem] min-[1400px]:rounded-[2rem] p-10 max-[439px]:p-5 lg:p-6 xl:p-8 min-[1400px]:p-12 text-left shadow-2xl relative overflow-hidden">
             {/* Subtle background element */}
             <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-white opacity-[0.03] blur-3xl"></div>
 
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-              <span className="text-white/70 font-bold uppercase tracking-wider text-[12px] lg:text-[10.5px] xl:text-[11px] min-[1400px]:text-[12px] mb-3 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-3 block font-['Inter',sans-serif]">
+              <span className="text-white/70 font-bold uppercase tracking-wider text-[12px] max-[439px]:text-[11px] lg:text-[10.5px] xl:text-[11px] min-[1400px]:text-[12px] mb-3 max-[439px]:mb-2 lg:mb-1.5 xl:mb-2 min-[1400px]:mb-3 block font-['Inter',sans-serif]">
                 GET IN TOUCH
               </span>
-              <h3 className="text-2xl sm:text-[2rem] lg:text-[22px] xl:text-[25px] min-[1400px]:text-[2rem] font-extrabold text-white leading-[1.2] lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.2] mb-12 lg:mb-5 xl:mb-6 min-[1400px]:mb-12 font-['Manrope',sans-serif]">
+              <h3 className="text-2xl max-[439px]:text-[22px] sm:text-[2rem] lg:text-[22px] xl:text-[25px] min-[1400px]:text-[2rem] font-extrabold text-white leading-[1.2] max-[439px]:leading-snug lg:leading-[1.15] xl:leading-[1.15] min-[1400px]:leading-[1.2] mb-12 max-[439px]:mb-6 lg:mb-5 xl:mb-6 min-[1400px]:mb-12 font-['Manrope',sans-serif]">
                 We'd Love to Hear From You.
               </h3>
             </div>
 
-            <div className="space-y-8 lg:space-y-4 xl:space-y-5 min-[1400px]:space-y-8 relative z-10">
+            <div className="space-y-8 max-[439px]:space-y-4 lg:space-y-4 xl:space-y-5 min-[1400px]:space-y-8 relative z-10">
               {/* Info Item 1 */}
-              <div className="flex gap-5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-5 items-start">
-                <div className="w-12 h-12 lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-12 min-[1400px]:h-12 rounded-full bg-white flex items-center justify-center shrink-0 shadow-md text-[#184a41]">
-                  <svg className="w-6 h-6 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex gap-5 max-[439px]:gap-3.5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-5 items-start">
+                <div className="w-12 h-12 max-[439px]:w-9 max-[439px]:h-9 lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-12 min-[1400px]:h-12 rounded-full bg-white flex items-center justify-center shrink-0 shadow-md text-[#184a41]">
+                  <svg className="w-6 h-6 max-[439px]:w-4.5 max-[439px]:h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div className="flex flex-col pt-1 lg:pt-0.5">
-                  <h4 className="text-white font-bold text-[17px] lg:text-[14px] xl:text-[14.5px] min-[1400px]:text-[17px] mb-1 lg:mb-0.5 min-[1400px]:mb-1 font-['Manrope',sans-serif]">Our Office</h4>
-                  <p className="text-white/80 text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] font-medium leading-relaxed lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
+                  <h4 className="text-white font-bold text-[17px] max-[439px]:text-[14.5px] lg:text-[14px] xl:text-[14.5px] min-[1400px]:text-[17px] mb-1 max-[439px]:mb-0.5 lg:mb-0.5 min-[1400px]:mb-1 font-['Manrope',sans-serif]">Our Office</h4>
+                  <p className="text-white/80 text-[15px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] font-medium leading-relaxed max-[439px]:leading-snug lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
                     Plot No: 496, 1st Floor, Sree Ikon Residency,<br />
                     Road No 3/2, Mathrusree Nagar, Miyapur,<br />
                     Hyderabad, Telangana – 500049.
@@ -327,71 +327,71 @@ export default function ContactPage() {
               </div>
 
               {/* Info Item 2 */}
-              <div className="flex gap-5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-5 items-start">
-                <div className="w-12 h-12 lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-12 min-[1400px]:h-12 rounded-full bg-white flex items-center justify-center shrink-0 shadow-md text-[#184a41]">
-                  <svg className="w-6 h-6 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex gap-5 max-[439px]:gap-3.5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-5 items-start">
+                <div className="w-12 h-12 max-[439px]:w-9 max-[439px]:h-9 lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-12 min-[1400px]:h-12 rounded-full bg-white flex items-center justify-center shrink-0 shadow-md text-[#184a41]">
+                  <svg className="w-6 h-6 max-[439px]:w-4.5 max-[439px]:h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div className="flex flex-col pt-1 lg:pt-0.5">
-                  <h4 className="text-white font-bold text-[17px] lg:text-[14px] xl:text-[14.5px] min-[1400px]:text-[17px] mb-1 lg:mb-0.5 min-[1400px]:mb-1 font-['Manrope',sans-serif]">Email Support</h4>
-                  <p className="text-white/80 text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] font-medium leading-relaxed lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
+                  <h4 className="text-white font-bold text-[17px] max-[439px]:text-[14.5px] lg:text-[14px] xl:text-[14.5px] min-[1400px]:text-[17px] mb-1 max-[439px]:mb-0.5 lg:mb-0.5 min-[1400px]:mb-1 font-['Manrope',sans-serif]">Email Support</h4>
+                  <p className="text-white/80 text-[15px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] font-medium leading-relaxed max-[439px]:leading-snug lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
                     info@prodbizsolutions.com
                   </p>
                 </div>
               </div>
 
               {/* Info Item 3 */}
-              <div className="flex gap-5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-5 items-start">
-                <div className="w-12 h-12 lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-12 min-[1400px]:h-12 rounded-full bg-white flex items-center justify-center shrink-0 shadow-md text-[#184a41]">
-                  <svg className="w-6 h-6 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex gap-5 max-[439px]:gap-3.5 lg:gap-3.5 xl:gap-4 min-[1400px]:gap-5 items-start">
+                <div className="w-12 h-12 max-[439px]:w-9 max-[439px]:h-9 lg:w-9 lg:h-9 xl:w-10 xl:h-10 min-[1400px]:w-12 min-[1400px]:h-12 rounded-full bg-white flex items-center justify-center shrink-0 shadow-md text-[#184a41]">
+                  <svg className="w-6 h-6 max-[439px]:w-4.5 max-[439px]:h-4.5 lg:w-4.5 lg:h-4.5 xl:w-5 xl:h-5 min-[1400px]:w-6 min-[1400px]:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <div className="flex flex-col pt-1 lg:pt-0.5">
-                  <h4 className="text-white font-bold text-[17px] lg:text-[14px] xl:text-[14.5px] min-[1400px]:text-[17px] mb-1 lg:mb-0.5 min-[1400px]:mb-1 font-['Manrope',sans-serif]">Let's Talk</h4>
-                  <p className="text-white/80 text-[15px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] font-medium leading-relaxed lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
+                  <h4 className="text-white font-bold text-[17px] max-[439px]:text-[14.5px] lg:text-[14px] xl:text-[14.5px] min-[1400px]:text-[17px] mb-1 max-[439px]:mb-0.5 lg:mb-0.5 min-[1400px]:mb-1 font-['Manrope',sans-serif]">Let's Talk</h4>
+                  <p className="text-white/80 text-[15px] max-[439px]:text-[13px] lg:text-[12.5px] xl:text-[13px] min-[1400px]:text-[15px] font-medium leading-relaxed max-[439px]:leading-snug lg:leading-[1.4] xl:leading-[1.45] min-[1400px]:leading-relaxed font-['Inter',sans-serif]">
                     Phone : +91 8977742255
                   </p>
                 </div>
               </div>
             </div>
 
-            <hr className="border-white/10 my-8 lg:my-4 xl:my-5 min-[1400px]:my-8 relative z-10" />
+            <hr className="border-white/10 my-8 max-[439px]:my-5 lg:my-4 xl:my-5 min-[1400px]:my-8 relative z-10" />
 
             {/* Social Follow */}
-            <div className="flex items-center gap-4 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-4 relative z-10">
-              <span className="text-white font-bold text-[16px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[16px] font-['Manrope',sans-serif]">Follow us :</span>
-              <div className="flex gap-2.5 lg:gap-2 xl:gap-2.5 min-[1400px]:gap-2.5">
+            <div className="flex items-center gap-4 max-[439px]:gap-3 lg:gap-2.5 xl:gap-3 min-[1400px]:gap-4 relative z-10">
+              <span className="text-white font-bold text-[16px] max-[439px]:text-[13.5px] lg:text-[13px] xl:text-[13.5px] min-[1400px]:text-[16px] font-['Manrope',sans-serif]">Follow us :</span>
+              <div className="flex gap-2.5 max-[439px]:gap-2 lg:gap-2 xl:gap-2.5 min-[1400px]:gap-2.5">
                 <a
                   href="https://x.com/ProdbizOfficial"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="X (Twitter)"
-                  className="w-9 h-9 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-9 min-[1400px]:h-9 rounded-full bg-[#f37636] flex items-center justify-center text-white hover:bg-[#fa7726] hover:-translate-y-1 transition-all shadow-sm"
+                  className="w-9 h-9 max-[439px]:w-7.5 max-[439px]:h-7.5 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-9 min-[1400px]:h-9 rounded-full bg-[#f37636] flex items-center justify-center text-white hover:bg-[#fa7726] hover:-translate-y-1 transition-all shadow-sm"
                 >
                   {/* Twitter */}
-                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
+                  <svg className="w-4 h-4 max-[439px]:w-3.5 max-[439px]:h-3.5 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
                 </a>
                 <a
                   href="https://in.linkedin.com/company/prodbiz-solutions-pvt-ltd"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="w-9 h-9 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-9 min-[1400px]:h-9 rounded-full bg-[#f37636] flex items-center justify-center text-white hover:bg-[#fa7726] hover:-translate-y-1 transition-all shadow-sm"
+                  className="w-9 h-9 max-[439px]:w-7.5 max-[439px]:h-7.5 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-9 min-[1400px]:h-9 rounded-full bg-[#f37636] flex items-center justify-center text-white hover:bg-[#fa7726] hover:-translate-y-1 transition-all shadow-sm"
                 >
                   {/* LinkedIn */}
-                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg>
+                  <svg className="w-4 h-4 max-[439px]:w-3.5 max-[439px]:h-3.5 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg>
                 </a>
                 <a
                   href="https://www.instagram.com/prodbizsolutions/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="w-9 h-9 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-9 min-[1400px]:h-9 rounded-full bg-[#f37636] flex items-center justify-center text-white hover:bg-[#fa7726] hover:-translate-y-1 transition-all shadow-sm"
+                  className="w-9 h-9 max-[439px]:w-7.5 max-[439px]:h-7.5 lg:w-7 lg:h-7 xl:w-8 xl:h-8 min-[1400px]:w-9 min-[1400px]:h-9 rounded-full bg-[#f37636] flex items-center justify-center text-white hover:bg-[#fa7726] hover:-translate-y-1 transition-all shadow-sm"
                 >
                   {/* Instagram */}
-                  <svg className="w-4 h-4 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                  <svg className="w-4 h-4 max-[439px]:w-3.5 max-[439px]:h-3.5 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 min-[1400px]:w-4 min-[1400px]:h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
                 </a>
               </div>
             </div>
