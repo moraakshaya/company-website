@@ -640,13 +640,13 @@ const portfolioItems: PortfolioItem[] = [
     title: "LALITHA",
     category: "Auto Ads",
     filter: "AUTO ADS",
-    image: "/our-work/autoads/lalitha-1.jpg",
+    image: "/our-work/autoads/lalitha-01.webp",
     height: "380px",
     bgColor: "bg-[#184a41]",
     gallery: [
-      "/our-work/autoads/lalitha-1.jpg",
-      "/our-work/autoads/lalitha-2.jpg",
-      "/our-work/autoads/lalitha-3.jpg",
+      "/our-work/autoads/lalitha-01.webp",
+      "/our-work/autoads/lalitha-02.webp",
+      "/our-work/autoads/lalitha-03.webp",
     ],
     clientOverview: "Dynamic outdoor transit advertising graphics designed for Lalitha across auto-rickshaw backs and hood wraps, ensuring high brand visibility across busy city roads.",
     services: [
