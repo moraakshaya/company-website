@@ -646,7 +646,7 @@ const portfolioItems: PortfolioItem[] = [
     gallery: [
       "/our-work/autoads/lalitha-01.webp",
       "/our-work/autoads/lalitha-02.webp",
-      "/our-work/autoads/lalitha-03.webp",
+      "/our-work/autoads/lalitha-1.jpg",
     ],
     clientOverview: "Dynamic outdoor transit advertising graphics designed for Lalitha across auto-rickshaw backs and hood wraps, ensuring high brand visibility across busy city roads.",
     services: [
